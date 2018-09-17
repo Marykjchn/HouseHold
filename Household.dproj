@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{4744be00-68be-4a52-ba46-09379a10fd30}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>C:\Users\KJC\Desktop\Household.exe</DCC_DependencyCheckOutputName>
+    <MainSource>Household.dpr</MainSource>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_WriteableConstants>True</DCC_WriteableConstants>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_Optimize>False</DCC_Optimize>
+    <DCC_GenerateStackFrames>True</DCC_GenerateStackFrames>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_DcpOutput>C:\Users\KJC\Desktop</DCC_DcpOutput>
+    <DCC_Define>RELEASE</DCC_Define>
+    <DCC_Description>사무조합 프로젝트 런타임 공통모듈</DCC_Description>
+    <DCC_ExeOutput>E:\Developer\Delphi\코딩 연습\Household</DCC_ExeOutput>
+    <DCC_BplOutput>E:\Developer\Delphi\코딩 연습\Household</DCC_BplOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_WriteableConstants>True</DCC_WriteableConstants>
+    <DCC_Optimize>False</DCC_Optimize>
+    <DCC_GenerateStackFrames>True</DCC_GenerateStackFrames>
+    <DCC_MapFile>3</DCC_MapFile>
+    <DCC_Define>DEBUG;USE_CODESITE</DCC_Define>
+    <DCC_Description>사무조합 프로젝트 런타임 공통모듈</DCC_Description>
+    <DCC_ExeOutput>C:\Users\KJC\Desktop</DCC_ExeOutput>
+    <DCC_DcpOutput>C:\Users\KJC\Desktop</DCC_DcpOutput>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="HostApplication">D:\### 71.김반장플러스(노무관리) ###\개발소스\실행모듈\KPlusMain.exe</Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">5</VersionInfo><VersionInfo Name="MinorVer">5</VersionInfo><VersionInfo Name="Release">7</VersionInfo><VersionInfo Name="Build">0</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">True</VersionInfo><VersionInfo Name="Locale">1033</VersionInfo><VersionInfo Name="CodePage">1200</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName">Developer Express Inc.</VersionInfoKeys><VersionInfoKeys Name="FileDescription">ExpressCommonLibrary</VersionInfoKeys><VersionInfoKeys Name="FileVersion">5.5.7.0</VersionInfoKeys><VersionInfoKeys Name="InternalName"></VersionInfoKeys><VersionInfoKeys Name="LegalCopyright">Copyright (c) 1998-2006 Developer Express Inc.</VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename">dxComnD10.BPL</VersionInfoKeys><VersionInfoKeys Name="ProductName"></VersionInfoKeys><VersionInfoKeys Name="ProductVersion">5.5</VersionInfoKeys><VersionInfoKeys Name="Comments"></VersionInfoKeys></VersionInfoKeys><Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dcloffice2k100.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dclofficexp100.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+    </Excluded_Packages><Source><Source Name="MainSource">Household.dpr</Source></Source></Delphi.Personality></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <ItemGroup>
+    <DelphiCompile Include="Household.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="AnniAddPage.pas">
+      <Form>AnniAddForm</Form>
+    </DCCReference>
+    <DCCReference Include="AnniversaryEditPage.pas">
+      <Form>AnniversaryEditForm</Form>
+    </DCCReference>
+    <DCCReference Include="DataModule.pas">
+      <Form>DataModule1</Form>
+      <DesignClass>TDataModule</DesignClass>
+    </DCCReference>
+    <DCCReference Include="EmailchkPage.pas">
+      <Form>EmailchkForm</Form>
+    </DCCReference>
+    <DCCReference Include="FindIDPage.pas">
+      <Form>FindIDForm</Form>
+    </DCCReference>
+    <DCCReference Include="FindPWPage.pas">
+      <Form>FindPWForm</Form>
+    </DCCReference>
+    <DCCReference Include="FixBreakdownEditPage.pas">
+      <Form>FixBreakdownEditForm</Form>
+    </DCCReference>
+    <DCCReference Include="HDataMethod.pas" />
+    <DCCReference Include="HouseholdPage.pas">
+      <Form>HouseHoldForm</Form>
+    </DCCReference>
+    <DCCReference Include="LoginPage.pas">
+      <Form>LoginForm</Form>
+    </DCCReference>
+    <DCCReference Include="MemInfoPage.pas">
+      <Form>MemInfoForm</Form>
+    </DCCReference>
+    <DCCReference Include="MemInsertPage.pas">
+      <Form>MemInsertForm</Form>
+    </DCCReference>
+    <DCCReference Include="ReportPage.pas">
+      <Form>ReportForm</Form>
+    </DCCReference>
+    <DCCReference Include="SolnLun.pas" />
+    <DCCReference Include="UpdateAddPage.pas">
+      <Form>UpdateAddForm</Form>
+    </DCCReference>
+    <DCCReference Include="UpdateEmailPage.pas">
+      <Form>UpdateEmailForm</Form>
+    </DCCReference>
+    <DCCReference Include="UpdatePhonePage.pas">
+      <Form>UpdatePhoneForm</Form>
+    </DCCReference>
+    <DCCReference Include="UpdatePWPage.pas">
+      <Form>UpdatePWForm</Form>
+    </DCCReference>
+  </ItemGroup>
+</Project>
