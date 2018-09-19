@@ -38,7 +38,7 @@ object AnniversaryEditForm: TAnniversaryEditForm
       Style.IsFontAssigned = True
     end
     object BtnClose: TPanel
-      Left = 444
+      Left = 449
       Top = 301
       Width = 75
       Height = 25
@@ -58,7 +58,7 @@ object AnniversaryEditForm: TAnniversaryEditForm
       OnMouseLeave = BtnCloseMouseLeave
     end
     object BtnUpdateAnniver: TPanel
-      Left = 444
+      Left = 449
       Top = 111
       Width = 75
       Height = 25
@@ -78,7 +78,7 @@ object AnniversaryEditForm: TAnniversaryEditForm
       OnMouseLeave = BtnUpdateAnniverMouseLeave
     end
     object BtnDelAnniver: TPanel
-      Left = 444
+      Left = 449
       Top = 151
       Width = 75
       Height = 25
@@ -98,7 +98,7 @@ object AnniversaryEditForm: TAnniversaryEditForm
       OnMouseLeave = BtnDelAnniverMouseLeave
     end
     object BtnAddAnniver: TPanel
-      Left = 444
+      Left = 449
       Top = 71
       Width = 75
       Height = 25

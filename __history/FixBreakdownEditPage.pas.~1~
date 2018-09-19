@@ -10,14 +10,14 @@ uses
   cxClasses, cxControls, cxGridCustomView, cxGrid;
 
 type
-  TFBreakDownData = record
+  TAnniverData = record
     AField, AValue : String;
     ano            : Integer;
   end;
 
 type
   TFixBreakdownEditForm = class(TForm)
-    DH_FBreakDownSelectAll: TOraDataSource;
+    DH_AnniSelectAll: TOraDataSource;
     GRD_FixBreakdown: TcxGrid;
     Total_FixBreakdown: TcxGridDBTableView;
     Total_FixBreakdownColumn1: TcxGridDBColumn;
@@ -33,11 +33,7 @@ type
     BtnUpdateFBreakdown: TPanel;
     BtnDelFBreakdown: TPanel;
     BtnAddFBreakdown: TPanel;
-    QH_FBreakDownEditSelect: TOraQuery;
-    Total_FixBreakdownColumn7: TcxGridDBColumn;
-    Total_FixBreakdownColumn8: TcxGridDBColumn;
-    Total_FixBreakdownColumn9: TcxGridDBColumn;
-    Total_FixBreakdownColumn10: TcxGridDBColumn;
+    QH_AnniversaryEditSelect: TOraQuery;
 
     // 폼 생성시 기념일 목록 출력
     procedure FormCreate(Sender: TObject);
@@ -49,16 +45,16 @@ type
     procedure SelectAnniversary;
     procedure BtnUpdateFBreakdownClick(Sender: TObject);
 
-    // 고정내역 수정
-    procedure Total_FbreakDownMouseDown(Sender: TObject; Button: TMouseButton;
+    // 기념일 수정
+    procedure Total_AnniversaryMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
 
-    // 고정내역 수정
-    procedure FbreakDownDataUpdate;
+    // 기념일 수정
+    procedure AnniverDataUpdate;
     procedure BtnDelFBreakdownClick(Sender: TObject);
 
-    // 고정내역 삭제
-    procedure FbreakDownDataDelete;
+    // 기념일 삭제
+    procedure AnniverDataDelete;
 
 
     // -------------- 마우스 호버시 색 변경 ---------------
@@ -72,7 +68,7 @@ type
     procedure BtnDelFBreakdownMouseLeave(Sender: TObject);
 
   private
-    FbreakDownData : TFbreakDownData;
+    AnniverData : TAnniverData;
   public
     { Public declarations }
   end;
@@ -89,7 +85,7 @@ implementation
 uses
   HouseholdPage, DataModule, AnniAddPage;
 
-procedure TFixBreakdownEditForm.FbreakDownDataDelete;
+procedure TFixBreakdownEditForm.AnniverDataDelete;
 var
   MessageVal : Integer;
 begin
@@ -101,7 +97,7 @@ begin
       SQL.Add('DELETE FROM hanniversary         ');
       SQL.Add('  WHERE ano = :ANO               ');
 
-      ParamByName('ANO').AsInteger  := FBreakDownData.ano;
+      ParamByName('ANO').AsInteger  := AnniverData.ano;
 
       ExecSQL;
     end;
@@ -116,35 +112,35 @@ begin
 
 end;
 
-procedure TFixBreakdownEditForm.FbreakDownDataUpdate;
+procedure TFixBreakdownEditForm.AnniverDataUpdate;
 var
   InputVal : String;
 begin
-  if FBreakDownData.AField = 'ACONTENTS' then begin
-    InputVal := InputBox('고정내역 수정', '수정할 분류를 입력해주세요', FBreakDownData.AValue);
+  if AnniverData.AField = 'ACONTENTS' then begin
+    InputVal := InputBox('기념일 수정', '수정할 분류를 입력해주세요', AnniverData.AValue);
   end else begin
-    InputVal := InputBox('고정내역 수정', '수정할 이름을 입력해주세요', FBreakDownData.AValue);
+    InputVal := InputBox('기념일 수정', '수정할 이름을 입력해주세요', AnniverData.AValue);
   end;
   with DataModule1.QH_DML do begin
     SQL.Clear;
     SQL.Add('UPDATE hanniversary              ');
-    if FBreakDownData.AField = 'ACONTENTS' then begin
+    if AnniverData.AField = 'ACONTENTS' then begin
       SQL.Add('  SET acontents = :ACOUNTENTS  ');
     end else begin
       SQL.Add('  SET aname = :ANAME           ');
     end;
     SQL.Add('  WHERE ano = :ANO               ');
 
-    if FBreakDownData.AField = 'ACONTENTS' then begin
+    if AnniverData.AField = 'ACONTENTS' then begin
       ParamByName('ACOUNTENTS').AsString  := InputVal;
     end else begin
       ParamByName('ANAME').AsString       := InputVal;
     end;
-      ParamByName('ANO').AsInteger        := FBreakDownData.Ano;
+      ParamByName('ANO').AsInteger        := AnniverData.Ano;
     ExecSQL;
   end;
 
-  QH_FBreakDownEditSelect.RefreshRecord;
+  QH_AnniversaryEditSelect.RefreshRecord;
 
 end;
 
@@ -246,14 +242,14 @@ end;
 procedure TFixBreakdownEditForm.FormCreate(Sender: TObject);
 begin
 
-  FBreakDownData.AField := '';
-  FBreakDownData.AValue := '';
-  FBreakDownData.ano    := 0;
+  AnniverData.AField := '';
+  AnniverData.AValue := '';
+  AnniverData.ano    := 0;
 
-  QH_FBreakDownEditSelect.Session  := DataModule1.OraSession1;
+  QH_AnniversaryEditSelect.Session  := DataModule1.OraSession1;
 
-  DH_FBreakDownSelectAll.DataSet                      := QH_FBreakDownEditSelect;
-  Total_FixBreakdown.DataController.DataSource        := DH_FBreakDownSelectAll;
+  DH_AnniSelectAll.DataSet                      := QH_AnniversaryEditSelect;
+  Total_FixBreakdown.DataController.DataSource   := DH_AnniSelectAll; 
 
   SelectAnniversary;
 
@@ -262,7 +258,7 @@ end;
 procedure TFixBreakdownEditForm.SelectAnniversary;
 begin
   try
-    with QH_FBreakDownEditSelect do begin
+    with QH_AnniversaryEditSelect do begin
       SQL.Clear;
       SQL.Add('SELECT * FROM hanniversary   ');
       SQL.Add('  WHERE aid = :AID           ');
@@ -277,7 +273,7 @@ begin
   end;
 end;
 
-procedure TFixBreakdownEditForm.Total_FBreakDownMouseDown(Sender: TObject;
+procedure TFixBreakdownEditForm.Total_AnniversaryMouseDown(Sender: TObject;
   Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
 var
   CField, CValue : String;
@@ -289,25 +285,25 @@ begin
     Cvalue := TcxGridDBColumn( Total_FixBreakdown.Controller.FocusedColumn ).DataBinding.Field.Text;
     ano    := Total_FixBreakdown.DataController.Values[Total_FixBreakdown.DataController.FocusedRecordIndex, 5];
 
-    FBreakDownData.AField := CField;
-    FBreakDownData.AValue := CValue;
-    FBreakDownData.ano    := ano;
+    AnniverData.AField := CField;
+    AnniverData.AValue := CValue;
+    AnniverData.ano    := ano;
 
     if (CField = 'ACONTENTS') OR (CField = 'ANAME') then begin
-      FBreakDownDataUpdate;
+      AnniverDataUpdate;
     end;
   end else if BtnDelFBreakdown.Caption = '제거모드' then begin
     ano    := Total_FixBreakdown.DataController.Values[Total_FixBreakdown.DataController.FocusedRecordIndex, 5];
 
-    FBreakDownData.ano    := ano;
+    AnniverData.ano    := ano;
 
-    FBreakDownDataDelete;
+    AnniverDataDelete;
 
   end;
 
-  FBreakDownData.AField := '';
-  FBreakDownData.AValue := '';
-  FBreakDownData.ano    := 0;
+  AnniverData.AField := '';
+  AnniverData.AValue := '';
+  AnniverData.ano    := 0;
 
   // 클릭한놈의 filed이름
   // TcxGridDBColumn( Total_Holding.Controller.FocusedColumn ).DataBinding.FieldName;

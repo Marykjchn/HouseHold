@@ -34,10 +34,6 @@ type
     BtnDelFBreakdown: TPanel;
     BtnAddFBreakdown: TPanel;
     QH_FBreakDownEditSelect: TOraQuery;
-    Total_FixBreakdownColumn7: TcxGridDBColumn;
-    Total_FixBreakdownColumn8: TcxGridDBColumn;
-    Total_FixBreakdownColumn9: TcxGridDBColumn;
-    Total_FixBreakdownColumn10: TcxGridDBColumn;
 
     // 폼 생성시 기념일 목록 출력
     procedure FormCreate(Sender: TObject);
