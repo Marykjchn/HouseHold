@@ -4,7 +4,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
   BorderStyle = bsDialog
   Caption = #44256#51221#45236#50669' '#49444#51221
   ClientHeight = 346
-  ClientWidth = 700
+  ClientWidth = 650
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,15 +18,14 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 700
+    Width = 650
     Height = 346
     Align = alClient
     Color = clWindow
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 650
     object cxLabel1: TcxLabel
-      Left = 292
+      Left = 267
       Top = 16
       Caption = #44256#51221#45236#50669' '#47785#47197
       ParentFont = False
@@ -38,7 +37,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
       Style.IsFontAssigned = True
     end
     object BtnClose: TPanel
-      Left = 610
+      Left = 560
       Top = 301
       Width = 75
       Height = 25
@@ -58,7 +57,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
       OnMouseLeave = BtnCloseMouseLeave
     end
     object BtnUpdateFBreakdown: TPanel
-      Left = 610
+      Left = 560
       Top = 111
       Width = 75
       Height = 25
@@ -78,7 +77,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
       OnMouseLeave = BtnUpdateFBreakdownMouseLeave
     end
     object BtnDelFBreakdown: TPanel
-      Left = 610
+      Left = 560
       Top = 151
       Width = 75
       Height = 25
@@ -98,7 +97,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
       OnMouseLeave = BtnDelFBreakdownMouseLeave
     end
     object BtnAddFBreakdown: TPanel
-      Left = 610
+      Left = 560
       Top = 71
       Width = 75
       Height = 25
@@ -120,7 +119,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
   object GRD_FixBreakdown: TcxGrid
     Left = 5
     Top = 66
-    Width = 590
+    Width = 540
     Height = 265
     TabOrder = 0
     object Total_FixBreakdown: TcxGridDBTableView
@@ -142,7 +141,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
         Options.Editing = False
-        Width = 67
+        Width = 61
       end
       object Total_FixBreakdownColumn2: TcxGridDBColumn
         Caption = #44396'  '#48516
@@ -151,7 +150,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
         Options.Editing = False
-        Width = 50
+        Width = 65
       end
       object Total_FixBreakdownColumn3: TcxGridDBColumn
         Caption = #54637'  '#47785
@@ -160,7 +159,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
         Options.Editing = False
-        Width = 50
+        Width = 65
       end
       object Total_FixBreakdownColumn4: TcxGridDBColumn
         Caption = #44208#51228' '#49688#45800
@@ -168,7 +167,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
         FooterAlignmentHorz = taCenter
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
-        Width = 70
+        Width = 75
       end
       object Total_FixBreakdownColumn5: TcxGridDBColumn
         Caption = #52852#46300#49324
@@ -176,7 +175,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
         FooterAlignmentHorz = taCenter
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
-        Width = 76
+        Width = 65
       end
       object Total_FixBreakdownColumn6: TcxGridDBColumn
         Caption = #49688#51077#50529
@@ -184,7 +183,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
         FooterAlignmentHorz = taCenter
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
-        Width = 81
+        Width = 69
       end
       object Total_FixBreakdownColumn7: TcxGridDBColumn
         Caption = #51648#52636#50529
@@ -192,7 +191,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
         FooterAlignmentHorz = taCenter
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
-        Width = 81
+        Width = 69
       end
       object Total_FixBreakdownColumn8: TcxGridDBColumn
         Caption = #52852#46300' '#49324#50857#50529
@@ -200,7 +199,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
         FooterAlignmentHorz = taCenter
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
-        Width = 80
+        Width = 69
       end
       object Total_FixBreakdownColumn9: TcxGridDBColumn
         DataBinding.FieldName = 'FNO'
