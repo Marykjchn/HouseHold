@@ -327,8 +327,6 @@ type
     procedure BtnMemoClearMouseLeave(Sender: TObject);
     procedure BtnSpendingDeleteMouseLeave(Sender: TObject);
     procedure BtnExcelClick(Sender: TObject);
-    procedure ComboAmountKeyDown(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
 
 
 
@@ -963,14 +961,6 @@ begin
 
 end;
 
-procedure THouseHoldForm.ComboAmountKeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if Key = 13 then begin
-    BtnStoreClick(nil);
-  end;
-end;
-
 procedure THouseHoldForm.ComboItemExit(Sender: TObject);
 begin
   if (RadioDiv2.Checked = True) AND (ComboItem.Text = '카드요금 납부') then begin
@@ -1054,14 +1044,14 @@ begin
       // 수입 일대 금액 지정
       if RadioDiv1.Checked then begin
         cdiv      := StringReplace(RadioDiv1.Caption, ' ', '', [rfReplaceAll, rfIgnoreCase]);
-        cincome   := StrToInt(StringReplace(StringReplace(ComboAmount.Text, ',', '', [rfReplaceAll, rfIgnoreCase]), '원', '', [rfReplaceAll, rfIgnoreCase]));
+        cincome   := StrToInt(ComboAmount.Text);
         cspending := 0;
         camount   := cincome;
       // 지출일때 금액 지정
       end else if RadioDiv2.Checked then begin
         cdiv := StringReplace(RadioDiv2.Caption, ' ', '', [rfReplaceAll, rfIgnoreCase]);
         cincome   := 0;
-        cspending := StrToInt(StringReplace(StringReplace(ComboAmount.Text, ',', '', [rfReplaceAll, rfIgnoreCase]), '원', '', [rfReplaceAll, rfIgnoreCase]));
+        cspending := StrToInt(ComboAmount.Text);
         // 지출이 신용카드가 아닐때 금액 지정
         if NOT(RadioMeans3.Checked) then begin
           camount          := -cspending;
@@ -1076,7 +1066,7 @@ begin
         end else begin
           cspending        := 0;
           camount          := 0;
-          ccreditspending  := StrToInt(StringReplace(StringReplace(ComboAmount.Text, ',', '', [rfReplaceAll, rfIgnoreCase]), '원', '', [rfReplaceAll, rfIgnoreCase]));
+          ccreditspending  := StrToInt(ComboAmount.Text);
         end;
 
       end;
@@ -1429,7 +1419,7 @@ begin
   ComboItem.Text        := '';
   RadioMeans1.Checked   := True;
   ComboType.Text        := '';
-  ComboAmount.EditValue := 0;
+  ComboAmount.Text      := '';
 end;
 
 procedure THouseHoldForm.BtnClearMouseEnter(Sender: TObject);

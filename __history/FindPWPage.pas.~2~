@@ -121,22 +121,18 @@ begin
   if EditID.Text = '' then begin
     chkID.Show;
     chkID.SetFocus;
-    Exit;
 
   end else if EditName.Text = '' then begin
     chkName.Show;
     chkName.SetFocus;
-    Exit;
 
   end else if EditEmail1.Text = '' then begin
     chkEmail.Show;
     EditEmail1.SetFocus;
-    Exit;
 
   end else if EditEmail2.Text = '' then begin
     chkEmail.Show;
     EditEmail2.SetFocus;
-    Exit;
 
   end else begin
     MID    := HDataMethod.HITSEncrypt(EditID.Text, KEY);

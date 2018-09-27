@@ -3,8 +3,7 @@ unit HDataMethod;
 interface
 
 uses
-  SysUtils, Windows, DCPrijndael, DCPcrypt2, DCPsha256, imm, Forms, Shlobj,
-  Controls;
+  SysUtils, Windows, DCPrijndael, DCPcrypt2, DCPsha256, imm, Forms, Shlobj;
 
 // ---------- 양방향 ----------
 // --- 암호화 ---
@@ -26,9 +25,6 @@ function GetRandomString: String;
 
 // ---------- 엑셀 저장 경로 ----------
 function GetProgramFilesDir: String;
-
-//// ----------  버튼 호버시 색 변경  -----------
-//procedure FoBtnColor(Btn : TWinControl; BtnCol : String);
 
 implementation
 
@@ -299,29 +295,5 @@ begin
     end;
    end;
 end;
-
-//procedure BtnColor(AWinControl : TWinControl; BtnCol : String);
-//var
-//  i, idx  : Integer;
-//begin
-//  with AWinControl do begin
-//    for i := 0 to ControlCount - 1 do begin  // 받아온 컴포넌트 갯수만큼
-//      if csAcceptsControls in Controls[i].ControlStyle then begin // panel이 얹어져있을경우 해당건도 재귀처리
-//        BtnColor(TWinControl(Controls[i], BtnCol));
-//
-//      end else begin
-//        idx := FControlColors.
-//
-//        if idx = -1 then begin
-//
-//        end;
-//
-//
-//
-//      end;
-//
-//    end;
-//  end;
-//end;
 
 end.

@@ -327,8 +327,6 @@ type
     procedure BtnMemoClearMouseLeave(Sender: TObject);
     procedure BtnSpendingDeleteMouseLeave(Sender: TObject);
     procedure BtnExcelClick(Sender: TObject);
-    procedure ComboAmountKeyDown(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
 
 
 
@@ -963,14 +961,6 @@ begin
 
 end;
 
-procedure THouseHoldForm.ComboAmountKeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if Key = 13 then begin
-    BtnStoreClick(nil);
-  end;
-end;
-
 procedure THouseHoldForm.ComboItemExit(Sender: TObject);
 begin
   if (RadioDiv2.Checked = True) AND (ComboItem.Text = '카드요금 납부') then begin
@@ -1429,7 +1419,7 @@ begin
   ComboItem.Text        := '';
   RadioMeans1.Checked   := True;
   ComboType.Text        := '';
-  ComboAmount.EditValue := 0;
+  ComboAmount.Text      := '';
 end;
 
 procedure THouseHoldForm.BtnClearMouseEnter(Sender: TObject);

@@ -302,13 +302,9 @@ begin
   if EditEmail1.Text = '' then begin
     chkEmail.Show;
     EditEmail1.SetFocus;
-    Exit;
-
   end else if EditEmail2.Text = '' then begin
     chkEmail.Show;
     EditEmail2.SetFocus;
-    Exit;
-
   end else begin
     eemail := EditEmail1.Text + '@' + EditEmail2.Text;
 
@@ -326,19 +322,14 @@ begin
     if eemail = emailchk then begin
       ShowMessage('중복된 이메일 입니다.');
       EditEmail1.SetFocus;
-      Exit;
 
-    end else begin     
-      Screen.Cursor := crHourGlass;
-
+    end else begin
       ebody := HDataMethod.GetRandomString;
 
       DataModule1.emailCerti.eemail    := eemail;
       DataModule1.emailCerti.ebody     := ebody;
 
       DataModule1.SendEmail('가계부 회원가입 이메일 인증번호 입니다.', ebody);
-
-      Screen.Cursor := crDefault;
 
       EmailchkForm := TEmailchkForm.Create(Application);
 

@@ -109,6 +109,7 @@ type
     cxLabel8: TcxLabel;
     cxLabel9: TcxLabel;
     cxLabel10: TcxLabel;
+    ComboAmount: TcxTextEdit;
     ComboType: TcxComboBox;
     LabDate: TcxLabel;
     Panel3: TPanel;
@@ -135,7 +136,6 @@ type
     BtnSpendingExcel: TImage;
     BtnIncomeExcel: TImage;
     BtnIncomePrint: TImage;
-    ComboAmount: TcxCurrencyEdit;
 
     // ---------------- 폼 ----------------
     // 폼 생성시 grid및 기본값 셋팅
@@ -210,7 +210,7 @@ type
 
     // ----------------- 입력 전처리 -----------------
     // 숫자만 입력가능
-    procedure ComboAmount3KeyPress(Sender: TObject; var Key: Char);
+    procedure ComboAmountKeyPress(Sender: TObject; var Key: Char);
     // 신용카드요급 납부일경우 신용카드 선택 불가
     procedure ComboItemExit(Sender: TObject);
 
@@ -327,8 +327,6 @@ type
     procedure BtnMemoClearMouseLeave(Sender: TObject);
     procedure BtnSpendingDeleteMouseLeave(Sender: TObject);
     procedure BtnExcelClick(Sender: TObject);
-    procedure ComboAmountKeyDown(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
 
 
 
@@ -950,7 +948,7 @@ begin
   end;
 end;
 
-procedure THouseHoldForm.ComboAmount3KeyPress(Sender: TObject; var Key: Char);
+procedure THouseHoldForm.ComboAmountKeyPress(Sender: TObject; var Key: Char);
 begin
   if Key = #13 then begin
     BtnStoreClick(nil);
@@ -961,14 +959,6 @@ begin
     Key := #0;
   end;
 
-end;
-
-procedure THouseHoldForm.ComboAmountKeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if Key = 13 then begin
-    BtnStoreClick(nil);
-  end;
 end;
 
 procedure THouseHoldForm.ComboItemExit(Sender: TObject);
@@ -1054,14 +1044,14 @@ begin
       // 수입 일대 금액 지정
       if RadioDiv1.Checked then begin
         cdiv      := StringReplace(RadioDiv1.Caption, ' ', '', [rfReplaceAll, rfIgnoreCase]);
-        cincome   := StrToInt(StringReplace(StringReplace(ComboAmount.Text, ',', '', [rfReplaceAll, rfIgnoreCase]), '원', '', [rfReplaceAll, rfIgnoreCase]));
+        cincome   := StrToInt(ComboAmount.Text);
         cspending := 0;
         camount   := cincome;
       // 지출일때 금액 지정
       end else if RadioDiv2.Checked then begin
         cdiv := StringReplace(RadioDiv2.Caption, ' ', '', [rfReplaceAll, rfIgnoreCase]);
         cincome   := 0;
-        cspending := StrToInt(StringReplace(StringReplace(ComboAmount.Text, ',', '', [rfReplaceAll, rfIgnoreCase]), '원', '', [rfReplaceAll, rfIgnoreCase]));
+        cspending := StrToInt(ComboAmount.Text);
         // 지출이 신용카드가 아닐때 금액 지정
         if NOT(RadioMeans3.Checked) then begin
           camount          := -cspending;
@@ -1076,7 +1066,7 @@ begin
         end else begin
           cspending        := 0;
           camount          := 0;
-          ccreditspending  := StrToInt(StringReplace(StringReplace(ComboAmount.Text, ',', '', [rfReplaceAll, rfIgnoreCase]), '원', '', [rfReplaceAll, rfIgnoreCase]));
+          ccreditspending  := StrToInt(ComboAmount.Text);
         end;
 
       end;
@@ -1429,7 +1419,7 @@ begin
   ComboItem.Text        := '';
   RadioMeans1.Checked   := True;
   ComboType.Text        := '';
-  ComboAmount.EditValue := 0;
+  ComboAmount.Text      := '';
 end;
 
 procedure THouseHoldForm.BtnClearMouseEnter(Sender: TObject);

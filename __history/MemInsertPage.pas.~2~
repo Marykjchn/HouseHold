@@ -302,13 +302,9 @@ begin
   if EditEmail1.Text = '' then begin
     chkEmail.Show;
     EditEmail1.SetFocus;
-    Exit;
-
   end else if EditEmail2.Text = '' then begin
     chkEmail.Show;
     EditEmail2.SetFocus;
-    Exit;
-
   end else begin
     eemail := EditEmail1.Text + '@' + EditEmail2.Text;
 
@@ -326,9 +322,9 @@ begin
     if eemail = emailchk then begin
       ShowMessage('중복된 이메일 입니다.');
       EditEmail1.SetFocus;
-      Exit;
 
-    end else begin     
+    end else begin
+
       Screen.Cursor := crHourGlass;
 
       ebody := HDataMethod.GetRandomString;

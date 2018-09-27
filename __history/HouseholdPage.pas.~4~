@@ -327,8 +327,6 @@ type
     procedure BtnMemoClearMouseLeave(Sender: TObject);
     procedure BtnSpendingDeleteMouseLeave(Sender: TObject);
     procedure BtnExcelClick(Sender: TObject);
-    procedure ComboAmountKeyDown(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
 
 
 
@@ -961,14 +959,6 @@ begin
     Key := #0;
   end;
 
-end;
-
-procedure THouseHoldForm.ComboAmountKeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if Key = 13 then begin
-    BtnStoreClick(nil);
-  end;
 end;
 
 procedure THouseHoldForm.ComboItemExit(Sender: TObject);

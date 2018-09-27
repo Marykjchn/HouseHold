@@ -114,17 +114,14 @@ begin
   if EditName.Text = '' then begin
     chkName.Show;
     chkName.SetFocus;
-    Exit;
 
   end else if EditEmail1.Text = '' then begin
     chkEmail.Show;
     EditEmail1.SetFocus;
-    Exit;
 
   end else if EditEmail2.Text = '' then begin
     chkEmail.Show;
     EditEmail2.SetFocus;
-    Exit;
 
   end else begin
     MName  := HDataMethod.HITSEncrypt(EditName.Text, KEY);
@@ -141,9 +138,6 @@ begin
       Open;
 
       if RecordCount > 0 then begin
-
-        Screen.Cursor := crHourGlass;
-
         eemail := EditEmail1.Text + '@' + EditEmail2.Text;
         ebody  := HDataMethod.GetRandomString;
 
@@ -151,8 +145,6 @@ begin
         DataModule1.emailCerti.ebody     := ebody;
 
         DataModule1.SendEmail('가계부 아이디찾기 이메일 인증번호 입니다.', ebody);
-
-        Screen.Cursor := crDefault;
 
         EmailchkForm := TEmailchkForm.Create(Application);
 

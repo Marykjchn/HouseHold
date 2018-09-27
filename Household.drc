@@ -8,422 +8,422 @@
   resources were bound to the produced executable.
 */
 
-#define IdResourceStrings_RSSSLAcceptError 64480
-#define IdResourceStrings_RSSSLConnectError 64481
-#define IdResourceStrings_RSSSLSettingCipherError 64482
-#define IdResourceStrings_RSSSLCreatingContextError 64483
-#define IdResourceStrings_RSSSLLoadingRootCertError 64484
-#define IdResourceStrings_RSSSLLoadingCertError 64485
-#define IdResourceStrings_RSSSLLoadingKeyError 64486
-#define IdResourceStrings_RSSSLGetMethodError 64487
-#define IdResourceStrings_RSSSLDataBindingError 64488
-#define IdResourceStrings_RSOSSLModeNotSet 64489
-#define IdResourceStrings_RSOSSLCouldNotLoadSSLLibrary 64490
-#define IdResourceStrings_RSOSSLStatusString 64491
-#define IdResourceStrings_RSUnevenSizeInDecodeStream 64492
-#define IdResourceStrings_RSUnevenSizeInEncodeStream 64493
-#define IdResourceStrings_RSMessageEncoderNotFound 64494
-#define IdResourceStrings_RSUnrecognizedUUEEncodingScheme 64495
-#define IdResourceStrings_RSTIdMessagePartCreate 64496
-#define IdResourceStrings_RSSocksRequestFailed 64497
-#define IdResourceStrings_RSSocksRequestServerFailed 64498
-#define IdResourceStrings_RSSocksRequestIdentFailed 64499
-#define IdResourceStrings_RSSocksUnknownError 64500
-#define IdResourceStrings_RSSocksServerRespondError 64501
-#define IdResourceStrings_RSSocksAuthMethodError 64502
-#define IdResourceStrings_RSSocksAuthError 64503
-#define IdResourceStrings_RSSocksServerGeneralError 64504
-#define IdResourceStrings_RSSocksServerPermissionError 64505
-#define IdResourceStrings_RSSocksServerNetUnreachableError 64506
-#define IdResourceStrings_RSSocksServerHostUnreachableError 64507
-#define IdResourceStrings_RSSocksServerConnectionRefusedError 64508
-#define IdResourceStrings_RSSocksServerTTLExpiredError 64509
-#define IdResourceStrings_RSSocksServerCommandError 64510
-#define IdResourceStrings_RSSocksServerAddressError 64511
-#define IdResourceStrings_RSStackENETRESET 64512
-#define IdResourceStrings_RSStackECONNABORTED 64513
-#define IdResourceStrings_RSStackECONNRESET 64514
-#define IdResourceStrings_RSStackENOBUFS 64515
-#define IdResourceStrings_RSStackEISCONN 64516
-#define IdResourceStrings_RSStackENOTCONN 64517
-#define IdResourceStrings_RSStackESHUTDOWN 64518
-#define IdResourceStrings_RSStackETOOMANYREFS 64519
-#define IdResourceStrings_RSStackETIMEDOUT 64520
-#define IdResourceStrings_RSStackECONNREFUSED 64521
-#define IdResourceStrings_RSStackELOOP 64522
-#define IdResourceStrings_RSStackENAMETOOLONG 64523
-#define IdResourceStrings_RSStackEHOSTDOWN 64524
-#define IdResourceStrings_RSStackEHOSTUNREACH 64525
-#define IdResourceStrings_RSStackENOTEMPTY 64526
-#define IdResourceStrings_RSStackHOST_NOT_FOUND 64527
-#define IdResourceStrings_RSStackEINPROGRESS 64528
-#define IdResourceStrings_RSStackEALREADY 64529
-#define IdResourceStrings_RSStackENOTSOCK 64530
-#define IdResourceStrings_RSStackEDESTADDRREQ 64531
-#define IdResourceStrings_RSStackEMSGSIZE 64532
-#define IdResourceStrings_RSStackEPROTOTYPE 64533
-#define IdResourceStrings_RSStackENOPROTOOPT 64534
-#define IdResourceStrings_RSStackEPROTONOSUPPORT 64535
-#define IdResourceStrings_RSStackESOCKTNOSUPPORT 64536
-#define IdResourceStrings_RSStackEOPNOTSUPP 64537
-#define IdResourceStrings_RSStackEPFNOSUPPORT 64538
-#define IdResourceStrings_RSStackEAFNOSUPPORT 64539
-#define IdResourceStrings_RSStackEADDRINUSE 64540
-#define IdResourceStrings_RSStackEADDRNOTAVAIL 64541
-#define IdResourceStrings_RSStackENETDOWN 64542
-#define IdResourceStrings_RSStackENETUNREACH 64543
-#define IdResourceStrings_RSStatusText 64544
-#define IdResourceStrings_RSConnectTimeout 64545
-#define IdResourceStrings_RSMsgClientEncodingText 64546
-#define IdResourceStrings_RSMsgClientEncodingAttachment 64547
-#define IdResourceStrings_RSMsgClientUnkownMessagePartType 64548
-#define IdResourceStrings_RSMsgClientInvalidEncoding 64549
-#define IdResourceStrings_RSInvalidServiceName 64550
-#define IdResourceStrings_RSStackError 64551
-#define IdResourceStrings_RSStackInvalidIP 64552
-#define IdResourceStrings_RSStackEINTR 64553
-#define IdResourceStrings_RSStackEBADF 64554
-#define IdResourceStrings_RSStackEACCES 64555
-#define IdResourceStrings_RSStackEFAULT 64556
-#define IdResourceStrings_RSStackEINVAL 64557
-#define IdResourceStrings_RSStackEMFILE 64558
-#define IdResourceStrings_RSStackEWOULDBLOCK 64559
-#define IdResourceStrings_RSOnlyOneAntiFreeze 64560
-#define IdResourceStrings_RSNotConnected 64561
-#define IdResourceStrings_RSObjectTypeNotSupported 64562
-#define IdResourceStrings_RSIdNoDataToRead 64563
-#define IdResourceStrings_RSCanNotBindRange 64564
-#define IdResourceStrings_RSInvalidPortRange 64565
-#define IdResourceStrings_RSReadTimeout 64566
-#define IdResourceStrings_RSReadLnMaxLineLengthExceeded 64567
-#define IdResourceStrings_RSEMailSymbolOutsideAddress 64568
-#define IdResourceStrings_RSWS2CallError 64569
-#define IdResourceStrings_RSWS2LoadError 64570
-#define IdResourceStrings_RSStatusResolving 64571
-#define IdResourceStrings_RSStatusConnecting 64572
-#define IdResourceStrings_RSStatusConnected 64573
-#define IdResourceStrings_RSStatusDisconnecting 64574
-#define IdResourceStrings_RSStatusDisconnected 64575
-#define cxExportStrs_scxInvalidColumnIndex 64576
-#define cxExportStrs_scxInvalidRowIndex 64577
-#define cxExportStrs_scxInvalidStyleIndex 64578
-#define cxExportStrs_scxExportToExcel 64579
-#define cxExportStrs_scxWorkbookWrite 64580
-#define cxExportStrs_scxInvalidCellDimension 64581
-#define cxExportStrs_scxBoolTrue 64582
-#define IdResourceStrings_RSAlreadyConnected 64583
-#define IdResourceStrings_RSCannotAllocateSocket 64584
-#define IdResourceStrings_RSConnectionClosedGracefully 64585
-#define IdResourceStrings_RSCouldNotBindSocket 64586
-#define IdResourceStrings_RSFailedTimeZoneInfo 64587
-#define IdResourceStrings_RSNotEnoughDataInBuffer 64588
-#define IdResourceStrings_RSWinsockInitializationError 64589
-#define IdResourceStrings_RSSetSizeExceeded 64590
-#define IdResourceStrings_RSFileNotFound 64591
-#define InResourceStrings_RSInvalidServiceName 64592
-#define InResourceStrings_RSIPv6Unavailable 64593
-#define InResourceStrings_RSIPVersionUnsupported 64594
-#define InResourceStrings_RSNotAllBytesSent 64595
-#define InResourceStrings_RSPackageSizeTooBig 64596
-#define InResourceStrings_RSSetSizeExceeded 64597
-#define InResourceStringsCore_RSThreadTerminateAndWaitFor 64598
-#define InResourceStringsProtocols_RSFailedTimeZoneInfo 64599
-#define cxExportStrs_scxUnsupportedExport 64600
-#define cxExportStrs_scxStyleManagerKill 64601
-#define cxExportStrs_scxExportToHtml 64602
-#define cxExportStrs_scxExportToXml 64603
-#define cxExportStrs_scxExportToText 64604
-#define cxExportStrs_scxIllegalWidth 64605
-#define cxExportStrs_scxInvalidColumnRowCount 64606
-#define cxExportStrs_scxIllegalHeight 64607
-#define InResourceStrings_RSStackENETRESET 64608
-#define InResourceStrings_RSStackECONNABORTED 64609
-#define InResourceStrings_RSStackECONNRESET 64610
-#define InResourceStrings_RSStackENOBUFS 64611
-#define InResourceStrings_RSStackEISCONN 64612
-#define InResourceStrings_RSStackENOTCONN 64613
-#define InResourceStrings_RSStackESHUTDOWN 64614
-#define InResourceStrings_RSStackETOOMANYREFS 64615
-#define InResourceStrings_RSStackETIMEDOUT 64616
-#define InResourceStrings_RSStackECONNREFUSED 64617
-#define InResourceStrings_RSStackELOOP 64618
-#define InResourceStrings_RSStackENAMETOOLONG 64619
-#define InResourceStrings_RSStackEHOSTDOWN 64620
-#define InResourceStrings_RSStackEHOSTUNREACH 64621
-#define InResourceStrings_RSStackENOTEMPTY 64622
-#define InResourceStrings_RSStackHOST_NOT_FOUND 64623
-#define InResourceStrings_RSStackEINPROGRESS 64624
-#define InResourceStrings_RSStackEALREADY 64625
-#define InResourceStrings_RSStackENOTSOCK 64626
-#define InResourceStrings_RSStackEDESTADDRREQ 64627
-#define InResourceStrings_RSStackEMSGSIZE 64628
-#define InResourceStrings_RSStackEPROTOTYPE 64629
-#define InResourceStrings_RSStackENOPROTOOPT 64630
-#define InResourceStrings_RSStackEPROTONOSUPPORT 64631
-#define InResourceStrings_RSStackESOCKTNOSUPPORT 64632
-#define InResourceStrings_RSStackEOPNOTSUPP 64633
-#define InResourceStrings_RSStackEPFNOSUPPORT 64634
-#define InResourceStrings_RSStackEAFNOSUPPORT 64635
-#define InResourceStrings_RSStackEADDRINUSE 64636
-#define InResourceStrings_RSStackEADDRNOTAVAIL 64637
-#define InResourceStrings_RSStackENETDOWN 64638
-#define InResourceStrings_RSStackENETUNREACH 64639
-#define IWResourceStrings_LogCSSRequest 64640
-#define IWResourceStrings_ExceptionSessionExpired 64641
-#define IWResourceStrings_ExceptionOther 64642
-#define IWResourceStrings_TrappedException 64643
-#define IWResourceStrings_Doodle 64644
-#define InResourceStrings_RSWinsockCallError 64645
-#define InResourceStrings_RSWinsockLoadError 64646
-#define InResourceStrings_RSWinsockInitializationError 64647
-#define InResourceStrings_RSStackError 64648
-#define InResourceStrings_RSStackEINTR 64649
-#define InResourceStrings_RSStackEBADF 64650
-#define InResourceStrings_RSStackEACCES 64651
-#define InResourceStrings_RSStackEFAULT 64652
-#define InResourceStrings_RSStackEINVAL 64653
-#define InResourceStrings_RSStackEMFILE 64654
-#define InResourceStrings_RSStackEWOULDBLOCK 64655
-#define IWResourceStrings_UseParamQueryTitle 64656
-#define IWResourceStrings_UseParamQueryPrompt 64657
-#define IWResourceStrings_ConnectionSpeedCaption 64658
-#define IWResourceStrings_IncorrectSpeed 64659
-#define IWResourceStrings_SimulSpeed 64660
-#define IWResourceStrings_ConnectionSpeed 64661
-#define IWResourceStrings_CanSetControlToSelf 64662
-#define IWResourceStrings_ZLibNotFound 64663
-#define IWResourceStrings_WrongZLibVer 64664
-#define IWResourceStrings_Today 64665
-#define IWResourceStrings_Previous 64666
-#define IWResourceStrings_Next 64667
-#define IWResourceStrings_EditHTML 64668
-#define IWResourceStrings_PreviewHTML 64669
-#define IWResourceStrings_InvalidTimeEditFormat 64670
-#define IWResourceStrings_MissingContainerOnFrame 64671
-#define IWResourceStrings_ExecuteFirefoxHint 64672
-#define IWResourceStrings_ExecuteNS6Caption 64673
-#define IWResourceStrings_ExecuteNS6Hint 64674
-#define IWResourceStrings_ExecuteOperaCaption 64675
-#define IWResourceStrings_ExecuteOperaHint 64676
-#define IWResourceStrings_UseSSLCaption 64677
-#define IWResourceStrings_UseSSLHint 64678
-#define IWResourceStrings_ParamCaption 64679
-#define IWResourceStrings_ParamHint 64680
-#define IWResourceStrings_AboutCaption 64681
-#define IWResourceStrings_AboutHint 64682
-#define IWResourceStrings_FileMenuCaption 64683
-#define IWResourceStrings_RunMenuCaption 64684
-#define IWResourceStrings_SelectBrowserCaption 64685
-#define IWResourceStrings_HelpCaption 64686
-#define IWResourceStrings_ToolBarCaption 64687
-#define IWResourceStrings_ClearSessionsHint 64688
-#define IWResourceStrings_CopyClipboardCaption 64689
-#define IWResourceStrings_CopyClipboardHint 64690
-#define IWResourceStrings_ShowDebugInfoCaption 64691
-#define IWResourceStrings_ShowDebugInfoHint 64692
-#define IWResourceStrings_ExitCaption 64693
-#define IWResourceStrings_ExitHint 64694
-#define IWResourceStrings_ExecuteCaption 64695
-#define IWResourceStrings_ExecuteHint 64696
-#define IWResourceStrings_ExecuteDefaultCaption 64697
-#define IWResourceStrings_ExecuteDefaultHint 64698
-#define IWResourceStrings_ExecuteIECaption 64699
-#define IWResourceStrings_ExecuteIEHint 64700
-#define IWResourceStrings_ExecuteMozillaCaption 64701
-#define IWResourceStrings_ExecuteMozillaHint 64702
-#define IWResourceStrings_ExecuteFirefoxCaption 64703
-#define IWResourceStrings_LoadImageError 64704
-#define IWResourceStrings_UnrecognizedCommand 64705
-#define IWResourceStrings_LayoutMgrNeeded32 64706
-#define IWResourceStrings_LogExecute 64707
-#define IWResourceStrings_LogCacheFile 64708
-#define IWResourceStrings_LogInternalGraphic 64709
-#define IWResourceStrings_LogJavaScript 64710
-#define IWResourceStrings_LogNewSession 64711
-#define IWResourceStrings_LogExternalFile 64712
-#define IWResourceStrings_LogExplicitStop 64713
-#define IWResourceStrings_LogUnrecognizedCommand 64714
-#define IWResourceStrings_LogActiveSessions 64715
-#define IWResourceStrings_LogTotalBytes 64716
-#define IWResourceStrings_LogResizeCommand 64717
-#define IWResourceStrings_LogUpdateCommand 64718
-#define IWResourceStrings_ClearSessionsCaption 64719
-#define IWResourceStrings_NewRoot 64720
-#define IWResourceStrings_NewItem 64721
-#define IWResourceStrings_DeleteItem 64722
-#define IWResourceStrings_EditCaption 64723
-#define IWResourceStrings_MsgDeleteItem 64724
-#define IWResourceStrings_ApacheDSOError 64725
-#define IWResourceStrings_ISAPIError 64726
-#define IWResourceStrings_StandaloneError 64727
-#define IWResourceStrings_AuthFailed 64728
-#define IWResourceStrings_ToolBarError 64729
-#define IWResourceStrings_Redirecting 64730
-#define IWResourceStrings_CanUseIWControlOnVCLForm 64731
-#define IWResourceStrings_No4On32Form 64732
-#define IWResourceStrings_No32On4Form 64733
-#define IWResourceStrings_DublicateEventHandler 64734
-#define IWResourceStrings_MetaFileNotSupported 64735
-#define IWResourceStrings_NoRefereshWhileInEdit 64736
-#define IWResourceStrings_InvalidResponse 64737
-#define IWResourceStrings_DeleteMessage 64738
-#define IWResourceStrings_UpdateMessage 64739
-#define IWResourceStrings_CancelMessage 64740
-#define IWResourceStrings_InvalidSessionTimeout 64741
-#define IWResourceStrings_EmptyWorkAreaPath 64742
-#define IWResourceStrings_FormPreviewError 64743
-#define IWResourceStrings_HTMLEditorError 64744
-#define IWResourceStrings_IE55OrLater 64745
-#define IWResourceStrings_ScriptEditorCaption 64746
-#define IWResourceStrings_ScriptEditorEvent 64747
-#define IWResourceStrings_ScriptEditorCode 64748
-#define IWResourceStrings_OKButton 64749
-#define IWResourceStrings_CancelButton 64750
-#define IWResourceStrings_ApplyButton 64751
-#define IWResourceStrings_IWVersion 64752
-#define IWResourceStrings_HTTPPort 64753
-#define IWResourceStrings_HTTPSPort 64754
-#define IWResourceStrings_BindError 64755
-#define IWResourceStrings_LicenseNumber 64756
-#define IWResourceStrings_btnNameFirst 64757
-#define IWResourceStrings_btnNamePrior 64758
-#define IWResourceStrings_btnNameNext 64759
-#define IWResourceStrings_btnNameLast 64760
-#define IWResourceStrings_btnNameInsert 64761
-#define IWResourceStrings_btnNameDelete 64762
-#define IWResourceStrings_btnNameEdit 64763
-#define IWResourceStrings_btnNamePost 64764
-#define IWResourceStrings_btnNameCancel 64765
-#define IWResourceStrings_btnNameRefresh 64766
-#define IWResourceStrings_UnsupportedFieldType 64767
-#define IWResourceStrings_IE 64768
-#define IWResourceStrings_NS6Gecko 64769
-#define IWResourceStrings_NS7Gecko 64770
-#define IWResourceStrings_Opera 64771
-#define IWResourceStrings_NS4 64772
-#define IWResourceStrings_Other 64773
-#define IWResourceStrings_HTML32Test 64774
-#define IWResourceStrings_WMLTest 64775
-#define IWResourceStrings_WAP 64776
-#define IWResourceStrings_XHTMLMPTest 64777
-#define IWResourceStrings_Safari 64778
-#define IWResourceStrings_Unrecognizable 64779
-#define IWResourceStrings_NoCookieSupport 64780
-#define IWResourceStrings_NoJSSupport 64781
-#define IWResourceStrings_CantFindInternalFile 64782
-#define IWResourceStrings_ExecuteError 64783
-#define IWResourceStrings_NoMainForm 64784
-#define IWResourceStrings_DeviceNotSupported 64785
-#define IWResourceStrings_NoServerControllerClass 64786
-#define IWResourceStrings_IWInitMissing 64787
-#define IWResourceStrings_UnknownSessionMethod 64788
-#define IWResourceStrings_InvalidBrowser 64789
-#define IWResourceStrings_MessageDialog 64790
-#define IWResourceStrings_ColorRed 64791
-#define IWResourceStrings_ColorBlue 64792
-#define IWResourceStrings_ColorGreen 64793
-#define IWResourceStrings_ColorYellow 64794
-#define IWResourceStrings_ColorBrown 64795
-#define IWResourceStrings_TextError 64796
-#define IWResourceStrings_CannotReceiveFocus 64797
-#define IWResourceStrings_ErrorCreatingSession 64798
-#define IWResourceStrings_UnknowBrowser 64799
-#define IWResourceStrings_SelectionRequired 64800
-#define IWResourceStrings_InvalidComponentName 64801
-#define IWResourceStrings_DroppedConnection 64802
-#define IWResourceStrings_NotFound 64803
-#define IWResourceStrings_NoSubmitComponent 64804
-#define IWResourceStrings_NoSubmitHandler 64805
-#define IWResourceStrings_InvalidFunction 64806
-#define IWResourceStrings_InvalidHeight 64807
-#define IWResourceStrings_InvalidWidth 64808
-#define IWResourceStrings_IndexOutOfBounds 64809
-#define IWResourceStrings_NoServerController 64810
-#define IWResourceStrings_SessionNotFound 64811
-#define IWResourceStrings_SessionAlreadyLocked 64812
-#define IWResourceStrings_NotForThisProcess 64813
-#define IWResourceStrings_RefreshWarning 64814
-#define IWResourceStrings_ResourceNotFound 64815
-#define IWResourceStrings_WMLCaption 64816
-#define IWResourceStrings_XHTMLMPCaption 64817
-#define IWResourceStrings_PleaseWait 64818
-#define IWResourceStrings_HTML32Hint 64819
-#define IWResourceStrings_WMLHint 64820
-#define IWResourceStrings_XHTMLMPHint 64821
-#define IWResourceStrings_UnknownClientType 64822
-#define IWResourceStrings_CannotShowNonAppForms 64823
-#define IWResourceStrings_CannotHideNonAppForms 64824
-#define IWResourceStrings_CannotReleaseNonAppForms 64825
-#define IWResourceStrings_UnknownBrowserType 64826
-#define IWResourceStrings_MustBeAppForm 64827
-#define IWResourceStrings_WrongIPForSession 64828
-#define IWResourceStrings_WrongBrowserForSession 64829
-#define IWResourceStrings_WrongSubnetForSession 64830
-#define IWResourceStrings_ValidationRequeredField 64831
-#define WebConst_sHTTPItemURI 64832
-#define WebConst_sHTTPItemEnabled 64833
-#define WebConst_sHTTPItemDefault 64834
-#define WebConst_sHTTPItemProducer 64835
-#define WebConst_sInternalApplicationError 64836
-#define IWResourceStrings_Ok 64837
-#define IWResourceStrings_PermissionDenied 64838
-#define IWResourceStrings_ShowMessageNotSupported 64839
-#define IWResourceStrings_SecureModeRequired 64840
-#define IWResourceStrings_NonSecureModeRequired 64841
-#define IWResourceStrings_AppStartedAndListening 64842
-#define IWResourceStrings_NotSupportedDuringPartialUpdate 64843
-#define IWResourceStrings_WebApplicationRequiered 64844
-#define IWResourceStrings_OptionsMenuCaption 64845
-#define IWResourceStrings_DeviceSimulationMenuCaption 64846
-#define IWResourceStrings_HTML32Caption 64847
-#define VDBConsts_SPriorRecord 64848
-#define VDBConsts_SNextRecord 64849
-#define VDBConsts_SLastRecord 64850
-#define VDBConsts_SInsertRecord 64851
-#define VDBConsts_SDeleteRecord 64852
-#define VDBConsts_SEditRecord 64853
-#define VDBConsts_SPostEdit 64854
-#define VDBConsts_SCancelEdit 64855
-#define VDBConsts_SRefreshRecord 64856
-#define VDBConsts_SPropDefByLookup 64857
-#define VDBConsts_SRemoteLogin 64858
-#define WebConst_sErrorDecodingURLText 64859
-#define WebConst_sInvalidURLEncodedChar 64860
-#define WebConst_sDuplicateActionName 64861
-#define WebConst_sOnlyOneDispatcher 64862
-#define WebConst_sHTTPItemName 64863
-#define cxGridStrs_scxGridNoDataInfoText 64864
-#define cxGridStrs_scxGridNewItemRowInfoText 64865
-#define cxGridStrs_scxGridFilterIsEmpty 64866
-#define cxGridStrs_scxGridCustomizationFormCaption 64867
-#define cxGridStrs_scxGridCustomizationFormColumnsPageCaption 64868
-#define cxGridStrs_scxGridGroupByBoxCaption 64869
-#define cxGridStrs_scxGridFilterCustomizeButtonCaption 64870
-#define cxGridStrs_scxGridColumnsQuickCustomizationHint 64871
-#define cxGridStrs_scxGridCustomizationFormBandsPageCaption 64872
-#define cxGridStrs_scxGridBandsQuickCustomizationHint 64873
-#define cxGridStrs_scxGridCustomizationFormRowsPageCaption 64874
-#define cxGridStrs_scxNotExistGridView 64875
-#define cxGridStrs_scxNotExistGridLevel 64876
-#define cxGridStrs_scxCantCreateExportOutputFile 64877
-#define cxGridStrs_scxGridChartValueHintFormat 64878
-#define VDBConsts_SFirstRecord 64879
-#define AdvCardList_SResDesignNoItemDefValue 64880
-#define AdvCardList_SResTrue 64881
-#define AdvCardList_SResFalse 64882
-#define cxPCConsts_scxPCImageListIndexError 64883
-#define cxPCConsts_scxPCNoBaseImages 64884
-#define cxPCConsts_scxPCNoRegisteredStyles 64885
-#define cxPCConsts_scxPCPageIndexError 64886
-#define cxPCConsts_scxPCPainterClassError 64887
-#define cxPCConsts_scxPCTabCountEqualsZero 64888
-#define cxPCConsts_scxPCTabIndexError 64889
-#define cxPCConsts_scxPCTabVisibleIndexOutsOfBounds 64890
-#define cxPCConsts_scxPCVisibleTabListEmpty 64891
-#define cxPCConsts_scxPCAllowRotateError 64892
-#define cxGridStrs_scxGridDeletingConfirmationCaption 64893
-#define cxGridStrs_scxGridDeletingFocusedConfirmationText 64894
-#define cxGridStrs_scxGridDeletingSelectedConfirmationText 64895
+#define InResourceStrings_RSStackETIMEDOUT 64480
+#define InResourceStrings_RSStackECONNREFUSED 64481
+#define InResourceStrings_RSStackELOOP 64482
+#define InResourceStrings_RSStackENAMETOOLONG 64483
+#define InResourceStrings_RSStackEHOSTDOWN 64484
+#define InResourceStrings_RSStackEHOSTUNREACH 64485
+#define InResourceStrings_RSStackENOTEMPTY 64486
+#define InResourceStrings_RSStackHOST_NOT_FOUND 64487
+#define InResourceStrings_RSInvalidServiceName 64488
+#define InResourceStrings_RSIPv6Unavailable 64489
+#define InResourceStrings_RSIPVersionUnsupported 64490
+#define InResourceStrings_RSNotAllBytesSent 64491
+#define InResourceStrings_RSPackageSizeTooBig 64492
+#define InResourceStrings_RSSetSizeExceeded 64493
+#define InResourceStringsCore_RSThreadTerminateAndWaitFor 64494
+#define InResourceStringsProtocols_RSFailedTimeZoneInfo 64495
+#define InResourceStrings_RSStackESOCKTNOSUPPORT 64496
+#define InResourceStrings_RSStackEOPNOTSUPP 64497
+#define InResourceStrings_RSStackEPFNOSUPPORT 64498
+#define InResourceStrings_RSStackEAFNOSUPPORT 64499
+#define InResourceStrings_RSStackEADDRINUSE 64500
+#define InResourceStrings_RSStackEADDRNOTAVAIL 64501
+#define InResourceStrings_RSStackENETDOWN 64502
+#define InResourceStrings_RSStackENETUNREACH 64503
+#define InResourceStrings_RSStackENETRESET 64504
+#define InResourceStrings_RSStackECONNABORTED 64505
+#define InResourceStrings_RSStackECONNRESET 64506
+#define InResourceStrings_RSStackENOBUFS 64507
+#define InResourceStrings_RSStackEISCONN 64508
+#define InResourceStrings_RSStackENOTCONN 64509
+#define InResourceStrings_RSStackESHUTDOWN 64510
+#define InResourceStrings_RSStackETOOMANYREFS 64511
+#define InResourceStrings_RSStackError 64512
+#define InResourceStrings_RSStackEINTR 64513
+#define InResourceStrings_RSStackEBADF 64514
+#define InResourceStrings_RSStackEACCES 64515
+#define InResourceStrings_RSStackEFAULT 64516
+#define InResourceStrings_RSStackEINVAL 64517
+#define InResourceStrings_RSStackEMFILE 64518
+#define InResourceStrings_RSStackEWOULDBLOCK 64519
+#define InResourceStrings_RSStackEINPROGRESS 64520
+#define InResourceStrings_RSStackEALREADY 64521
+#define InResourceStrings_RSStackENOTSOCK 64522
+#define InResourceStrings_RSStackEDESTADDRREQ 64523
+#define InResourceStrings_RSStackEMSGSIZE 64524
+#define InResourceStrings_RSStackEPROTOTYPE 64525
+#define InResourceStrings_RSStackENOPROTOOPT 64526
+#define InResourceStrings_RSStackEPROTONOSUPPORT 64527
+#define IWResourceStrings_WrongZLibVer 64528
+#define IWResourceStrings_Today 64529
+#define IWResourceStrings_Previous 64530
+#define IWResourceStrings_Next 64531
+#define IWResourceStrings_EditHTML 64532
+#define IWResourceStrings_PreviewHTML 64533
+#define IWResourceStrings_InvalidTimeEditFormat 64534
+#define IWResourceStrings_MissingContainerOnFrame 64535
+#define IWResourceStrings_LogCSSRequest 64536
+#define IWResourceStrings_ExceptionSessionExpired 64537
+#define IWResourceStrings_ExceptionOther 64538
+#define IWResourceStrings_TrappedException 64539
+#define IWResourceStrings_Doodle 64540
+#define InResourceStrings_RSWinsockCallError 64541
+#define InResourceStrings_RSWinsockLoadError 64542
+#define InResourceStrings_RSWinsockInitializationError 64543
+#define IWResourceStrings_ParamHint 64544
+#define IWResourceStrings_AboutCaption 64545
+#define IWResourceStrings_AboutHint 64546
+#define IWResourceStrings_FileMenuCaption 64547
+#define IWResourceStrings_RunMenuCaption 64548
+#define IWResourceStrings_SelectBrowserCaption 64549
+#define IWResourceStrings_HelpCaption 64550
+#define IWResourceStrings_ToolBarCaption 64551
+#define IWResourceStrings_UseParamQueryTitle 64552
+#define IWResourceStrings_UseParamQueryPrompt 64553
+#define IWResourceStrings_ConnectionSpeedCaption 64554
+#define IWResourceStrings_IncorrectSpeed 64555
+#define IWResourceStrings_SimulSpeed 64556
+#define IWResourceStrings_ConnectionSpeed 64557
+#define IWResourceStrings_CanSetControlToSelf 64558
+#define IWResourceStrings_ZLibNotFound 64559
+#define IWResourceStrings_ExecuteHint 64560
+#define IWResourceStrings_ExecuteDefaultCaption 64561
+#define IWResourceStrings_ExecuteDefaultHint 64562
+#define IWResourceStrings_ExecuteIECaption 64563
+#define IWResourceStrings_ExecuteIEHint 64564
+#define IWResourceStrings_ExecuteMozillaCaption 64565
+#define IWResourceStrings_ExecuteMozillaHint 64566
+#define IWResourceStrings_ExecuteFirefoxCaption 64567
+#define IWResourceStrings_ExecuteFirefoxHint 64568
+#define IWResourceStrings_ExecuteNS6Caption 64569
+#define IWResourceStrings_ExecuteNS6Hint 64570
+#define IWResourceStrings_ExecuteOperaCaption 64571
+#define IWResourceStrings_ExecuteOperaHint 64572
+#define IWResourceStrings_UseSSLCaption 64573
+#define IWResourceStrings_UseSSLHint 64574
+#define IWResourceStrings_ParamCaption 64575
+#define IWResourceStrings_LogExternalFile 64576
+#define IWResourceStrings_LogExplicitStop 64577
+#define IWResourceStrings_LogUnrecognizedCommand 64578
+#define IWResourceStrings_LogActiveSessions 64579
+#define IWResourceStrings_LogTotalBytes 64580
+#define IWResourceStrings_LogResizeCommand 64581
+#define IWResourceStrings_LogUpdateCommand 64582
+#define IWResourceStrings_ClearSessionsCaption 64583
+#define IWResourceStrings_ClearSessionsHint 64584
+#define IWResourceStrings_CopyClipboardCaption 64585
+#define IWResourceStrings_CopyClipboardHint 64586
+#define IWResourceStrings_ShowDebugInfoCaption 64587
+#define IWResourceStrings_ShowDebugInfoHint 64588
+#define IWResourceStrings_ExitCaption 64589
+#define IWResourceStrings_ExitHint 64590
+#define IWResourceStrings_ExecuteCaption 64591
+#define IWResourceStrings_AuthFailed 64592
+#define IWResourceStrings_ToolBarError 64593
+#define IWResourceStrings_Redirecting 64594
+#define IWResourceStrings_CanUseIWControlOnVCLForm 64595
+#define IWResourceStrings_No4On32Form 64596
+#define IWResourceStrings_No32On4Form 64597
+#define IWResourceStrings_DublicateEventHandler 64598
+#define IWResourceStrings_MetaFileNotSupported 64599
+#define IWResourceStrings_LoadImageError 64600
+#define IWResourceStrings_UnrecognizedCommand 64601
+#define IWResourceStrings_LayoutMgrNeeded32 64602
+#define IWResourceStrings_LogExecute 64603
+#define IWResourceStrings_LogCacheFile 64604
+#define IWResourceStrings_LogInternalGraphic 64605
+#define IWResourceStrings_LogJavaScript 64606
+#define IWResourceStrings_LogNewSession 64607
+#define IWResourceStrings_HTMLEditorError 64608
+#define IWResourceStrings_IE55OrLater 64609
+#define IWResourceStrings_ScriptEditorCaption 64610
+#define IWResourceStrings_ScriptEditorEvent 64611
+#define IWResourceStrings_ScriptEditorCode 64612
+#define IWResourceStrings_OKButton 64613
+#define IWResourceStrings_CancelButton 64614
+#define IWResourceStrings_ApplyButton 64615
+#define IWResourceStrings_NewRoot 64616
+#define IWResourceStrings_NewItem 64617
+#define IWResourceStrings_DeleteItem 64618
+#define IWResourceStrings_EditCaption 64619
+#define IWResourceStrings_MsgDeleteItem 64620
+#define IWResourceStrings_ApacheDSOError 64621
+#define IWResourceStrings_ISAPIError 64622
+#define IWResourceStrings_StandaloneError 64623
+#define IWResourceStrings_btnNameLast 64624
+#define IWResourceStrings_btnNameInsert 64625
+#define IWResourceStrings_btnNameDelete 64626
+#define IWResourceStrings_btnNameEdit 64627
+#define IWResourceStrings_btnNamePost 64628
+#define IWResourceStrings_btnNameCancel 64629
+#define IWResourceStrings_btnNameRefresh 64630
+#define IWResourceStrings_UnsupportedFieldType 64631
+#define IWResourceStrings_NoRefereshWhileInEdit 64632
+#define IWResourceStrings_InvalidResponse 64633
+#define IWResourceStrings_DeleteMessage 64634
+#define IWResourceStrings_UpdateMessage 64635
+#define IWResourceStrings_CancelMessage 64636
+#define IWResourceStrings_InvalidSessionTimeout 64637
+#define IWResourceStrings_EmptyWorkAreaPath 64638
+#define IWResourceStrings_FormPreviewError 64639
+#define IWResourceStrings_WAP 64640
+#define IWResourceStrings_XHTMLMPTest 64641
+#define IWResourceStrings_Safari 64642
+#define IWResourceStrings_Unrecognizable 64643
+#define IWResourceStrings_NoCookieSupport 64644
+#define IWResourceStrings_NoJSSupport 64645
+#define IWResourceStrings_CantFindInternalFile 64646
+#define IWResourceStrings_ExecuteError 64647
+#define IWResourceStrings_IWVersion 64648
+#define IWResourceStrings_HTTPPort 64649
+#define IWResourceStrings_HTTPSPort 64650
+#define IWResourceStrings_BindError 64651
+#define IWResourceStrings_LicenseNumber 64652
+#define IWResourceStrings_btnNameFirst 64653
+#define IWResourceStrings_btnNamePrior 64654
+#define IWResourceStrings_btnNameNext 64655
+#define IWResourceStrings_ColorBlue 64656
+#define IWResourceStrings_ColorGreen 64657
+#define IWResourceStrings_ColorYellow 64658
+#define IWResourceStrings_ColorBrown 64659
+#define IWResourceStrings_TextError 64660
+#define IWResourceStrings_CannotReceiveFocus 64661
+#define IWResourceStrings_ErrorCreatingSession 64662
+#define IWResourceStrings_UnknowBrowser 64663
+#define IWResourceStrings_IE 64664
+#define IWResourceStrings_NS6Gecko 64665
+#define IWResourceStrings_NS7Gecko 64666
+#define IWResourceStrings_Opera 64667
+#define IWResourceStrings_NS4 64668
+#define IWResourceStrings_Other 64669
+#define IWResourceStrings_HTML32Test 64670
+#define IWResourceStrings_WMLTest 64671
+#define IWResourceStrings_InvalidWidth 64672
+#define IWResourceStrings_IndexOutOfBounds 64673
+#define IWResourceStrings_NoServerController 64674
+#define IWResourceStrings_SessionNotFound 64675
+#define IWResourceStrings_SessionAlreadyLocked 64676
+#define IWResourceStrings_NotForThisProcess 64677
+#define IWResourceStrings_RefreshWarning 64678
+#define IWResourceStrings_ResourceNotFound 64679
+#define IWResourceStrings_NoMainForm 64680
+#define IWResourceStrings_DeviceNotSupported 64681
+#define IWResourceStrings_NoServerControllerClass 64682
+#define IWResourceStrings_IWInitMissing 64683
+#define IWResourceStrings_UnknownSessionMethod 64684
+#define IWResourceStrings_InvalidBrowser 64685
+#define IWResourceStrings_MessageDialog 64686
+#define IWResourceStrings_ColorRed 64687
+#define IWResourceStrings_CannotHideNonAppForms 64688
+#define IWResourceStrings_CannotReleaseNonAppForms 64689
+#define IWResourceStrings_UnknownBrowserType 64690
+#define IWResourceStrings_MustBeAppForm 64691
+#define IWResourceStrings_WrongIPForSession 64692
+#define IWResourceStrings_WrongBrowserForSession 64693
+#define IWResourceStrings_WrongSubnetForSession 64694
+#define IWResourceStrings_ValidationRequeredField 64695
+#define IWResourceStrings_SelectionRequired 64696
+#define IWResourceStrings_InvalidComponentName 64697
+#define IWResourceStrings_DroppedConnection 64698
+#define IWResourceStrings_NotFound 64699
+#define IWResourceStrings_NoSubmitComponent 64700
+#define IWResourceStrings_NoSubmitHandler 64701
+#define IWResourceStrings_InvalidFunction 64702
+#define IWResourceStrings_InvalidHeight 64703
+#define IWResourceStrings_SecureModeRequired 64704
+#define IWResourceStrings_NonSecureModeRequired 64705
+#define IWResourceStrings_AppStartedAndListening 64706
+#define IWResourceStrings_NotSupportedDuringPartialUpdate 64707
+#define IWResourceStrings_WebApplicationRequiered 64708
+#define IWResourceStrings_OptionsMenuCaption 64709
+#define IWResourceStrings_DeviceSimulationMenuCaption 64710
+#define IWResourceStrings_HTML32Caption 64711
+#define IWResourceStrings_WMLCaption 64712
+#define IWResourceStrings_XHTMLMPCaption 64713
+#define IWResourceStrings_PleaseWait 64714
+#define IWResourceStrings_HTML32Hint 64715
+#define IWResourceStrings_WMLHint 64716
+#define IWResourceStrings_XHTMLMPHint 64717
+#define IWResourceStrings_UnknownClientType 64718
+#define IWResourceStrings_CannotShowNonAppForms 64719
+#define AdvCardList_SResDesignNoItemDefValue 64720
+#define AdvCardList_SResTrue 64721
+#define AdvCardList_SResFalse 64722
+#define WebConst_sErrorDecodingURLText 64723
+#define WebConst_sInvalidURLEncodedChar 64724
+#define WebConst_sDuplicateActionName 64725
+#define WebConst_sOnlyOneDispatcher 64726
+#define WebConst_sHTTPItemName 64727
+#define WebConst_sHTTPItemURI 64728
+#define WebConst_sHTTPItemEnabled 64729
+#define WebConst_sHTTPItemDefault 64730
+#define WebConst_sHTTPItemProducer 64731
+#define WebConst_sInternalApplicationError 64732
+#define IWResourceStrings_Ok 64733
+#define IWResourceStrings_PermissionDenied 64734
+#define IWResourceStrings_ShowMessageNotSupported 64735
+#define IdResourceStrings_RSSSLConnectError 64736
+#define IdResourceStrings_RSSSLSettingCipherError 64737
+#define IdResourceStrings_RSSSLCreatingContextError 64738
+#define IdResourceStrings_RSSSLLoadingRootCertError 64739
+#define IdResourceStrings_RSSSLLoadingCertError 64740
+#define IdResourceStrings_RSSSLLoadingKeyError 64741
+#define IdResourceStrings_RSSSLGetMethodError 64742
+#define IdResourceStrings_RSSSLDataBindingError 64743
+#define IdResourceStrings_RSOSSLModeNotSet 64744
+#define IdResourceStrings_RSOSSLCouldNotLoadSSLLibrary 64745
+#define IdResourceStrings_RSOSSLStatusString 64746
+#define IdResourceStrings_RSUnevenSizeInDecodeStream 64747
+#define IdResourceStrings_RSUnevenSizeInEncodeStream 64748
+#define IdResourceStrings_RSMessageEncoderNotFound 64749
+#define IdResourceStrings_RSUnrecognizedUUEEncodingScheme 64750
+#define AdvCardList_SResDesignNoItemCaption 64751
+#define IdResourceStrings_RSSocksRequestFailed 64752
+#define IdResourceStrings_RSSocksRequestServerFailed 64753
+#define IdResourceStrings_RSSocksRequestIdentFailed 64754
+#define IdResourceStrings_RSSocksUnknownError 64755
+#define IdResourceStrings_RSSocksServerRespondError 64756
+#define IdResourceStrings_RSSocksAuthMethodError 64757
+#define IdResourceStrings_RSSocksAuthError 64758
+#define IdResourceStrings_RSSocksServerGeneralError 64759
+#define IdResourceStrings_RSSocksServerPermissionError 64760
+#define IdResourceStrings_RSSocksServerNetUnreachableError 64761
+#define IdResourceStrings_RSSocksServerHostUnreachableError 64762
+#define IdResourceStrings_RSSocksServerConnectionRefusedError 64763
+#define IdResourceStrings_RSSocksServerTTLExpiredError 64764
+#define IdResourceStrings_RSSocksServerCommandError 64765
+#define IdResourceStrings_RSSocksServerAddressError 64766
+#define IdResourceStrings_RSSSLAcceptError 64767
+#define IdResourceStrings_RSStackECONNABORTED 64768
+#define IdResourceStrings_RSStackECONNRESET 64769
+#define IdResourceStrings_RSStackENOBUFS 64770
+#define IdResourceStrings_RSStackEISCONN 64771
+#define IdResourceStrings_RSStackENOTCONN 64772
+#define IdResourceStrings_RSStackESHUTDOWN 64773
+#define IdResourceStrings_RSStackETOOMANYREFS 64774
+#define IdResourceStrings_RSStackETIMEDOUT 64775
+#define IdResourceStrings_RSStackECONNREFUSED 64776
+#define IdResourceStrings_RSStackELOOP 64777
+#define IdResourceStrings_RSStackENAMETOOLONG 64778
+#define IdResourceStrings_RSStackEHOSTDOWN 64779
+#define IdResourceStrings_RSStackEHOSTUNREACH 64780
+#define IdResourceStrings_RSStackENOTEMPTY 64781
+#define IdResourceStrings_RSStackHOST_NOT_FOUND 64782
+#define IdResourceStrings_RSTIdMessagePartCreate 64783
+#define IdResourceStrings_RSStackEALREADY 64784
+#define IdResourceStrings_RSStackENOTSOCK 64785
+#define IdResourceStrings_RSStackEDESTADDRREQ 64786
+#define IdResourceStrings_RSStackEMSGSIZE 64787
+#define IdResourceStrings_RSStackEPROTOTYPE 64788
+#define IdResourceStrings_RSStackENOPROTOOPT 64789
+#define IdResourceStrings_RSStackEPROTONOSUPPORT 64790
+#define IdResourceStrings_RSStackESOCKTNOSUPPORT 64791
+#define IdResourceStrings_RSStackEOPNOTSUPP 64792
+#define IdResourceStrings_RSStackEPFNOSUPPORT 64793
+#define IdResourceStrings_RSStackEAFNOSUPPORT 64794
+#define IdResourceStrings_RSStackEADDRINUSE 64795
+#define IdResourceStrings_RSStackEADDRNOTAVAIL 64796
+#define IdResourceStrings_RSStackENETDOWN 64797
+#define IdResourceStrings_RSStackENETUNREACH 64798
+#define IdResourceStrings_RSStackENETRESET 64799
+#define IdResourceStrings_RSConnectTimeout 64800
+#define IdResourceStrings_RSMsgClientEncodingText 64801
+#define IdResourceStrings_RSMsgClientEncodingAttachment 64802
+#define IdResourceStrings_RSMsgClientUnkownMessagePartType 64803
+#define IdResourceStrings_RSMsgClientInvalidEncoding 64804
+#define IdResourceStrings_RSInvalidServiceName 64805
+#define IdResourceStrings_RSStackError 64806
+#define IdResourceStrings_RSStackInvalidIP 64807
+#define IdResourceStrings_RSStackEINTR 64808
+#define IdResourceStrings_RSStackEBADF 64809
+#define IdResourceStrings_RSStackEACCES 64810
+#define IdResourceStrings_RSStackEFAULT 64811
+#define IdResourceStrings_RSStackEINVAL 64812
+#define IdResourceStrings_RSStackEMFILE 64813
+#define IdResourceStrings_RSStackEWOULDBLOCK 64814
+#define IdResourceStrings_RSStackEINPROGRESS 64815
+#define IdResourceStrings_RSNotConnected 64816
+#define IdResourceStrings_RSObjectTypeNotSupported 64817
+#define IdResourceStrings_RSIdNoDataToRead 64818
+#define IdResourceStrings_RSCanNotBindRange 64819
+#define IdResourceStrings_RSInvalidPortRange 64820
+#define IdResourceStrings_RSReadTimeout 64821
+#define IdResourceStrings_RSReadLnMaxLineLengthExceeded 64822
+#define IdResourceStrings_RSEMailSymbolOutsideAddress 64823
+#define IdResourceStrings_RSWS2CallError 64824
+#define IdResourceStrings_RSWS2LoadError 64825
+#define IdResourceStrings_RSStatusResolving 64826
+#define IdResourceStrings_RSStatusConnecting 64827
+#define IdResourceStrings_RSStatusConnected 64828
+#define IdResourceStrings_RSStatusDisconnecting 64829
+#define IdResourceStrings_RSStatusDisconnected 64830
+#define IdResourceStrings_RSStatusText 64831
+#define cxExportStrs_scxInvalidRowIndex 64832
+#define cxExportStrs_scxInvalidStyleIndex 64833
+#define cxExportStrs_scxExportToExcel 64834
+#define cxExportStrs_scxWorkbookWrite 64835
+#define cxExportStrs_scxInvalidCellDimension 64836
+#define cxExportStrs_scxBoolTrue 64837
+#define IdResourceStrings_RSAlreadyConnected 64838
+#define IdResourceStrings_RSCannotAllocateSocket 64839
+#define IdResourceStrings_RSConnectionClosedGracefully 64840
+#define IdResourceStrings_RSCouldNotBindSocket 64841
+#define IdResourceStrings_RSFailedTimeZoneInfo 64842
+#define IdResourceStrings_RSNotEnoughDataInBuffer 64843
+#define IdResourceStrings_RSWinsockInitializationError 64844
+#define IdResourceStrings_RSSetSizeExceeded 64845
+#define IdResourceStrings_RSFileNotFound 64846
+#define IdResourceStrings_RSOnlyOneAntiFreeze 64847
+#define VDBConsts_SDeleteRecord 64848
+#define VDBConsts_SEditRecord 64849
+#define VDBConsts_SPostEdit 64850
+#define VDBConsts_SCancelEdit 64851
+#define VDBConsts_SRefreshRecord 64852
+#define VDBConsts_SPropDefByLookup 64853
+#define VDBConsts_SRemoteLogin 64854
+#define cxExportStrs_scxUnsupportedExport 64855
+#define cxExportStrs_scxStyleManagerKill 64856
+#define cxExportStrs_scxExportToHtml 64857
+#define cxExportStrs_scxExportToXml 64858
+#define cxExportStrs_scxExportToText 64859
+#define cxExportStrs_scxIllegalWidth 64860
+#define cxExportStrs_scxInvalidColumnRowCount 64861
+#define cxExportStrs_scxIllegalHeight 64862
+#define cxExportStrs_scxInvalidColumnIndex 64863
+#define cxGridStrs_scxGridCustomizationFormColumnsPageCaption 64864
+#define cxGridStrs_scxGridGroupByBoxCaption 64865
+#define cxGridStrs_scxGridFilterCustomizeButtonCaption 64866
+#define cxGridStrs_scxGridColumnsQuickCustomizationHint 64867
+#define cxGridStrs_scxGridCustomizationFormBandsPageCaption 64868
+#define cxGridStrs_scxGridBandsQuickCustomizationHint 64869
+#define cxGridStrs_scxGridCustomizationFormRowsPageCaption 64870
+#define cxGridStrs_scxNotExistGridView 64871
+#define cxGridStrs_scxNotExistGridLevel 64872
+#define cxGridStrs_scxCantCreateExportOutputFile 64873
+#define cxGridStrs_scxGridChartValueHintFormat 64874
+#define VDBConsts_SFirstRecord 64875
+#define VDBConsts_SPriorRecord 64876
+#define VDBConsts_SNextRecord 64877
+#define VDBConsts_SLastRecord 64878
+#define VDBConsts_SInsertRecord 64879
+#define cxPCConsts_scxPCNoBaseImages 64880
+#define cxPCConsts_scxPCNoRegisteredStyles 64881
+#define cxPCConsts_scxPCPageIndexError 64882
+#define cxPCConsts_scxPCPainterClassError 64883
+#define cxPCConsts_scxPCTabCountEqualsZero 64884
+#define cxPCConsts_scxPCTabIndexError 64885
+#define cxPCConsts_scxPCTabVisibleIndexOutsOfBounds 64886
+#define cxPCConsts_scxPCVisibleTabListEmpty 64887
+#define cxPCConsts_scxPCAllowRotateError 64888
+#define cxGridStrs_scxGridDeletingConfirmationCaption 64889
+#define cxGridStrs_scxGridDeletingFocusedConfirmationText 64890
+#define cxGridStrs_scxGridDeletingSelectedConfirmationText 64891
+#define cxGridStrs_scxGridNoDataInfoText 64892
+#define cxGridStrs_scxGridNewItemRowInfoText 64893
+#define cxGridStrs_scxGridFilterIsEmpty 64894
+#define cxGridStrs_scxGridCustomizationFormCaption 64895
 #define OraConsts_SMissingDataSetField 64896
 #define OraConsts_SKeyFieldNotFound 64897
 #define OraConsts_SInvalidInterval 64898
@@ -439,7 +439,7 @@
 #define OraConsts_SChangeNotifyNotSupportedWithDirect 64908
 #define OraConsts_SChangeNotifyOCIVersion 64909
 #define OraConsts_SChangeNotifyServerVersion 64910
-#define AdvCardList_SResDesignNoItemCaption 64911
+#define cxPCConsts_scxPCImageListIndexError 64911
 #define OraConsts_SNotEnoughInputParams 64912
 #define OraConsts_STooNanyOutputParams 64913
 #define OraConsts_SNotEnoughOutputParams 64914
@@ -1066,7 +1066,262 @@
 #define SysConst_SEndOfFile 65535
 STRINGTABLE
 BEGIN
-	IdResourceStrings_RSSSLAcceptError,	"Error accepting connection with SSL."
+	InResourceStrings_RSStackETIMEDOUT,	"Connection timed out."
+	InResourceStrings_RSStackECONNREFUSED,	"Connection refused."
+	InResourceStrings_RSStackELOOP,	"Too many levels of symbolic links."
+	InResourceStrings_RSStackENAMETOOLONG,	"File name too long."
+	InResourceStrings_RSStackEHOSTDOWN,	"Host is down."
+	InResourceStrings_RSStackEHOSTUNREACH,	"No route to host."
+	InResourceStrings_RSStackENOTEMPTY,	"Directory not empty"
+	InResourceStrings_RSStackHOST_NOT_FOUND,	"Host not found."
+	InResourceStrings_RSInvalidServiceName,	"%s is not a valid service."
+	InResourceStrings_RSIPv6Unavailable,	"IPv6 unavailable"
+	InResourceStrings_RSIPVersionUnsupported,	"The requested IPVersion / Address family is not supported."
+	InResourceStrings_RSNotAllBytesSent,	"Not all bytes sent."
+	InResourceStrings_RSPackageSizeTooBig,	"Package Size Too Big."
+	InResourceStrings_RSSetSizeExceeded,	"Set Size Exceeded."
+	InResourceStringsCore_RSThreadTerminateAndWaitFor,	"Cannot call TerminateAndWaitFor on FreeAndTerminate threads"
+	InResourceStringsProtocols_RSFailedTimeZoneInfo,	"Failed attempting to retrieve time zone information."
+	InResourceStrings_RSStackESOCKTNOSUPPORT,	"Socket type not supported."
+	InResourceStrings_RSStackEOPNOTSUPP,	"Operation not supported on socket."
+	InResourceStrings_RSStackEPFNOSUPPORT,	"Protocol family not supported."
+	InResourceStrings_RSStackEAFNOSUPPORT,	"Address family not supported by protocol family."
+	InResourceStrings_RSStackEADDRINUSE,	"Address already in use."
+	InResourceStrings_RSStackEADDRNOTAVAIL,	"Cannot assign requested address."
+	InResourceStrings_RSStackENETDOWN,	"Network is down."
+	InResourceStrings_RSStackENETUNREACH,	"Network is unreachable."
+	InResourceStrings_RSStackENETRESET,	"Net dropped connection or reset."
+	InResourceStrings_RSStackECONNABORTED,	"Software caused connection abort."
+	InResourceStrings_RSStackECONNRESET,	"Connection reset by peer."
+	InResourceStrings_RSStackENOBUFS,	"No buffer space available."
+	InResourceStrings_RSStackEISCONN,	"Socket is already connected."
+	InResourceStrings_RSStackENOTCONN,	"Socket is not connected."
+	InResourceStrings_RSStackESHUTDOWN,	"Cannot send or receive after socket is closed."
+	InResourceStrings_RSStackETOOMANYREFS,	"Too many references, cannot splice."
+	InResourceStrings_RSStackError,	"Socket Error # %d\r\n%s"
+	InResourceStrings_RSStackEINTR,	"Interrupted system call."
+	InResourceStrings_RSStackEBADF,	"Bad file number."
+	InResourceStrings_RSStackEACCES,	"Access denied."
+	InResourceStrings_RSStackEFAULT,	"Buffer fault."
+	InResourceStrings_RSStackEINVAL,	"Invalid argument."
+	InResourceStrings_RSStackEMFILE,	"Too many open files."
+	InResourceStrings_RSStackEWOULDBLOCK,	"Operation would block."
+	InResourceStrings_RSStackEINPROGRESS,	"Operation now in progress."
+	InResourceStrings_RSStackEALREADY,	"Operation already in progress."
+	InResourceStrings_RSStackENOTSOCK,	"Socket operation on non-socket."
+	InResourceStrings_RSStackEDESTADDRREQ,	"Destination address required."
+	InResourceStrings_RSStackEMSGSIZE,	"Message too long."
+	InResourceStrings_RSStackEPROTOTYPE,	"Protocol wrong type for socket."
+	InResourceStrings_RSStackENOPROTOOPT,	"Bad protocol option."
+	InResourceStrings_RSStackEPROTONOSUPPORT,	"Protocol not supported."
+	IWResourceStrings_WrongZLibVer,	"Wrong ZLib version"
+	IWResourceStrings_Today,	"Today"
+	IWResourceStrings_Previous,	"Previous"
+	IWResourceStrings_Next,	"Next"
+	IWResourceStrings_EditHTML,	"Edit"
+	IWResourceStrings_PreviewHTML,	"Preview"
+	IWResourceStrings_InvalidTimeEditFormat,	"The value of %s is in an incorrect format.\r\nPlease correct the value."
+	IWResourceStrings_MissingContainerOnFrame,	"Frame container not found."
+	IWResourceStrings_LogCSSRequest,	"CSS: "
+	IWResourceStrings_ExceptionSessionExpired,	"Your session has expired. You will have to restart the application. In order to keep sessions from expiring you may set the session timeout parameter to a higher value. The current session timeout value is %d minute%s."
+	IWResourceStrings_ExceptionOther,	"Depending on the error condition, it might be possible to restart the application."
+	IWResourceStrings_TrappedException,	"The following exception%s occured\r\n%s"
+	IWResourceStrings_Doodle,	"This edition is limited to 5 concurrent active sessions"
+	InResourceStrings_RSWinsockCallError,	"Error on call Winsock2 library function %s"
+	InResourceStrings_RSWinsockLoadError,	"Error on loading Winsock2 library (%s)"
+	InResourceStrings_RSWinsockInitializationError,	"Winsock Initialization Error."
+	IWResourceStrings_ParamHint,	"Set parameters for application."
+	IWResourceStrings_AboutCaption,	"&About"
+	IWResourceStrings_AboutHint,	"Display about box."
+	IWResourceStrings_FileMenuCaption,	"&File"
+	IWResourceStrings_RunMenuCaption,	"&Run"
+	IWResourceStrings_SelectBrowserCaption,	"Select browser"
+	IWResourceStrings_HelpCaption,	"&Help"
+	IWResourceStrings_ToolBarCaption,	"Toolbar"
+	IWResourceStrings_UseParamQueryTitle,	"URL Parameters"
+	IWResourceStrings_UseParamQueryPrompt,	"Enter parameters for URL:"
+	IWResourceStrings_ConnectionSpeedCaption,	"Set Simulated Connection speed"
+	IWResourceStrings_IncorrectSpeed,	"Incorrect connection speed value (%s)."
+	IWResourceStrings_SimulSpeed,	"Simulated Connection speed"
+	IWResourceStrings_ConnectionSpeed,	"Connection Speed: "
+	IWResourceStrings_CanSetControlToSelf,	"You cannot assign the control to itself"
+	IWResourceStrings_ZLibNotFound,	"zlib.dll       not found in %s"
+	IWResourceStrings_ExecuteHint,	"Launch selected browser and execute application."
+	IWResourceStrings_ExecuteDefaultCaption,	"Execute via &Default browser"
+	IWResourceStrings_ExecuteDefaultHint,	"Launch default browser and execute application."
+	IWResourceStrings_ExecuteIECaption,	"Execute via &IE"
+	IWResourceStrings_ExecuteIEHint,	"Launch Internet Explorer and execute application."
+	IWResourceStrings_ExecuteMozillaCaption,	"Execute via &Mozilla"
+	IWResourceStrings_ExecuteMozillaHint,	"Launch Mozilla and execute application."
+	IWResourceStrings_ExecuteFirefoxCaption,	"Execute via &Firefox"
+	IWResourceStrings_ExecuteFirefoxHint,	"Launch Firefox and execute application."
+	IWResourceStrings_ExecuteNS6Caption,	"Execute via &Netscape"
+	IWResourceStrings_ExecuteNS6Hint,	"Launch Netscape and execute application."
+	IWResourceStrings_ExecuteOperaCaption,	"Execute via &Opera"
+	IWResourceStrings_ExecuteOperaHint,	"Launch Opera and execute application."
+	IWResourceStrings_UseSSLCaption,	"Use SS&L"
+	IWResourceStrings_UseSSLHint,	"Use SS&L"
+	IWResourceStrings_ParamCaption,	"&Parameters"
+	IWResourceStrings_LogExternalFile,	"External File: "
+	IWResourceStrings_LogExplicitStop,	"Explicit Stop: "
+	IWResourceStrings_LogUnrecognizedCommand,	"Unrecognized Command: "
+	IWResourceStrings_LogActiveSessions,	"Active Sessions: "
+	IWResourceStrings_LogTotalBytes,	"Sent: "
+	IWResourceStrings_LogResizeCommand,	"Resize: "
+	IWResourceStrings_LogUpdateCommand,	"Partial Update: "
+	IWResourceStrings_ClearSessionsCaption,	"C&lear Sessions"
+	IWResourceStrings_ClearSessionsHint,	"Clear all active sessions."
+	IWResourceStrings_CopyClipboardCaption,	"&Copy URL to Clipboard"
+	IWResourceStrings_CopyClipboardHint,	"Copies the starting URL for the application to the clipboard."
+	IWResourceStrings_ShowDebugInfoCaption,	"&Show Debug Information"
+	IWResourceStrings_ShowDebugInfoHint,	"Shows detailed debug information in the log window."
+	IWResourceStrings_ExitCaption,	"E&xit"
+	IWResourceStrings_ExitHint,	"Stop the service and exit the application."
+	IWResourceStrings_ExecuteCaption,	"E&xecute"
+	IWResourceStrings_AuthFailed,	"Authentication Failed."
+	IWResourceStrings_ToolBarError,	"Error loading toolbar button images."
+	IWResourceStrings_Redirecting,	"Redirecting..."
+	IWResourceStrings_CanUseIWControlOnVCLForm,	"VCL for the Web controls can only be placed on IntraWeb forms or Delphi frames"
+	IWResourceStrings_No4On32Form,	"Only 3.2 controls should be placed on a 3.2 Form"
+	IWResourceStrings_No32On4Form,	"Only 4.0 controls should be placed on a 4.0 Form"
+	IWResourceStrings_DublicateEventHandler,	"This event handler already has code associated to it"
+	IWResourceStrings_MetaFileNotSupported,	"MetaFile not supported"
+	IWResourceStrings_LoadImageError,	"Could not load image"
+	IWResourceStrings_UnrecognizedCommand,	"Unrecognized Command: "
+	IWResourceStrings_LayoutMgrNeeded32,	"For HTML 3.2 a layout manager is required. Make sure that you have one\r\n associated to the form and this it's Able property is set to True"
+	IWResourceStrings_LogExecute,	"Execute: "
+	IWResourceStrings_LogCacheFile,	"Cache File: "
+	IWResourceStrings_LogInternalGraphic,	"Internal Graphic: "
+	IWResourceStrings_LogJavaScript,	"Javascript: "
+	IWResourceStrings_LogNewSession,	"New session: "
+	IWResourceStrings_HTMLEditorError,	"Error loading HTML Layout Manager. Check to see if it is installed."
+	IWResourceStrings_IE55OrLater,	"Internet Explorer 5.5 or higher is required to run the editor"
+	IWResourceStrings_ScriptEditorCaption,	"VCL for the Web Event Scripts Editor"
+	IWResourceStrings_ScriptEditorEvent,	"Event"
+	IWResourceStrings_ScriptEditorCode,	"Code"
+	IWResourceStrings_OKButton,	"OK"
+	IWResourceStrings_CancelButton,	"Cancel"
+	IWResourceStrings_ApplyButton,	"&Apply"
+	IWResourceStrings_NewRoot,	"New &Root Item"
+	IWResourceStrings_NewItem,	"&New Item"
+	IWResourceStrings_DeleteItem,	"&Delete Item"
+	IWResourceStrings_EditCaption,	"&Edit Caption"
+	IWResourceStrings_MsgDeleteItem,	"Delete \"%s\"?"
+	IWResourceStrings_ApacheDSOError,	"Apache DSOs must be a library."
+	IWResourceStrings_ISAPIError,	"ISAPI version must be a library."
+	IWResourceStrings_StandaloneError,	"Standalone must be .exe"
+	IWResourceStrings_btnNameLast,	"Last"
+	IWResourceStrings_btnNameInsert,	"Insert"
+	IWResourceStrings_btnNameDelete,	"Delete"
+	IWResourceStrings_btnNameEdit,	"Edit"
+	IWResourceStrings_btnNamePost,	"Post"
+	IWResourceStrings_btnNameCancel,	"Cancel"
+	IWResourceStrings_btnNameRefresh,	"Refresh"
+	IWResourceStrings_UnsupportedFieldType,	"Unsupported field type in DBLink"
+	IWResourceStrings_NoRefereshWhileInEdit,	"Cannot refresh grid while data is in edit or insert mode."
+	IWResourceStrings_InvalidResponse,	"%s is not a valid response."
+	IWResourceStrings_DeleteMessage,	"Are you sure you want to delete this record?"
+	IWResourceStrings_UpdateMessage,	"Are you sure you want to update this record?"
+	IWResourceStrings_CancelMessage,	"Are you sure you want to cancel your changes to this record?"
+	IWResourceStrings_InvalidSessionTimeout,	"Invalid session timeout value."
+	IWResourceStrings_EmptyWorkAreaPath,	"Work Area Path not set."
+	IWResourceStrings_FormPreviewError,	"Error loading Form Preview Manager. Check to see if it is installed."
+	IWResourceStrings_WAP,	"Generic WAP Browser"
+	IWResourceStrings_XHTMLMPTest,	"XHTML MP Test"
+	IWResourceStrings_Safari,	"Safari"
+	IWResourceStrings_Unrecognizable,	"Unknown browser type."
+	IWResourceStrings_NoCookieSupport,	"Your browser does not seem to support cookies or they are disactivated"
+	IWResourceStrings_NoJSSupport,	"Your browser does not seem to support JavaScript. Please make sure it is supported and activated"
+	IWResourceStrings_CantFindInternalFile,	"Cannot find internal file: %s"
+	IWResourceStrings_ExecuteError,	"Error %s while launching browser."
+	IWResourceStrings_IWVersion,	"VCL for the Web Version: %s"
+	IWResourceStrings_HTTPPort,	"HTTP Port: %s"
+	IWResourceStrings_HTTPSPort,	"HTTPS Port: %s"
+	IWResourceStrings_BindError,	"Warning: Port has been assigned by system."
+	IWResourceStrings_LicenseNumber,	"License Number: %s"
+	IWResourceStrings_btnNameFirst,	"First"
+	IWResourceStrings_btnNamePrior,	"Prior"
+	IWResourceStrings_btnNameNext,	"Next"
+	IWResourceStrings_ColorBlue,	"blue"
+	IWResourceStrings_ColorGreen,	"green"
+	IWResourceStrings_ColorYellow,	"yellow"
+	IWResourceStrings_ColorBrown,	"brown"
+	IWResourceStrings_TextError,	"Error: "
+	IWResourceStrings_CannotReceiveFocus,	"Control cannot receive focus"
+	IWResourceStrings_ErrorCreatingSession,	"Error creating session"
+	IWResourceStrings_UnknowBrowser,	"Unknown or Unrecognized"
+	IWResourceStrings_IE,	"Internet Explorer"
+	IWResourceStrings_NS6Gecko,	"Netscape 6 (Gecko)"
+	IWResourceStrings_NS7Gecko,	"Netscape 7 or higher (Gecko)"
+	IWResourceStrings_Opera,	"Opera"
+	IWResourceStrings_NS4,	"Netscape 4"
+	IWResourceStrings_Other,	"Other"
+	IWResourceStrings_HTML32Test,	"HTML 32 Test"
+	IWResourceStrings_WMLTest,	"WML Test"
+	IWResourceStrings_InvalidWidth,	"\"%s\" is not a valid width."
+	IWResourceStrings_IndexOutOfBounds,	"Index out of bounds."
+	IWResourceStrings_NoServerController,	"No server controller has been created."
+	IWResourceStrings_SessionNotFound,	"Session not found. Session may have expired."
+	IWResourceStrings_SessionAlreadyLocked,	"Session is already locked."
+	IWResourceStrings_NotForThisProcess,	"The session does not belong to this process."
+	IWResourceStrings_RefreshWarning,	"You have attempted to post or refresh data from a page that  depends on information that is no longer available to the server application.\r\n\r\nYour attempted changes will be ignored. You will now be resynced to the current place in the application."
+	IWResourceStrings_ResourceNotFound,	"Resource %s not found."
+	IWResourceStrings_NoMainForm,	"No main form is defined."
+	IWResourceStrings_DeviceNotSupported,	"Device not supported"
+	IWResourceStrings_NoServerControllerClass,	"No server controller is defined."
+	IWResourceStrings_IWInitMissing,	"IW application not initialized (IWInit missing)."
+	IWResourceStrings_UnknownSessionMethod,	"Unknown session tracking method"
+	IWResourceStrings_InvalidBrowser,	"Your browser was detected as %s, identifying itself as %s.\r\nOne of the following browsers is required:\r\n"
+	IWResourceStrings_MessageDialog,	"Message Dialog"
+	IWResourceStrings_ColorRed,	"red"
+	IWResourceStrings_CannotHideNonAppForms,	"Cannot hide non-app forms."
+	IWResourceStrings_CannotReleaseNonAppForms,	"Cannot release non-app forms."
+	IWResourceStrings_UnknownBrowserType,	"Unknown browser type."
+	IWResourceStrings_MustBeAppForm,	"Form must be an application form."
+	IWResourceStrings_WrongIPForSession,	"Security Exception: The IP you are using is different than the one that is assigned to the specified session."
+	IWResourceStrings_WrongBrowserForSession,	"Security Exception: The browser you are using is different than the one that is assigned to the specified session."
+	IWResourceStrings_WrongSubnetForSession,	"Security Exception: The IP you are using is from a different subnet than the one that is assigned to the specified session."
+	IWResourceStrings_ValidationRequeredField,	"%s is a required field."
+	IWResourceStrings_SelectionRequired,	"A value must be selected for %s."
+	IWResourceStrings_InvalidComponentName,	"\"%s\" is not a valid component name."
+	IWResourceStrings_DroppedConnection,	"Client Dropped Connection"
+	IWResourceStrings_NotFound,	"%s not found."
+	IWResourceStrings_NoSubmitComponent,	"Cannot find submit component."
+	IWResourceStrings_NoSubmitHandler,	"Submit control (%s) does not have a handler."
+	IWResourceStrings_InvalidFunction,	"This function is not valid for this server type."
+	IWResourceStrings_InvalidHeight,	"\"%s\" is not a valid height."
+	IWResourceStrings_SecureModeRequired,	"Secure mode is required for this form."
+	IWResourceStrings_NonSecureModeRequired,	"Non-Secure mode is required for this form."
+	IWResourceStrings_AppStartedAndListening,	"Application initialized and listening on port: "
+	IWResourceStrings_NotSupportedDuringPartialUpdate,	"That change is not supported during partial update."
+	IWResourceStrings_WebApplicationRequiered,	"WebApplication is requiered in order to use this function."
+	IWResourceStrings_OptionsMenuCaption,	"&Options"
+	IWResourceStrings_DeviceSimulationMenuCaption,	"&Device Simulation"
+	IWResourceStrings_HTML32Caption,	"HTML 3.2"
+	IWResourceStrings_WMLCaption,	"WML"
+	IWResourceStrings_XHTMLMPCaption,	"XHTML MP"
+	IWResourceStrings_PleaseWait,	"Please wait..."
+	IWResourceStrings_HTML32Hint,	"Override browser type and use HTML 3.2 mode."
+	IWResourceStrings_WMLHint,	"Override browser type and use WML mode."
+	IWResourceStrings_XHTMLMPHint,	"Override browser type and use XHTML MP mode"
+	IWResourceStrings_UnknownClientType,	"Unknown client type."
+	IWResourceStrings_CannotShowNonAppForms,	"Cannot show non-app forms."
+	AdvCardList_SResDesignNoItemDefValue,	"[Item value]"
+	AdvCardList_SResTrue,	"True"
+	AdvCardList_SResFalse,	"False"
+	WebConst_sErrorDecodingURLText,	"Error decoding URL style (%%XX) encoded string at position %d"
+	WebConst_sInvalidURLEncodedChar,	"Invalid URL encoded character (%s) at position %d"
+	WebConst_sDuplicateActionName,	"Duplicate action name"
+	WebConst_sOnlyOneDispatcher,	"Only one WebDispatcher per form/data module"
+	WebConst_sHTTPItemName,	"Name"
+	WebConst_sHTTPItemURI,	"PathInfo"
+	WebConst_sHTTPItemEnabled,	"Enabled"
+	WebConst_sHTTPItemDefault,	"Default"
+	WebConst_sHTTPItemProducer,	"Producer"
+	WebConst_sInternalApplicationError,	"<html><body><h1>Internal Application Error</h1>\r\n<p>%0:s\r\n<p><hr width=\"100%%\"><i>%1:s</i></body></html>"
+	IWResourceStrings_Ok,	"Ok"
+	IWResourceStrings_PermissionDenied,	"Permission denied"
+	IWResourceStrings_ShowMessageNotSupported,	"ShowMessage not supported"
 	IdResourceStrings_RSSSLConnectError,	"Error connecting with SSL."
 	IdResourceStrings_RSSSLSettingCipherError,	"SetCipher failed."
 	IdResourceStrings_RSSSLCreatingContextError,	"Error creating SSL context."
@@ -1082,7 +1337,7 @@ BEGIN
 	IdResourceStrings_RSUnevenSizeInEncodeStream,	"Uneven size in Encode."
 	IdResourceStrings_RSMessageEncoderNotFound,	"Message encoder not found"
 	IdResourceStrings_RSUnrecognizedUUEEncodingScheme,	"Unrecognized UUE encoding scheme."
-	IdResourceStrings_RSTIdMessagePartCreate,	"TIdMessagePart can not be created.  Use descendant classes. "
+	AdvCardList_SResDesignNoItemCaption,	"[Item caption]"
 	IdResourceStrings_RSSocksRequestFailed,	"Request rejected or failed."
 	IdResourceStrings_RSSocksRequestServerFailed,	"Request rejected because SOCKS server cannot connect."
 	IdResourceStrings_RSSocksRequestIdentFailed,	"Request rejected because the client program and identd report different user-ids."
@@ -1098,7 +1353,7 @@ BEGIN
 	IdResourceStrings_RSSocksServerTTLExpiredError,	"TTL expired."
 	IdResourceStrings_RSSocksServerCommandError,	"Command not supported."
 	IdResourceStrings_RSSocksServerAddressError,	"Address type not supported."
-	IdResourceStrings_RSStackENETRESET,	"Net dropped connection or reset."
+	IdResourceStrings_RSSSLAcceptError,	"Error accepting connection with SSL."
 	IdResourceStrings_RSStackECONNABORTED,	"Software caused connection abort."
 	IdResourceStrings_RSStackECONNRESET,	"Connection reset by peer."
 	IdResourceStrings_RSStackENOBUFS,	"No buffer space available."
@@ -1114,7 +1369,7 @@ BEGIN
 	IdResourceStrings_RSStackEHOSTUNREACH,	"No route to host."
 	IdResourceStrings_RSStackENOTEMPTY,	"Directory not empty"
 	IdResourceStrings_RSStackHOST_NOT_FOUND,	"Host not found."
-	IdResourceStrings_RSStackEINPROGRESS,	"Operation now in progress."
+	IdResourceStrings_RSTIdMessagePartCreate,	"TIdMessagePart can not be created.  Use descendant classes. "
 	IdResourceStrings_RSStackEALREADY,	"Operation already in progress."
 	IdResourceStrings_RSStackENOTSOCK,	"Socket operation on non-socket."
 	IdResourceStrings_RSStackEDESTADDRREQ,	"Destination address required."
@@ -1130,7 +1385,7 @@ BEGIN
 	IdResourceStrings_RSStackEADDRNOTAVAIL,	"Cannot assign requested address."
 	IdResourceStrings_RSStackENETDOWN,	"Network is down."
 	IdResourceStrings_RSStackENETUNREACH,	"Network is unreachable."
-	IdResourceStrings_RSStatusText,	"%s"
+	IdResourceStrings_RSStackENETRESET,	"Net dropped connection or reset."
 	IdResourceStrings_RSConnectTimeout,	"Connect timed out."
 	IdResourceStrings_RSMsgClientEncodingText,	"Encoding text"
 	IdResourceStrings_RSMsgClientEncodingAttachment,	"Encoding attachment"
@@ -1146,7 +1401,7 @@ BEGIN
 	IdResourceStrings_RSStackEINVAL,	"Invalid argument."
 	IdResourceStrings_RSStackEMFILE,	"Too many open files."
 	IdResourceStrings_RSStackEWOULDBLOCK,	"Operation would block. "
-	IdResourceStrings_RSOnlyOneAntiFreeze,	"Only one TIdAntiFreeze can exist per application."
+	IdResourceStrings_RSStackEINPROGRESS,	"Operation now in progress."
 	IdResourceStrings_RSNotConnected,	"Not Connected"
 	IdResourceStrings_RSObjectTypeNotSupported,	"Object type not supported."
 	IdResourceStrings_RSIdNoDataToRead,	"No data to read."
@@ -1162,7 +1417,7 @@ BEGIN
 	IdResourceStrings_RSStatusConnected,	"Connected."
 	IdResourceStrings_RSStatusDisconnecting,	"Disconnecting."
 	IdResourceStrings_RSStatusDisconnected,	"Disconnected."
-	cxExportStrs_scxInvalidColumnIndex,	"The column index %d out of bounds"
+	IdResourceStrings_RSStatusText,	"%s"
 	cxExportStrs_scxInvalidRowIndex,	"The row index %d out of bounds"
 	cxExportStrs_scxInvalidStyleIndex,	"Invalid style index %d"
 	cxExportStrs_scxExportToExcel,	"Export to MS Excel (*.xls)"
@@ -1178,14 +1433,14 @@ BEGIN
 	IdResourceStrings_RSWinsockInitializationError,	"Winsock Initialization Error."
 	IdResourceStrings_RSSetSizeExceeded,	"Set Size Exceeded."
 	IdResourceStrings_RSFileNotFound,	"File \"%s\" not found"
-	InResourceStrings_RSInvalidServiceName,	"%s is not a valid service."
-	InResourceStrings_RSIPv6Unavailable,	"IPv6 unavailable"
-	InResourceStrings_RSIPVersionUnsupported,	"The requested IPVersion / Address family is not supported."
-	InResourceStrings_RSNotAllBytesSent,	"Not all bytes sent."
-	InResourceStrings_RSPackageSizeTooBig,	"Package Size Too Big."
-	InResourceStrings_RSSetSizeExceeded,	"Set Size Exceeded."
-	InResourceStringsCore_RSThreadTerminateAndWaitFor,	"Cannot call TerminateAndWaitFor on FreeAndTerminate threads"
-	InResourceStringsProtocols_RSFailedTimeZoneInfo,	"Failed attempting to retrieve time zone information."
+	IdResourceStrings_RSOnlyOneAntiFreeze,	"Only one TIdAntiFreeze can exist per application."
+	VDBConsts_SDeleteRecord,	"Delete record"
+	VDBConsts_SEditRecord,	"Edit record"
+	VDBConsts_SPostEdit,	"Post edit"
+	VDBConsts_SCancelEdit,	"Cancel edit"
+	VDBConsts_SRefreshRecord,	"Refresh data"
+	VDBConsts_SPropDefByLookup,	"Property already defined by lookup field"
+	VDBConsts_SRemoteLogin,	"Remote Login"
 	cxExportStrs_scxUnsupportedExport,	"Unsupported export type: %1"
 	cxExportStrs_scxStyleManagerKill,	"The Style Manager is currently being used elsewhere and can not be released at this stage"
 	cxExportStrs_scxExportToHtml,	"Export to Web page (*.html)"
@@ -1194,266 +1449,7 @@ BEGIN
 	cxExportStrs_scxIllegalWidth,	"Illegal width of the column"
 	cxExportStrs_scxInvalidColumnRowCount,	"Invalid column or row count"
 	cxExportStrs_scxIllegalHeight,	"Illegal height of the row"
-	InResourceStrings_RSStackENETRESET,	"Net dropped connection or reset."
-	InResourceStrings_RSStackECONNABORTED,	"Software caused connection abort."
-	InResourceStrings_RSStackECONNRESET,	"Connection reset by peer."
-	InResourceStrings_RSStackENOBUFS,	"No buffer space available."
-	InResourceStrings_RSStackEISCONN,	"Socket is already connected."
-	InResourceStrings_RSStackENOTCONN,	"Socket is not connected."
-	InResourceStrings_RSStackESHUTDOWN,	"Cannot send or receive after socket is closed."
-	InResourceStrings_RSStackETOOMANYREFS,	"Too many references, cannot splice."
-	InResourceStrings_RSStackETIMEDOUT,	"Connection timed out."
-	InResourceStrings_RSStackECONNREFUSED,	"Connection refused."
-	InResourceStrings_RSStackELOOP,	"Too many levels of symbolic links."
-	InResourceStrings_RSStackENAMETOOLONG,	"File name too long."
-	InResourceStrings_RSStackEHOSTDOWN,	"Host is down."
-	InResourceStrings_RSStackEHOSTUNREACH,	"No route to host."
-	InResourceStrings_RSStackENOTEMPTY,	"Directory not empty"
-	InResourceStrings_RSStackHOST_NOT_FOUND,	"Host not found."
-	InResourceStrings_RSStackEINPROGRESS,	"Operation now in progress."
-	InResourceStrings_RSStackEALREADY,	"Operation already in progress."
-	InResourceStrings_RSStackENOTSOCK,	"Socket operation on non-socket."
-	InResourceStrings_RSStackEDESTADDRREQ,	"Destination address required."
-	InResourceStrings_RSStackEMSGSIZE,	"Message too long."
-	InResourceStrings_RSStackEPROTOTYPE,	"Protocol wrong type for socket."
-	InResourceStrings_RSStackENOPROTOOPT,	"Bad protocol option."
-	InResourceStrings_RSStackEPROTONOSUPPORT,	"Protocol not supported."
-	InResourceStrings_RSStackESOCKTNOSUPPORT,	"Socket type not supported."
-	InResourceStrings_RSStackEOPNOTSUPP,	"Operation not supported on socket."
-	InResourceStrings_RSStackEPFNOSUPPORT,	"Protocol family not supported."
-	InResourceStrings_RSStackEAFNOSUPPORT,	"Address family not supported by protocol family."
-	InResourceStrings_RSStackEADDRINUSE,	"Address already in use."
-	InResourceStrings_RSStackEADDRNOTAVAIL,	"Cannot assign requested address."
-	InResourceStrings_RSStackENETDOWN,	"Network is down."
-	InResourceStrings_RSStackENETUNREACH,	"Network is unreachable."
-	IWResourceStrings_LogCSSRequest,	"CSS: "
-	IWResourceStrings_ExceptionSessionExpired,	"Your session has expired. You will have to restart the application. In order to keep sessions from expiring you may set the session timeout parameter to a higher value. The current session timeout value is %d minute%s."
-	IWResourceStrings_ExceptionOther,	"Depending on the error condition, it might be possible to restart the application."
-	IWResourceStrings_TrappedException,	"The following exception%s occured\r\n%s"
-	IWResourceStrings_Doodle,	"This edition is limited to 5 concurrent active sessions"
-	InResourceStrings_RSWinsockCallError,	"Error on call Winsock2 library function %s"
-	InResourceStrings_RSWinsockLoadError,	"Error on loading Winsock2 library (%s)"
-	InResourceStrings_RSWinsockInitializationError,	"Winsock Initialization Error."
-	InResourceStrings_RSStackError,	"Socket Error # %d\r\n%s"
-	InResourceStrings_RSStackEINTR,	"Interrupted system call."
-	InResourceStrings_RSStackEBADF,	"Bad file number."
-	InResourceStrings_RSStackEACCES,	"Access denied."
-	InResourceStrings_RSStackEFAULT,	"Buffer fault."
-	InResourceStrings_RSStackEINVAL,	"Invalid argument."
-	InResourceStrings_RSStackEMFILE,	"Too many open files."
-	InResourceStrings_RSStackEWOULDBLOCK,	"Operation would block."
-	IWResourceStrings_UseParamQueryTitle,	"URL Parameters"
-	IWResourceStrings_UseParamQueryPrompt,	"Enter parameters for URL:"
-	IWResourceStrings_ConnectionSpeedCaption,	"Set Simulated Connection speed"
-	IWResourceStrings_IncorrectSpeed,	"Incorrect connection speed value (%s)."
-	IWResourceStrings_SimulSpeed,	"Simulated Connection speed"
-	IWResourceStrings_ConnectionSpeed,	"Connection Speed: "
-	IWResourceStrings_CanSetControlToSelf,	"You cannot assign the control to itself"
-	IWResourceStrings_ZLibNotFound,	"zlib.dll       not found in %s"
-	IWResourceStrings_WrongZLibVer,	"Wrong ZLib version"
-	IWResourceStrings_Today,	"Today"
-	IWResourceStrings_Previous,	"Previous"
-	IWResourceStrings_Next,	"Next"
-	IWResourceStrings_EditHTML,	"Edit"
-	IWResourceStrings_PreviewHTML,	"Preview"
-	IWResourceStrings_InvalidTimeEditFormat,	"The value of %s is in an incorrect format.\r\nPlease correct the value."
-	IWResourceStrings_MissingContainerOnFrame,	"Frame container not found."
-	IWResourceStrings_ExecuteFirefoxHint,	"Launch Firefox and execute application."
-	IWResourceStrings_ExecuteNS6Caption,	"Execute via &Netscape"
-	IWResourceStrings_ExecuteNS6Hint,	"Launch Netscape and execute application."
-	IWResourceStrings_ExecuteOperaCaption,	"Execute via &Opera"
-	IWResourceStrings_ExecuteOperaHint,	"Launch Opera and execute application."
-	IWResourceStrings_UseSSLCaption,	"Use SS&L"
-	IWResourceStrings_UseSSLHint,	"Use SS&L"
-	IWResourceStrings_ParamCaption,	"&Parameters"
-	IWResourceStrings_ParamHint,	"Set parameters for application."
-	IWResourceStrings_AboutCaption,	"&About"
-	IWResourceStrings_AboutHint,	"Display about box."
-	IWResourceStrings_FileMenuCaption,	"&File"
-	IWResourceStrings_RunMenuCaption,	"&Run"
-	IWResourceStrings_SelectBrowserCaption,	"Select browser"
-	IWResourceStrings_HelpCaption,	"&Help"
-	IWResourceStrings_ToolBarCaption,	"Toolbar"
-	IWResourceStrings_ClearSessionsHint,	"Clear all active sessions."
-	IWResourceStrings_CopyClipboardCaption,	"&Copy URL to Clipboard"
-	IWResourceStrings_CopyClipboardHint,	"Copies the starting URL for the application to the clipboard."
-	IWResourceStrings_ShowDebugInfoCaption,	"&Show Debug Information"
-	IWResourceStrings_ShowDebugInfoHint,	"Shows detailed debug information in the log window."
-	IWResourceStrings_ExitCaption,	"E&xit"
-	IWResourceStrings_ExitHint,	"Stop the service and exit the application."
-	IWResourceStrings_ExecuteCaption,	"E&xecute"
-	IWResourceStrings_ExecuteHint,	"Launch selected browser and execute application."
-	IWResourceStrings_ExecuteDefaultCaption,	"Execute via &Default browser"
-	IWResourceStrings_ExecuteDefaultHint,	"Launch default browser and execute application."
-	IWResourceStrings_ExecuteIECaption,	"Execute via &IE"
-	IWResourceStrings_ExecuteIEHint,	"Launch Internet Explorer and execute application."
-	IWResourceStrings_ExecuteMozillaCaption,	"Execute via &Mozilla"
-	IWResourceStrings_ExecuteMozillaHint,	"Launch Mozilla and execute application."
-	IWResourceStrings_ExecuteFirefoxCaption,	"Execute via &Firefox"
-	IWResourceStrings_LoadImageError,	"Could not load image"
-	IWResourceStrings_UnrecognizedCommand,	"Unrecognized Command: "
-	IWResourceStrings_LayoutMgrNeeded32,	"For HTML 3.2 a layout manager is required. Make sure that you have one\r\n associated to the form and this it's Able property is set to True"
-	IWResourceStrings_LogExecute,	"Execute: "
-	IWResourceStrings_LogCacheFile,	"Cache File: "
-	IWResourceStrings_LogInternalGraphic,	"Internal Graphic: "
-	IWResourceStrings_LogJavaScript,	"Javascript: "
-	IWResourceStrings_LogNewSession,	"New session: "
-	IWResourceStrings_LogExternalFile,	"External File: "
-	IWResourceStrings_LogExplicitStop,	"Explicit Stop: "
-	IWResourceStrings_LogUnrecognizedCommand,	"Unrecognized Command: "
-	IWResourceStrings_LogActiveSessions,	"Active Sessions: "
-	IWResourceStrings_LogTotalBytes,	"Sent: "
-	IWResourceStrings_LogResizeCommand,	"Resize: "
-	IWResourceStrings_LogUpdateCommand,	"Partial Update: "
-	IWResourceStrings_ClearSessionsCaption,	"C&lear Sessions"
-	IWResourceStrings_NewRoot,	"New &Root Item"
-	IWResourceStrings_NewItem,	"&New Item"
-	IWResourceStrings_DeleteItem,	"&Delete Item"
-	IWResourceStrings_EditCaption,	"&Edit Caption"
-	IWResourceStrings_MsgDeleteItem,	"Delete \"%s\"?"
-	IWResourceStrings_ApacheDSOError,	"Apache DSOs must be a library."
-	IWResourceStrings_ISAPIError,	"ISAPI version must be a library."
-	IWResourceStrings_StandaloneError,	"Standalone must be .exe"
-	IWResourceStrings_AuthFailed,	"Authentication Failed."
-	IWResourceStrings_ToolBarError,	"Error loading toolbar button images."
-	IWResourceStrings_Redirecting,	"Redirecting..."
-	IWResourceStrings_CanUseIWControlOnVCLForm,	"VCL for the Web controls can only be placed on IntraWeb forms or Delphi frames"
-	IWResourceStrings_No4On32Form,	"Only 3.2 controls should be placed on a 3.2 Form"
-	IWResourceStrings_No32On4Form,	"Only 4.0 controls should be placed on a 4.0 Form"
-	IWResourceStrings_DublicateEventHandler,	"This event handler already has code associated to it"
-	IWResourceStrings_MetaFileNotSupported,	"MetaFile not supported"
-	IWResourceStrings_NoRefereshWhileInEdit,	"Cannot refresh grid while data is in edit or insert mode."
-	IWResourceStrings_InvalidResponse,	"%s is not a valid response."
-	IWResourceStrings_DeleteMessage,	"Are you sure you want to delete this record?"
-	IWResourceStrings_UpdateMessage,	"Are you sure you want to update this record?"
-	IWResourceStrings_CancelMessage,	"Are you sure you want to cancel your changes to this record?"
-	IWResourceStrings_InvalidSessionTimeout,	"Invalid session timeout value."
-	IWResourceStrings_EmptyWorkAreaPath,	"Work Area Path not set."
-	IWResourceStrings_FormPreviewError,	"Error loading Form Preview Manager. Check to see if it is installed."
-	IWResourceStrings_HTMLEditorError,	"Error loading HTML Layout Manager. Check to see if it is installed."
-	IWResourceStrings_IE55OrLater,	"Internet Explorer 5.5 or higher is required to run the editor"
-	IWResourceStrings_ScriptEditorCaption,	"VCL for the Web Event Scripts Editor"
-	IWResourceStrings_ScriptEditorEvent,	"Event"
-	IWResourceStrings_ScriptEditorCode,	"Code"
-	IWResourceStrings_OKButton,	"OK"
-	IWResourceStrings_CancelButton,	"Cancel"
-	IWResourceStrings_ApplyButton,	"&Apply"
-	IWResourceStrings_IWVersion,	"VCL for the Web Version: %s"
-	IWResourceStrings_HTTPPort,	"HTTP Port: %s"
-	IWResourceStrings_HTTPSPort,	"HTTPS Port: %s"
-	IWResourceStrings_BindError,	"Warning: Port has been assigned by system."
-	IWResourceStrings_LicenseNumber,	"License Number: %s"
-	IWResourceStrings_btnNameFirst,	"First"
-	IWResourceStrings_btnNamePrior,	"Prior"
-	IWResourceStrings_btnNameNext,	"Next"
-	IWResourceStrings_btnNameLast,	"Last"
-	IWResourceStrings_btnNameInsert,	"Insert"
-	IWResourceStrings_btnNameDelete,	"Delete"
-	IWResourceStrings_btnNameEdit,	"Edit"
-	IWResourceStrings_btnNamePost,	"Post"
-	IWResourceStrings_btnNameCancel,	"Cancel"
-	IWResourceStrings_btnNameRefresh,	"Refresh"
-	IWResourceStrings_UnsupportedFieldType,	"Unsupported field type in DBLink"
-	IWResourceStrings_IE,	"Internet Explorer"
-	IWResourceStrings_NS6Gecko,	"Netscape 6 (Gecko)"
-	IWResourceStrings_NS7Gecko,	"Netscape 7 or higher (Gecko)"
-	IWResourceStrings_Opera,	"Opera"
-	IWResourceStrings_NS4,	"Netscape 4"
-	IWResourceStrings_Other,	"Other"
-	IWResourceStrings_HTML32Test,	"HTML 32 Test"
-	IWResourceStrings_WMLTest,	"WML Test"
-	IWResourceStrings_WAP,	"Generic WAP Browser"
-	IWResourceStrings_XHTMLMPTest,	"XHTML MP Test"
-	IWResourceStrings_Safari,	"Safari"
-	IWResourceStrings_Unrecognizable,	"Unknown browser type."
-	IWResourceStrings_NoCookieSupport,	"Your browser does not seem to support cookies or they are disactivated"
-	IWResourceStrings_NoJSSupport,	"Your browser does not seem to support JavaScript. Please make sure it is supported and activated"
-	IWResourceStrings_CantFindInternalFile,	"Cannot find internal file: %s"
-	IWResourceStrings_ExecuteError,	"Error %s while launching browser."
-	IWResourceStrings_NoMainForm,	"No main form is defined."
-	IWResourceStrings_DeviceNotSupported,	"Device not supported"
-	IWResourceStrings_NoServerControllerClass,	"No server controller is defined."
-	IWResourceStrings_IWInitMissing,	"IW application not initialized (IWInit missing)."
-	IWResourceStrings_UnknownSessionMethod,	"Unknown session tracking method"
-	IWResourceStrings_InvalidBrowser,	"Your browser was detected as %s, identifying itself as %s.\r\nOne of the following browsers is required:\r\n"
-	IWResourceStrings_MessageDialog,	"Message Dialog"
-	IWResourceStrings_ColorRed,	"red"
-	IWResourceStrings_ColorBlue,	"blue"
-	IWResourceStrings_ColorGreen,	"green"
-	IWResourceStrings_ColorYellow,	"yellow"
-	IWResourceStrings_ColorBrown,	"brown"
-	IWResourceStrings_TextError,	"Error: "
-	IWResourceStrings_CannotReceiveFocus,	"Control cannot receive focus"
-	IWResourceStrings_ErrorCreatingSession,	"Error creating session"
-	IWResourceStrings_UnknowBrowser,	"Unknown or Unrecognized"
-	IWResourceStrings_SelectionRequired,	"A value must be selected for %s."
-	IWResourceStrings_InvalidComponentName,	"\"%s\" is not a valid component name."
-	IWResourceStrings_DroppedConnection,	"Client Dropped Connection"
-	IWResourceStrings_NotFound,	"%s not found."
-	IWResourceStrings_NoSubmitComponent,	"Cannot find submit component."
-	IWResourceStrings_NoSubmitHandler,	"Submit control (%s) does not have a handler."
-	IWResourceStrings_InvalidFunction,	"This function is not valid for this server type."
-	IWResourceStrings_InvalidHeight,	"\"%s\" is not a valid height."
-	IWResourceStrings_InvalidWidth,	"\"%s\" is not a valid width."
-	IWResourceStrings_IndexOutOfBounds,	"Index out of bounds."
-	IWResourceStrings_NoServerController,	"No server controller has been created."
-	IWResourceStrings_SessionNotFound,	"Session not found. Session may have expired."
-	IWResourceStrings_SessionAlreadyLocked,	"Session is already locked."
-	IWResourceStrings_NotForThisProcess,	"The session does not belong to this process."
-	IWResourceStrings_RefreshWarning,	"You have attempted to post or refresh data from a page that  depends on information that is no longer available to the server application.\r\n\r\nYour attempted changes will be ignored. You will now be resynced to the current place in the application."
-	IWResourceStrings_ResourceNotFound,	"Resource %s not found."
-	IWResourceStrings_WMLCaption,	"WML"
-	IWResourceStrings_XHTMLMPCaption,	"XHTML MP"
-	IWResourceStrings_PleaseWait,	"Please wait..."
-	IWResourceStrings_HTML32Hint,	"Override browser type and use HTML 3.2 mode."
-	IWResourceStrings_WMLHint,	"Override browser type and use WML mode."
-	IWResourceStrings_XHTMLMPHint,	"Override browser type and use XHTML MP mode"
-	IWResourceStrings_UnknownClientType,	"Unknown client type."
-	IWResourceStrings_CannotShowNonAppForms,	"Cannot show non-app forms."
-	IWResourceStrings_CannotHideNonAppForms,	"Cannot hide non-app forms."
-	IWResourceStrings_CannotReleaseNonAppForms,	"Cannot release non-app forms."
-	IWResourceStrings_UnknownBrowserType,	"Unknown browser type."
-	IWResourceStrings_MustBeAppForm,	"Form must be an application form."
-	IWResourceStrings_WrongIPForSession,	"Security Exception: The IP you are using is different than the one that is assigned to the specified session."
-	IWResourceStrings_WrongBrowserForSession,	"Security Exception: The browser you are using is different than the one that is assigned to the specified session."
-	IWResourceStrings_WrongSubnetForSession,	"Security Exception: The IP you are using is from a different subnet than the one that is assigned to the specified session."
-	IWResourceStrings_ValidationRequeredField,	"%s is a required field."
-	WebConst_sHTTPItemURI,	"PathInfo"
-	WebConst_sHTTPItemEnabled,	"Enabled"
-	WebConst_sHTTPItemDefault,	"Default"
-	WebConst_sHTTPItemProducer,	"Producer"
-	WebConst_sInternalApplicationError,	"<html><body><h1>Internal Application Error</h1>\r\n<p>%0:s\r\n<p><hr width=\"100%%\"><i>%1:s</i></body></html>"
-	IWResourceStrings_Ok,	"Ok"
-	IWResourceStrings_PermissionDenied,	"Permission denied"
-	IWResourceStrings_ShowMessageNotSupported,	"ShowMessage not supported"
-	IWResourceStrings_SecureModeRequired,	"Secure mode is required for this form."
-	IWResourceStrings_NonSecureModeRequired,	"Non-Secure mode is required for this form."
-	IWResourceStrings_AppStartedAndListening,	"Application initialized and listening on port: "
-	IWResourceStrings_NotSupportedDuringPartialUpdate,	"That change is not supported during partial update."
-	IWResourceStrings_WebApplicationRequiered,	"WebApplication is requiered in order to use this function."
-	IWResourceStrings_OptionsMenuCaption,	"&Options"
-	IWResourceStrings_DeviceSimulationMenuCaption,	"&Device Simulation"
-	IWResourceStrings_HTML32Caption,	"HTML 3.2"
-	VDBConsts_SPriorRecord,	"Prior record"
-	VDBConsts_SNextRecord,	"Next record"
-	VDBConsts_SLastRecord,	"Last record"
-	VDBConsts_SInsertRecord,	"Insert record"
-	VDBConsts_SDeleteRecord,	"Delete record"
-	VDBConsts_SEditRecord,	"Edit record"
-	VDBConsts_SPostEdit,	"Post edit"
-	VDBConsts_SCancelEdit,	"Cancel edit"
-	VDBConsts_SRefreshRecord,	"Refresh data"
-	VDBConsts_SPropDefByLookup,	"Property already defined by lookup field"
-	VDBConsts_SRemoteLogin,	"Remote Login"
-	WebConst_sErrorDecodingURLText,	"Error decoding URL style (%%XX) encoded string at position %d"
-	WebConst_sInvalidURLEncodedChar,	"Invalid URL encoded character (%s) at position %d"
-	WebConst_sDuplicateActionName,	"Duplicate action name"
-	WebConst_sOnlyOneDispatcher,	"Only one WebDispatcher per form/data module"
-	WebConst_sHTTPItemName,	"Name"
-	cxGridStrs_scxGridNoDataInfoText,	"<No data to display>"
-	cxGridStrs_scxGridNewItemRowInfoText,	"Click here to add a new row"
-	cxGridStrs_scxGridFilterIsEmpty,	"<Filter is Empty>"
-	cxGridStrs_scxGridCustomizationFormCaption,	"Customization"
+	cxExportStrs_scxInvalidColumnIndex,	"The column index %d out of bounds"
 	cxGridStrs_scxGridCustomizationFormColumnsPageCaption,	"Columns"
 	cxGridStrs_scxGridGroupByBoxCaption,	"Drag a column header here to group by that column"
 	cxGridStrs_scxGridFilterCustomizeButtonCaption,	"Customize..."
@@ -1466,10 +1462,10 @@ BEGIN
 	cxGridStrs_scxCantCreateExportOutputFile,	"Can't create the export output file"
 	cxGridStrs_scxGridChartValueHintFormat,	"%s for %s is %s"
 	VDBConsts_SFirstRecord,	"First record"
-	AdvCardList_SResDesignNoItemDefValue,	"[Item value]"
-	AdvCardList_SResTrue,	"True"
-	AdvCardList_SResFalse,	"False"
-	cxPCConsts_scxPCImageListIndexError,	"Index (%d) must be between 0 and %d"
+	VDBConsts_SPriorRecord,	"Prior record"
+	VDBConsts_SNextRecord,	"Next record"
+	VDBConsts_SLastRecord,	"Last record"
+	VDBConsts_SInsertRecord,	"Insert record"
 	cxPCConsts_scxPCNoBaseImages,	"BaseImages is not assigned"
 	cxPCConsts_scxPCNoRegisteredStyles,	"There are no styles registered"
 	cxPCConsts_scxPCPageIndexError,	"%d is an invalid PageIndex value.  PageIndex must be between 0 and %d"
@@ -1482,6 +1478,10 @@ BEGIN
 	cxGridStrs_scxGridDeletingConfirmationCaption,	"Confirm"
 	cxGridStrs_scxGridDeletingFocusedConfirmationText,	"Delete record?"
 	cxGridStrs_scxGridDeletingSelectedConfirmationText,	"Delete all selected records?"
+	cxGridStrs_scxGridNoDataInfoText,	"<No data to display>"
+	cxGridStrs_scxGridNewItemRowInfoText,	"Click here to add a new row"
+	cxGridStrs_scxGridFilterIsEmpty,	"<Filter is Empty>"
+	cxGridStrs_scxGridCustomizationFormCaption,	"Customization"
 	OraConsts_SMissingDataSetField,	"Missing DataSetField property"
 	OraConsts_SKeyFieldNotFound,	"%s: Key field '%s' not found"
 	OraConsts_SInvalidInterval,	"Invalid interval."
@@ -1497,7 +1497,7 @@ BEGIN
 	OraConsts_SChangeNotifyNotSupportedWithDirect,	"Change notification is not supported in Direct mode"
 	OraConsts_SChangeNotifyOCIVersion,	"OCI 10.2 or greater is needed for change notification"
 	OraConsts_SChangeNotifyServerVersion,	"Change notification is supported starting with Oracle 10.2"
-	AdvCardList_SResDesignNoItemCaption,	"[Item caption]"
+	cxPCConsts_scxPCImageListIndexError,	"Index (%d) must be between 0 and %d"
 	OraConsts_SNotEnoughInputParams,	"Not enough Input params"
 	OraConsts_STooNanyOutputParams,	"Too many Output params"
 	OraConsts_SNotEnoughOutputParams,	"Not enough Output params"
@@ -2133,25 +2133,18 @@ END
 /* c:\program files (x86)\codegear\rad studio\5.0\mylib\ExpressEditors Library 5\Sources\cxEdit.res */
 /* c:\program files (x86)\codegear\rad studio\5.0\mylib\sdac_v4_30\sdac430src\Source\DBAccess.res */
 /* c:\program files (x86)\codegear\rad studio\5.0\mylib\odac620src\Source\Ora.res */
-/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\PLANNER.RES */
-/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\AdvCardList.res */
+/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\ADVSPIN.RES */
+/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\ASGSPIN.RES */
+/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\ADVGRID.RES */
+/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\ASGRES.RES */
+/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\asgprint.DFM */
 /* c:\program files (x86)\codegear\rad studio\5.0\mylib\ExpressQuantumGrid 5\Sources\cxGrid.res */
 /* c:\program files (x86)\codegear\rad studio\5.0\mylib\ExpressEditors Library 5\Sources\cxFilterControlDialog.dfm */
 /* c:\program files (x86)\codegear\rad studio\5.0\mylib\ExpressQuantumGrid 5\Sources\cxFilterDialog.dfm */
 /* c:\program files (x86)\codegear\rad studio\5.0\lib\DBPWDlg.dfm */
 /* c:\program files (x86)\codegear\rad studio\5.0\lib\DBLogDlg.dfm */
 /* c:\program files (x86)\codegear\rad studio\5.0\lib\DBCtrls.res */
-/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\SPIN.RES */
-/* c:\program files (x86)\codegear\rad studio\5.0\lib\IWTabPane.res */
-/* c:\program files (x86)\codegear\rad studio\5.0\lib\IWData.res */
-/* c:\program files (x86)\codegear\rad studio\5.0\lib\IWWAP.RES */
-/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\ASGSPIN.RES */
-/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\ADVGRID.RES */
-/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\ASGRES.RES */
-/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\PlanSimpleEdit.dfm */
-/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\ADVSPIN.RES */
-/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\clisted.res */
-/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\asgprint.DFM */
+/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\PLANNER.RES */
 /* EmailchkPage.dfm */
 /* FindPWPage.dfm */
 /* UpdatePWPage.dfm */
@@ -2163,9 +2156,16 @@ END
 /* FixBreakdownEditPage.dfm */
 /* AnniversaryEditPage.dfm */
 /* SolnLun.dcr */
+/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\AdvCardList.res */
+/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\SPIN.RES */
+/* c:\program files (x86)\codegear\rad studio\5.0\lib\IWTabPane.res */
+/* c:\program files (x86)\codegear\rad studio\5.0\lib\IWData.res */
+/* c:\program files (x86)\codegear\rad studio\5.0\lib\IWWAP.RES */
+/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\PlanSimpleEdit.dfm */
+/* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\clisted.res */
+/* ReportPage.dfm */
 /* HouseholdPage.dfm */
 /* DataModule.dfm */
-/* ReportPage.dfm */
 /* FindIDPage.dfm */
 /* MemInsertPage.dfm */
 /* LoginPage.dfm */
