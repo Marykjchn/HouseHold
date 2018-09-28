@@ -2232,7 +2232,7 @@ object HouseHoldForm: THouseHoldForm
       Margins.Right = 15
       EditValue = 0c
       ParentFont = False
-      Properties.DisplayFormat = ',0.;-,0.'
+      Properties.DisplayFormat = ',0.'#50896';-,0'#50896'.'
       Style.Font.Charset = HANGEUL_CHARSET
       Style.Font.Color = 4934475
       Style.Font.Height = -12
@@ -2241,7 +2241,7 @@ object HouseHoldForm: THouseHoldForm
       Style.IsFontAssigned = True
       TabOrder = 4
       OnKeyDown = ComboAmountKeyDown
-      BiDiMode = bdLeftToRight
+      BiDiMode = bdRightToLeft
       ParentBiDiMode = False
       Width = 240
     end
