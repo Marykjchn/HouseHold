@@ -3,7 +3,7 @@ object MemInsertForm: TMemInsertForm
   Top = 0
   BorderStyle = bsDialog
   Caption = #54924#50896#44032#51077
-  ClientHeight = 780
+  ClientHeight = 850
   ClientWidth = 480
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -20,7 +20,7 @@ object MemInsertForm: TMemInsertForm
     Left = 0
     Top = 0
     Width = 480
-    Height = 780
+    Height = 850
     Align = alClient
     Color = clWindow
     ParentBackground = False
@@ -99,7 +99,7 @@ object MemInsertForm: TMemInsertForm
     end
     object cxLabel9: TcxLabel
       Left = 87
-      Top = 600
+      Top = 670
       Caption = #51060#47700#51068
       ParentFont = False
       Style.Font.Charset = HANGEUL_CHARSET
@@ -190,7 +190,7 @@ object MemInsertForm: TMemInsertForm
     end
     object chkAdd: TcxLabel
       Left = 89
-      Top = 510
+      Top = 580
       Caption = #51452#49548#47484' '#51077#47141#54644#51452#49464#50836'.'
       ParentFont = False
       Style.Font.Charset = HANGEUL_CHARSET
@@ -203,7 +203,7 @@ object MemInsertForm: TMemInsertForm
     end
     object chkEmail: TcxLabel
       Left = 87
-      Top = 650
+      Top = 720
       Caption = #51060#47700#51068#51012' '#51077#47141#54644#51452#49464#50836'.'
       ParentFont = False
       Style.Font.Charset = HANGEUL_CHARSET
@@ -216,7 +216,7 @@ object MemInsertForm: TMemInsertForm
     end
     object cxLabel12: TcxLabel
       Left = 87
-      Top = 530
+      Top = 600
       Caption = #55092#45824#54256' '#48264#54840
       ParentFont = False
       Style.Font.Charset = DEFAULT_CHARSET
@@ -228,7 +228,7 @@ object MemInsertForm: TMemInsertForm
     end
     object cxLabel13: TcxLabel
       Left = 173
-      Top = 555
+      Top = 625
       Caption = '-'
       ParentFont = False
       Style.Font.Charset = HANGEUL_CHARSET
@@ -240,7 +240,7 @@ object MemInsertForm: TMemInsertForm
     end
     object cxLabel14: TcxLabel
       Left = 288
-      Top = 555
+      Top = 625
       Caption = '-'
       ParentFont = False
       Style.Font.Charset = HANGEUL_CHARSET
@@ -289,7 +289,7 @@ object MemInsertForm: TMemInsertForm
         OnKeyUp = EditIDKeyUp
         Width = 300
       end
-      object cxLabel15: TcxLabel
+      object LabID: TcxLabel
         Left = 17
         Top = 2
         Caption = #50500#51060#46356
@@ -305,7 +305,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = cxLabel15Click
+        OnClick = LabIDClick
       end
     end
     object Panel3: TPanel
@@ -347,7 +347,7 @@ object MemInsertForm: TMemInsertForm
         OnKeyUp = EditPWKeyUp
         Width = 300
       end
-      object cxLabel16: TcxLabel
+      object LabPW: TcxLabel
         Left = 17
         Top = 2
         Caption = #48708#48128#48264#54840' (6'#51088#51060#49345')'
@@ -363,7 +363,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = cxLabel16Click
+        OnClick = LabPWClick
       end
     end
     object Panel4: TPanel
@@ -405,7 +405,7 @@ object MemInsertForm: TMemInsertForm
         OnKeyUp = EditPWchkKeyUp
         Width = 300
       end
-      object cxLabel17: TcxLabel
+      object LabPWChk: TcxLabel
         Left = 17
         Top = 2
         Caption = #48708#48128#48264#54840' '#51116#54869#51064
@@ -421,7 +421,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = cxLabel17Click
+        OnClick = LabPWChkClick
       end
     end
     object Panel5: TPanel
@@ -463,7 +463,7 @@ object MemInsertForm: TMemInsertForm
         OnKeyUp = EditNameKeyUp
         Width = 300
       end
-      object cxLabel4: TcxLabel
+      object LabName: TcxLabel
         Left = 17
         Top = 2
         Caption = #51060#47492
@@ -479,7 +479,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = cxLabel4Click
+        OnClick = LabNameClick
       end
     end
     object Panel6: TPanel
@@ -519,7 +519,7 @@ object MemInsertForm: TMemInsertForm
         OnKeyUp = EditYearKeyUp
         Width = 76
       end
-      object cxLabel18: TcxLabel
+      object LabBirthYear: TcxLabel
         Left = 17
         Top = 2
         Caption = #45380
@@ -535,7 +535,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = cxLabel18Click
+        OnClick = LabBirthYearClick
       end
     end
     object Panel7: TPanel
@@ -593,7 +593,7 @@ object MemInsertForm: TMemInsertForm
         OnKeyUp = ComboMonKeyUp
         Width = 76
       end
-      object cxLabel19: TcxLabel
+      object LabBirthMonth: TcxLabel
         Left = 17
         Top = 2
         Caption = #50900
@@ -609,7 +609,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = cxLabel19Click
+        OnClick = LabBirthMonthClick
       end
     end
     object Panel8: TPanel
@@ -649,7 +649,7 @@ object MemInsertForm: TMemInsertForm
         OnKeyUp = EditDayKeyUp
         Width = 76
       end
-      object cxLabel20: TcxLabel
+      object LabBirthDay: TcxLabel
         Left = 17
         Top = 2
         Caption = #51068
@@ -665,7 +665,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = cxLabel20Click
+        OnClick = LabBirthDayClick
       end
     end
     object cxLabel6: TcxLabel
@@ -713,7 +713,7 @@ object MemInsertForm: TMemInsertForm
         TabOrder = 1
         Width = 81
       end
-      object cxLabel21: TcxLabel
+      object LabAge: TcxLabel
         Left = 17
         Top = 2
         Caption = #45208#51060
@@ -745,7 +745,7 @@ object MemInsertForm: TMemInsertForm
       ParentBackground = False
       ParentCtl3D = False
       TabOrder = 9
-      object cxRadioButton2: TcxRadioButton
+      object RBtnSexW: TcxRadioButton
         Left = 128
         Top = 5
         Width = 70
@@ -759,7 +759,7 @@ object MemInsertForm: TMemInsertForm
         ParentFont = False
         TabOrder = 1
       end
-      object cxRadioButton1: TcxRadioButton
+      object RBtnSexM: TcxRadioButton
         Left = 35
         Top = 5
         Width = 70
@@ -778,7 +778,7 @@ object MemInsertForm: TMemInsertForm
     end
     object Panel11: TPanel
       Left = 70
-      Top = 550
+      Top = 620
       Width = 100
       Height = 30
       BevelEdges = []
@@ -795,8 +795,8 @@ object MemInsertForm: TMemInsertForm
       ParentBackground = False
       ParentCtl3D = False
       ParentFont = False
-      TabOrder = 11
-      object ComboFPhone: TcxComboBox
+      TabOrder = 13
+      object ComFPhone: TcxComboBox
         Left = 14
         Top = 3
         ParentFont = False
@@ -819,15 +819,15 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 0
         Text = '010'
-        OnEnter = ComboFPhoneEnter
-        OnExit = ComboFPhoneExit
+        OnEnter = ComFPhoneEnter
+        OnExit = ComFPhoneExit
         OnKeyPress = OnlyNumber2
         Width = 70
       end
     end
     object Panel12: TPanel
       Left = 185
-      Top = 550
+      Top = 620
       Width = 100
       Height = 30
       BevelEdges = []
@@ -838,7 +838,7 @@ object MemInsertForm: TMemInsertForm
       Ctl3D = False
       ParentBackground = False
       ParentCtl3D = False
-      TabOrder = 12
+      TabOrder = 14
       object EditMPhone: TcxTextEdit
         Left = 14
         Top = 4
@@ -864,7 +864,7 @@ object MemInsertForm: TMemInsertForm
     end
     object Panel13: TPanel
       Left = 300
-      Top = 550
+      Top = 620
       Width = 100
       Height = 30
       BevelEdges = []
@@ -875,7 +875,7 @@ object MemInsertForm: TMemInsertForm
       Ctl3D = False
       ParentBackground = False
       ParentCtl3D = False
-      TabOrder = 13
+      TabOrder = 15
       object EditLPhone: TcxTextEdit
         Left = 14
         Top = 4
@@ -901,7 +901,7 @@ object MemInsertForm: TMemInsertForm
     end
     object Panel14: TPanel
       Left = 70
-      Top = 480
+      Top = 515
       Width = 330
       Height = 30
       BevelEdges = []
@@ -912,14 +912,16 @@ object MemInsertForm: TMemInsertForm
       Ctl3D = False
       ParentBackground = False
       ParentCtl3D = False
-      TabOrder = 10
+      TabOrder = 11
       object EditAdd: TcxTextEdit
         Left = 14
-        Top = 4
+        Top = 1
         ImeMode = imSHanguel
         ParentFont = False
         ParentShowHint = False
         Properties.ImeMode = imSHanguel
+        Properties.ReadOnly = True
+        Properties.OnChange = EditAddPropertiesChange
         ShowHint = True
         Style.BorderColor = clWindow
         Style.Edges = []
@@ -931,13 +933,10 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditAddEnter
-        OnExit = EditAddExit
-        OnKeyPress = EditAddKeyPress
-        OnKeyUp = EditAddKeyUp
+        OnClick = EditAddClick
         Width = 300
       end
-      object cxLabel22: TcxLabel
+      object LabAddress: TcxLabel
         Left = 17
         Top = 2
         Caption = #51452#49548
@@ -953,12 +952,12 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = cxLabel22Click
+        OnClick = LabAddressClick
       end
     end
     object chkPhone: TcxLabel
       Left = 89
-      Top = 580
+      Top = 650
       Caption = #55092#45824#54256' '#48264#54840#47484' '#51221#54869#55176' '#51077#47141#54644#51452#49464#50836'.'
       ParentFont = False
       Style.Font.Charset = HANGEUL_CHARSET
@@ -971,7 +970,7 @@ object MemInsertForm: TMemInsertForm
     end
     object Panel15: TPanel
       Left = 70
-      Top = 620
+      Top = 690
       Width = 85
       Height = 30
       BevelEdges = []
@@ -982,8 +981,8 @@ object MemInsertForm: TMemInsertForm
       Ctl3D = False
       ParentBackground = False
       ParentCtl3D = False
-      TabOrder = 14
-      object EditEmail1: TcxTextEdit
+      TabOrder = 16
+      object EditFEmail: TcxTextEdit
         Left = 5
         Top = 4
         ImeMode = imSAlpha
@@ -1001,15 +1000,15 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 0
-        OnEnter = EditEmail1Enter
-        OnExit = EditEmail1Exit
+        OnEnter = EditFEmailEnter
+        OnExit = EditFEmailExit
         OnKeyPress = EditEmailKeyPress
         Width = 75
       end
     end
     object Panel16: TPanel
       Left = 170
-      Top = 620
+      Top = 690
       Width = 91
       Height = 30
       BevelEdges = []
@@ -1020,8 +1019,8 @@ object MemInsertForm: TMemInsertForm
       Ctl3D = False
       ParentBackground = False
       ParentCtl3D = False
-      TabOrder = 15
-      object EditEmail2: TcxTextEdit
+      TabOrder = 17
+      object EditLEmail: TcxTextEdit
         Left = 5
         Top = 4
         ImeMode = imSAlpha
@@ -1039,15 +1038,15 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 0
-        OnEnter = EditEmail2Enter
-        OnExit = EditEmail2Exit
+        OnEnter = EditLEmailEnter
+        OnExit = EditLEmailExit
         OnKeyPress = EditEmailKeyPress
         Width = 81
       end
     end
     object Panel17: TPanel
       Left = 264
-      Top = 620
+      Top = 690
       Width = 91
       Height = 30
       BevelEdges = []
@@ -1064,8 +1063,8 @@ object MemInsertForm: TMemInsertForm
       ParentBackground = False
       ParentCtl3D = False
       ParentFont = False
-      TabOrder = 16
-      object ComboEmailSel: TcxComboBox
+      TabOrder = 18
+      object ComboSelEmail: TcxComboBox
         Left = 5
         Top = 4
         ParentFont = False
@@ -1088,14 +1087,14 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 0
         Text = #51649#51217#51077#47141
-        OnEnter = ComboEmailSelEnter
-        OnExit = ComboEmailSelExit
+        OnEnter = ComboSelEmailEnter
+        OnExit = ComboSelEmailExit
         Width = 81
       end
     end
     object cxLabel26: TcxLabel
       Left = 154
-      Top = 625
+      Top = 695
       Caption = '@'
       ParentFont = False
       Style.Font.Charset = HANGEUL_CHARSET
@@ -1107,7 +1106,7 @@ object MemInsertForm: TMemInsertForm
     end
     object BtnMemInsert: TPanel
       Left = 75
-      Top = 690
+      Top = 760
       Width = 320
       Height = 40
       Cursor = crHandPoint
@@ -1120,14 +1119,14 @@ object MemInsertForm: TMemInsertForm
       Font.Style = [fsBold]
       ParentBackground = False
       ParentFont = False
-      TabOrder = 37
+      TabOrder = 39
       OnClick = BtnMemInsertClick
       OnMouseEnter = BtnMemInsertMouseEnter
       OnMouseLeave = BtnMemInsertMouseLeave
     end
     object BtnEmailChk: TPanel
       Left = 356
-      Top = 619
+      Top = 689
       Width = 44
       Height = 31
       Cursor = crHandPoint
@@ -1140,8 +1139,139 @@ object MemInsertForm: TMemInsertForm
       Font.Style = [fsBold]
       ParentBackground = False
       ParentFont = False
-      TabOrder = 38
+      TabOrder = 40
       OnClick = BtnEmailChkClick
+      OnMouseEnter = BtnEmailChkMouseEnter
+      OnMouseLeave = BtnEmailChkMouseLeave
+    end
+    object Panel18: TPanel
+      Left = 70
+      Top = 551
+      Width = 330
+      Height = 30
+      BevelEdges = []
+      BevelOuter = bvNone
+      BorderWidth = 1
+      BorderStyle = bsSingle
+      Color = clWindow
+      Ctl3D = False
+      ParentBackground = False
+      ParentCtl3D = False
+      TabOrder = 12
+      object EditDetailAddress: TcxTextEdit
+        Left = 14
+        Top = 4
+        ImeMode = imSHanguel
+        ParentFont = False
+        ParentShowHint = False
+        Properties.ImeMode = imSHanguel
+        Properties.ReadOnly = False
+        Properties.OnChange = EditDetailAddressPropertiesChange
+        ShowHint = True
+        Style.BorderColor = clWindow
+        Style.Edges = []
+        Style.Font.Charset = HANGEUL_CHARSET
+        Style.Font.Color = 5592405
+        Style.Font.Height = -12
+        Style.Font.Name = #47569#51008' '#44256#46357
+        Style.Font.Style = [fsBold]
+        Style.IsFontAssigned = True
+        StyleFocused.Color = 16776441
+        TabOrder = 1
+        OnClick = EditAddClick
+        Width = 300
+      end
+      object LabDetailAddress: TcxLabel
+        Left = 17
+        Top = 2
+        Caption = #49345#49464' '#51452#49548
+        ParentColor = False
+        ParentFont = False
+        Style.BorderColor = 13158600
+        Style.Color = clWindow
+        Style.Font.Charset = HANGEUL_CHARSET
+        Style.Font.Color = 9211020
+        Style.Font.Height = -15
+        Style.Font.Name = #47569#51008' '#44256#46357
+        Style.Font.Style = []
+        Style.IsFontAssigned = True
+        StyleDisabled.Color = clWindow
+        StyleHot.Color = clWindow
+        OnClick = LabAddressClick
+      end
+    end
+    object Panel19: TPanel
+      Left = 70
+      Top = 480
+      Width = 225
+      Height = 30
+      BevelEdges = []
+      BevelOuter = bvNone
+      BorderWidth = 1
+      BorderStyle = bsSingle
+      Color = clWindow
+      Ctl3D = False
+      ParentBackground = False
+      ParentCtl3D = False
+      TabOrder = 10
+      object EditPostCode: TcxTextEdit
+        Left = 14
+        Top = 4
+        ParentFont = False
+        ParentShowHint = False
+        Properties.MaxLength = 2
+        Properties.ReadOnly = True
+        Properties.OnChange = EditPostCodePropertiesChange
+        ShowHint = True
+        Style.BorderColor = clWindow
+        Style.Edges = []
+        Style.Font.Charset = HANGEUL_CHARSET
+        Style.Font.Color = 5592405
+        Style.Font.Height = -12
+        Style.Font.Name = #47569#51008' '#44256#46357
+        Style.Font.Style = [fsBold]
+        Style.IsFontAssigned = True
+        StyleFocused.Color = 16776441
+        TabOrder = 1
+        OnClick = EditAddClick
+        Width = 195
+      end
+      object LabPostCode: TcxLabel
+        Left = 17
+        Top = 2
+        Caption = #50864#54200#48264#54840
+        ParentColor = False
+        ParentFont = False
+        Style.BorderColor = 13158600
+        Style.Color = clWindow
+        Style.Font.Charset = HANGEUL_CHARSET
+        Style.Font.Color = 9211020
+        Style.Font.Height = -15
+        Style.Font.Name = #47569#51008' '#44256#46357
+        Style.Font.Style = []
+        Style.IsFontAssigned = True
+        StyleDisabled.Color = clWindow
+        StyleHot.Color = clWindow
+        OnClick = LabAddressClick
+      end
+    end
+    object BtnSearchAddress: TPanel
+      Left = 300
+      Top = 479
+      Width = 100
+      Height = 31
+      Cursor = crHandPoint
+      Caption = #51452#49548#44160#49353
+      Color = 16760704
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = #47569#51008' '#44256#46357
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 41
+      OnClick = BtnSearchAddressClick
       OnMouseEnter = BtnEmailChkMouseEnter
       OnMouseLeave = BtnEmailChkMouseLeave
     end

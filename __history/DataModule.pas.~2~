@@ -8,8 +8,7 @@ uses
   IdMessageClient, IdSMTP, IdBaseComponent, IdComponent, IdIOHandler,
   IdIOHandlerSocket, IdSSLOpenSSL, Messages, Dialogs, DCPmd5, DCPsha256,
   IdCoder, IdCoder3to4, IdCoderMIME, cxGrid, Windows, Forms, Controls,
-  cxExportGrid4Link , shellApi, asgprint, OraTransaction, xmldom, XMLIntf,
-  msxmldom, XMLDoc, IdHTTP, HTTPAPP, cxGridDBTableView, cxLabel;
+  cxExportGrid4Link , shellApi, asgprint, OraTransaction;
 
 const
   CHAR_SET: array [0..35] of Char =
@@ -33,13 +32,6 @@ type
     eemail, ebody                    : String;
   end;
 
-// 주소검색시 해당 우편번호, 지번주소, 도로명주소 저장, 도로명저장여부
-type
-  TaddressSearch  = record
-    AZipCode, ARoadAddr, AJibunAddr, ADetailAddr  : String;
-    ARoadBool                                     : Boolean;
-  end;
-
 type
   TDataModule1 = class(TDataModule)
     OraSession1: TOraSession;
@@ -49,8 +41,6 @@ type
     IdMessage1: TIdMessage;
     SaveExcel: TSaveDialog;
     OraTransaction1: TOraTransaction;
-    Indy: TIdHTTP;
-    XMLDocument1: TXMLDocument;
     procedure DataModuleCreate(Sender: TObject);
 
   private
@@ -58,26 +48,14 @@ type
 
   public
     { Public declarations }
-    recMemDate    : TmemData;
-    emailCerti    : TemailC​erti;
-    addressSearch : TaddressSearch;
+    recMemDate : TmemData;
+    emailCerti : TemailC​erti;
 
     // --------------- 이메일 사용 ---------------
     function SendEmail(eSubject, ebody : String) : string;
 
     // --------------- 엑셀 파일 경로 저장 ---------------
     procedure ExcelRoute(FileName : String; GridName : TcxGrid; phandle : HWND);
-
-    // --------------- 주소 검색 ------------------
-    procedure JusoSearchApiCall(JusoEdit : String; PageNum : Integer);
-
-    //// control 상의 Enable 지정 FControlColors 참조하여 구분
-    procedure SetVisibleItems(AWinControl: TWinControl; AEnabled: Boolean);
-
-    var
-      TJusoTotNum  : Integer;  // 총 주소 row수
-      TJusoTotPage : Integer;  // 총 주소 page수
-      TJusoTotMod  : Integer;  // 주소를 countperpage로 나눈 나머지수
 
   end;
 
@@ -89,7 +67,7 @@ implementation
 {$R *.dfm}
 
 uses
-  HDataMethod, LoginPage, HouseholdPage, SearchJusoPage;
+  HDataMethod, LoginPage, HouseholdPage;
 
 { TDataModule1 }
 
@@ -97,18 +75,12 @@ procedure TDataModule1.DataModuleCreate(Sender: TObject);
 var
   chk : Integer;
 begin
-  OraSession1.ConnectString := 'sg100/"*%(vmffosdlt)^("@devdb2.itshan.co.kr:3300:SALGU';
+  OraSession1.ConnectString := 'mary/"456527"@61.80.112.205:1521:XE';
   OraSession1.Connected     := True;
 
   QH_DML.Session            := OraSession1;
 
   LoginForm := TLoginForm.Create(Self);
-
-  addressSearch.AZipCode    := '';
-  addressSearch.ARoadAddr   := '';
-  addressSearch.AJibunAddr  := '';
-  addressSearch.ARoadBool   := False;
-  addressSearch.ADetailAddr := '';
 
   try
     chk := LoginForm.ShowModal;
@@ -228,130 +200,6 @@ begin
   finally
     SMTP.Disconnect;
   end;
-end;
-
-procedure TDataModule1.SetVisibleItems(AWinControl: TWinControl; AEnabled: Boolean);
-var
-  i     : Integer;
-  IsTag : Integer;
-begin
-  with AWinControl do begin
-    for i := 0 to AWinControl.ControlCount - 1 do begin
-      IsTag := Controls[i].Tag;
-      if IsTag = 7 then begin
-        continue;
-      end;
-      Controls[i].Visible := AEnabled;
-    end;
-  end;
-end;
-
-procedure TDataModule1.JusoSearchApiCall(JusoEdit : String; PageNum : Integer);
-var
-  Key, SearchWord, Url  : String;
-  Data, DResult         : TStringStream;
-  sData                 : TStringList;
-  OuterRoot, EntryNode  : iXmlNode;
-  i, j, k               : Integer;
-  nTotCnt               : Integer;
-begin
-
-  Data := TStringStream.Create('');
-  sData := TStringList.Create;
-  DResult := TStringStream.Create('');
-
-  Screen.Cursor := crHourGlass;
-
-  try
-    // 승인키
-    Key := HTTPEncode(Utf8Encode('U01TX0FVVEgyMDE4MTAwNDExMjMxNzEwODIxMTQ='));
-
-    // 검색어
-    SearchWord := HTTPEncode(Utf8Encode(JusoEdit));
-
-    Url := 'http://www.juso.go.kr/addrlink/addrLinkApi.do';
-
-    // 1페이지당 5개(countPerPage=5)씩 호출
-    Url                       := Url + '?currentPage=' + intToStr(PageNum) + '&countPerPage=5&keyword=' + searchWord + '&confmKey=' + Key;
-    Indy.Request.ContentType  := 'application/json';
-    Indy.HTTPOptions          := [hoForceEncodeParams];
-    Indy.get(Url, DResult);
-
-    XMLDocument1.LoadFromStream(DResult);
-    XMLDocument1.Active := True;
-
-    OuterRoot := XMLDocument1.DocumentElement;
-    nTotCnt   := 0;
-
-    //검색결과의 common 영역에서 totalcount, currentPage, countPerPage를 읽어 들임
-    //currentPage > 0 (def 1), 0 < countPerPage <= 100 (max 100)이므로 지정범위를 벗어난 값을 호출하면 기본값으로 변경되어 호출시 보낸 값과 다른 값 나옴
-    for i:=0 to OuterRoot.ChildNodes.Count-1 do begin
-      if OuterRoot.ChildNodes[i].NodeName = 'common' then begin
-        EntryNode := OuterRoot.ChildNodes[i];
-
-        for j:=0 to EntryNode.ChildNodes.Count-1 do begin
-          if EntryNode.ChildNodes[j].NodeName = 'totalCount' then begin
-            nTotCnt := strtoint(EntryNode.ChildNodes[j].Text);
-            Break;
-          end;
-        end;
-      end;
-    end;
-
-    TJusoTotNum  := nTotCnt;
-
-    if (TJusoTotNum MOD 5) = 0 then begin
-      TJusoTotPage := nTotCnt div 5;
-    end else begin
-      TJusoTotPage := (nTotCnt div 5) + 1;
-    end;
-
-    if ((TJusoTotPage = PageNum) AND ((TJusoTotNum MOD 5) = 0)) then begin
-      TJusoTotMod  := 5;
-    end else if TJusoTotNum = 0 then begin
-      TJusoTotMod  := 0;
-    end else begin
-      TJusoTotMod  := TJusoTotNum MOD 5;
-    end;
-
-    //주소 그리드 세팅
-    if nTotCnt > 0 then begin
-
-      k := 1; //Search_Juso 데이터 시작 행
-
-      for i:=0 to OuterRoot.ChildNodes.Count-1 do  begin
-
-        if OuterRoot.ChildNodes[i].NodeName = 'juso' then begin
-          EntryNode := OuterRoot.ChildNodes[i];
-
-          for j:=0 to EntryNode.ChildNodes.Count-1 do begin
-            with SearchJusoForm do begin
-
-              if EntryNode.ChildNodes[j].NodeName = 'zipNo'       then begin
-                TcxLabel(FindComponent('ZipNo'+intToStr(k))).Caption     := EntryNode.ChildNodes[j].Text;
-              end;
-              if EntryNode.ChildNodes[j].NodeName = 'roadAddr'    then begin
-                TcxLabel(FindComponent('roadAddr'+intToStr(k))).Caption  := EntryNode.ChildNodes[j].Text;
-              end;
-              if EntryNode.ChildNodes[j].NodeName = 'jibunAddr'   then begin
-                TcxLabel(FindComponent('jibunAddr'+intToStr(k))).Caption := EntryNode.ChildNodes[j].Text;
-              end;
-
-            end;
-
-          end;
-          k := k+1;
-        end;
-      end;
-    end;
-  finally
-    XMLDocument1.Active := False;
-    Data.Free;
-    sData.Free;
-    DResult.Free;
-    Screen.Cursor := crDefault;
-  end;
-
 end;
 
 end.

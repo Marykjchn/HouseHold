@@ -48,24 +48,4 @@ object DataModule1: TDataModule1
     Left = 24
     Top = 64
   end
-  object Indy: TIdHTTP
-    MaxLineAction = maException
-    AllowCookies = True
-    ProxyParams.BasicAuthentication = False
-    ProxyParams.ProxyPort = 0
-    Request.ContentLength = -1
-    Request.ContentRangeEnd = 0
-    Request.ContentRangeStart = 0
-    Request.Accept = 'text/html, */*'
-    Request.BasicAuthentication = False
-    Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
-    HTTPOptions = [hoForceEncodeParams]
-    Left = 64
-    Top = 64
-  end
-  object XMLDocument1: TXMLDocument
-    Left = 112
-    Top = 64
-    DOMVendorDesc = 'MSXML'
-  end
 end

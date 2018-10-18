@@ -29,8 +29,8 @@ type
     cxLabel8: TcxLabel;
     cxLabel9: TcxLabel;
     cxLabel10: TcxLabel;
-    cxRadioButton1: TcxRadioButton;
-    cxRadioButton2: TcxRadioButton;
+    RBtnSexM: TcxRadioButton;
+    RBtnSexW: TcxRadioButton;
     chkName: TcxLabel;
     chkID: TcxLabel;
     chkPW: TcxLabel;
@@ -43,49 +43,56 @@ type
     cxLabel14: TcxLabel;
     Panel2: TPanel;
     EditID: TcxTextEdit;
-    cxLabel15: TcxLabel;
+    LabID: TcxLabel;
     Panel3: TPanel;
     EditPW: TcxTextEdit;
-    cxLabel16: TcxLabel;
+    LabPW: TcxLabel;
     Panel4: TPanel;
     EditPWchk: TcxTextEdit;
-    cxLabel17: TcxLabel;
+    LabPWChk: TcxLabel;
     Panel5: TPanel;
     EditName: TcxTextEdit;
-    cxLabel4: TcxLabel;
+    LabName: TcxLabel;
     Panel6: TPanel;
     EditYear: TcxTextEdit;
-    cxLabel18: TcxLabel;
+    LabBirthYear: TcxLabel;
     Panel7: TPanel;
-    cxLabel19: TcxLabel;
+    LabBirthMonth: TcxLabel;
     Panel8: TPanel;
     EditDay: TcxTextEdit;
-    cxLabel20: TcxLabel;
+    LabBirthDay: TcxLabel;
     ComboMon: TcxComboBox;
     cxLabel6: TcxLabel;
     Panel9: TPanel;
-    cxLabel21: TcxLabel;
+    LabAge: TcxLabel;
     EditAge: TcxTextEdit;
     Panel10: TPanel;
     Panel11: TPanel;
-    ComboFPhone: TcxComboBox;
+    ComFPhone: TcxComboBox;
     Panel12: TPanel;
     EditMPhone: TcxTextEdit;
     Panel13: TPanel;
     EditLPhone: TcxTextEdit;
     Panel14: TPanel;
     EditAdd: TcxTextEdit;
-    cxLabel22: TcxLabel;
+    LabAddress: TcxLabel;
     chkPhone: TcxLabel;
     Panel15: TPanel;
-    EditEmail1: TcxTextEdit;
+    EditFEmail: TcxTextEdit;
     Panel16: TPanel;
-    EditEmail2: TcxTextEdit;
+    EditLEmail: TcxTextEdit;
     Panel17: TPanel;
-    ComboEmailSel: TcxComboBox;
+    ComboSelEmail: TcxComboBox;
     cxLabel26: TcxLabel;
     BtnMemInsert: TPanel;
     BtnEmailChk: TPanel;
+    Panel18: TPanel;
+    EditDetailAddress: TcxTextEdit;
+    LabDetailAddress: TcxLabel;
+    Panel19: TPanel;
+    EditPostCode: TcxTextEdit;
+    LabPostCode: TcxLabel;
+    BtnSearchAddress: TPanel;
 
     // 폼 생성시 에러 라벨 hide
     procedure FormCreate(Sender: TObject);   
@@ -104,26 +111,26 @@ type
     // ------------- 회원가입 입력란 이벤트 -------------
 
     // -----아이디-----
-    procedure cxLabel15Click(Sender: TObject);
+    procedure LabIDClick(Sender: TObject);
     procedure EditIDEnter(Sender: TObject);
     procedure EditIDKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditIDKeyPress(Sender: TObject; var Key: Char);
     procedure EditIDExit(Sender: TObject);
 
     // -----비밀번호-----
-    procedure cxLabel16Click(Sender: TObject);
+    procedure LabPWClick(Sender: TObject);
     procedure EditPWEnter(Sender: TObject);
     procedure EditPWKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditPWExit(Sender: TObject);
 
     // -----비밀번호 확인-----
-    procedure cxLabel17Click(Sender: TObject);
+    procedure LabPWChkClick(Sender: TObject);
     procedure EditPWchkEnter(Sender: TObject);
     procedure EditPWchkKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditPWchkExit(Sender: TObject);
 
     // -----이름-----
-    procedure cxLabel4Click(Sender: TObject);
+    procedure LabNameClick(Sender: TObject);
     procedure EditNameEnter(Sender: TObject);
     procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditNameKeyPress(Sender: TObject; var Key: Char);
@@ -131,33 +138,29 @@ type
 
     // -----생년월일-----
     // 년도
-    procedure cxLabel18Click(Sender: TObject);
+    procedure LabBirthYearClick(Sender: TObject);
     procedure EditYearEnter(Sender: TObject);
     procedure EditYearKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditYear2Exit(Sender: TObject);
     // 월
-    procedure cxLabel19Click(Sender: TObject);
+    procedure LabBirthMonthClick(Sender: TObject);
     procedure ComboMonEnter(Sender: TObject);
     procedure ComboMonKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure ComboMonPropertiesChange(Sender: TObject);
     procedure ComboMonExit(Sender: TObject);
     // 일
-    procedure cxLabel20Click(Sender: TObject);
+    procedure LabBirthDayClick(Sender: TObject);
     procedure EditDayEnter(Sender: TObject);
     procedure EditDayKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditDayExit(Sender: TObject);
 
     // -----주소-----
-    procedure cxLabel22Click(Sender: TObject);
-    procedure EditAddEnter(Sender: TObject);
-    procedure EditAddKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure EditAddKeyPress(Sender: TObject; var Key: Char);
-    procedure EditAddExit(Sender: TObject);
+    procedure LabAddressClick(Sender: TObject);
 
     // -----핸드폰 번호-----
     // 앞번호
-    procedure ComboFPhoneEnter(Sender: TObject);
-    procedure ComboFPhoneExit(Sender: TObject);
+    procedure ComFPhoneEnter(Sender: TObject);
+    procedure ComFPhoneExit(Sender: TObject);
     // 중간번호
     procedure EditMPhoneEnter(Sender: TObject);
     procedure EditMPhoneExit(Sender: TObject);
@@ -167,15 +170,15 @@ type
 
     // -----이메일-----
     // 아이디
-    procedure EditEmail1Enter(Sender: TObject);
+    procedure EditFEmailEnter(Sender: TObject);
     procedure EditEmailKeyPress(Sender: TObject; var Key: Char);
-    procedure EditEmail1Exit(Sender: TObject);
+    procedure EditFEmailExit(Sender: TObject);
     // 메일주소
-    procedure EditEmail2Enter(Sender: TObject);
-    procedure EditEmail2Exit(Sender: TObject);
+    procedure EditLEmailEnter(Sender: TObject);
+    procedure EditLEmailExit(Sender: TObject);
     // 선택
-    procedure ComboEmailSelEnter(Sender: TObject);
-    procedure ComboEmailSelExit(Sender: TObject);
+    procedure ComboSelEmailEnter(Sender: TObject);
+    procedure ComboSelEmailExit(Sender: TObject);
     procedure ComboEmailSelPropertiesChange(Sender: TObject);
 
 
@@ -190,6 +193,11 @@ type
 
     // --------------- 인증 메일 번호 ---------------
     procedure BtnEmailChkClick(Sender: TObject);
+    procedure EditAddPropertiesChange(Sender: TObject);
+    procedure EditPostCodePropertiesChange(Sender: TObject);
+    procedure BtnSearchAddressClick(Sender: TObject);
+    procedure EditAddClick(Sender: TObject);
+    procedure EditDetailAddressPropertiesChange(Sender: TObject);
     //function SendEmail : string;
 
   private
@@ -209,7 +217,7 @@ implementation
 {$R *.dfm}
 
 uses
-  DataModule, EmailchkPage, HDataMethod;
+  DataModule, EmailchkPage, HDataMethod, SearchJusoPage;
 
 procedure TMemInsertForm.BtnMemInsertMouseEnter(Sender: TObject);
 begin
@@ -221,27 +229,60 @@ begin
   BtnMemInsert.Color := $00FF9122;
 end;
 
-procedure TMemInsertForm.ComboEmailSelEnter(Sender: TObject);
+procedure TMemInsertForm.BtnSearchAddressClick(Sender: TObject);
+var
+  GetModal : TModalResult;
+begin
+  GetModal := 0;
+  SearchJusoForm := TSearchJusoForm.Create(Self);
+  try
+    GetModal := SearchJusoForm.ShowModal;
+  finally
+    if GetModal = mrOk then begin
+      SearchJusoForm.Free;
+      with DataModule1 do begin
+        EditPostCode.Text       := addressSearch.AZipCode;
+        if addressSearch.ARoadBool then begin
+          EditAdd.Text := addressSearch.ARoadAddr;
+        end else begin
+          EditAdd.Text := addressSearch.AJibunAddr;
+        end;
+        EditDetailAddress.Text  := addressSearch.ADetailAddr;
+
+        addressSearch.AZipCode    := '';
+        addressSearch.ARoadAddr   := '';
+        addressSearch.AJibunAddr  := '';
+        addressSearch.ADetailAddr := '';
+        addressSearch.ARoadBool   := False;
+
+        MemInsertChk.address := True;
+      end;
+      EditMPhone.SetFocus;
+    end;
+  end;
+end;
+
+procedure TMemInsertForm.ComboSelEmailEnter(Sender: TObject);
 begin
   chkEmail.Caption       := '이메일을 입력해주세요.';
   Panel17.Color          := $00FFFCF9;
 end;
 
-procedure TMemInsertForm.ComboEmailSelExit(Sender: TObject);
+procedure TMemInsertForm.ComboSelEmailExit(Sender: TObject);
 begin
   Panel17.Color          := clWindow;
 end;
 
 procedure TMemInsertForm.ComboEmailSelPropertiesChange(Sender: TObject);
 begin
-  if ComboEmailSel.Text <> '직접입력' then begin
-    EditEmail2.Properties.ReadOnly := True;
-    EditEmail2.Text := ComboEmailSel.Text;
+  if ComboSelEmail.Text <> '직접입력' then begin
+    EditLEmail.Properties.ReadOnly := True;
+    EditLEmail.Text := ComboSelEmail.Text;
     chkEmail.Hide;
   end else begin
-    EditEmail2.Properties.ReadOnly := False;
-    EditEmail2.Text := '';
-    EditEmail2.SetFocus;
+    EditLEmail.Properties.ReadOnly := False;
+    EditLEmail.Text := '';
+    EditLEmail.SetFocus;
   end;
 end;
 
@@ -253,7 +294,7 @@ end;
 
 procedure TMemInsertForm.ComboMonExit(Sender: TObject);
 begin
-  cxLabel19.Style.Color := clWindow;
+  LabBirthMonth.Style.Color := clWindow;
   Panel7.Color          := clWindow;
 
   if ComboMon.Text = '' then begin
@@ -276,9 +317,9 @@ procedure TMemInsertForm.ComboMonKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if ComboMon.Text <> '' then begin
-    cxLabel19.hide;
+    LabBirthMonth.hide;
   end else begin
-    cxLabel19.show;
+    LabBirthMonth.show;
   end;
 
 end;
@@ -286,9 +327,9 @@ end;
 procedure TMemInsertForm.ComboMonPropertiesChange(Sender: TObject);
 begin
   if ComboMon.Text <> '' then begin
-    cxLabel19.hide;
+    LabBirthMonth.hide;
   end else begin
-    cxLabel19.show;
+    LabBirthMonth.show;
   end;
 
 end;
@@ -299,18 +340,18 @@ var
   chk                       : Integer;
 
 begin
-  if EditEmail1.Text = '' then begin
+  if EditFEmail.Text = '' then begin
     chkEmail.Show;
-    EditEmail1.SetFocus;
+    EditFEmail.SetFocus;
     Exit;
 
-  end else if EditEmail2.Text = '' then begin
+  end else if EditLEmail.Text = '' then begin
     chkEmail.Show;
-    EditEmail2.SetFocus;
+    EditLEmail.SetFocus;
     Exit;
 
   end else begin
-    eemail := EditEmail1.Text + '@' + EditEmail2.Text;
+    eemail := EditFEmail.Text + '@' + EditLEmail.Text;
 
     with DataModule1.QH_DML do begin
       SQL.Clear;
@@ -325,10 +366,10 @@ begin
 
     if eemail = emailchk then begin
       ShowMessage('중복된 이메일 입니다.');
-      EditEmail1.SetFocus;
+      EditFEmail.SetFocus;
       Exit;
 
-    end else begin     
+    end else begin
       Screen.Cursor := crHourGlass;
 
       ebody := HDataMethod.GetRandomString;
@@ -348,9 +389,9 @@ begin
         MemInsertChk.email                := True;
         chkEmail.Style.TextColor          := clGreen;
         chkEmail.Caption                  := '이메일 인증이 완료되었습니다.';
-        EditEmail1.Properties.ReadOnly    := True;
-        EditEmail2.Properties.ReadOnly    := True;
-        ComboEmailSel.Properties.ReadOnly := True;
+        EditFEmail.Properties.ReadOnly    := True;
+        EditLEmail.Properties.ReadOnly    := True;
+        ComboSelEmail.Properties.ReadOnly := True;
         chkEmail.Show;
 
       end else if chk = 7 then begin
@@ -381,7 +422,7 @@ end;
 procedure TMemInsertForm.BtnMemInsertClick(Sender: TObject);
 var
   nam, id, pw, birth, year, month, day, sex, add,
-  phone, phonechk, email, idiv, age               : string;
+  phone, phonechk, email, idiv, postcode          : string;
 
   idx                                             : Integer;
 //  TranID                                          : TBytes;
@@ -409,10 +450,10 @@ begin
     EditDay.SetFocus;
   end else if MemInsertChk.address = False then begin
     ShowMessage('주소가 잘못 입력되었습니다.');
-    EditAdd.SetFocus;
+    EditPostCode.SetFocus;
   end else if MemInsertChk.phone1 = False then begin
     ShowMessage('휴대폰번호가 잘못 입력되었습니다.');
-    ComboFPhone.SetFocus;
+    ComFPhone.SetFocus;
   end else if MemInsertChk.phone2 = False then begin
     ShowMessage('휴대폰번호가 잘못 입력되었습니다.');
     EditMPhone.SetFocus;
@@ -421,10 +462,10 @@ begin
     EditLPhone.SetFocus;
   end else if MemInsertChk.email = False then begin
     ShowMessage('이메일을 인증해주세요.');
-    EditEmail2.SetFocus;
+    EditLEmail.SetFocus;
   end else begin
 
-    phone := ComboFPhone.Text + '-' + EditMPhone.Text + '-' + EditLPhone.Text;
+    phone := ComFPhone.Text + '-' + EditMPhone.Text + '-' + EditLPhone.Text;
 
     try
       with DataModule1.QH_DML do begin
@@ -446,23 +487,23 @@ begin
       EditMPhone.SetFocus;
 
     end else begin
-      nam   := HDataMethod.HITSEncrypt(EditName.Text, KEY);
-      id    := HDataMethod.HITSEncrypt(EditID.Text, KEY);
-      pw    := HDataMethod.HITSHashEncrypt(EditPW.Text);
-      year  := EditYear.Text;
-      month := ComboMon.Text;
-      day   := EditDay.Text;
-      birth := HDataMethod.HITSEncrypt(year + '-' + month + '-' + day, KEY);
-      age   := HDataMethod.HITSEncrypt(EditAge.Text, KEY);
+      nam       := HDataMethod.HITSEncrypt(EditName.Text, KEY);
+      id        := HDataMethod.HITSEncrypt(EditID.Text, KEY);
+      pw        := HDataMethod.HITSHashEncrypt(EditPW.Text);
+      year      := EditYear.Text;
+      month     := ComboMon.Text;
+      day       := EditDay.Text;
+      birth     := HDataMethod.HITSEncrypt(year + '-' + month + '-' + day, KEY);
+      postcode  := HDataMethod.HITSHashEncrypt(EditPostCode.Text);
 
-      if cxRadioButton1.Checked then begin
+      if RBtnSexM.Checked then begin
         sex := 'M';
       end else begin
         sex := 'F';
       end;
 
-      add   := HDataMethod.HITSEncrypt(EditAdd.Text, KEY);
-      email := HDataMethod.HITSEncrypt(EditEmail1.Text + '@' + EditEmail2.Text, KEY);
+      add   := HDataMethod.HITSEncrypt(EditAdd.Text + ' ' + EditDetailAddress.Text, KEY);
+      email := HDataMethod.HITSEncrypt(EditFEmail.Text + '@' + EditLEmail.Text, KEY);
       phone := HDataMethod.HITSEncrypt(phone, KEY);
 
       with DataModule1 do begin
@@ -473,29 +514,32 @@ begin
           with QH_DML do begin
             try
               SQL.Clear;
-              SQL.Add('INSERT INTO household(                             ');
-              SQL.Add('   mnum, mname, mid, mpw, mbirth,                  ');
-              SQL.Add('   mage, msex, madd, memail, mphone)               ');
-              SQL.Add('   VALUES(household_seq.nextval,                   ');
-              SQL.Add('          :MNAME, :MID,  :MPW,  :MBIRTH,           ');
-              SQL.Add('          :MAGE,  :MSEX, :MADD, :MEMAIL, :MPHONE)  ');
+              SQL.Add(' INSERT INTO household(                        ');
+              SQL.Add('   mnum, mname, mid, mpw, mbirth,              ');
+              SQL.Add('   msex, mpostcode, madd, memail, mphone)      ');
+              SQL.Add(' VALUES(household_seq.nextval,                 ');
+              SQL.Add('   :MNAME, :MID,  :MPW,  :MBIRTH,              ');
+              SQL.Add('   :MSEX,  :MPOSTCODE, :MADD :MEMAIL, :MPHONE) ');
 
-              ParamByName('MNAME').AsString  := nam;
-              ParamByName('MID').AsString    := id;
-              ParamByName('MPW').AsString    := pw;
-              ParamByName('MBIRTH').AsString := birth;
-              ParamByName('MAGE').AsString   := age;
-              ParamByName('MSEX').AsString   := sex;
-              ParamByName('MADD').AsString   := add;
-              ParamByName('MEMAIL').AsString := email;
-              ParamByName('MPHONE').AsString := phone;
+              ParamByName('MNAME').AsString       := nam;
+              ParamByName('MID').AsString         := id;
+              ParamByName('MPW').AsString         := pw;
+              ParamByName('MBIRTH').AsString      := birth;
+              ParamByName('MSEX').AsString        := sex;
+              ParamByName('MAPOSTCODE').AsString  := postcode;
+              ParamByName('MADD').AsString        := add;
+              ParamByName('MEMAIL').AsString      := email;
+              ParamByName('MPHONE').AsString      := phone;
 
               ExecSQL;
 
               SQL.Clear;
-              SQL.Add('INSERT INTO hcontents(cno, cnum, cid, cdate, cdiv, citem, cmeans,            ');
-              SQL.Add('                      ctype, cincome, cspending, ccreditbal, cbalance)       ');
-              SQL.Add('  VALUES (hcontents_seq.nextval, 0, :MID, :MDATE, 0, 0, 0, 0, 0, 0, 0, 0)    ');
+              SQL.Add(' INSERT INTO hcontents                                 ');
+              SQL.Add('  (cno, cnum, cid, cdate, cdiv, citem, cmeans,         ');
+              SQL.Add('   ctype, cincome, cspending, ccreditbal, cbalance)    ');
+              SQL.Add(' VALUES                                                ');
+              SQL.Add('  (hcontents_seq.nextval, 0, :MID, :MDATE, 0, 0, 0,    ');
+              SQL.Add('   0, 0, 0, 0, 0)                                      ');
               ParamByName('MID').AsString := id;
               ParamByName('MDATE').AsDate := now;
 
@@ -509,8 +553,7 @@ begin
               IItem[3] := '교통비';
               IItem[4] := '경조사비';
 
-              for idx := 0 to 5 - 1 do
-              begin
+              for idx := 0 to 5 - 1 do begin
                 SQL.Clear;
                 SQL.Add('INSERT INTO hitem VALUES(                   ');
                 SQL.Add('  hitem_seq.nextval, :IID, :IDIV, :IITEM )  ');
@@ -600,16 +643,16 @@ begin
 
 end;
 
-procedure TMemInsertForm.ComboFPhoneEnter(Sender: TObject);
+procedure TMemInsertForm.ComFPhoneEnter(Sender: TObject);
 begin
   Panel11.Color          := $00FFFCF9;
 end;
 
-procedure TMemInsertForm.ComboFPhoneExit(Sender: TObject);
+procedure TMemInsertForm.ComFPhoneExit(Sender: TObject);
 begin
   Panel11.Color          := clWindow;
 
-  if ComboFPhone.Text = '' then begin
+  if ComFPhone.Text = '' then begin
     chkPhone.Show;
     MemInsertChk.phone1 := False;
   end else begin
@@ -619,42 +662,42 @@ begin
 
 end;
 
-procedure TMemInsertForm.cxLabel15Click(Sender: TObject);
+procedure TMemInsertForm.LabIDClick(Sender: TObject);
 begin
   EditID.SetFocus;
 end;
 
-procedure TMemInsertForm.cxLabel16Click(Sender: TObject);
+procedure TMemInsertForm.LabPWClick(Sender: TObject);
 begin
   EditPw.SetFocus;
 end;
 
-procedure TMemInsertForm.cxLabel17Click(Sender: TObject);
+procedure TMemInsertForm.LabPWChkClick(Sender: TObject);
 begin
   EditPWchk.SetFocus;
 end;
 
-procedure TMemInsertForm.cxLabel18Click(Sender: TObject);
+procedure TMemInsertForm.LabBirthYearClick(Sender: TObject);
 begin
   EditYear.SetFocus;
 end;
 
-procedure TMemInsertForm.cxLabel19Click(Sender: TObject);
+procedure TMemInsertForm.LabBirthMonthClick(Sender: TObject);
 begin
   ComboMon.SetFocus;
 end;
 
-procedure TMemInsertForm.cxLabel20Click(Sender: TObject);
+procedure TMemInsertForm.LabBirthDayClick(Sender: TObject);
 begin
   EditDay.SetFocus;
 end;
 
-procedure TMemInsertForm.cxLabel22Click(Sender: TObject);
+procedure TMemInsertForm.LabAddressClick(Sender: TObject);
 begin
-  EditAdd.SetFocus;
+  BtnSearchAddressClick(nil);
 end;
 
-procedure TMemInsertForm.cxLabel4Click(Sender: TObject);
+procedure TMemInsertForm.LabNameClick(Sender: TObject);
 begin
   EditName.SetFocus;
 end;
@@ -695,17 +738,17 @@ begin
   end;
 end;
 
-procedure TMemInsertForm.EditEmail2Enter(Sender: TObject);
+procedure TMemInsertForm.EditLEmailEnter(Sender: TObject);
 begin
   Panel16.Color          := $00FFFCF9;
 end;
 
-procedure TMemInsertForm.EditEmail2Exit(Sender: TObject);
+procedure TMemInsertForm.EditLEmailExit(Sender: TObject);
 var
   emailchk: string;
 begin
   Panel16.Color     := clWindow;
-  emailchk          := EditEmail2.Text;
+  emailchk          := EditLEmail.Text;
 
   if emailchk = '' then begin
     chkEmail.Style.TextColor := clRed;
@@ -717,55 +760,36 @@ begin
 
 end;
 
-procedure TMemInsertForm.EditAddEnter(Sender: TObject);
-begin
-  cxLabel22.Style.Color  := $00FFFCF9;
-  Panel14.Color          := $00FFFCF9;
-end;
-
-procedure TMemInsertForm.EditAddExit(Sender: TObject);
-begin
-  cxLabel22.Style.Color := clWindow;
-  Panel14.Color         := clWindow;
-end;
-
-procedure TMemInsertForm.EditAddKeyPress(Sender: TObject; var Key: Char);
-var
-  chk: Boolean;
-begin
-  chk := HDataMethod.hanglechk(Key, Self.Handle);
-  if not (chk) then begin
-    if key <> '' then begin
-      chkAdd.Caption := '한글을 입력해주세요.';
-      MemInsertChk.address := False;
-      chkAdd.Show;
-      key := #0;
-    end;
-  end else if EditAdd.Text <> '' then begin
-    chkAdd.Hide;
-    MemInsertChk.address := True;
+procedure TMemInsertForm.EditAddClick(Sender: TObject);
+begin  
+  if TcxTextEdit(Sender).Text = '' then begin
+    BtnSearchAddressClick(nil);
+  end else begin
+    EditMPhone.SetFocus;
+    Exit;
   end;
 end;
 
-procedure TMemInsertForm.EditAddKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
+procedure TMemInsertForm.EditAddPropertiesChange(Sender: TObject);
 begin
   if EditAdd.Text <> '' then begin
-    cxLabel22.hide;
+    LabAddress.hide;
+    MemInsertChk.address := True;
   end else begin
-    cxLabel22.show;
+    LabAddress.show;
+    MemInsertChk.address := False;
   end;
 end;
 
 procedure TMemInsertForm.EditDayEnter(Sender: TObject);
 begin
-  cxLabel20.Style.Color  := $00FFFCF9;
+  LabBirthDay.Style.Color  := $00FFFCF9;
   Panel8.Color          := $00FFFCF9;
 end;
 
 procedure TMemInsertForm.EditDayExit(Sender: TObject);
 begin
-  cxLabel20.Style.Color := clWindow;
+  LabBirthDay.Style.Color := clWindow;
   Panel8.Color          := clWindow;
 
   if EditDay.Text = '' then begin
@@ -787,23 +811,32 @@ procedure TMemInsertForm.EditDayKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if EditDay.Text <> '' then begin
-    cxLabel20.hide;
+    LabBirthDay.hide;
   end else begin
-    cxLabel20.show;
+    LabBirthDay.show;
   end;
 end;
 
-procedure TMemInsertForm.EditEmail1Enter(Sender: TObject);
+procedure TMemInsertForm.EditDetailAddressPropertiesChange(Sender: TObject);
+begin
+  if EditDetailAddress.Text = '' then begin
+    LabDetailAddress.Show;
+  end else begin
+    LabDetailAddress.Hide;
+  end;
+end;
+
+procedure TMemInsertForm.EditFEmailEnter(Sender: TObject);
 begin
   Panel15.Color          := $00FFFCF9;
 end;
 
-procedure TMemInsertForm.EditEmail1Exit(Sender: TObject);
+procedure TMemInsertForm.EditFEmailExit(Sender: TObject);
 var
   emailchk: string;
 begin
   Panel15.Color          := clWindow;
-  emailchk := EditEmail1.Text;
+  emailchk := EditFEmail.Text;
 
   if emailchk = '' then begin
     chkEmail.Caption    := '이메일을 입력해주세요.';
@@ -829,7 +862,7 @@ end;
 
 procedure TMemInsertForm.EditIDEnter(Sender: TObject);
 begin
-  cxLabel15.Style.Color := $00FFFCF9;
+  LabID.Style.Color := $00FFFCF9;
   Panel2.Color         := $00FFFCF9;
 end;
 
@@ -839,7 +872,7 @@ var
   IDlength: Integer;
 begin
 
-  cxLabel15.Style.Color := clWindow;
+  LabID.Style.Color := clWindow;
   Panel2.Color          := clWindow;
 
   id := HDataMethod.HITSEncrypt(EditID.Text, KEY);
@@ -914,15 +947,15 @@ procedure TMemInsertForm.EditIDKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if EditID.Text <> '' then begin
-    cxLabel15.hide;
+    LabID.hide;
   end else begin
-    cxLabel15.show;
-  end;      
+    LabID.show;
+  end;
 end;
 
 procedure TMemInsertForm.EditNameEnter(Sender: TObject);
 begin
-  cxLabel4.Style.Color  := $00FFFCF9;
+  LabName.Style.Color  := $00FFFCF9;
   Panel5.Color          := $00FFFCF9;
 end;
 
@@ -930,7 +963,7 @@ procedure TMemInsertForm.EditNameExit(Sender: TObject);
 var
   namechk: string;
 begin
-  cxLabel4.Style.Color := clWindow;
+  LabName.Style.Color := clWindow;
   Panel5.Color          := clWindow;
 
   namechk := EditName.Text;
@@ -974,15 +1007,25 @@ procedure TMemInsertForm.EditNameKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if EditName.Text <> '' then begin
-    cxLabel4.hide;
+    LabName.hide;
   end else begin
-    cxLabel4.show;
+    LabName.show;
+  end;
+end;
+
+
+procedure TMemInsertForm.EditPostCodePropertiesChange(Sender: TObject);
+begin
+  if EditPostCode.Text <> '' then begin
+    LabPostCode.Hide;
+  end else begin
+    LabPostCode.Show;
   end;
 end;
 
 procedure TMemInsertForm.EditPWchkEnter(Sender: TObject);
 begin
-  cxLabel17.Style.Color := $00FFFCF9;
+  LabPWChk.Style.Color := $00FFFCF9;
   Panel4.Color          := $00FFFCF9;
 end;
 
@@ -990,7 +1033,7 @@ procedure TMemInsertForm.EditPWchkExit(Sender: TObject);
 var
   pw, pwchk: string;
 begin
-  cxLabel17.Style.Color := clWindow;
+  LabPWChk.Style.Color := clWindow;
   Panel4.Color          := clWindow;
 
   pw := EditPW.Text;
@@ -1019,15 +1062,15 @@ procedure TMemInsertForm.EditPWchkKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if EditPWChk.Text <> '' then begin
-    cxLabel17.hide;
+    LabPWChk.hide;
   end else begin
-    cxLabel17.show;
+    LabPWChk.show;
   end;
 end;
 
 procedure TMemInsertForm.EditPWEnter(Sender: TObject);
 begin
-  cxLabel16.Style.Color := $00FFFCF9;
+  LabPW.Style.Color := $00FFFCF9;
   Panel3.Color          := $00FFFCF9;
 end;
 
@@ -1036,7 +1079,7 @@ var
   pw: string;
   PWlength: Integer;
 begin
-  cxLabel16.Style.Color := clWindow;
+  LabPW.Style.Color := clWindow;
   Panel3.Color          := clWindow;
 
   pw := EditPW.Text;
@@ -1065,9 +1108,9 @@ procedure TMemInsertForm.EditPWKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if EditPW.Text <> '' then begin
-    cxLabel16.hide;
+    LabPW.hide;
   end else begin
-    cxLabel16.show;
+    LabPW.show;
   end;
 end;
 
@@ -1077,7 +1120,7 @@ var
   Nyear: string;
   age: Integer;
 begin
-  cxLabel18.Style.Color := clWindow;
+  LabBirthYear.Style.Color := clWindow;
   Panel6.Color          := clWindow;
 
   year := EditYear.Text;
@@ -1100,7 +1143,7 @@ begin
     EditAge.Text := IntToStr(age);
     EditAge.Properties.ReadOnly := True;
     MemInsertChk.year := True;
-    cxLabel21.Hide;
+    LabAge.Hide;
   end;
 
 end;
@@ -1115,9 +1158,9 @@ procedure TMemInsertForm.EditYearKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if EditYear.Text <> '' then begin
-    cxLabel18.hide;
+    LabBirthYear.hide;
   end else begin
-    cxLabel18.show;
+    LabBirthYear.show;
   end;
 
 end;

@@ -57,6 +57,9 @@
       <Form>DataModule1</Form>
       <DesignClass>TDataModule</DesignClass>
     </DCCReference>
+    <DCCReference Include="DetailAddressPage.pas">
+      <Form>DetailAddressForm</Form>
+    </DCCReference>
     <DCCReference Include="EmailchkPage.pas">
       <Form>EmailchkForm</Form>
     </DCCReference>
@@ -84,6 +87,9 @@
     </DCCReference>
     <DCCReference Include="ReportPage.pas">
       <Form>ReportForm</Form>
+    </DCCReference>
+    <DCCReference Include="SearchJusoPage.pas">
+      <Form>SearchJusoForm</Form>
     </DCCReference>
     <DCCReference Include="SolnLun.pas" />
     <DCCReference Include="UpdateAddPage.pas">
