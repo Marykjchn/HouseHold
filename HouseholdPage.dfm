@@ -1197,6 +1197,9 @@ object HouseHoldForm: THouseHoldForm
         object Simple_IncomeColumn1: TcxGridDBColumn
           Caption = #48264#54840
           DataBinding.FieldName = 'CNUM'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           FooterAlignmentHorz = taCenter
           HeaderAlignmentHorz = taCenter
           HeaderAlignmentVert = vaCenter
@@ -1205,6 +1208,9 @@ object HouseHoldForm: THouseHoldForm
         object Simple_IncomeColumn2: TcxGridDBColumn
           Caption = #54637'  '#47785
           DataBinding.FieldName = 'CITEM'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           HeaderAlignmentHorz = taCenter
           HeaderAlignmentVert = vaCenter
           Width = 68
@@ -1212,6 +1218,9 @@ object HouseHoldForm: THouseHoldForm
         object Simple_IncomeColumn3: TcxGridDBColumn
           Caption = #44208#51228' '#49688#45800
           DataBinding.FieldName = 'CMEANS'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           HeaderAlignmentHorz = taCenter
           HeaderAlignmentVert = vaCenter
           Width = 68
@@ -1275,6 +1284,9 @@ object HouseHoldForm: THouseHoldForm
         object Simple_SpendingColumn1: TcxGridDBColumn
           Caption = #48264#54840
           DataBinding.FieldName = 'CNUM'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           FooterAlignmentHorz = taCenter
           HeaderAlignmentHorz = taCenter
           HeaderAlignmentVert = vaCenter
@@ -1283,6 +1295,9 @@ object HouseHoldForm: THouseHoldForm
         object Simple_SpendingColumn2: TcxGridDBColumn
           Caption = #54637'  '#47785
           DataBinding.FieldName = 'CITEM'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           HeaderAlignmentHorz = taCenter
           HeaderAlignmentVert = vaCenter
           Width = 62
@@ -1290,6 +1305,9 @@ object HouseHoldForm: THouseHoldForm
         object Simple_SpendingColumn3: TcxGridDBColumn
           Caption = #44208#51228' '#49688#45800
           DataBinding.FieldName = 'CMEANS'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           HeaderAlignmentHorz = taCenter
           HeaderAlignmentVert = vaCenter
           Width = 67
@@ -1377,6 +1395,9 @@ object HouseHoldForm: THouseHoldForm
         object Total_HoldingColumn1: TcxGridDBColumn
           Caption = #48264#54840
           DataBinding.FieldName = 'CNUM'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           FooterAlignmentHorz = taCenter
           HeaderAlignmentHorz = taCenter
           HeaderAlignmentVert = vaCenter
@@ -1385,6 +1406,9 @@ object HouseHoldForm: THouseHoldForm
         object Total_HoldingColumn2: TcxGridDBColumn
           Caption = #45216'  '#51676
           DataBinding.FieldName = 'cdate'
+          PropertiesClassName = 'TcxDateEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           HeaderAlignmentHorz = taCenter
           HeaderAlignmentVert = vaCenter
           Options.Editing = False
@@ -1393,6 +1417,9 @@ object HouseHoldForm: THouseHoldForm
         object Total_HoldingColumn3: TcxGridDBColumn
           Caption = #44396' '#48516
           DataBinding.FieldName = 'CDIV'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           HeaderAlignmentHorz = taCenter
           HeaderAlignmentVert = vaCenter
           Width = 55
@@ -1400,6 +1427,9 @@ object HouseHoldForm: THouseHoldForm
         object Total_HoldingColumn4: TcxGridDBColumn
           Caption = #54637'  '#47785
           DataBinding.FieldName = 'CITEM'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           FooterAlignmentHorz = taCenter
           HeaderAlignmentHorz = taCenter
           HeaderAlignmentVert = vaCenter
@@ -1409,6 +1439,9 @@ object HouseHoldForm: THouseHoldForm
         object Total_HoldingColumn5: TcxGridDBColumn
           Caption = #44208#51228' '#49688#45800
           DataBinding.FieldName = 'CMEANS'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           HeaderAlignmentHorz = taCenter
           HeaderAlignmentVert = vaCenter
           Width = 75
@@ -1416,6 +1449,9 @@ object HouseHoldForm: THouseHoldForm
         object Total_HoldingColumn6: TcxGridDBColumn
           Caption = #52852#46300#49324
           DataBinding.FieldName = 'CTYPE'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           HeaderAlignmentHorz = taCenter
           HeaderAlignmentVert = vaCenter
           Width = 63
@@ -2168,7 +2204,7 @@ object HouseHoldForm: THouseHoldForm
     end
     object BtnTypeDel: TPanel
       Left = 340
-      Top = 262
+      Top = 258
       Width = 30
       Height = 21
       Cursor = crHandPoint
@@ -2208,7 +2244,7 @@ object HouseHoldForm: THouseHoldForm
     end
     object BtnTypeAdd: TPanel
       Left = 307
-      Top = 262
+      Top = 258
       Width = 30
       Height = 21
       Cursor = crHandPoint

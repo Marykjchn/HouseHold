@@ -3,7 +3,7 @@ object MemInfoForm: TMemInfoForm
   Top = 0
   BorderStyle = bsDialog
   Caption = #54924#50896#51221#48372
-  ClientHeight = 556
+  ClientHeight = 610
   ClientWidth = 700
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -20,11 +20,12 @@ object MemInfoForm: TMemInfoForm
     Left = 0
     Top = 0
     Width = 700
-    Height = 556
+    Height = 610
     Align = alClient
     Color = clWindow
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 556
     object Panel2: TPanel
       Left = 50
       Top = 100
@@ -226,7 +227,7 @@ object MemInfoForm: TMemInfoForm
       Left = 50
       Top = 356
       Width = 600
-      Height = 148
+      Height = 202
       BevelEdges = [beTop, beBottom]
       BevelKind = bkTile
       BevelOuter = bvNone
@@ -332,7 +333,7 @@ object MemInfoForm: TMemInfoForm
         Style.Font.Style = [fsBold]
         Style.IsFontAssigned = True
       end
-      object LabAdd: TcxLabel
+      object LabPostCode: TcxLabel
         Left = 300
         Top = 104
         ParentFont = False
@@ -363,6 +364,66 @@ object MemInfoForm: TMemInfoForm
         OnClick = BtnMAddUpdateClick
         OnMouseEnter = BtnMAddUpdateMouseEnter
         OnMouseLeave = BtnMAddUpdateMouseLeave
+      end
+      object cxLabel14: TcxLabel
+        Left = 210
+        Top = 104
+        Caption = #50864#54200#48264#54840'        :'
+        ParentFont = False
+        Style.Font.Charset = HANGEUL_CHARSET
+        Style.Font.Color = 7237230
+        Style.Font.Height = -12
+        Style.Font.Name = #47569#51008' '#44256#46357
+        Style.Font.Style = []
+        Style.IsFontAssigned = True
+      end
+      object LabAdd: TcxLabel
+        Left = 300
+        Top = 131
+        ParentFont = False
+        Style.Font.Charset = HANGEUL_CHARSET
+        Style.Font.Color = 8536320
+        Style.Font.Height = -12
+        Style.Font.Name = #47569#51008' '#44256#46357
+        Style.Font.Style = []
+        Style.TextColor = 8536320
+        Style.IsFontAssigned = True
+      end
+      object cxLabel17: TcxLabel
+        Left = 210
+        Top = 131
+        Caption = #44592#48376#51452#49548'        :'
+        ParentFont = False
+        Style.Font.Charset = HANGEUL_CHARSET
+        Style.Font.Color = 7237230
+        Style.Font.Height = -12
+        Style.Font.Name = #47569#51008' '#44256#46357
+        Style.Font.Style = []
+        Style.IsFontAssigned = True
+      end
+      object LabDetailAdd: TcxLabel
+        Left = 300
+        Top = 158
+        ParentFont = False
+        Style.Font.Charset = HANGEUL_CHARSET
+        Style.Font.Color = 8536320
+        Style.Font.Height = -12
+        Style.Font.Name = #47569#51008' '#44256#46357
+        Style.Font.Style = []
+        Style.TextColor = 8536320
+        Style.IsFontAssigned = True
+      end
+      object cxLabel21: TcxLabel
+        Left = 210
+        Top = 158
+        Caption = #49345#49464#51452#49548'        :'
+        ParentFont = False
+        Style.Font.Charset = HANGEUL_CHARSET
+        Style.Font.Color = 7237230
+        Style.Font.Height = -12
+        Style.Font.Name = #47569#51008' '#44256#46357
+        Style.Font.Style = []
+        Style.IsFontAssigned = True
       end
     end
     object cxLabel18: TcxLabel

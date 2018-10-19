@@ -197,6 +197,8 @@ object LoginForm: TLoginForm
         Style.Font.Style = []
         Style.IsFontAssigned = True
         OnClick = LabFindIDClick
+        OnMouseEnter = LabMouseEnter
+        OnMouseLeave = LabMouseLeave
       end
       object LabFindPW: TcxLabel
         Left = 118
@@ -213,6 +215,8 @@ object LoginForm: TLoginForm
         Style.Font.Style = []
         Style.IsFontAssigned = True
         OnClick = LabFindPWClick
+        OnMouseEnter = LabMouseEnter
+        OnMouseLeave = LabMouseLeave
       end
       object LabMemInsert: TcxLabel
         Left = 205
@@ -234,6 +238,8 @@ object LoginForm: TLoginForm
         StyleFocused.TextStyle = []
         StyleHot.TextStyle = []
         OnClick = LabMemInsertClick
+        OnMouseEnter = LabMouseEnter
+        OnMouseLeave = LabMouseLeave
       end
       object cxLabel5: TcxLabel
         Left = 108

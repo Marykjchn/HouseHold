@@ -894,6 +894,176 @@ object ReportForm: TReportForm
         0000000000000000000000000000000000000000000000000000000000000000
         00000000}
     end
+    object GRD_SelectAll: TcxGrid
+      Left = 10
+      Top = 108
+      Width = 1130
+      Height = 564
+      Font.Charset = HANGEUL_CHARSET
+      Font.Color = 4934475
+      Font.Height = -13
+      Font.Name = #47569#51008' '#44256#46357
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      object Holding_SelectAll: TcxGridDBTableView
+        NavigatorButtons.ConfirmDelete = False
+        DataController.Summary.DefaultGroupSummaryItems = <>
+        DataController.Summary.FooterSummaryItems = <
+          item
+            Format = #52509', 0'#44148
+            Kind = skCount
+            FieldName = 'CNUM'
+            Column = Holding_SelectAllColumn1
+          end
+          item
+            Format = ', 0'#50896
+            Kind = skSum
+            FieldName = 'CINCOME'
+            Column = Holding_SelectAllColumn7
+          end
+          item
+            Format = ', 0'#50896
+            Kind = skSum
+            FieldName = 'CSPENDING'
+            Column = Holding_SelectAllColumn8
+          end
+          item
+            Format = ', 0'#50896
+            Kind = skSum
+            FieldName = 'CCREDITBAL'
+            Column = Holding_SelectAllColumn9
+          end
+          item
+            FieldName = 'CBALANCE'
+            Column = Holding_SelectAllColumn10
+          end>
+        DataController.Summary.SummaryGroups = <>
+        OptionsData.Deleting = False
+        OptionsData.DeletingConfirmation = False
+        OptionsData.Editing = False
+        OptionsData.Inserting = False
+        OptionsView.ColumnAutoWidth = True
+        OptionsView.ExpandButtonsForEmptyDetails = False
+        OptionsView.Footer = True
+        OptionsView.GroupByBox = False
+        object Holding_SelectAllColumn1: TcxGridDBColumn
+          Caption = #48264#54840
+          DataBinding.FieldName = 'cNUM'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
+          FooterAlignmentHorz = taCenter
+          HeaderAlignmentHorz = taCenter
+          Width = 60
+        end
+        object Holding_SelectAllColumn2: TcxGridDBColumn
+          Caption = #45216'  '#51676
+          DataBinding.FieldName = 'CDATE'
+          PropertiesClassName = 'TcxDateEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
+          FooterAlignmentHorz = taCenter
+          HeaderAlignmentHorz = taCenter
+          Width = 140
+        end
+        object Holding_SelectAllColumn3: TcxGridDBColumn
+          Caption = #44396'  '#48516
+          DataBinding.FieldName = 'CDIV'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
+          FooterAlignmentHorz = taCenter
+          HeaderAlignmentHorz = taCenter
+          Width = 80
+        end
+        object Holding_SelectAllColumn4: TcxGridDBColumn
+          Caption = #54637#47785
+          DataBinding.FieldName = 'CITEM'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
+          FooterAlignmentHorz = taCenter
+          HeaderAlignmentHorz = taCenter
+          Width = 100
+        end
+        object Holding_SelectAllColumn5: TcxGridDBColumn
+          Caption = #44208#51228' '#49688#45800
+          DataBinding.FieldName = 'CMEANS'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
+          FooterAlignmentHorz = taCenter
+          HeaderAlignmentHorz = taCenter
+          Width = 90
+        end
+        object Holding_SelectAllColumn6: TcxGridDBColumn
+          Caption = #52852#46300#49324
+          DataBinding.FieldName = 'CTYPE'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
+          FooterAlignmentHorz = taCenter
+          HeaderAlignmentHorz = taCenter
+          Width = 70
+        end
+        object Holding_SelectAllColumn7: TcxGridDBColumn
+          Caption = #49688' '#51077' '#50529
+          DataBinding.FieldName = 'CINCOME'
+          PropertiesClassName = 'TcxCurrencyEditProperties'
+          Properties.DisplayFormat = ',0.;-,0.'
+          FooterAlignmentHorz = taCenter
+          HeaderAlignmentHorz = taCenter
+          Width = 125
+        end
+        object Holding_SelectAllColumn8: TcxGridDBColumn
+          Caption = #51648' '#52636' '#50529
+          DataBinding.FieldName = 'CSPENDING'
+          PropertiesClassName = 'TcxCurrencyEditProperties'
+          Properties.DisplayFormat = ',0.;-,0.'
+          FooterAlignmentHorz = taCenter
+          HeaderAlignmentHorz = taCenter
+          Width = 125
+        end
+        object Holding_SelectAllColumn9: TcxGridDBColumn
+          Caption = #52852#46300' '#49324#50857#50529
+          DataBinding.FieldName = 'CCREDITBAL'
+          PropertiesClassName = 'TcxCurrencyEditProperties'
+          Properties.DisplayFormat = ',0.;-,0.'
+          FooterAlignmentHorz = taCenter
+          HeaderAlignmentHorz = taCenter
+          Width = 125
+        end
+        object Holding_SelectAllColumn10: TcxGridDBColumn
+          Caption = #52509' '#51092#50529
+          DataBinding.FieldName = 'CBALANCE'
+          PropertiesClassName = 'TcxCurrencyEditProperties'
+          Properties.DisplayFormat = ',0.;-,0.'
+          HeaderAlignmentHorz = taCenter
+          HeaderAlignmentVert = vaCenter
+          HeaderGlyphAlignmentHorz = taCenter
+          Width = 125
+        end
+      end
+      object GRD_SelectAllDBTableView2: TcxGridDBTableView
+        NavigatorButtons.ConfirmDelete = False
+        DataController.Summary.DefaultGroupSummaryItems = <>
+        DataController.Summary.FooterSummaryItems = <>
+        DataController.Summary.SummaryGroups = <>
+        OptionsView.GroupByBox = False
+      end
+      object GRD_SelectAllDBTableView3: TcxGridDBTableView
+        NavigatorButtons.ConfirmDelete = False
+        DataController.Summary.DefaultGroupSummaryItems = <>
+        DataController.Summary.FooterSummaryItems = <>
+        DataController.Summary.SummaryGroups = <>
+        OptionsView.GroupByBox = False
+      end
+      object GRD_SelectAllLevel1: TcxGridLevel
+        Caption = #51204' '#52404
+        GridView = Holding_SelectAll
+      end
+    end
     object StartFinishDatePanel: TPanel
       Left = 458
       Top = 43
@@ -1213,158 +1383,6 @@ object ReportForm: TReportForm
       ParentFont = False
       TabOrder = 5
     end
-    object GRD_SelectAll: TcxGrid
-      Left = 10
-      Top = 108
-      Width = 1130
-      Height = 564
-      Font.Charset = HANGEUL_CHARSET
-      Font.Color = 4934475
-      Font.Height = -13
-      Font.Name = #47569#51008' '#44256#46357
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      object Holding_SelectAll: TcxGridDBTableView
-        NavigatorButtons.ConfirmDelete = False
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <
-          item
-            Format = #52509', 0'#44148
-            Kind = skCount
-            FieldName = 'CNUM'
-            Column = Holding_SelectAllColumn1
-          end
-          item
-            Format = ', 0'#50896
-            Kind = skSum
-            FieldName = 'CINCOME'
-            Column = Holding_SelectAllColumn7
-          end
-          item
-            Format = ', 0'#50896
-            Kind = skSum
-            FieldName = 'CSPENDING'
-            Column = Holding_SelectAllColumn8
-          end
-          item
-            Format = ', 0'#50896
-            Kind = skSum
-            FieldName = 'CCREDITBAL'
-            Column = Holding_SelectAllColumn9
-          end
-          item
-            FieldName = 'CBALANCE'
-            Column = Holding_SelectAllColumn10
-          end>
-        DataController.Summary.SummaryGroups = <>
-        OptionsData.Deleting = False
-        OptionsData.DeletingConfirmation = False
-        OptionsData.Editing = False
-        OptionsData.Inserting = False
-        OptionsView.ColumnAutoWidth = True
-        OptionsView.ExpandButtonsForEmptyDetails = False
-        OptionsView.Footer = True
-        OptionsView.GroupByBox = False
-        object Holding_SelectAllColumn1: TcxGridDBColumn
-          Caption = #48264#54840
-          DataBinding.FieldName = 'cNUM'
-          FooterAlignmentHorz = taCenter
-          HeaderAlignmentHorz = taCenter
-          Width = 60
-        end
-        object Holding_SelectAllColumn2: TcxGridDBColumn
-          Caption = #45216'  '#51676
-          DataBinding.FieldName = 'CDATE'
-          FooterAlignmentHorz = taCenter
-          HeaderAlignmentHorz = taCenter
-          Width = 140
-        end
-        object Holding_SelectAllColumn3: TcxGridDBColumn
-          Caption = #44396'  '#48516
-          DataBinding.FieldName = 'CDIV'
-          FooterAlignmentHorz = taCenter
-          HeaderAlignmentHorz = taCenter
-          Width = 80
-        end
-        object Holding_SelectAllColumn4: TcxGridDBColumn
-          Caption = #54637#47785
-          DataBinding.FieldName = 'CITEM'
-          FooterAlignmentHorz = taCenter
-          HeaderAlignmentHorz = taCenter
-          Width = 100
-        end
-        object Holding_SelectAllColumn5: TcxGridDBColumn
-          Caption = #44208#51228' '#49688#45800
-          DataBinding.FieldName = 'CMEANS'
-          FooterAlignmentHorz = taCenter
-          HeaderAlignmentHorz = taCenter
-          Width = 90
-        end
-        object Holding_SelectAllColumn6: TcxGridDBColumn
-          Caption = #52852#46300#49324
-          DataBinding.FieldName = 'CTYPE'
-          FooterAlignmentHorz = taCenter
-          HeaderAlignmentHorz = taCenter
-          Width = 70
-        end
-        object Holding_SelectAllColumn7: TcxGridDBColumn
-          Caption = #49688' '#51077' '#50529
-          DataBinding.FieldName = 'CINCOME'
-          PropertiesClassName = 'TcxCurrencyEditProperties'
-          Properties.DisplayFormat = ',0.;-,0.'
-          FooterAlignmentHorz = taCenter
-          HeaderAlignmentHorz = taCenter
-          Width = 125
-        end
-        object Holding_SelectAllColumn8: TcxGridDBColumn
-          Caption = #51648' '#52636' '#50529
-          DataBinding.FieldName = 'CSPENDING'
-          PropertiesClassName = 'TcxCurrencyEditProperties'
-          Properties.DisplayFormat = ',0.;-,0.'
-          FooterAlignmentHorz = taCenter
-          HeaderAlignmentHorz = taCenter
-          Width = 125
-        end
-        object Holding_SelectAllColumn9: TcxGridDBColumn
-          Caption = #52852#46300' '#49324#50857#50529
-          DataBinding.FieldName = 'CCREDITBAL'
-          PropertiesClassName = 'TcxCurrencyEditProperties'
-          Properties.DisplayFormat = ',0.;-,0.'
-          FooterAlignmentHorz = taCenter
-          HeaderAlignmentHorz = taCenter
-          Width = 125
-        end
-        object Holding_SelectAllColumn10: TcxGridDBColumn
-          Caption = #52509' '#51092#50529
-          DataBinding.FieldName = 'CBALANCE'
-          PropertiesClassName = 'TcxCurrencyEditProperties'
-          Properties.DisplayFormat = ',0.;-,0.'
-          HeaderAlignmentHorz = taCenter
-          HeaderAlignmentVert = vaCenter
-          HeaderGlyphAlignmentHorz = taCenter
-          Width = 125
-        end
-      end
-      object GRD_SelectAllDBTableView2: TcxGridDBTableView
-        NavigatorButtons.ConfirmDelete = False
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
-        OptionsView.GroupByBox = False
-      end
-      object GRD_SelectAllDBTableView3: TcxGridDBTableView
-        NavigatorButtons.ConfirmDelete = False
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
-        OptionsView.GroupByBox = False
-      end
-      object GRD_SelectAllLevel1: TcxGridLevel
-        Caption = #51204' '#52404
-        GridView = Holding_SelectAll
-      end
-    end
     object StatusBar1: TStatusBar
       Left = 1
       Top = 765
@@ -1614,6 +1632,9 @@ object ReportForm: TReportForm
         object Holding_SelectIncomeColumn1: TcxGridDBColumn
           Caption = #48264' '#54840
           DataBinding.FieldName = 'cnum'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           FooterAlignmentHorz = taCenter
           HeaderAlignmentHorz = taCenter
           HeaderGlyphAlignmentHorz = taCenter
@@ -1622,6 +1643,9 @@ object ReportForm: TReportForm
         object Holding_SelectIncomeColumn2: TcxGridDBColumn
           Caption = #54637'  '#47785
           DataBinding.FieldName = 'CITEM'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           HeaderAlignmentHorz = taCenter
           HeaderGlyphAlignmentHorz = taCenter
           Width = 122
@@ -1629,6 +1653,9 @@ object ReportForm: TReportForm
         object Holding_SelectIncomeColumn3: TcxGridDBColumn
           Caption = #44208#51228' '#49688#45800
           DataBinding.FieldName = 'CMEANS'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           HeaderAlignmentHorz = taCenter
           HeaderGlyphAlignmentHorz = taCenter
           Width = 135
@@ -1694,6 +1721,9 @@ object ReportForm: TReportForm
         object Holding_SelectSpendingColumn1: TcxGridDBColumn
           Caption = #48264' '#54840
           DataBinding.FieldName = 'CNUM'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           FooterAlignmentHorz = taCenter
           HeaderAlignmentHorz = taCenter
           HeaderGlyphAlignmentHorz = taCenter
@@ -1702,6 +1732,9 @@ object ReportForm: TReportForm
         object Holding_SelectSpendingColumn2: TcxGridDBColumn
           Caption = #54637'  '#47785
           DataBinding.FieldName = 'CITEM'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           HeaderAlignmentHorz = taCenter
           HeaderGlyphAlignmentHorz = taCenter
           Width = 121
@@ -1709,6 +1742,9 @@ object ReportForm: TReportForm
         object Holding_SelectSpendingColumn3: TcxGridDBColumn
           Caption = #44208#51228' '#49688#45800
           DataBinding.FieldName = 'CMEANS'
+          PropertiesClassName = 'TcxTextEditProperties'
+          Properties.Alignment.Horz = taCenter
+          Properties.Alignment.Vert = taVCenter
           HeaderAlignmentHorz = taCenter
           HeaderGlyphAlignmentHorz = taCenter
           Width = 91

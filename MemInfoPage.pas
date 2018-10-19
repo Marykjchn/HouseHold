@@ -29,7 +29,7 @@ type
     cxLabel20: TcxLabel;
     LabAge: TcxLabel;
     cxLabel16: TcxLabel;
-    LabAdd: TcxLabel;
+    LabPostCode: TcxLabel;
     BtnMPhoneUpdate: TPanel;
     BtnMEmailUpdate: TPanel;
     BtnMAddUpdate: TPanel;
@@ -40,6 +40,11 @@ type
     BtnMPWUpdate: TPanel;
     BtnMIDDelete: TPanel;
     cxLabel8: TcxLabel;
+    cxLabel14: TcxLabel;
+    LabAdd: TcxLabel;
+    cxLabel17: TcxLabel;
+    LabDetailAdd: TcxLabel;
+    cxLabel21: TcxLabel;
 
     // --------------- 폼생성시 회원정보 셋팅 ---------------
     procedure FormCreate(Sender: TObject);
@@ -79,17 +84,71 @@ implementation
 {$R *.dfm}
 
 uses
-  HDataMethod, DataModule, UpdatePhonePage, UpdateEmailPage, UpdateAddPage,
-  UpdatePWPage;
+  HDataMethod, DataModule, UpdatePhonePage, UpdateEmailPage, UpdatePWPage, SearchJusoPage;
 
 procedure TMemInfoForm.BtnMAddUpdateClick(Sender: TObject);
+var
+  ModalResult : TModalResult;
+  TotalAdd    : String;
 begin
-  UpdateAddForm := TUpdateAddForm.Create(Self);
+
+  ModalResult := 0;
+
+  SearchJusoForm := TSearchJusoForm.Create(Self);
+
   try
-    UpdateAddForm.ShowModal;
+    ModalResult := SearchJusoForm.ShowModal;
   finally
-    UpdateAddForm.Free;
-    MemInfoShow;
+    with Datamodule1 do begin
+
+      if ModalResult = mrOk then begin
+        with QH_DML do begin
+          SQL.Clear;
+          SQL.Add(' UPDATE HOUSEHOLD                            ');
+          SQL.Add(' SET                                         ');
+          SQL.Add('   mpostcode = :MPOSTCODE, madd = :MADD    ');
+          SQL.Add(' WHERE                                       ');
+          SQL.Add('   mid = :MID AND mpw = :MPW                 ');
+
+          with AddressSearch do begin
+
+            if ARoadBool then begin
+              TotalAdd := ARoadAddr + ' | ' + ADetailAddr;
+            end else begin
+              TotalAdd := AJibunAddr + ' | ' + ADetailAddr;
+            end;
+
+            ParamByName('MID').AsString         := recMemDate.mid;
+            ParamByName('MPW').AsString         := recMemDate.mpw;
+            ParamByName('MPOSTCODE').AsString   := HITSEncrypt(AZipCode, KEY);
+            ParamByName('MADD').AsString        := HITSEncrypt(TotalAdd, KEY);
+
+          end;
+
+          ExecSQL;
+        end;
+
+        recMemDate.mpostcode  := AddressSearch.AZipCode;
+        if AddressSearch.ARoadBool then begin
+          recMemDate.madd := AddressSearch.ARoadAddr;
+        end else begin
+          recMemDate.madd := AddressSearch.AJibunAddr;
+        end;
+        recMemDate.mdetailadd := AddressSearch.ADetailAddr;
+
+        MemInfoShow;
+      end else begin
+
+        addressSearch.AZipCode    := '';
+        addressSearch.ARoadAddr   := '';
+        addressSearch.AJibunAddr  := '';
+        addressSearch.ADetailAddr := '';
+        addressSearch.ARoadBool   := False;
+
+      end;
+
+    end;
+
   end;
 end;
 
@@ -165,35 +224,42 @@ var
   email, email1, email2, code1, phone, phone1, phone2 : String;
   idx, Pemail1                                        : Integer;
 begin
-  LabId.Caption     := HITSDecrypt(DataModule1.recMemDate.mid, KEY);
+  with DataModule1 do begin
 
-  phone  := DataModule1.recMemDate.mphone;
-  Insert('**', phone, 7);
-  phone1 := Copy(phone, 1, 8);
+    LabId.Caption     := HITSDecrypt(recMemDate.mid, KEY);
 
-  phone  := DataModule1.recMemDate.mphone;
-  Insert('**', phone, 12);
-  phone2 := Copy(phone, 9, 5);
+    phone  := recMemDate.mphone;
+    Insert('**', phone, 7);
+    phone1 := Copy(phone, 1, 8);
 
-  LabPhone.Caption  := phone1 + phone2;
+    phone  := recMemDate.mphone;
+    Insert('**', phone, 12);
+    phone2 := Copy(phone, 9, 5);
 
-  email := DataModule1.recMemDate.memail;
-  Pemail1 := Pos('@', email);
-  email1  := Copy(email, 1, Pemail1-1);
+    LabPhone.Caption  := phone1 + phone2;
 
-  for idx := 2 to Pemail1 - 2 do begin
-    code1 := code1 + '*';
+    email := recMemDate.memail;
+    Pemail1 := Pos('@', email);
+    email1  := Copy(email, 1, Pemail1-1);
+
+    for idx := 2 to Pemail1 - 2 do begin
+      code1 := code1 + '*';
+    end;
+
+    Insert(code1, email1, 3);
+    email1  := Copy(email1, 1, Pemail1-1);
+    email2  := Copy(email, Pemail1,  Length(email)-1);
+
+    LabEmail.Caption      := email1 + email2;
+    LabGrade.Caption      := recMemDate.mgrade;
+    LabName.Caption       := recMemDate.mname;
+    LabAge.Caption        := recMemDate.mage;
+    LabPostCode.Caption   := recMemDate.mpostcode;
+    LabAdd.Caption        := recMemDate.madd;
+    LabDetailAdd.Caption  := recMemDate.mdetailadd;
+
   end;
 
-  Insert(code1, email1, 3);
-  email1  := Copy(email1, 1, Pemail1-1);
-  email2  := Copy(email, Pemail1,  Length(email)-1);
-
-  LabEmail.Caption  := email1 + email2;
-  LabGrade.Caption  := DataModule1.recMemDate.mgrade;
-  LabName.Caption   := DataModule1.recMemDate.mname;
-  LabAge.Caption    := DataModule1.recMemDate.mage;
-  LabAdd.Caption    := DataModule1.recMemDate.madd;
 end;
 
 procedure TMemInfoForm.BtnMPWUpdateClick(Sender: TObject);

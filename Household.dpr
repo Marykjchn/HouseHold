@@ -18,7 +18,6 @@ uses
   MemInfoPage in 'MemInfoPage.pas' {MemInfoForm},
   UpdatePhonePage in 'UpdatePhonePage.pas' {UpdatePhoneForm},
   UpdateEmailPage in 'UpdateEmailPage.pas' {UpdateEmailForm},
-  UpdateAddPage in 'UpdateAddPage.pas' {UpdateAddForm},
   DetailAddressPage in 'DetailAddressPage.pas' {DetailAddressForm},
   SearchJusoPage in 'SearchJusoPage.pas' {SearchJusoForm},
   MemInsertPage in 'MemInsertPage.pas' {MemInsertForm};
@@ -30,8 +29,5 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.Title := '°¡°èºÎ';
   Application.CreateForm(TDataModule1, DataModule1);
-  Application.CreateForm(TDetailAddressForm, DetailAddressForm);
-  Application.CreateForm(TSearchJusoForm, SearchJusoForm);
-  Application.CreateForm(TMemInsertForm, MemInsertForm);
   Application.Run;
 end.

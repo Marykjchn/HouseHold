@@ -51,6 +51,8 @@ type
     // --------------- ¾ÆÀÌµð Ã£±âÆû »ý¼º ---------------
     procedure LabFindIDClick(Sender: TObject);
     procedure LabFindPWClick(Sender: TObject);
+    procedure LabMouseEnter(Sender: TObject);
+    procedure LabMouseLeave(Sender: TObject);
 
   private
     { Private declarations }
@@ -176,6 +178,9 @@ procedure TLoginForm.BtnLoginClick(Sender: TObject);
 var
   id, pw, cid, cpw  : String;
   use               : Integer;
+  TotalAdd          : String;
+  add, detailAdd    : String;
+  FindIndex         : Integer;
 begin
   id  := HDataMethod.HITSEncrypt(EditID.Text, KEY);
   pw  := HDataMethod.HITSHashEncrypt(EditPW.Text);
@@ -197,33 +202,38 @@ begin
     try
       with DataModule1.QH_DML do begin
         SQL.Clear;
-        SQL.ADD('SELECT * FROM household                          ');
-        SQL.ADD('  WHERE mid = :ID AND mpw = :PW AND muse = :USE  ');
+        SQL.ADD('SELECT * FROM household         ');
+        SQL.ADD('  WHERE mid = :ID AND mpw = :PW ');
 
         ParamByName('ID').AsString   := id;
         ParamByName('PW').AsString   := pw;
-        ParamByName('USE').AsInteger := 1;
 
         Open;
 
-        cid     := FieldByName('mid').AsString;
-        cpw     := FieldByName('mpw').AsString;
-        use     := FieldByName('muse').AsInteger;
+        cid       := FieldByName('mid').AsString;
+        cpw       := FieldByName('mpw').AsString;
+        use       := FieldByName('muse').AsInteger;
+        TotalAdd  := HITSDecrypt(FieldByName('madd').AsString, KEY);
+        FindIndex := Pos('|', TotalAdd);
+        add       := Copy(TotalAdd, 0, FindIndex - 1);
+        detailadd := Copy(TotalAdd, FindIndex + 2, Length(TotalAdd));
 
         if (id = cid) AND (pw = cpw) AND (use = 1) then begin
           with DataModule1.recMemDate do begin
-            mnum    := FieldByName('mnum').AsInteger;
-            mname   := HITSDecrypt(FieldByName('mname').AsString, KEY);
-            mid     := FieldByName('mid').AsString;
-            mpw     := FieldByName('mpw').AsString;
-            mbirth  := HITSDecrypt(FieldByName('mbirth').AsString, KEY);
-            mage    := IntToStr(StrToInt(FormatDateTime('YYYY', Now)) - StrToInt(FormatDateTime('YYYY', StrToDate(mbirth))) + 1);
-            msex    := FieldByName('msex').AsString;
-            madd    := HITSDecrypt(FieldByName('madd').AsString, KEY);
-            mphone  := HITSDecrypt(FieldByName('mphone').AsString, KEY);
-            memail  := HITSDecrypt(FieldByName('memail').AsString, KEY);
-            mgrade  := FieldByName('mgrade').AsString;
-            muse    := FieldByName('muse').AsInteger;
+            mnum        := FieldByName('mnum').AsInteger;
+            mname       := HITSDecrypt(FieldByName('mname').AsString, KEY);
+            mid         := cid;
+            mpw         := cpw;
+            mbirth      := HITSDecrypt(FieldByName('mbirth').AsString, KEY);
+            mage        := IntToStr(StrToInt(FormatDateTime('YYYY', Now)) - StrToInt(FormatDateTime('YYYY', StrToDate(mbirth))) + 1);
+            msex        := FieldByName('msex').AsString;
+            mpostcode   := HITSDecrypt(FieldByName('mpostcode').AsString, KEY);
+            madd        := add;
+            mdetailadd  := detailadd;
+            mphone      := HITSDecrypt(FieldByName('mphone').AsString, KEY);
+            memail      := HITSDecrypt(FieldByName('memail').AsString, KEY);
+            mgrade      := FieldByName('mgrade').AsString;
+            muse        := use;
 
           end;
 
@@ -237,6 +247,8 @@ begin
             cxLabel2.Show;
           end;
 
+        end else if use <> 1 then begin
+          ShowMessage('Å»ÅðÇÑ È¸¿øÀÔ´Ï´Ù.');
         end else begin
           idx := idx + 1;
           if idx >= 4 then begin
@@ -267,6 +279,16 @@ begin
   finally
     FindIdForm.Free;
   end;
+end;
+
+procedure TLoginForm.LabMouseEnter(Sender: TObject);
+begin
+  TcxLabel(Sender).Style.TextStyle := [fsUnderline];
+end;
+
+procedure TLoginForm.LabMouseLeave(Sender: TObject);
+begin
+  TcxLabel(Sender).Style.TextStyle := [];
 end;
 
 procedure TLoginForm.LabFindPWClick(Sender: TObject);

@@ -11,7 +11,7 @@ uses
   cxGrid, cxTextEdit, cxMemo, cxDBEdit, StdCtrls, cxButtons, cxContainer,
   cxLabel, DBAccess, Ora, MemDS, cxMaskEdit, cxDropDownEdit, cxRadioGroup,
   Grids, Calendar, DateUtils, PlannerMonthView, DBPlannerMonthView, AdvEdit,
-  AdvEdBtn, PlannerDatePicker, cxCurrencyEdit, ImgList;
+  AdvEdBtn, PlannerDatePicker, cxCurrencyEdit, ImgList, cxCalendar;
 
 const
   WM_LOCALMESSAGE = WM_USER + 1000;

@@ -4,7 +4,7 @@ object AnniversaryEditForm: TAnniversaryEditForm
   BorderStyle = bsDialog
   Caption = #44592#45392#51068' '#49444#51221
   ClientHeight = 346
-  ClientWidth = 540
+  ClientWidth = 460
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,14 +19,15 @@ object AnniversaryEditForm: TAnniversaryEditForm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 540
+    Width = 460
     Height = 346
     Align = alClient
     Color = clWindow
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 540
     object cxLabel1: TcxLabel
-      Left = 220
+      Left = 185
       Top = 16
       Caption = #44592#45392#51068' '#47785#47197
       ParentFont = False
@@ -38,7 +39,7 @@ object AnniversaryEditForm: TAnniversaryEditForm
       Style.IsFontAssigned = True
     end
     object BtnClose: TPanel
-      Left = 449
+      Left = 370
       Top = 301
       Width = 75
       Height = 25
@@ -58,7 +59,7 @@ object AnniversaryEditForm: TAnniversaryEditForm
       OnMouseLeave = BtnCloseMouseLeave
     end
     object BtnUpdateAnniver: TPanel
-      Left = 449
+      Left = 370
       Top = 111
       Width = 75
       Height = 25
@@ -78,7 +79,7 @@ object AnniversaryEditForm: TAnniversaryEditForm
       OnMouseLeave = BtnUpdateAnniverMouseLeave
     end
     object BtnDelAnniver: TPanel
-      Left = 449
+      Left = 370
       Top = 151
       Width = 75
       Height = 25
@@ -98,7 +99,7 @@ object AnniversaryEditForm: TAnniversaryEditForm
       OnMouseLeave = BtnDelAnniverMouseLeave
     end
     object BtnAddAnniver: TPanel
-      Left = 449
+      Left = 370
       Top = 71
       Width = 75
       Height = 25
@@ -121,7 +122,7 @@ object AnniversaryEditForm: TAnniversaryEditForm
   object GRD_Anniversary: TcxGrid
     Left = 5
     Top = 66
-    Width = 430
+    Width = 350
     Height = 265
     TabOrder = 1
     object Total_Anniversary: TcxGridDBTableView
@@ -139,33 +140,45 @@ object AnniversaryEditForm: TAnniversaryEditForm
       object Total_AnniversaryColumn1: TcxGridDBColumn
         Caption = #45216'  '#51676
         DataBinding.FieldName = 'AANNIVERSARY'
+        PropertiesClassName = 'TcxDateEditProperties'
+        Properties.Alignment.Horz = taCenter
+        Properties.Alignment.Vert = taVCenter
         FooterAlignmentHorz = taCenter
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
         Options.Editing = False
-        Width = 80
+        Width = 60
       end
       object Total_AnniversaryColumn2: TcxGridDBColumn
         Caption = #44396'  '#48516
         DataBinding.FieldName = 'ATYPE'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taCenter
+        Properties.Alignment.Vert = taVCenter
         FooterAlignmentHorz = taCenter
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
         Options.Editing = False
-        Width = 60
+        Width = 50
       end
       object Total_AnniversaryColumn3: TcxGridDBColumn
         Caption = #51452'  '#44592
         DataBinding.FieldName = 'ACYCLE'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taCenter
+        Properties.Alignment.Vert = taVCenter
         FooterAlignmentHorz = taCenter
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
         Options.Editing = False
-        Width = 60
+        Width = 50
       end
       object Total_AnniversaryColumn4: TcxGridDBColumn
         Caption = #48516'  '#47448
         DataBinding.FieldName = 'ACONTENTS'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taCenter
+        Properties.Alignment.Vert = taVCenter
         FooterAlignmentHorz = taCenter
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
@@ -174,6 +187,9 @@ object AnniversaryEditForm: TAnniversaryEditForm
       object Total_AnniversaryColumn5: TcxGridDBColumn
         Caption = #51060'  '#47492
         DataBinding.FieldName = 'ANAME'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taCenter
+        Properties.Alignment.Vert = taVCenter
         FooterAlignmentHorz = taCenter
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter

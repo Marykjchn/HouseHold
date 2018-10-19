@@ -502,134 +502,142 @@ begin
         sex := 'F';
       end;
 
-      add   := HDataMethod.HITSEncrypt(EditAdd.Text + ' ' + EditDetailAddress.Text, KEY);
+      add   := HDataMethod.HITSEncrypt(EditAdd.Text + ' | ' + EditDetailAddress.Text, KEY);
       email := HDataMethod.HITSEncrypt(EditFEmail.Text + '@' + EditLEmail.Text, KEY);
       phone := HDataMethod.HITSEncrypt(phone, KEY);
 
       with DataModule1 do begin
-//        if NOT DataModule1.OraSession1.InTransaction then begin
-//          OraTransaction1.TransactionId :=  TranID[0];
-//          OraSession1.StartTransaction(OraSession1.InTransaction);
 
-          with QH_DML do begin
-            try
-              SQL.Clear;
-              SQL.Add(' INSERT INTO household(                        ');
-              SQL.Add('   mnum, mname, mid, mpw, mbirth,              ');
-              SQL.Add('   msex, mpostcode, madd, memail, mphone)      ');
-              SQL.Add(' VALUES(household_seq.nextval,                 ');
-              SQL.Add('   :MNAME, :MID,  :MPW,  :MBIRTH,              ');
-              SQL.Add('   :MSEX,  :MPOSTCODE, :MADD :MEMAIL, :MPHONE) ');
+        with QH_DML do begin
+          try
 
-              ParamByName('MNAME').AsString       := nam;
-              ParamByName('MID').AsString         := id;
-              ParamByName('MPW').AsString         := pw;
-              ParamByName('MBIRTH').AsString      := birth;
-              ParamByName('MSEX').AsString        := sex;
-              ParamByName('MAPOSTCODE').AsString  := postcode;
-              ParamByName('MADD').AsString        := add;
-              ParamByName('MEMAIL').AsString      := email;
-              ParamByName('MPHONE').AsString      := phone;
+            if DataModule1.OraSession1.InTransaction then begin
+              DataModule1.OraSession1.Commit;
+            end;
 
-              ExecSQL;
+            DataModule1.OraSession1.StartTransaction;
 
-              SQL.Clear;
-              SQL.Add(' INSERT INTO hcontents                                 ');
-              SQL.Add('  (cno, cnum, cid, cdate, cdiv, citem, cmeans,         ');
-              SQL.Add('   ctype, cincome, cspending, ccreditbal, cbalance)    ');
-              SQL.Add(' VALUES                                                ');
-              SQL.Add('  (hcontents_seq.nextval, 0, :MID, :MDATE, 0, 0, 0,    ');
-              SQL.Add('   0, 0, 0, 0, 0)                                      ');
-              ParamByName('MID').AsString := id;
-              ParamByName('MDATE').AsDate := now;
+            SQL.Clear;
+            SQL.Add(' INSERT INTO household(                        ');
+            SQL.Add('   mnum, mname, mid, mpw, mbirth,              ');
+            SQL.Add('   msex, mpostcode, madd, memail, mphone)      ');
+            SQL.Add(' VALUES(household_seq.nextval,                 ');
+            SQL.Add('   :MNAME, :MID,  :MPW,  :MBIRTH,              ');
+            SQL.Add('   :MSEX,  :MPOSTCODE, :MADD, :MEMAIL, :MPHONE) ');
 
-              ExecSQL;
+            ParamByName('MNAME').AsString       := nam;
+            ParamByName('MID').AsString         := id;
+            ParamByName('MPW').AsString         := pw;
+            ParamByName('MBIRTH').AsString      := birth;
+            ParamByName('MSEX').AsString        := sex;
+            ParamByName('MAPOSTCODE').AsString  := postcode;
+            ParamByName('MADD').AsString        := add;
+            ParamByName('MEMAIL').AsString      := email;
+            ParamByName('MPHONE').AsString      := phone;
 
-              iDiv := '지출';
+            Execute;
 
-              IItem[0] := '카드요금 납부';
-              IItem[1] := '식비';
-              IItem[2] := '의류비';
-              IItem[3] := '교통비';
-              IItem[4] := '경조사비';
+            SQL.Clear;
+            SQL.Add(' INSERT INTO hcontents                                 ');
+            SQL.Add('  (cno, cnum, cid, cdate, cdiv, citem, cmeans,         ');
+            SQL.Add('   ctype, cincome, cspending, ccreditbal, cbalance)    ');
+            SQL.Add(' VALUES                                                ');
+            SQL.Add('  (hcontents_seq.nextval, 0, :MID, :MDATE, 0, 0, 0,    ');
+            SQL.Add('   0, 0, 0, 0, 0)                                      ');
+            ParamByName('MID').AsString := id;
+            ParamByName('MDATE').AsDate := now;
 
-              for idx := 0 to 5 - 1 do begin
-                SQL.Clear;
-                SQL.Add('INSERT INTO hitem VALUES(                   ');
-                SQL.Add('  hitem_seq.nextval, :IID, :IDIV, :IITEM )  ');
-                ParamByName('IID').AsString   := id;
-                ParamByName('IDIV').AsString  := idiv;
-                ParamByName('IITEM').AsString := IItem[idx];
+            Execute;
 
-                ExecSQL;
+            iDiv := '지출';
 
-              end;
+            IItem[0] := '카드요금 납부';
+            IItem[1] := '식비';
+            IItem[2] := '의류비';
+            IItem[3] := '교통비';
+            IItem[4] := '경조사비';
 
+            for idx := 0 to 5 - 1 do begin
               SQL.Clear;
               SQL.Add('INSERT INTO hitem VALUES(                   ');
-              SQL.Add('  hitem_seq.nextval, :IID, :IDIV, :IITEM)   ');
+              SQL.Add('  hitem_seq.nextval, :IID, :IDIV, :IITEM )  ');
               ParamByName('IID').AsString   := id;
-              ParamByName('IDIV').AsString  := '수입';
-              ParamByName('IITEM').AsString := '월급';
+              ParamByName('IDIV').AsString  := idiv;
+              ParamByName('IITEM').AsString := IItem[idx];
 
-              ExecSQL;
-
-              TType[0] := 'NH농협';
-              TType[1] := 'IBK기업';
-              TType[2] := 'KB국민';
-              TType[3] := '우리';
-              TType[4] := '하나';
-              TType[5] := '롯데';
-              TType[6] := '비씨';
-              TType[7] := '삼성';
-              TType[8] := '신한';
-              TType[9] := '현대';
-
-              for idx := 0 to 9 do begin
-                SQL.Clear;
-                SQL.Add('INSERT INTO htype                            ');
-                SQL.Add('  VALUES (htype_seq.nextval, :TID, :TTYPE)   ');
-
-                ParamByName('TID').AsString := id;
-                ParamByName('TTYPE').AsString := TType[idx];
-
-                ExecSQL;
-              end;
-
-              SQL.Clear;
-              SQL.Add('INSERT INTO hanniversary                                                                      ');
-              SQL.Add('  VALUES( hanniversary_seq.nextval, :AID, :ATPYE, :ACONTENTS, :ANAME, :ACYCLE, :AANIVERSARY ) ');
-
-              ParamByName('AID').AsString       := id;
-              ParamByName('ATPYE').AsString     := '양력';
-              ParamByName('ACONTENTS').AsString := '생일';
-              ParamByName('ANAME').AsString     := EditName.Text;
-              ParamByName('ACYCLE').AsString    := '일년';
-              ParamByName('AANIVERSARY').AsDate := StrToDate(year + '-' + month + '-' + day);
-
-              ExecSQL;
-
-              SQL.Clear;
-              SQL.Add('INSERT INTO hexcelStore (eno, eid)         ');
-              SQL.Add('  VALUES( hexcelStore_seq.nextval, :EID )  ');
-
-              ParamByName('EID').AsString     := id;
-
-              ExecSQL;
-
-              ShowMessage('회원가입이 완료되었습니다.');
-
-//              DataModule1.OraSession1.Commit;
-
-            except
-              on e : Exception do begin
-//                OraSession1.RollBack;
-                Application.MessageBox(PChar(e.Message), PChar('회원가입 실패'), MB_ICONERROR + MB_OK);
-              end;
+              Execute;
 
             end;
 
+            SQL.Clear;
+            SQL.Add('INSERT INTO hitem VALUES(                   ');
+            SQL.Add('  hitem_seq.nextval, :IID, :IDIV, :IITEM)   ');
+            ParamByName('IID').AsString   := id;
+            ParamByName('IDIV').AsString  := '수입';
+            ParamByName('IITEM').AsString := '월급';
+
+            Execute;
+
+            TType[0] := 'NH농협';
+            TType[1] := 'IBK기업';
+            TType[2] := 'KB국민';
+            TType[3] := '우리';
+            TType[4] := '하나';
+            TType[5] := '롯데';
+            TType[6] := '비씨';
+            TType[7] := '삼성';
+            TType[8] := '신한';
+            TType[9] := '현대';
+
+            for idx := 0 to 9 do begin
+              SQL.Clear;
+              SQL.Add('INSERT INTO htype                            ');
+              SQL.Add('  VALUES (htype_seq.nextval, :TID, :TTYPE)   ');
+
+              ParamByName('TID').AsString := id;
+              ParamByName('TTYPE').AsString := TType[idx];
+
+              Execute;
+            end;
+
+            SQL.Clear;
+            SQL.Add('INSERT INTO hanniversary                                                                      ');
+            SQL.Add('  VALUES( hanniversary_seq.nextval, :AID, :ATPYE, :ACONTENTS, :ANAME, :ACYCLE, :AANIVERSARY ) ');
+
+            ParamByName('AID').AsString       := id;
+            ParamByName('ATPYE').AsString     := '양력';
+            ParamByName('ACONTENTS').AsString := '생일';
+            ParamByName('ANAME').AsString     := EditName.Text;
+            ParamByName('ACYCLE').AsString    := '일년';
+            ParamByName('AANIVERSARY').AsDate := StrToDate(year + '-' + month + '-' + day);
+
+            Execute;
+
+            SQL.Clear;
+            SQL.Add('INSERT INTO hexcelStore (eno, eid)         ');
+            SQL.Add('  VALUES( hexcelStore_seq.nextval, :EID )  ');
+
+            ParamByName('EID').AsString     := id;
+
+            Execute;
+
+            ShowMessage('회원가입이 완료되었습니다.');
+
+            if DataModule1.OraSession1.InTransaction then begin
+              DataModule1.OraSession1.Commit;
+            end;
+
+          except
+            on e : Exception do begin
+              Application.MessageBox(PChar(e.Message), PChar('회원가입 실패'), MB_ICONERROR + MB_OK);
+              if DataModule1.OraSession1.InTransaction then begin
+                 DataModule1.OraSession1.rollback;
+              end;
+            end;
+
           end;
+
+        end;
 
 //        end;
 

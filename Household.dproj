@@ -50,6 +50,9 @@
     <DCCReference Include="AnniAddPage.pas">
       <Form>AnniAddForm</Form>
     </DCCReference>
+    <DCCReference Include="AnniversaryAddPage.pas">
+      <Form>AnniversaryAddForm</Form>
+    </DCCReference>
     <DCCReference Include="AnniversaryEditPage.pas">
       <Form>AnniversaryEditForm</Form>
     </DCCReference>
@@ -92,9 +95,6 @@
       <Form>SearchJusoForm</Form>
     </DCCReference>
     <DCCReference Include="SolnLun.pas" />
-    <DCCReference Include="UpdateAddPage.pas">
-      <Form>UpdateAddForm</Form>
-    </DCCReference>
     <DCCReference Include="UpdateEmailPage.pas">
       <Form>UpdateEmailForm</Form>
     </DCCReference>

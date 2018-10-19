@@ -22,9 +22,10 @@ const
 // 로그인후 가지고있는 유저값 (ID만 암호화 상태 나머지정보는 복호화되어있음)
 type
   TmemData = record
-    mnum, muse                            : Integer;
-    mname, mid, mpw, mbirth, mage         : String;
-    msex, madd, memail, mgrade, mphone    : String;
+    mnum, muse                          : Integer;
+    mname, mid, mpw, mbirth, mage       : String;
+    msex, mpostcode, madd, mdetailadd   : String;
+    memail, mgrade, mphone              : String;
   end;
 
 // email인증시 해당 이메일주소와 내용 저장
@@ -95,8 +96,11 @@ uses
 
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
 var
-  chk : Integer;
+  ModalResult : TModalResult;
 begin
+
+  ModalResult := 0;
+
   OraSession1.ConnectString := 'sg100/"*%(vmffosdlt)^("@devdb2.itshan.co.kr:3300:SALGU';
   OraSession1.Connected     := True;
 
@@ -111,10 +115,10 @@ begin
   addressSearch.ADetailAddr := '';
 
   try
-    chk := LoginForm.ShowModal;
+    ModalResult := LoginForm.ShowModal;
 
   finally
-    if chk = mrOk then begin
+    if ModalResult = mrOk then begin
       LoginForm.Free;
       HouseHoldForm := THouseholdForm.Create(Self);
 

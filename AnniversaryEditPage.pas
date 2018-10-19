@@ -8,7 +8,8 @@ uses
   CheckLst, StdCtrls, Menus, cxLookAndFeelPainters, cxEdit, cxLabel, cxButtons,
   DB, MemDS, DBAccess, Ora, cxStyles, cxCustomData, cxGraphics, cxFilter,
   cxData, cxDataStorage, cxDBData, cxGridCustomTableView, cxGridTableView,
-  cxGridDBTableView, cxGridLevel, cxClasses, cxGridCustomView, cxGrid;
+  cxGridDBTableView, cxGridLevel, cxClasses, cxGridCustomView, cxGrid,
+  cxCalendar, cxTextEdit;
 
 type
   TAnniverData = record
