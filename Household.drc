@@ -2200,12 +2200,12 @@ END
 /* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\asgprint.DFM */
 /* DetailAddressPage.dfm */
 /* SearchJusoPage.dfm */
-/* UpdatePhonePage.dfm */
 /* EmailchkPage.dfm */
-/* UpdateEmailPage.dfm */
 /* FindPWPage.dfm */
 /* UpdatePWPage.dfm */
-/* E:\Developer\Delphi\코딩 연습\Household\MemInfoPage.dfm */
+/* UpdateEmailPage.dfm */
+/* UpdatePhonePage.dfm */
+/* MemInfoPage.dfm */
 /* AnniAddPage.dfm */
 /* FixBreakdownEditPage.dfm */
 /* AnniversaryEditPage.dfm */

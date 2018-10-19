@@ -25,7 +25,6 @@ object MemInfoForm: TMemInfoForm
     Color = clWindow
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 556
     object Panel2: TPanel
       Left = 50
       Top = 100
@@ -366,9 +365,9 @@ object MemInfoForm: TMemInfoForm
         OnMouseLeave = BtnMAddUpdateMouseLeave
       end
       object cxLabel14: TcxLabel
-        Left = 210
+        Left = 230
         Top = 104
-        Caption = #50864#54200#48264#54840'        :'
+        Caption = #50864#54200#48264#54840
         ParentFont = False
         Style.Font.Charset = HANGEUL_CHARSET
         Style.Font.Color = 7237230
@@ -390,9 +389,9 @@ object MemInfoForm: TMemInfoForm
         Style.IsFontAssigned = True
       end
       object cxLabel17: TcxLabel
-        Left = 210
+        Left = 230
         Top = 131
-        Caption = #44592#48376#51452#49548'        :'
+        Caption = #44592#48376#51452#49548
         ParentFont = False
         Style.Font.Charset = HANGEUL_CHARSET
         Style.Font.Color = 7237230
@@ -414,9 +413,9 @@ object MemInfoForm: TMemInfoForm
         Style.IsFontAssigned = True
       end
       object cxLabel21: TcxLabel
-        Left = 210
+        Left = 230
         Top = 158
-        Caption = #49345#49464#51452#49548'        :'
+        Caption = #49345#49464#51452#49548
         ParentFont = False
         Style.Font.Charset = HANGEUL_CHARSET
         Style.Font.Color = 7237230
