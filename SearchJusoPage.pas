@@ -68,10 +68,6 @@ type
     LabNotFindAddress: TcxLabel;
     LabTotAddList: TcxLabel;
 
-
-    procedure BtnBeforeNextMouseEnter(Sender: TObject);
-    procedure BtnBeforeNextMouseLeave(Sender: TObject);
-
     // 조회 버튼 클릭시 조회이벤트 호출
     procedure BtnSearchAddressClick(Sender: TObject);
 
@@ -92,8 +88,7 @@ type
     procedure PageNumMouseLeave(Sender: TObject);
 
     // Edit 버튼 이벤트
-    procedure EditAddressEnter(Sender: TObject);
-    procedure EditAddressExit(Sender: TObject);
+    procedure EditEnter(Sender: TObject);
     procedure EditAddressKeyPress(Sender: TObject; var Key: Char);
     procedure EditAddressKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure LabEditAddressClick(Sender: TObject);
@@ -101,10 +96,21 @@ type
     // 폼생성시 이벤트
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+
+    // 페이지네이션 다음 이전 버튼 클릭시 이벤트
     procedure BtnBeforeNextPageClick(Sender: TObject);
+
+    // 페이지네이션 다음 이전버튼 호버,불러시 색변경
+    procedure BtnBeforeNextMouseEnter(Sender: TObject);
+    procedure BtnBeforeNextMouseLeave(Sender: TObject);
+
+    // 검색된 주소 클릭시 페이지 이동
+    procedure AddressClick(Sender: TObject);
+
+    // 검색된 주소 마우스 호버,불러시 스타일변경
     procedure LabJusoMouseEnter(Sender: TObject);
     procedure LabJusoMouseLeave(Sender: TObject);
-    procedure AddressClick(Sender: TObject);
+    procedure EditExit(Sender: TObject);
 
   private
     { Private declarations }
@@ -154,16 +160,14 @@ begin
   EditAddress.SetFocus;
 end;
 
-procedure TSearchJusoForm.EditAddressEnter(Sender: TObject);
+procedure TSearchJusoForm.EditEnter(Sender: TObject);
 begin
-  LabEditAddress.Style.Color := $00FFFCF9;
-  PlEditAddress.Color        := $00FFFCF9;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
 end;
 
-procedure TSearchJusoForm.EditAddressExit(Sender: TObject);
+procedure TSearchJusoForm.EditExit(Sender: TObject);
 begin
-  LabEditAddress.Style.Color := clWindow;
-  PlEditAddress.Color        := clWindow;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, False);
 end;
 
 procedure TSearchJusoForm.EditAddressKeyPress(Sender: TObject; var Key: Char);
@@ -272,6 +276,7 @@ begin
         addressSearch.ARoadBool   := False;
       end;
     end;
+    DetailAddressForm.Free;
   end;
 
 end;

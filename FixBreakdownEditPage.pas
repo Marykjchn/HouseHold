@@ -87,7 +87,7 @@ implementation
 { TFixBreakdownEdit }
 
 uses
-  HouseholdPage, DataModule, AnniAddPage;
+  HouseholdPage, DataModule, FixBreakAddPage;
 
 procedure TFixBreakdownEditForm.FbreakDownDataDelete;
 var
@@ -151,10 +151,10 @@ end;
 procedure TFixBreakdownEditForm.BtnAddFBreakdownClick(Sender: TObject);
 begin
   try
-    AnniAddForm := TAnniAddForm.Create(self);
-    AnniAddForm.ShowModal;
+    FixBreakAddForm := TFixBreakAddForm.Create(self);
+    FixBreakAddForm.ShowModal;
   finally
-    AnniAddForm.Free;
+    FixBreakAddForm.Free;
   end;
   SelectAnniversary;
 end;

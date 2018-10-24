@@ -21,11 +21,9 @@ type
     cxLabel10: TcxLabel;
     chkPW: TcxLabel;
     Panel2: TPanel;
-    procedure EditPWEnter(Sender: TObject);
-    procedure EditPWExit(Sender: TObject);
+    procedure EditEnter(Sender: TObject);
+    procedure EditExit(Sender: TObject);
     procedure EditPWKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure EditPWchkEnter(Sender: TObject);
-    procedure EditPWchkExit(Sender: TObject);
     procedure EditPWchkKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure BtnMemInsertClick(Sender: TObject);
@@ -99,41 +97,6 @@ begin
 
 end;
 
-procedure TUpdatePWForm.EditPWchkEnter(Sender: TObject);
-begin
-  cxLabel17.Style.Color := $00FFFCF9;
-  Panel4.Color          := $00FFFCF9;
-end;
-
-procedure TUpdatePWForm.EditPWchkExit(Sender: TObject);
-var
-  pw, pwchk: string;
-begin
-  cxLabel17.Style.Color := clWindow;
-  Panel4.Color          := clWindow;
-
-  pw := EditPW.Text;
-  pwchk := EditPWchk.Text;
-
-  if pwchk = '' then begin
-    chkPWTrue.Caption := '비밀번호확인을 입력해주세요.';
-    chkPWTrue.Show;
-    chkPW.Hide;
-    UpdatePWForm.pwchk2 := False;
-  end else begin
-    if not (pwchk = pw) then begin
-      chkPWTrue.Caption := '비밀번호가 일치하지 않습니다.';
-      chkPWTrue.Show;
-      chkPW.Hide;
-      UpdatePWForm.pwchk2 := False;
-    end else begin
-      chkPWTrue.Hide;
-      UpdatePWForm.pwchk2 := True;
-    end;
-  end;
-
-end;
-
 procedure TUpdatePWForm.EditPWchkKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
@@ -144,39 +107,65 @@ begin
   end;
 end;
 
-procedure TUpdatePWForm.EditPWEnter(Sender: TObject);
+procedure TUpdatePWForm.EditEnter(Sender: TObject);
 begin
-  cxLabel16.Style.Color := $00FFFCF9;
-  Panel3.Color          := $00FFFCF9;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
 end;
 
-procedure TUpdatePWForm.EditPWExit(Sender: TObject);
+procedure TUpdatePWForm.EditExit(Sender: TObject);
 var
-  pw      : string;
-  PWlength: Integer;
+  pw, pw2   : string;
+  PWlength  : Integer;
+  ControlN  : TWinControl;
 begin
+  ControlN := TWinControl(Sender);
 
-  cxLabel16.Style.Color := clWindow;
-  Panel3.Color          := clWindow;
+  DataModule1.SetEditStyle(ControlN.Parent, False);
 
-  pw := EditPW.Text;
-  PWlength := Length(pw);
-  if pw = '' then begin
-    chkpw.Caption := '비밀번호를 입력해주세요.';
-    chkpw.Show;
-    chkPWTrue.Hide;
-    UpdatePWForm.pwchk := False;
-  end else begin
-    if (PWlength < 6) or (PWlength > 18) then  begin
-      chkpw.Caption := '비밀번호를 8~16자로 입력해주세요.';
-      chkPW.Show;
+  pw        := EditPW.Text;
+  pw2       := EditPWchk.Text;
+  PWlength  := Length(pw);    
+
+  if ControlN.Name = 'EditPW' then begin
+
+    if pw = '' then begin
+      chkpw.Caption := '비밀번호를 입력해주세요.';
+      chkpw.Show;
       chkPWTrue.Hide;
       UpdatePWForm.pwchk := False;
     end else begin
-      chkPW.Hide;
-      UpdatePWForm.pwchk := True;
+      if (PWlength < 6) or (PWlength > 18) then  begin
+        chkpw.Caption := '비밀번호를 8~16자로 입력해주세요.';
+        chkPW.Show;
+        chkPWTrue.Hide;
+        UpdatePWForm.pwchk := False;
+      end else begin
+        chkPW.Hide;
+        UpdatePWForm.pwchk := True;
+      end;
     end;
+
+  end else if ControlN.Name = 'EditPWChk' then begin   
+    if pw2 = '' then begin
+      chkPWTrue.Caption := '비밀번호확인을 입력해주세요.';
+      chkPWTrue.Show;
+      chkPW.Hide;
+      UpdatePWForm.pwchk2 := False;
+    end else begin
+      if not (pw2 = pw) then begin
+        chkPWTrue.Caption := '비밀번호가 일치하지 않습니다.';
+        chkPWTrue.Show;
+        chkPW.Hide;
+        UpdatePWForm.pwchk2 := False;
+      end else begin
+        chkPWTrue.Hide;
+        UpdatePWForm.pwchk2 := True;
+      end;
+
+    end;
+
   end;
+
 end;
 
 procedure TUpdatePWForm.EditPWKeyUp(Sender: TObject; var Key: Word;

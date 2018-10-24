@@ -14,6 +14,7 @@ object UpdatePhoneForm: TUpdatePhoneForm
   OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -91,8 +92,8 @@ object UpdatePhoneForm: TUpdatePhoneForm
           StyleFocused.Color = 16776441
           TabOrder = 0
           Text = '010'
-          OnEnter = ComboFPhoneEnter
-          OnExit = ComboFPhoneExit
+          OnEnter = EditEnter
+          OnExit = EditExit
           OnKeyPress = OnlyNumber2
           Width = 70
         end
@@ -128,8 +129,8 @@ object UpdatePhoneForm: TUpdatePhoneForm
           Style.IsFontAssigned = True
           StyleFocused.Color = 16776441
           TabOrder = 0
-          OnEnter = EditMPhoneEnter
-          OnExit = EditMPhoneExit
+          OnEnter = EditEnter
+          OnExit = EditExit
           OnKeyPress = OnlyNumber2
           Width = 70
         end
@@ -165,8 +166,8 @@ object UpdatePhoneForm: TUpdatePhoneForm
           Style.IsFontAssigned = True
           StyleFocused.Color = 16776441
           TabOrder = 0
-          OnEnter = EditLPhoneEnter
-          OnExit = EditLPhoneExit
+          OnEnter = EditEnter
+          OnExit = EditExit
           OnKeyPress = OnlyNumber2
           Width = 70
         end

@@ -25,8 +25,6 @@ object EmailchkForm: TEmailchkForm
     Color = clWindow
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 400
-    ExplicitHeight = 200
     object cxLabel1: TcxLabel
       Left = 54
       Top = 25
@@ -70,8 +68,8 @@ object EmailchkForm: TEmailchkForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditCodeValEnter
-        OnExit = EditCodeValExit
+        OnEnter = EditEnter
+        OnExit = EditExit
         OnKeyUp = EditCodeValKeyUp
         Width = 300
       end

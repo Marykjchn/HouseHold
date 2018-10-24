@@ -20,7 +20,8 @@ uses
   UpdateEmailPage in 'UpdateEmailPage.pas' {UpdateEmailForm},
   DetailAddressPage in 'DetailAddressPage.pas' {DetailAddressForm},
   SearchJusoPage in 'SearchJusoPage.pas' {SearchJusoForm},
-  MemInsertPage in 'MemInsertPage.pas' {MemInsertForm};
+  MemInsertPage in 'MemInsertPage.pas' {MemInsertForm},
+  FixBreakAddPage in 'FixBreakAddPage.pas' {FixBreakAddForm};
 
 {$R *.res}
 

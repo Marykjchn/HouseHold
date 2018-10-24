@@ -24,8 +24,6 @@ object DetailAddressForm: TDetailAddressForm
     Height = 302
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 400
-    ExplicitHeight = 300
     object Panel19: TPanel
       Left = 38
       Top = 100
@@ -135,8 +133,8 @@ object DetailAddressForm: TDetailAddressForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditDetailAddressEnter
-        OnExit = EditDetailAddressExit
+        OnEnter = EditEnter
+        OnExit = EditExit
         OnKeyPress = EditDetailAddressKeyPress
         Width = 300
       end

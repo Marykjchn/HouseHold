@@ -950,7 +950,7 @@ object HouseHoldForm: THouseHoldForm
       Completion.Font.Charset = DEFAULT_CHARSET
       Completion.Font.Color = clWindowText
       Completion.Font.Height = -11
-      Completion.Font.Name = 'Arial'
+      Completion.Font.Name = #47569#51008' '#44256#46357
       Completion.Font.Style = []
       DateFormat = 'dd/mm/yyyy'
       DayFont.Charset = HANGEUL_CHARSET

@@ -38,18 +38,13 @@ type
     procedure BtnCloseMouseLeave(Sender: TObject);
 
     // --------------- 입력란 이벤트 ---------------
-    procedure ComboFPhoneEnter(Sender: TObject);
-    procedure ComboFPhoneExit(Sender: TObject);
-    procedure EditMPhoneEnter(Sender: TObject);
-    procedure EditMPhoneExit(Sender: TObject);
-    procedure EditLPhoneEnter(Sender: TObject);
-    procedure EditLPhoneExit(Sender: TObject);
-
+    procedure EditEnter(Sender: TObject);
+    procedure EditExit(Sender: TObject);
 
     // --------------- 버튼 클릭시 ---------------
     procedure BtnCloseClick(Sender: TObject);
     procedure BtnPhoneUpdateClick(Sender: TObject);
-
+    procedure FormShow(Sender: TObject);
 
   private
     { Private declarations }
@@ -149,57 +144,42 @@ begin
   BtnPhoneUpdate.Color := $00FF9E3E;
 end;
 
-procedure TUpdatePhoneForm.ComboFPhoneEnter(Sender: TObject);
+procedure TUpdatePhoneForm.EditEnter(Sender: TObject);
 begin
-  Panel11.Color          := $00FFFCF9;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
 end;
 
-procedure TUpdatePhoneForm.ComboFPhoneExit(Sender: TObject);
+procedure TUpdatePhoneForm.EditExit(Sender: TObject);
+var
+  ControlN : TWinControl;
 begin
-  Panel11.Color          := clWindow;
+  ControlN := TWinControl(Sender);
 
-  if ComboFPhone.Text = '' then begin
-    chkPhone.Show;
-  end else begin
-    chkPhone.Hide;
-  end;
-end;
+  DataModule1.SetEditStyle(ControlN.Parent, False);
 
-procedure TUpdatePhoneForm.EditLPhoneEnter(Sender: TObject);
-begin
-  Panel13.Color          := $00FFFCF9;
-end;
-
-procedure TUpdatePhoneForm.EditLPhoneExit(Sender: TObject);
-begin
-  Panel13.Color          := clWindow;
-
-  if EditLPhone.Text = '' then begin
-    chkPhone.Show;
-  end else begin
-    chkPhone.Hide;
-  end;
-end;
-
-procedure TUpdatePhoneForm.EditMPhoneEnter(Sender: TObject);
-begin
-  Panel12.Color          := $00FFFCF9;
-end;
-
-procedure TUpdatePhoneForm.EditMPhoneExit(Sender: TObject);
-begin
-  Panel12.Color          := clWindow;
-
-  if EditMPhone.Text = '' then begin
-    chkPhone.Show;
-  end else begin
-    chkPhone.Hide;
+  if ControlN.Name = 'EditMPhone' then begin
+    if EditMPhone.Text = '' then begin
+      chkPhone.Show;
+    end else begin
+      chkPhone.Hide;
+    end;
+  end else if ControlN.Name = 'EditLPhone' then begin
+    if EditLPhone.Text = '' then begin
+      chkPhone.Show;
+    end else begin
+      chkPhone.Hide;
+    end;
   end;
 end;
 
 procedure TUpdatePhoneForm.FormCreate(Sender: TObject);
 begin
   chkPhone.Hide;
+end;
+
+procedure TUpdatePhoneForm.FormShow(Sender: TObject);
+begin
+  EditMPhone.SetFocus;
 end;
 
 procedure TUpdatePhoneForm.OnlyNumber2(Sender: TObject; var Key: Char);

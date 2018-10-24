@@ -21,8 +21,12 @@ type
     procedure cxTextEdit1PropertiesChange(Sender: TObject);
     procedure EditDetailAddressKeyPress(Sender: TObject; var Key: Char);
     procedure LabDetailAddressClick(Sender: TObject);
-    procedure EditDetailAddressEnter(Sender: TObject);
-    procedure EditDetailAddressExit(Sender: TObject);
+
+    //Edit창 Enter시 스타일 변경
+    procedure EditEnter(Sender: TObject);
+    procedure EditExit(Sender: TObject);
+
+
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure BtnDetailAddressClick(Sender: TObject);
@@ -61,16 +65,14 @@ begin
   end;
 end;    
 
-procedure TDetailAddressForm.EditDetailAddressEnter(Sender: TObject);
+procedure TDetailAddressForm.EditEnter(Sender: TObject);
 begin
-  LabDetailAddress.Style.Color  := $00FFFCF9;
-  Panel18.Color                 := $00FFFCF9;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
 end;
 
-procedure TDetailAddressForm.EditDetailAddressExit(Sender: TObject);
+procedure TDetailAddressForm.EditExit(Sender: TObject);
 begin
-  LabDetailAddress.Style.Color  := clWindow;
-  Panel18.Color                 := clWindow;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, False);
 end;
 
 procedure TDetailAddressForm.EditDetailAddressKeyPress(Sender: TObject;

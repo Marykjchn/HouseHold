@@ -33,13 +33,11 @@ type
     procedure LabMemInsertClick(Sender: TObject);
 
     // --------------- 로그인 입력란 이벤트 ---------------
-    procedure EditIDEnter(Sender: TObject);
-    procedure EditIDExit(Sender: TObject);
+    procedure EditEnter(Sender: TObject);
+    procedure EditExit(Sender: TObject);
     procedure EditIDKeyPress(Sender: TObject; var Key: Char);
     procedure EditIDKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure cxLabel1Click(Sender: TObject);
-    procedure EditPWEnter(Sender: TObject);
-    procedure EditPWExit(Sender: TObject);
     procedure EditPWKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure cxLabel2Click(Sender: TObject);
     procedure EditKeyPress(Sender: TObject; var Key: Char);
@@ -92,16 +90,14 @@ begin
   EditPW.SetFocus;
 end;
 
-procedure TLoginForm.EditIDEnter(Sender: TObject);
+procedure TLoginForm.EditEnter(Sender: TObject);
 begin
-  cxLabel1.Style.Color := $00FFFCF9;
-  Panel2.Color         := $00FFFCF9;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
 end;
 
-procedure TLoginForm.EditIDExit(Sender: TObject);
+procedure TLoginForm.EditExit(Sender: TObject);
 begin
-  cxLabel1.Style.Color := clWindow;
-  Panel2.Color         := clWindow;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, False);
 end;
 
 procedure TLoginForm.EditIDKeyPress(Sender: TObject; var Key: Char);
@@ -137,18 +133,6 @@ begin
   end else begin
     cxLabel1.show;
   end;
-end;
-
-procedure TLoginForm.EditPWEnter(Sender: TObject);
-begin
-  cxLabel2.Style.Color := $00FFFCF9;
-  Panel3.Color         := $00FFFCF9;
-end;
-
-procedure TLoginForm.EditPWExit(Sender: TObject);
-begin
-  cxLabel2.Style.Color := clWindow;
-  Panel3.Color         := clWindow;
 end;
 
 procedure TLoginForm.EditPWKeyUp(Sender: TObject; var Key: Word;

@@ -43,10 +43,9 @@ type
 
     // -------------- 입력란 이벤트 --------------
     // 클릭시 색 변경
-    procedure EditContentsEnter(Sender: TObject);
-    procedure EditContentsExit(Sender: TObject);
-    procedure EditNameEnter(Sender: TObject);
-    procedure EditNameExit(Sender: TObject);
+    procedure EditEnter(Sender: TObject);
+    procedure EditExit(Sender: TObject);
+
     procedure EditContentsKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -177,16 +176,14 @@ begin
   Key := #0;
 end;
 
-procedure TAnniAddForm.EditContentsEnter(Sender: TObject);
+procedure TAnniAddForm.EditEnter(Sender: TObject);
 begin
-  cxLabel7.Style.Color := $00FFFCF9;
-  Panel4.Color         := $00FFFCF9;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
 end;
 
-procedure TAnniAddForm.EditContentsExit(Sender: TObject);
+procedure TAnniAddForm.EditExit(Sender: TObject);
 begin
-  cxLabel7.Style.Color := clWindow;
-  Panel4.Color         := clWindow;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, False);
 end;
 
 procedure TAnniAddForm.EditContentsKeyUp(Sender: TObject; var Key: Word;
@@ -197,18 +194,6 @@ begin
   end else begin
     cxLabel7.show;
   end;
-end;
-
-procedure TAnniAddForm.EditNameEnter(Sender: TObject);
-begin
-  cxLabel8.Style.Color := $00FFFCF9;
-  Panel5.Color         := $00FFFCF9;
-end;
-
-procedure TAnniAddForm.EditNameExit(Sender: TObject);
-begin
-  cxLabel8.Style.Color := clWindow;
-  Panel5.Color         := clWindow;
 end;
 
 procedure TAnniAddForm.EditNameKeyUp(Sender: TObject; var Key: Word;

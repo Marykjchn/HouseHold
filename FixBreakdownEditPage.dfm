@@ -24,7 +24,6 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
     Color = clWindow
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 650
     object cxLabel1: TcxLabel
       Left = 292
       Top = 16
@@ -113,6 +112,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
       ParentBackground = False
       ParentFont = False
       TabOrder = 4
+      OnClick = BtnAddFBreakdownClick
       OnMouseEnter = BtnAddFBreakdownMouseEnter
       OnMouseLeave = BtnAddFBreakdownMouseLeave
     end

@@ -50,9 +50,6 @@
     <DCCReference Include="AnniAddPage.pas">
       <Form>AnniAddForm</Form>
     </DCCReference>
-    <DCCReference Include="AnniversaryAddPage.pas">
-      <Form>AnniversaryAddForm</Form>
-    </DCCReference>
     <DCCReference Include="AnniversaryEditPage.pas">
       <Form>AnniversaryEditForm</Form>
     </DCCReference>
@@ -71,6 +68,9 @@
     </DCCReference>
     <DCCReference Include="FindPWPage.pas">
       <Form>FindPWForm</Form>
+    </DCCReference>
+    <DCCReference Include="FixBreakAddPage.pas">
+      <Form>FixBreakAddForm</Form>
     </DCCReference>
     <DCCReference Include="FixBreakdownEditPage.pas">
       <Form>FixBreakdownEditForm</Form>

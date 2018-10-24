@@ -9,7 +9,8 @@ uses
   IdIOHandlerSocket, IdSSLOpenSSL, Messages, Dialogs, DCPmd5, DCPsha256,
   IdCoder, IdCoder3to4, IdCoderMIME, cxGrid, Windows, Forms, Controls,
   cxExportGrid4Link , shellApi, asgprint, OraTransaction, xmldom, XMLIntf,
-  msxmldom, XMLDoc, IdHTTP, HTTPAPP, cxGridDBTableView, cxLabel;
+  msxmldom, XMLDoc, IdHTTP, HTTPAPP, cxGridDBTableView, cxLabel, cxTextEdit,
+  PlannerDatePicker, cxDropDownEdit, ExtCtrls, Graphics;
 
 const
   CHAR_SET: array [0..35] of Char =
@@ -74,6 +75,9 @@ type
 
     //// control 상의 Enable 지정 FControlColors 참조하여 구분
     procedure SetVisibleItems(AWinControl: TWinControl; AEnabled: Boolean);
+
+    // Edit버튼 스타일 지정
+    procedure SetEditStyle(AWinControl: TWinControl; AEnabled: Boolean);
 
     var
       TJusoTotNum  : Integer;  // 총 주소 row수
@@ -234,6 +238,67 @@ begin
   end;
 end;
 
+procedure TDataModule1.SetEditStyle(AWinControl: TWinControl;
+  AEnabled: Boolean);
+var
+  i     : Integer;
+  BoolItem : Boolean;
+begin
+
+  with AWinControl do begin 
+    if AEnabled then begin
+      TPanel(AWinControl).Color := $00FFFCF9;
+
+      for i := 0 to AWinControl.ControlCount - 1 do begin
+        BoolItem := (Controls[i] is TcxLabel);
+        if BoolItem then begin
+          TcxLabel(Controls[i]).Style.Color := $00FFFCF9;
+          Continue;
+        end;
+
+        BoolItem := (Controls[i] is TcxComboBox);
+        if BoolItem then begin
+          TcxComboBox(Controls[i]).Style.Color := $00FFFCF9;
+          Continue;
+        end;
+
+        BoolItem := (Controls[i] is TPlannerDatePicker);
+        if BoolItem then begin
+          TPlannerDatePicker(Controls[i]).Color := $00FFFCF9;
+          Continue;
+        end;
+
+      end;
+
+    end else begin
+      TPanel(AWinControl).Color := clWindow;
+
+      for i := 0 to AWinControl.ControlCount - 1 do begin
+        BoolItem := (Controls[i] is TcxLabel);
+        if BoolItem then begin
+          TcxLabel(Controls[i]).Style.Color := clWindow;
+          Continue;
+        end;
+
+        BoolItem := (Controls[i] is TcxComboBox);
+        if BoolItem then begin
+          TcxComboBox(Controls[i]).Style.Color := clWindow;
+          Continue;
+        end;
+
+        BoolItem := (Controls[i] is TPlannerDatePicker);   
+        if BoolItem then begin
+          TPlannerDatePicker(Controls[i]).Color := clWindow;
+          Continue;
+        end;
+
+      end;
+
+    end;
+
+  end;
+end;
+
 procedure TDataModule1.SetVisibleItems(AWinControl: TWinControl; AEnabled: Boolean);
 var
   i     : Integer;
@@ -249,6 +314,8 @@ begin
     end;
   end;
 end;
+
+
 
 procedure TDataModule1.JusoSearchApiCall(JusoEdit : String; PageNum : Integer);
 var

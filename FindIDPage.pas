@@ -35,23 +35,16 @@ type
 
     // --------------- 아이디 찾기란 이벤트 ---------------
     // --- 이름 ---
-    procedure EditNameEnter(Sender: TObject);
+    procedure EditEnter(Sender: TObject);
     procedure EditNameKeyPress(Sender: TObject; var Key: Char);
     procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure EditNameExit(Sender: TObject);
+    procedure EditExit(Sender: TObject);
     procedure cxLabel1Click(Sender: TObject);
 
     // --- 이메일 ---
-    procedure EditEmail1Enter(Sender: TObject);
-    procedure EditEmail1Exit(Sender: TObject);
-    procedure EditEmail2Enter(Sender: TObject);
-    procedure EditEmail2Exit(Sender: TObject);
-    procedure ComboEmailSelEnter(Sender: TObject);
-    procedure ComboEmailSelExit(Sender: TObject);
     procedure EditEmail1KeyPress(Sender: TObject; var Key: Char);
     procedure EditEmail2KeyPress(Sender: TObject; var Key: Char);
     procedure ComboEmailSelPropertiesChange(Sender: TObject);
-
 
     // --------------- 버튼 호버시 색 변경 ---------------
     procedure BtnIdSelectMouseEnter(Sender: TObject);
@@ -217,16 +210,6 @@ begin
   BtnIdSelect.Color := $00FF9E3E;
 end;
 
-procedure TFindIDForm.ComboEmailSelEnter(Sender: TObject);
-begin
-  Panel17.Color          := $00FFFCF9;
-end;
-
-procedure TFindIDForm.ComboEmailSelExit(Sender: TObject);
-begin
-  Panel17.Color          := clWindow;
-end;
-
 procedure TFindIDForm.ComboEmailSelPropertiesChange(Sender: TObject);
 begin
 if ComboEmailSel.Text <> '직접입력' then
@@ -248,25 +231,6 @@ begin
   EditName.SetFocus;
 end;
 
-procedure TFindIDForm.EditEmail1Enter(Sender: TObject);
-begin
-  Panel15.Color          := $00FFFCF9;
-end;
-
-procedure TFindIDForm.EditEmail1Exit(Sender: TObject);
-begin
-  Panel15.Color          := clWindow;
-
-  if EditEmail1.Text = '' then
-  begin
-    chkEmail.Show;
-  end
-  else
-  begin
-    chkEmail.Hide;
-  end;
-end;
-
 procedure TFindIDForm.EditEmail1KeyPress(Sender: TObject; var Key: Char);
 var
   chk: Boolean;
@@ -282,25 +246,6 @@ begin
     if key <> '' then begin
       chkEmail.Hide;
     end;
-  end;
-end;
-
-procedure TFindIDForm.EditEmail2Enter(Sender: TObject);
-begin
-  Panel16.Color          := $00FFFCF9;
-end;
-
-procedure TFindIDForm.EditEmail2Exit(Sender: TObject);
-begin
-  Panel16.Color          := clWindow;
-
-  if EditEmail2.Text = '' then
-  begin
-    chkEmail.Show;
-  end
-  else
-  begin
-    chkEmail.Hide;
   end;
 end;
 
@@ -328,27 +273,39 @@ begin
 end;
 
 
-procedure TFindIDForm.EditNameEnter(Sender: TObject);
+procedure TFindIDForm.EditEnter(Sender: TObject);
 begin
-  cxLabel1.Style.Color := $00FFFCF9;
-  Panel5.Color         := $00FFFCF9;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
 end;
 
-procedure TFindIDForm.EditNameExit(Sender: TObject);
+procedure TFindIDForm.EditExit(Sender: TObject);
+var
+  ControlN : TWinControl;
 begin
-  cxLabel1.Style.Color := clWindow;
-  Panel5.Color         := clWindow;
+  ControlN := TWinControl(Sender);
 
-  if EditName.Text = '' then
-  begin
-    chkName.Caption := '이름을 입력해주세요.';
-    chkName.Show;
-  end
-  else if EditName.Text <> '' then
-  begin
-    chkName.Hide;
-  end;
+  DataModule1.SetEditStyle(ControlN.Parent, False);
 
+  if ControlN.Name = 'EditName' then begin
+    if EditName.Text = '' then begin
+      chkName.Caption := '이름을 입력해주세요.';
+      chkName.Show;
+    end else if EditName.Text <> '' then begin
+      chkName.Hide;
+    end;
+  end else if ControlN.Name = 'EditEmail1' then begin
+    if EditEmail1.Text = '' then begin
+      chkEmail.Show;
+    end else begin
+      chkEmail.Hide;
+    end;
+  end else if ControlN.Name = 'EditEmail2' then begin
+    if EditEmail2.Text = '' then begin
+      chkEmail.Show;
+    end else begin
+      chkEmail.Hide;
+    end;
+  end;       
 end;
 
 procedure TFindIDForm.EditNameKeyPress(Sender: TObject; var Key: Char);

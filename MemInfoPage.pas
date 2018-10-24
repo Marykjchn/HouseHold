@@ -146,6 +146,7 @@ begin
         addressSearch.ARoadBool   := False;
 
       end;
+      SearchJusoForm.Free;
 
     end;
 

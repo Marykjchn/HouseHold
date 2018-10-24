@@ -272,16 +272,12 @@ type
       Shift: TShiftState; X, Y: Integer);
     procedure BtnHoldingUpdateClick(Sender: TObject);
 
-
     // ----------------- 달력에 기념일 표시 -----------------
     procedure CalenderViewAnniversary;
     procedure DBPlannerMonthView1MonthChanged(Sender: TObject; origDate,
       newDate: TDateTime);
     procedure DBPlannerMonthView1YearChanged(Sender: TObject; origDate,
       newDate: TDateTime);
-
-
-
 
     // --------------- 마우스 호버시 색 변경 ---------------
     procedure BtnAnniversaryEditMouseEnter(Sender: TObject);

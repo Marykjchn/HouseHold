@@ -108,8 +108,8 @@ object UpdatePWForm: TUpdatePWForm
           Style.IsFontAssigned = True
           StyleFocused.Color = 16776441
           TabOrder = 1
-          OnEnter = EditPWEnter
-          OnExit = EditPWExit
+          OnEnter = EditEnter
+          OnExit = EditExit
           OnKeyUp = EditPWKeyUp
           Width = 300
         end
@@ -165,8 +165,8 @@ object UpdatePWForm: TUpdatePWForm
           Style.IsFontAssigned = True
           StyleFocused.Color = 16776441
           TabOrder = 1
-          OnEnter = EditPWchkEnter
-          OnExit = EditPWchkExit
+          OnEnter = EditEnter
+          OnExit = EditExit
           OnKeyUp = EditPWchkKeyUp
           Width = 300
         end

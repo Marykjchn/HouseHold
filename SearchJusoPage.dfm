@@ -94,7 +94,8 @@ object SearchJusoForm: TSearchJusoForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditAddressEnter
+        OnEnter = EditEnter
+        OnExit = EditExit
         OnKeyPress = EditAddressKeyPress
         OnKeyUp = EditAddressKeyUp
         Width = 345

@@ -92,8 +92,8 @@ object LoginForm: TLoginForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditPWEnter
-        OnExit = EditPWExit
+        OnEnter = EditEnter
+        OnExit = EditExit
         OnKeyPress = EditKeyPress
         OnKeyUp = EditPWKeyUp
         Width = 271
@@ -148,8 +148,8 @@ object LoginForm: TLoginForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditIDEnter
-        OnExit = EditIDExit
+        OnEnter = EditEnter
+        OnExit = EditExit
         OnKeyPress = EditIDKeyPress
         OnKeyUp = EditIDKeyUp
         Width = 271

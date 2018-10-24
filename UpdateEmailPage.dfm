@@ -80,8 +80,8 @@ object UpdateEmailForm: TUpdateEmailForm
           Style.IsFontAssigned = True
           StyleFocused.Color = 16776441
           TabOrder = 0
-          OnEnter = EditEmail1Enter
-          OnExit = EditEmail1Exit
+          OnEnter = EditEnter
+          OnExit = EditExit
           OnKeyPress = EditEmailKeyPress
           Width = 75
         end
@@ -143,8 +143,8 @@ object UpdateEmailForm: TUpdateEmailForm
           Style.IsFontAssigned = True
           StyleFocused.Color = 16776441
           TabOrder = 0
-          OnEnter = EditEmail2Enter
-          OnExit = EditEmail2Exit
+          OnEnter = EditEnter
+          OnExit = EditExit
           OnKeyPress = EditEmailKeyPress
           Width = 81
         end
@@ -192,8 +192,8 @@ object UpdateEmailForm: TUpdateEmailForm
           StyleFocused.Color = 16776441
           TabOrder = 0
           Text = #51649#51217#51077#47141
-          OnEnter = ComboEmailSelEnter
-          OnExit = ComboEmailSelExit
+          OnEnter = EditEnter
+          OnExit = EditExit
           Width = 81
         end
       end

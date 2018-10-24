@@ -112,26 +112,23 @@ type
 
     // -----아이디-----
     procedure LabIDClick(Sender: TObject);
-    procedure EditIDEnter(Sender: TObject);
+    procedure EditEnter(Sender: TObject);
     procedure EditIDKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditIDKeyPress(Sender: TObject; var Key: Char);
-    procedure EditIDExit(Sender: TObject);
+    procedure EditExit(Sender: TObject);
 
     // -----비밀번호-----
     procedure LabPWClick(Sender: TObject);
-    procedure EditPWEnter(Sender: TObject);
     procedure EditPWKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditPWExit(Sender: TObject);
 
     // -----비밀번호 확인-----
     procedure LabPWChkClick(Sender: TObject);
-    procedure EditPWchkEnter(Sender: TObject);
     procedure EditPWchkKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditPWchkExit(Sender: TObject);
 
     // -----이름-----
     procedure LabNameClick(Sender: TObject);
-    procedure EditNameEnter(Sender: TObject);
     procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditNameKeyPress(Sender: TObject; var Key: Char);
     procedure EditNameExit(Sender: TObject);
@@ -139,18 +136,15 @@ type
     // -----생년월일-----
     // 년도
     procedure LabBirthYearClick(Sender: TObject);
-    procedure EditYearEnter(Sender: TObject);
     procedure EditYearKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditYear2Exit(Sender: TObject);
     // 월
     procedure LabBirthMonthClick(Sender: TObject);
-    procedure ComboMonEnter(Sender: TObject);
     procedure ComboMonKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure ComboMonPropertiesChange(Sender: TObject);
     procedure ComboMonExit(Sender: TObject);
     // 일
     procedure LabBirthDayClick(Sender: TObject);
-    procedure EditDayEnter(Sender: TObject);
     procedure EditDayKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditDayExit(Sender: TObject);
 
@@ -159,25 +153,19 @@ type
 
     // -----핸드폰 번호-----
     // 앞번호
-    procedure ComFPhoneEnter(Sender: TObject);
     procedure ComFPhoneExit(Sender: TObject);
     // 중간번호
-    procedure EditMPhoneEnter(Sender: TObject);
     procedure EditMPhoneExit(Sender: TObject);
     // 뒷번호
-    procedure EditLPhoneEnter(Sender: TObject);
     procedure EditLPhoneExit(Sender: TObject);
 
     // -----이메일-----
     // 아이디
-    procedure EditFEmailEnter(Sender: TObject);
     procedure EditEmailKeyPress(Sender: TObject; var Key: Char);
     procedure EditFEmailExit(Sender: TObject);
     // 메일주소
-    procedure EditLEmailEnter(Sender: TObject);
     procedure EditLEmailExit(Sender: TObject);
     // 선택
-    procedure ComboSelEmailEnter(Sender: TObject);
     procedure ComboSelEmailExit(Sender: TObject);
     procedure ComboEmailSelPropertiesChange(Sender: TObject);
 
@@ -239,7 +227,6 @@ begin
     GetModal := SearchJusoForm.ShowModal;
   finally
     if GetModal = mrOk then begin
-      SearchJusoForm.Free;
       with DataModule1 do begin
         EditPostCode.Text       := addressSearch.AZipCode;
         if addressSearch.ARoadBool then begin
@@ -259,13 +246,8 @@ begin
       end;
       EditMPhone.SetFocus;
     end;
+    SearchJusoForm.Free;
   end;
-end;
-
-procedure TMemInsertForm.ComboSelEmailEnter(Sender: TObject);
-begin
-  chkEmail.Caption       := '이메일을 입력해주세요.';
-  Panel17.Color          := $00FFFCF9;
 end;
 
 procedure TMemInsertForm.ComboSelEmailExit(Sender: TObject);
@@ -284,12 +266,6 @@ begin
     EditLEmail.Text := '';
     EditLEmail.SetFocus;
   end;
-end;
-
-procedure TMemInsertForm.ComboMonEnter(Sender: TObject);
-begin
-  cxLabel9.Style.Color  := $00FFFCF9;
-  Panel7.Color          := $00FFFCF9;
 end;
 
 procedure TMemInsertForm.ComboMonExit(Sender: TObject);
@@ -651,11 +627,6 @@ begin
 
 end;
 
-procedure TMemInsertForm.ComFPhoneEnter(Sender: TObject);
-begin
-  Panel11.Color          := $00FFFCF9;
-end;
-
 procedure TMemInsertForm.ComFPhoneExit(Sender: TObject);
 begin
   Panel11.Color          := clWindow;
@@ -710,11 +681,6 @@ begin
   EditName.SetFocus;
 end;
 
-procedure TMemInsertForm.EditMPhoneEnter(Sender: TObject);
-begin
-  Panel12.Color          := $00FFFCF9;
-end;
-
 procedure TMemInsertForm.EditMPhoneExit(Sender: TObject);
 begin
   Panel12.Color          := clWindow;
@@ -728,11 +694,6 @@ begin
   end;
 end;
 
-procedure TMemInsertForm.EditLPhoneEnter(Sender: TObject);
-begin
-  Panel13.Color          := $00FFFCF9;
-end;
-
 procedure TMemInsertForm.EditLPhoneExit(Sender: TObject);
 begin
   Panel13.Color          := clWindow;
@@ -744,11 +705,6 @@ begin
     chkPhone.Hide;
     MemInsertChk.phone3 := True;
   end;
-end;
-
-procedure TMemInsertForm.EditLEmailEnter(Sender: TObject);
-begin
-  Panel16.Color          := $00FFFCF9;
 end;
 
 procedure TMemInsertForm.EditLEmailExit(Sender: TObject);
@@ -787,12 +743,6 @@ begin
     LabAddress.show;
     MemInsertChk.address := False;
   end;
-end;
-
-procedure TMemInsertForm.EditDayEnter(Sender: TObject);
-begin
-  LabBirthDay.Style.Color  := $00FFFCF9;
-  Panel8.Color          := $00FFFCF9;
 end;
 
 procedure TMemInsertForm.EditDayExit(Sender: TObject);
@@ -834,11 +784,6 @@ begin
   end;
 end;
 
-procedure TMemInsertForm.EditFEmailEnter(Sender: TObject);
-begin
-  Panel15.Color          := $00FFFCF9;
-end;
-
 procedure TMemInsertForm.EditFEmailExit(Sender: TObject);
 var
   emailchk: string;
@@ -868,40 +813,36 @@ begin
 
 end;
 
-procedure TMemInsertForm.EditIDEnter(Sender: TObject);
+procedure TMemInsertForm.EditEnter(Sender: TObject);
 begin
-  LabID.Style.Color := $00FFFCF9;
-  Panel2.Color         := $00FFFCF9;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
 end;
 
-procedure TMemInsertForm.EditIDExit(Sender: TObject);
+procedure TMemInsertForm.EditExit(Sender: TObject);
 var
   id, idchk: string;
   IDlength: Integer;
-begin
 
-  LabID.Style.Color := clWindow;
-  Panel2.Color          := clWindow;
+  ControlN : TWinControl;
+begin
+  ControlN := TWinControl(Sender);
+
+  DataModule1.SetEditStyle(ControlN.Parent, False);
 
   id := HDataMethod.HITSEncrypt(EditID.Text, KEY);
   IDlength := Length(EditID.Text);
 
-  if (IDlength < 4) or (IDlength > 18) then
-  begin
+  if (IDlength < 4) or (IDlength > 18) then begin
     chkID.Caption := '4~18자의 아이디를 입력해주세요.';
     MemInsertChk.id := False;
     chkID.Show;
 
-  end
-  else
-  begin
+  end else begin
     chkID.Caption := '아이디가 올바르지 않습니다.';
     chkID.Hide;
 
     try
-      with DataModule1.QH_DML do
-      begin
-
+      with DataModule1.QH_DML do begin
         SQL.Clear;
         SQL.ADD('SELECT mid FROM household');
         SQL.ADD('   WHERE mid = :ID       ');
@@ -912,15 +853,12 @@ begin
         idchk := FieldByName('mid').AsString;
       end;
 
-      if id <> idchk then
-      begin
+      if id <> idchk then begin
         chkID.Show;
         chkID.Caption := '좋은 아이디네요.';
         chkID.Style.TextColor := clGreen;
         MemInsertChk.id := True;
-      end
-      else
-      begin
+      end else begin
         ShowMessage('중복된 아이디 입니다.');
         MemInsertChk.id := False;
         EditID.SetFocus;
@@ -961,12 +899,6 @@ begin
   end;
 end;
 
-procedure TMemInsertForm.EditNameEnter(Sender: TObject);
-begin
-  LabName.Style.Color  := $00FFFCF9;
-  Panel5.Color          := $00FFFCF9;
-end;
-
 procedure TMemInsertForm.EditNameExit(Sender: TObject);
 var
   namechk: string;
@@ -992,20 +924,23 @@ end;
 procedure TMemInsertForm.EditNameKeyPress(Sender: TObject; var Key: Char);
 var
   chk: Boolean;
-begin
+begin 
+  if Key = #13 then begin
+    BtnMemInsert.OnClick(nil);
+    Exit;
+  end;
+
   chk := HDataMethod.hanglechk(Key, Self.Handle);
-  if not (chk) then
-  begin
-    if key <> '' then
-    begin
+  if not(chk) then begin
+    if key <> '' then begin
       chkName.Caption := '한글을 입력해주세요.';
       MemInsertChk.name := False;
       chkName.Show;
       key := #0;
+
+      Exit;
     end;
-  end
-  else if not (EditName.Text = '') then
-  begin
+  end else if EditName.Text <> '' then begin
     chkName.Hide;
     MemInsertChk.name := True;
   end;
@@ -1029,12 +964,6 @@ begin
   end else begin
     LabPostCode.Show;
   end;
-end;
-
-procedure TMemInsertForm.EditPWchkEnter(Sender: TObject);
-begin
-  LabPWChk.Style.Color := $00FFFCF9;
-  Panel4.Color          := $00FFFCF9;
 end;
 
 procedure TMemInsertForm.EditPWchkExit(Sender: TObject);
@@ -1074,12 +1003,6 @@ begin
   end else begin
     LabPWChk.show;
   end;
-end;
-
-procedure TMemInsertForm.EditPWEnter(Sender: TObject);
-begin
-  LabPW.Style.Color := $00FFFCF9;
-  Panel3.Color          := $00FFFCF9;
 end;
 
 procedure TMemInsertForm.EditPWExit(Sender: TObject);
@@ -1154,12 +1077,6 @@ begin
     LabAge.Hide;
   end;
 
-end;
-
-procedure TMemInsertForm.EditYearEnter(Sender: TObject);
-begin
-  cxLabel8.Style.Color  := $00FFFCF9;
-  Panel6.Color          := $00FFFCF9;
 end;
 
 procedure TMemInsertForm.EditYearKeyUp(Sender: TObject; var Key: Word;

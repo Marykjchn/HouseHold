@@ -37,13 +37,9 @@ type
     procedure BtnCloseMouseLeave(Sender: TObject);
 
     // --------------- 입력란 클릭 이벤트 ---------------
-    procedure EditEmail1Enter(Sender: TObject);
-    procedure EditEmail1Exit(Sender: TObject);
+    procedure EditEnter(Sender: TObject);
+    procedure EditExit(Sender: TObject);
     procedure EditEmailKeyPress(Sender: TObject; var Key: Char);
-    procedure EditEmail2Enter(Sender: TObject);
-    procedure EditEmail2Exit(Sender: TObject);
-    procedure ComboEmailSelEnter(Sender: TObject);
-    procedure ComboEmailSelExit(Sender: TObject);
     procedure ComboEmailSelPropertiesChange(Sender: TObject);
 
     // ---------------- 버튼 클릭시 이벤트 ---------------
@@ -203,17 +199,6 @@ begin
   BtnEmailUpdate.Color := $00FF9E3E;
 end;
 
-procedure TUpdateEmailForm.ComboEmailSelEnter(Sender: TObject);
-begin
-  chkEmail.Caption       := '이메일을 입력해주세요.';
-  Panel17.Color          := $00FFFCF9;
-end;
-
-procedure TUpdateEmailForm.ComboEmailSelExit(Sender: TObject);
-begin
-  Panel17.Color          := clWindow;
-end;
-
 procedure TUpdateEmailForm.ComboEmailSelPropertiesChange(Sender: TObject);
 begin
   if ComboEmailSel.Text <> '직접입력' then begin
@@ -227,25 +212,33 @@ begin
   end;
 end;
 
-procedure TUpdateEmailForm.EditEmail1Enter(Sender: TObject);
+procedure TUpdateEmailForm.EditEnter(Sender: TObject);
 begin
-  Panel15.Color          := $00FFFCF9;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
 end;
 
-procedure TUpdateEmailForm.EditEmail1Exit(Sender: TObject);
+procedure TUpdateEmailForm.EditExit(Sender: TObject);
 var
-  emailchk: string;
+  ControlN : TWinControl;
 begin
-  Panel15.Color          := clWindow;
+  ControlN := TWinControl(Sender);
 
-  emailchk := EditEmail1.Text;
+  DataModule1.SetEditStyle(ControlN.Parent, False);
 
-  if emailchk = '' then begin
-    chkEmail.Caption    := '이메일을 입력해주세요.';
-    chkEmail.Show;
-  end else begin
-    chkEmail.Hide;
+  if ControlN.Name = 'EditEmail1' then begin
+    if EditEmail1.Text = '' then begin
+      chkEmail.Show;
+    end else begin
+      chkEmail.Hide;
+    end;
+  end else if ControlN.Name = 'EditEmail2' then begin
+    if EditEmail2.Text = '' then begin
+      chkEmail.Show;
+    end else begin
+      chkEmail.Hide;
+    end;
   end;
+
 end;
 
 procedure TUpdateEmailForm.EditEmailKeyPress(Sender: TObject; var Key: Char);
@@ -257,27 +250,6 @@ begin
     chkEmail.Caption := '영문으로 이메일을 입력해주세요.';
     chkEmail.Show;
     key := #0;
-  end;
-end;
-
-procedure TUpdateEmailForm.EditEmail2Enter(Sender: TObject);
-begin
-  Panel16.Color          := $00FFFCF9;
-end;
-
-procedure TUpdateEmailForm.EditEmail2Exit(Sender: TObject);
-var
-  emailchk: string;
-begin
-  Panel16.Color     := clWindow;
-  emailchk          := EditEmail2.Text;
-
-  if emailchk = '' then begin
-    chkEmail.Style.TextColor := clRed;
-    chkEmail.Caption         := '이메일을 입력해주세요.';
-    chkEmail.Show;
-  end else begin
-    chkEmail.Hide;
   end;
 end;
 

@@ -283,8 +283,8 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditIDEnter
-        OnExit = EditIDExit
+        OnEnter = EditEnter
+        OnExit = EditExit
         OnKeyPress = EditIDKeyPress
         OnKeyUp = EditIDKeyUp
         Width = 300
@@ -342,7 +342,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditPWEnter
+        OnEnter = EditEnter
         OnExit = EditPWExit
         OnKeyUp = EditPWKeyUp
         Width = 300
@@ -400,7 +400,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditPWchkEnter
+        OnEnter = EditEnter
         OnExit = EditPWchkExit
         OnKeyUp = EditPWchkKeyUp
         Width = 300
@@ -457,7 +457,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditNameEnter
+        OnEnter = EditEnter
         OnExit = EditNameExit
         OnKeyPress = EditNameKeyPress
         OnKeyUp = EditNameKeyUp
@@ -513,7 +513,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditYearEnter
+        OnEnter = EditEnter
         OnExit = EditYear2Exit
         OnKeyPress = OnlyNumber
         OnKeyUp = EditYearKeyUp
@@ -587,7 +587,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = ComboMonEnter
+        OnEnter = EditEnter
         OnExit = ComboMonExit
         OnKeyPress = OnlyNumber
         OnKeyUp = ComboMonKeyUp
@@ -643,7 +643,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditDayEnter
+        OnEnter = EditEnter
         OnExit = EditDayExit
         OnKeyPress = OnlyNumber
         OnKeyUp = EditDayKeyUp
@@ -711,6 +711,8 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
+        OnEnter = EditEnter
+        OnExit = EditExit
         Width = 81
       end
       object LabAge: TcxLabel
@@ -819,7 +821,7 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 0
         Text = '010'
-        OnEnter = ComFPhoneEnter
+        OnEnter = EditEnter
         OnExit = ComFPhoneExit
         OnKeyPress = OnlyNumber2
         Width = 70
@@ -856,7 +858,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 0
-        OnEnter = EditMPhoneEnter
+        OnEnter = EditEnter
         OnExit = EditMPhoneExit
         OnKeyPress = OnlyNumber2
         Width = 70
@@ -893,7 +895,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 0
-        OnEnter = EditLPhoneEnter
+        OnEnter = EditEnter
         OnExit = EditLPhoneExit
         OnKeyPress = OnlyNumber2
         Width = 70
@@ -934,6 +936,8 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 1
         OnClick = EditAddClick
+        OnEnter = EditEnter
+        OnExit = EditExit
         Width = 300
       end
       object LabAddress: TcxLabel
@@ -1000,7 +1004,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 0
-        OnEnter = EditFEmailEnter
+        OnEnter = EditEnter
         OnExit = EditFEmailExit
         OnKeyPress = EditEmailKeyPress
         Width = 75
@@ -1038,7 +1042,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 0
-        OnEnter = EditLEmailEnter
+        OnEnter = EditEnter
         OnExit = EditLEmailExit
         OnKeyPress = EditEmailKeyPress
         Width = 81
@@ -1087,7 +1091,7 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 0
         Text = #51649#51217#51077#47141
-        OnEnter = ComboSelEmailEnter
+        OnEnter = EditEnter
         OnExit = ComboSelEmailExit
         Width = 81
       end
@@ -1179,6 +1183,8 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 1
         OnClick = EditAddClick
+        OnEnter = EditEnter
+        OnExit = EditExit
         Width = 300
       end
       object LabDetailAddress: TcxLabel
@@ -1234,6 +1240,8 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 1
         OnClick = EditAddClick
+        OnEnter = EditEnter
+        OnExit = EditExit
         Width = 195
       end
       object LabPostCode: TcxLabel

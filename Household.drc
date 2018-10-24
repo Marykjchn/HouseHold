@@ -2206,8 +2206,9 @@ END
 /* UpdateEmailPage.dfm */
 /* UpdatePhonePage.dfm */
 /* MemInfoPage.dfm */
-/* AnniAddPage.dfm */
+/* FixBreakAddPage.dfm */
 /* FixBreakdownEditPage.dfm */
+/* AnniAddPage.dfm */
 /* AnniversaryEditPage.dfm */
 /* SolnLun.dcr */
 /* HouseholdPage.dfm */

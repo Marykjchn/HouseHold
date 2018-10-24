@@ -120,7 +120,7 @@ object AnniAddForm: TAnniAddForm
     end
     object cxLabel5: TcxLabel
       Left = 20
-      Top = 291
+      Top = 289
       Caption = #45216'   '#51676
       ParentFont = False
       Style.Font.Charset = HANGEUL_CHARSET
@@ -150,7 +150,7 @@ object AnniAddForm: TAnniAddForm
       BevelOuter = bvNone
       TabOrder = 4
       object RadCycle1: TcxRadioButton
-        Left = 21
+        Left = 22
         Top = 10
         Width = 70
         Height = 20
@@ -258,8 +258,8 @@ object AnniAddForm: TAnniAddForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditContentsEnter
-        OnExit = EditContentsExit
+        OnEnter = EditEnter
+        OnExit = EditExit
         OnKeyUp = EditContentsKeyUp
         Width = 170
       end
@@ -312,8 +312,8 @@ object AnniAddForm: TAnniAddForm
         Style.IsFontAssigned = True
         StyleFocused.Color = 16776441
         TabOrder = 1
-        OnEnter = EditNameEnter
-        OnExit = EditNameExit
+        OnEnter = EditEnter
+        OnExit = EditExit
         OnKeyUp = EditNameKeyUp
         Width = 170
       end
@@ -377,6 +377,8 @@ object AnniAddForm: TAnniAddForm
         TabOrder = 1
         Visible = True
         OnChange = DatePickerAnniChange
+        OnEnter = EditEnter
+        OnExit = EditExit
         OnKeyPress = DatePickerAnniKeyPress
         Version = '1.6.2.3'
         ButtonStyle = bsDropDown
@@ -463,8 +465,8 @@ object AnniAddForm: TAnniAddForm
           NameOfMonths.UseIntlNames = True
           StartDay = 7
           TodayFormat = '"Today" DDD/mm, YYYY'
-          Day = 3
-          Month = 9
+          Day = 24
+          Month = 10
           Year = 2018
           TabOrder = 0
           Font.Charset = DEFAULT_CHARSET

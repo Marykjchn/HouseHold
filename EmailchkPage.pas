@@ -26,8 +26,8 @@ type
 
 
     // -------------- 버튼 호버시 색 변경 ---------------
-    procedure EditCodeValEnter(Sender: TObject);
-    procedure EditCodeValExit(Sender: TObject);
+    procedure EditEnter(Sender: TObject);
+    procedure EditExit(Sender: TObject);
     procedure EditCodeValKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure BtnCodeValMouseEnter(Sender: TObject);
@@ -73,16 +73,14 @@ begin
   BtnCodeVal.Color := $00FF9E3E;
 end;
 
-procedure TEmailchkForm.EditCodeValEnter(Sender: TObject);
+procedure TEmailchkForm.EditEnter(Sender: TObject);
 begin
-  cxLabel4.Style.Color := $00FFFCF9;
-  Panel5.Color         := $00FFFCF9;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
 end;
 
-procedure TEmailchkForm.EditCodeValExit(Sender: TObject);
+procedure TEmailchkForm.EditExit(Sender: TObject);
 begin
-  cxLabel4.Style.Color := clWindow;
-  Panel5.Color         := clWindow;
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, False);
 end;
 
 procedure TEmailchkForm.EditCodeValKeyUp(Sender: TObject; var Key: Word;

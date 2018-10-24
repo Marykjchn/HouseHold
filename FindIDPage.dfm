@@ -94,8 +94,8 @@ object FindIDForm: TFindIDForm
           Style.IsFontAssigned = True
           StyleFocused.Color = 16776441
           TabOrder = 1
-          OnEnter = EditNameEnter
-          OnExit = EditNameExit
+          OnEnter = EditEnter
+          OnExit = EditExit
           OnKeyPress = EditNameKeyPress
           OnKeyUp = EditNameKeyUp
           Width = 300
@@ -208,8 +208,8 @@ object FindIDForm: TFindIDForm
           Style.IsFontAssigned = True
           StyleFocused.Color = 16776441
           TabOrder = 0
-          OnEnter = EditEmail1Enter
-          OnExit = EditEmail1Exit
+          OnEnter = EditEnter
+          OnExit = EditExit
           OnKeyPress = EditEmail1KeyPress
           Width = 75
         end
@@ -246,8 +246,8 @@ object FindIDForm: TFindIDForm
           Style.IsFontAssigned = True
           StyleFocused.Color = 16776441
           TabOrder = 0
-          OnEnter = EditEmail2Enter
-          OnExit = EditEmail2Exit
+          OnEnter = EditEnter
+          OnExit = EditExit
           OnKeyPress = EditEmail2KeyPress
           Width = 81
         end
@@ -295,8 +295,8 @@ object FindIDForm: TFindIDForm
           StyleFocused.Color = 16776441
           TabOrder = 0
           Text = #51649#51217#51077#47141
-          OnEnter = ComboEmailSelEnter
-          OnExit = ComboEmailSelExit
+          OnEnter = EditEnter
+          OnExit = EditExit
           Width = 81
         end
       end
