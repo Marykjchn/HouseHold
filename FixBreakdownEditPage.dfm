@@ -53,8 +53,8 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
       ParentFont = False
       TabOrder = 1
       OnClick = BtnCloseClick
-      OnMouseEnter = BtnCloseMouseEnter
-      OnMouseLeave = BtnCloseMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object BtnUpdateFBreakdown: TPanel
       Left = 610
@@ -73,7 +73,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
       ParentFont = False
       TabOrder = 2
       OnClick = BtnUpdateFBreakdownClick
-      OnMouseEnter = BtnUpdateFBreakdownMouseEnter
+      OnMouseEnter = BtnStyle_2MouseEnter
       OnMouseLeave = BtnUpdateFBreakdownMouseLeave
     end
     object BtnDelFBreakdown: TPanel
@@ -93,7 +93,7 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
       ParentFont = False
       TabOrder = 3
       OnClick = BtnDelFBreakdownClick
-      OnMouseEnter = BtnDelFBreakdownMouseEnter
+      OnMouseEnter = BtnStyle_2MouseEnter
       OnMouseLeave = BtnDelFBreakdownMouseLeave
     end
     object BtnAddFBreakdown: TPanel
@@ -113,8 +113,8 @@ object FixBreakdownEditForm: TFixBreakdownEditForm
       ParentFont = False
       TabOrder = 4
       OnClick = BtnAddFBreakdownClick
-      OnMouseEnter = BtnAddFBreakdownMouseEnter
-      OnMouseLeave = BtnAddFBreakdownMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStyle_2MouseLeave
     end
   end
   object GRD_FixBreakdown: TcxGrid

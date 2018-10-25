@@ -343,7 +343,7 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 1
         OnEnter = EditEnter
-        OnExit = EditPWExit
+        OnExit = EditExit
         OnKeyUp = EditPWKeyUp
         Width = 300
       end
@@ -401,7 +401,7 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 1
         OnEnter = EditEnter
-        OnExit = EditPWchkExit
+        OnExit = EditExit
         OnKeyUp = EditPWchkKeyUp
         Width = 300
       end
@@ -458,7 +458,7 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 1
         OnEnter = EditEnter
-        OnExit = EditNameExit
+        OnExit = EditExit
         OnKeyPress = EditNameKeyPress
         OnKeyUp = EditNameKeyUp
         Width = 300
@@ -514,7 +514,7 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 1
         OnEnter = EditEnter
-        OnExit = EditYear2Exit
+        OnExit = EditExit
         OnKeyPress = OnlyNumber
         OnKeyUp = EditYearKeyUp
         Width = 76
@@ -588,7 +588,7 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 1
         OnEnter = EditEnter
-        OnExit = ComboMonExit
+        OnExit = EditExit
         OnKeyPress = OnlyNumber
         OnKeyUp = ComboMonKeyUp
         Width = 76
@@ -644,7 +644,7 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 1
         OnEnter = EditEnter
-        OnExit = EditDayExit
+        OnExit = EditExit
         OnKeyPress = OnlyNumber
         OnKeyUp = EditDayKeyUp
         Width = 76
@@ -822,7 +822,7 @@ object MemInsertForm: TMemInsertForm
         TabOrder = 0
         Text = '010'
         OnEnter = EditEnter
-        OnExit = ComFPhoneExit
+        OnExit = EditExit
         OnKeyPress = OnlyNumber2
         Width = 70
       end
@@ -859,7 +859,7 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 0
         OnEnter = EditEnter
-        OnExit = EditMPhoneExit
+        OnExit = EditExit
         OnKeyPress = OnlyNumber2
         Width = 70
       end
@@ -896,7 +896,7 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 0
         OnEnter = EditEnter
-        OnExit = EditLPhoneExit
+        OnExit = EditExit
         OnKeyPress = OnlyNumber2
         Width = 70
       end
@@ -1005,7 +1005,7 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 0
         OnEnter = EditEnter
-        OnExit = EditFEmailExit
+        OnExit = EditExit
         OnKeyPress = EditEmailKeyPress
         Width = 75
       end
@@ -1043,7 +1043,7 @@ object MemInsertForm: TMemInsertForm
         StyleFocused.Color = 16776441
         TabOrder = 0
         OnEnter = EditEnter
-        OnExit = EditLEmailExit
+        OnExit = EditExit
         OnKeyPress = EditEmailKeyPress
         Width = 81
       end
@@ -1092,7 +1092,7 @@ object MemInsertForm: TMemInsertForm
         TabOrder = 0
         Text = #51649#51217#51077#47141
         OnEnter = EditEnter
-        OnExit = ComboSelEmailExit
+        OnExit = EditExit
         Width = 81
       end
     end
@@ -1125,8 +1125,8 @@ object MemInsertForm: TMemInsertForm
       ParentFont = False
       TabOrder = 39
       OnClick = BtnMemInsertClick
-      OnMouseEnter = BtnMemInsertMouseEnter
-      OnMouseLeave = BtnMemInsertMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object BtnEmailChk: TPanel
       Left = 356
@@ -1145,8 +1145,8 @@ object MemInsertForm: TMemInsertForm
       ParentFont = False
       TabOrder = 40
       OnClick = BtnEmailChkClick
-      OnMouseEnter = BtnEmailChkMouseEnter
-      OnMouseLeave = BtnEmailChkMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStyle_2MouseLeave
     end
     object Panel18: TPanel
       Left = 70
@@ -1280,8 +1280,8 @@ object MemInsertForm: TMemInsertForm
       ParentFont = False
       TabOrder = 41
       OnClick = BtnSearchAddressClick
-      OnMouseEnter = BtnEmailChkMouseEnter
-      OnMouseLeave = BtnEmailChkMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStyle_2MouseLeave
     end
   end
 end

@@ -25,7 +25,6 @@ object AnniversaryEditForm: TAnniversaryEditForm
     Color = clWindow
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 540
     object cxLabel1: TcxLabel
       Left = 185
       Top = 16
@@ -75,7 +74,7 @@ object AnniversaryEditForm: TAnniversaryEditForm
       ParentFont = False
       TabOrder = 2
       OnClick = BtnUpdateAnniverClick
-      OnMouseEnter = BtnUpdateAnniverMouseEnter
+      OnMouseEnter = BtnStyle_2MouseEnter
       OnMouseLeave = BtnUpdateAnniverMouseLeave
     end
     object BtnDelAnniver: TPanel
@@ -95,7 +94,7 @@ object AnniversaryEditForm: TAnniversaryEditForm
       ParentFont = False
       TabOrder = 3
       OnClick = BtnDelAnniverClick
-      OnMouseEnter = BtnDelAnniverMouseEnter
+      OnMouseEnter = BtnStyle_2MouseEnter
       OnMouseLeave = BtnDelAnniverMouseLeave
     end
     object BtnAddAnniver: TPanel
@@ -115,8 +114,8 @@ object AnniversaryEditForm: TAnniversaryEditForm
       ParentFont = False
       TabOrder = 4
       OnClick = BtnAddAnniverClick
-      OnMouseEnter = BtnAddAnniverMouseEnter
-      OnMouseLeave = BtnAddAnniverMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStyle_2MouseLeave
     end
   end
   object GRD_Anniversary: TcxGrid

@@ -154,20 +154,10 @@ type
 
 
     // --------------- 버튼 호버시 색 변경 ---------------
-    procedure BtnSearchMouseEnter(Sender: TObject);
-    procedure BtnSearchMouseLeave(Sender: TObject);
-    procedure Panel2MouseEnter(Sender: TObject);
-    procedure Panel2MouseLeave(Sender: TObject);
-    procedure BtnIncomeSpendingMouseEnter(Sender: TObject);
-    procedure BtnIncomeSpendingMouseLeave(Sender: TObject);
-    procedure BtnCloseMouseEnter(Sender: TObject);
-    procedure BtnCloseMouseLeave(Sender: TObject);
-    procedure BtnYearMouseEnter(Sender: TObject);
-    procedure BtnYearMouseLeave(Sender: TObject);
-    procedure BtnMonthMouseEnter(Sender: TObject);
-    procedure BtnMonthMouseLeave(Sender: TObject);
-    procedure BtnTermMouseEnter(Sender: TObject);
-    procedure BtnTermMouseLeave(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStyle_1MouseLeave(Sender: TObject);
+    procedure BtnStyle_2MouseEnter(Sender: TObject);
+    procedure BtnStyle_2MouseLeave(Sender: TObject);
 
     // ----- 엑셀 및 프린트 버튼 클릭 -----
     procedure BtnExcelClick(Sender: TObject);
@@ -390,14 +380,14 @@ begin
   DateSelectAll;
 end;
 
-procedure TReportForm.BtnYearMouseEnter(Sender: TObject);
+procedure TReportForm.BtnStyle_2MouseEnter(Sender: TObject);
 begin
-  BtnYear.Color := $00FFAB57;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), True);
 end;
 
-procedure TReportForm.BtnYearMouseLeave(Sender: TObject);
+procedure TReportForm.BtnStyle_2MouseLeave(Sender: TObject);
 begin
-  BtnYear.Color := $00FFBF80;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), False);
 end;
 
 procedure TReportForm.BtnMonthClick(Sender: TObject);
@@ -433,16 +423,6 @@ begin
 
   DateSelectAll;
 
-end;
-
-procedure TReportForm.BtnMonthMouseEnter(Sender: TObject);
-begin
-  BtnMonth.Color := $00FFAB57;
-end;
-
-procedure TReportForm.BtnMonthMouseLeave(Sender: TObject);
-begin
-  BtnMonth.Color := $00FFBF80;
 end;
 
 procedure TReportForm.BtnTerm2Click(Sender: TObject);
@@ -484,16 +464,6 @@ begin
 
   PlannerCalendar1.Date := Now;
   PlannerCalendar1.Show;  
-end;
-
-procedure TReportForm.BtnTermMouseEnter(Sender: TObject);
-begin
-  BtnTerm.Color := $00FFAB57;
-end;
-
-procedure TReportForm.BtnTermMouseLeave(Sender: TObject);
-begin
-  BtnTerm.Color := $00FFBF80;
 end;
 
 procedure TReportForm.BtnExcelClick(Sender: TObject);
@@ -1128,44 +1098,14 @@ begin
 
 end;
 
-procedure TReportForm.BtnSearchMouseEnter(Sender: TObject);
+procedure TReportForm.BtnStyle_1MouseEnter(Sender: TObject);
 begin
-  BtnSearch.Color := $00C66300;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
-procedure TReportForm.BtnSearchMouseLeave(Sender: TObject);
+procedure TReportForm.BtnStyle_1MouseLeave(Sender: TObject);
 begin
-  BtnSearch.Color := $00FF9E3E;
-end;
-
-procedure TReportForm.Panel2MouseEnter(Sender: TObject);
-begin
-  Panel2.Color := $00C66300;
-end;
-
-procedure TReportForm.Panel2MouseLeave(Sender: TObject);
-begin
-  Panel2.Color := $00FF9E3E;
-end;
-
-procedure TReportForm.BtnIncomeSpendingMouseEnter(Sender: TObject);
-begin
-  BtnIncomeSpending.Color := $00C66300;
-end;
-
-procedure TReportForm.BtnIncomeSpendingMouseLeave(Sender: TObject);
-begin
-  BtnIncomeSpending.Color := $00FF9E3E;
-end;
-
-procedure TReportForm.BtnCloseMouseEnter(Sender: TObject);
-begin
-  BtnClose.Color := $00C66300;
-end;
-
-procedure TReportForm.BtnCloseMouseLeave(Sender: TObject);
-begin
-  BtnClose.Color := $00FF9E3E;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 end.

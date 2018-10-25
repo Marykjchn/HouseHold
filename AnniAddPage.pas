@@ -55,10 +55,8 @@ type
 
 
     // -------------- 마우스 호버시 색 변경 ---------------
-    procedure BtnAnniStoreMouseEnter(Sender: TObject);
-    procedure BtnAnniStoreMouseLeave(Sender: TObject);
-    procedure BtnCloseMouseEnter(Sender: TObject);
-    procedure BtnCloseMouseLeave(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStyle_1MouseLeave(Sender: TObject);
 
 
   private
@@ -126,29 +124,19 @@ begin
 
 end;
 
-procedure TAnniAddForm.BtnAnniStoreMouseEnter(Sender: TObject);
+procedure TAnniAddForm.BtnStyle_1MouseEnter(Sender: TObject);
 begin
-  BtnAnniStore.Color := $00C66300;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
-procedure TAnniAddForm.BtnAnniStoreMouseLeave(Sender: TObject);
+procedure TAnniAddForm.BtnStyle_1MouseLeave(Sender: TObject);
 begin
-  BtnAnniStore.Color := $00FF9E3E;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TAnniAddForm.BtnCloseClick(Sender: TObject);
 begin
   ModalResult := mrCancel;
-end;
-
-procedure TAnniAddForm.BtnCloseMouseEnter(Sender: TObject);
-begin
-  BtnClose.Color :=  $00C66300;
-end;
-
-procedure TAnniAddForm.BtnCloseMouseLeave(Sender: TObject);
-begin
-  BtnClose.Color := $00FF9E3E;
 end;
 
 procedure TAnniAddForm.cxLabel7Click(Sender: TObject);

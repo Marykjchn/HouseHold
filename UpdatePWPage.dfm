@@ -165,8 +165,6 @@ object UpdatePWForm: TUpdatePWForm
           Style.IsFontAssigned = True
           StyleFocused.Color = 16776441
           TabOrder = 1
-          OnEnter = EditEnter
-          OnExit = EditExit
           OnKeyUp = EditPWchkKeyUp
           Width = 300
         end
@@ -206,6 +204,8 @@ object UpdatePWForm: TUpdatePWForm
       ParentFont = False
       TabOrder = 0
       OnClick = BtnMemInsertClick
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object cxLabel10: TcxLabel
       Left = 147

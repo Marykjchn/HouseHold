@@ -120,61 +120,43 @@ type
     // -----비밀번호-----
     procedure LabPWClick(Sender: TObject);
     procedure EditPWKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure EditPWExit(Sender: TObject);
 
     // -----비밀번호 확인-----
     procedure LabPWChkClick(Sender: TObject);
     procedure EditPWchkKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure EditPWchkExit(Sender: TObject);
 
     // -----이름-----
     procedure LabNameClick(Sender: TObject);
     procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditNameKeyPress(Sender: TObject; var Key: Char);
-    procedure EditNameExit(Sender: TObject);
 
     // -----생년월일-----
     // 년도
     procedure LabBirthYearClick(Sender: TObject);
     procedure EditYearKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure EditYear2Exit(Sender: TObject);
     // 월
     procedure LabBirthMonthClick(Sender: TObject);
     procedure ComboMonKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure ComboMonPropertiesChange(Sender: TObject);
-    procedure ComboMonExit(Sender: TObject);
     // 일
     procedure LabBirthDayClick(Sender: TObject);
     procedure EditDayKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure EditDayExit(Sender: TObject);
 
     // -----주소-----
     procedure LabAddressClick(Sender: TObject);
 
-    // -----핸드폰 번호-----
-    // 앞번호
-    procedure ComFPhoneExit(Sender: TObject);
-    // 중간번호
-    procedure EditMPhoneExit(Sender: TObject);
-    // 뒷번호
-    procedure EditLPhoneExit(Sender: TObject);
-
     // -----이메일-----
     // 아이디
     procedure EditEmailKeyPress(Sender: TObject; var Key: Char);
-    procedure EditFEmailExit(Sender: TObject);
-    // 메일주소
-    procedure EditLEmailExit(Sender: TObject);
     // 선택
-    procedure ComboSelEmailExit(Sender: TObject);
     procedure ComboEmailSelPropertiesChange(Sender: TObject);
 
 
     // --------------- 버튼 호버시 색변경 ---------------
-    procedure BtnMemInsertMouseEnter(Sender: TObject);
-    procedure BtnMemInsertMouseLeave(Sender: TObject);
-    procedure BtnEmailChkMouseEnter(Sender: TObject);
-    procedure BtnEmailChkMouseLeave(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStyle_1MouseLeave(Sender: TObject);
+    procedure BtnStyle_2MouseEnter(Sender: TObject);
+    procedure BtnStyle_2MouseLeave(Sender: TObject);
 
 
 
@@ -187,6 +169,9 @@ type
     procedure EditAddClick(Sender: TObject);
     procedure EditDetailAddressPropertiesChange(Sender: TObject);
     //function SendEmail : string;
+
+    // --------------- Edit앞딴처리 ---------------
+    procedure EditEvent(EditN : TWinControl);
 
   private
     MemInsertChk: TMemInsertChk;
@@ -207,14 +192,14 @@ implementation
 uses
   DataModule, EmailchkPage, HDataMethod, SearchJusoPage;
 
-procedure TMemInsertForm.BtnMemInsertMouseEnter(Sender: TObject);
+procedure TMemInsertForm.BtnStyle_1MouseEnter(Sender: TObject);
 begin
-  BtnMemInsert.Color := $00C66300;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
-procedure TMemInsertForm.BtnMemInsertMouseLeave(Sender: TObject);
+procedure TMemInsertForm.BtnStyle_1MouseLeave(Sender: TObject);
 begin
-  BtnMemInsert.Color := $00FF9122;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TMemInsertForm.BtnSearchAddressClick(Sender: TObject);
@@ -250,11 +235,6 @@ begin
   end;
 end;
 
-procedure TMemInsertForm.ComboSelEmailExit(Sender: TObject);
-begin
-  Panel17.Color          := clWindow;
-end;
-
 procedure TMemInsertForm.ComboEmailSelPropertiesChange(Sender: TObject);
 begin
   if ComboSelEmail.Text <> '직접입력' then begin
@@ -266,27 +246,6 @@ begin
     EditLEmail.Text := '';
     EditLEmail.SetFocus;
   end;
-end;
-
-procedure TMemInsertForm.ComboMonExit(Sender: TObject);
-begin
-  LabBirthMonth.Style.Color := clWindow;
-  Panel7.Color          := clWindow;
-
-  if ComboMon.Text = '' then begin
-    chkBirth.Show;
-    MemInsertChk.month := False;
-  end else if (StrToInt(ComboMon.Text) > 12) OR (StrToInt(ComboMon.Text) < 1) then begin
-    chkBirth.Show;
-    MemInsertChk.month := False;
-  end else begin
-    if (StrToInt(ComboMon.Text) > 0) OR (StrToInt(ComboMon.Text) < 10) then begin
-      ComboMon.Text := '0' + IntToStr(StrToInt(ComboMon.Text));
-    end;
-    chkBirth.Hide;
-    MemInsertChk.month := True;
-  end;
-
 end;
 
 procedure TMemInsertForm.ComboMonKeyUp(Sender: TObject; var Key: Word;
@@ -385,14 +344,14 @@ begin
 
 end;
 
-procedure TMemInsertForm.BtnEmailChkMouseEnter(Sender: TObject);
+procedure TMemInsertForm.BtnStyle_2MouseEnter(Sender: TObject);
 begin
-  BtnEmailChk.Color := $00FFAB57;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), True);
 end;
 
-procedure TMemInsertForm.BtnEmailChkMouseLeave(Sender: TObject);
+procedure TMemInsertForm.BtnStyle_2MouseLeave(Sender: TObject);
 begin
-  BtnEmailChk.Color := $00FFBF80;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), False);
 end;
 
 procedure TMemInsertForm.BtnMemInsertClick(Sender: TObject);
@@ -627,20 +586,6 @@ begin
 
 end;
 
-procedure TMemInsertForm.ComFPhoneExit(Sender: TObject);
-begin
-  Panel11.Color          := clWindow;
-
-  if ComFPhone.Text = '' then begin
-    chkPhone.Show;
-    MemInsertChk.phone1 := False;
-  end else begin
-    chkPhone.Hide;
-    MemInsertChk.phone1 := True;
-  end;
-
-end;
-
 procedure TMemInsertForm.LabIDClick(Sender: TObject);
 begin
   EditID.SetFocus;
@@ -681,49 +626,6 @@ begin
   EditName.SetFocus;
 end;
 
-procedure TMemInsertForm.EditMPhoneExit(Sender: TObject);
-begin
-  Panel12.Color          := clWindow;
-
-  if EditMPhone.Text = '' then begin
-    chkPhone.Show;
-    MemInsertChk.phone2 := False;
-  end else begin
-    chkPhone.Hide;
-    MemInsertChk.phone2 := True;
-  end;
-end;
-
-procedure TMemInsertForm.EditLPhoneExit(Sender: TObject);
-begin
-  Panel13.Color          := clWindow;
-
-  if EditLPhone.Text = '' then begin
-    chkPhone.Show;
-    MemInsertChk.phone3 := False;
-  end else begin
-    chkPhone.Hide;
-    MemInsertChk.phone3 := True;
-  end;
-end;
-
-procedure TMemInsertForm.EditLEmailExit(Sender: TObject);
-var
-  emailchk: string;
-begin
-  Panel16.Color     := clWindow;
-  emailchk          := EditLEmail.Text;
-
-  if emailchk = '' then begin
-    chkEmail.Style.TextColor := clRed;
-    chkEmail.Caption         := '이메일을 입력해주세요.';
-    chkEmail.Show;
-  end else begin
-    chkEmail.Hide;
-  end;
-
-end;
-
 procedure TMemInsertForm.EditAddClick(Sender: TObject);
 begin  
   if TcxTextEdit(Sender).Text = '' then begin
@@ -742,26 +644,6 @@ begin
   end else begin
     LabAddress.show;
     MemInsertChk.address := False;
-  end;
-end;
-
-procedure TMemInsertForm.EditDayExit(Sender: TObject);
-begin
-  LabBirthDay.Style.Color := clWindow;
-  Panel8.Color          := clWindow;
-
-  if EditDay.Text = '' then begin
-    chkBirth.Show;
-    MemInsertChk.day := False;
-  end else if (StrToInt(EditDay.Text) > 31) or (StrToInt(EditDay.Text) < 1) then begin
-    chkBirth.Show;
-    MemInsertChk.day := False;
-  end else begin
-    if (StrToInt(EditDay.Text) > 0) AND (StrToInt(EditDay.Text) < 10) then begin
-      EditDay.Text := '0' + IntToStr(StrToInt(EditDay.Text));
-    end;
-    chkBirth.Hide;
-    MemInsertChk.day := True;
   end;
 end;
 
@@ -784,22 +666,6 @@ begin
   end;
 end;
 
-procedure TMemInsertForm.EditFEmailExit(Sender: TObject);
-var
-  emailchk: string;
-begin
-  Panel15.Color          := clWindow;
-  emailchk := EditFEmail.Text;
-
-  if emailchk = '' then begin
-    chkEmail.Caption    := '이메일을 입력해주세요.';
-    chkEmail.Show;
-  end else begin
-    chkEmail.Hide;
-  end;
-
-end;
-
 procedure TMemInsertForm.EditEmailKeyPress(Sender: TObject; var Key: Char);
 var
   chk: Boolean;
@@ -818,30 +684,41 @@ begin
   DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
 end;
 
-procedure TMemInsertForm.EditExit(Sender: TObject);
+procedure TMemInsertForm.EditEvent(EditN : TWinControl);
 var
-  id, idchk: string;
-  IDlength: Integer;
+  id, idchk : String;
+  IDlength  : Integer;
+  EditNam   : String;
+  pw, pwchk : String;
+  PWlength  : Integer;
+  namechk   : String;
+  year      : String;
+  Nyear     : String;
+  age       : Integer;
+  emailchk  : String;
+  emailchk2 : string;
+begin   //
+  EditNam  := EditN.Name;
 
-  ControlN : TWinControl;
-begin
-  ControlN := TWinControl(Sender);
+  id        := HDataMethod.HITSEncrypt(EditID.Text, KEY);
+  IDlength  := Length(EditID.Text);
+  pw        := EditPW.Text;
+  PWlength  := Length(pw);
+  pwchk     := EditPWchk.Text;
+  namechk   := EditName.Text;
+  year      := EditYear.Text;
+  Nyear     := FormatDateTime('yyyy', Now);
 
-  DataModule1.SetEditStyle(ControlN.Parent, False);
+  if EditNam = 'EditID' then begin
+    if (IDlength < 4) or (IDlength > 18) then begin
+      chkID.Caption := '4~18자의 아이디를 입력해주세요.';
+      MemInsertChk.id := False;
+      chkID.Show;
 
-  id := HDataMethod.HITSEncrypt(EditID.Text, KEY);
-  IDlength := Length(EditID.Text);
+    end else begin
+      chkID.Caption := '아이디가 올바르지 않습니다.';
+      chkID.Hide;
 
-  if (IDlength < 4) or (IDlength > 18) then begin
-    chkID.Caption := '4~18자의 아이디를 입력해주세요.';
-    MemInsertChk.id := False;
-    chkID.Show;
-
-  end else begin
-    chkID.Caption := '아이디가 올바르지 않습니다.';
-    chkID.Hide;
-
-    try
       with DataModule1.QH_DML do begin
         SQL.Clear;
         SQL.ADD('SELECT mid FROM household');
@@ -863,12 +740,163 @@ begin
         MemInsertChk.id := False;
         EditID.SetFocus;
       end;
-
-    finally
-
     end;
 
+  end else if EditNam = 'EditPW' then begin
+    if pw = '' then begin
+      chkpw.Caption := '비밀번호를 입력해주세요.';
+      MemInsertChk.pw := False;
+      chkpw.Show;
+      chkPWTrue.Hide;
+    end else begin
+      if (PWlength < 6) or (PWlength > 18) then  begin
+        chkpw.Caption := '비밀번호를 8~16자로 입력해주세요.';
+        MemInsertChk.pw := False;
+        chkPW.Show;
+        chkPWTrue.Hide;
+      end else begin
+        chkPW.Hide;
+        MemInsertChk.pw := True;
+      end;
+    end;
+
+  end else if EditNam = 'EditPW' then begin
+    if pwchk = '' then begin
+      chkPWTrue.Caption := '비밀번호확인을 입력해주세요.';
+      MemInsertChk.pwchk := False;
+      chkPWTrue.Show;
+      chkPW.Hide;
+    end else begin
+      if not (pwchk = pw) then begin
+        chkPWTrue.Caption := '비밀번호가 일치하지 않습니다.';
+        MemInsertChk.pwchk := False;
+        chkPWTrue.Show;
+        chkPW.Hide;
+      end else begin
+        chkPWTrue.Hide;
+        MemInsertChk.pwchk := True;
+      end;
+    end;
+  end else if EditNam = 'EditName' then begin
+    if namechk = '' then begin
+      chkName.Caption := '이름을 입력해주세요.';
+      MemInsertChk.name := False;
+      chkName.Show;
+    end else if namechk <> '' then begin
+      chkName.Hide;
+      MemInsertChk.name := True;
+    end;
+
+  end else if EditNam = 'EditYear' then begin
+    if year = '' then begin
+      chkBirth.show;
+      MemInsertChk.year := False;
+    end else if StrToInt(year) > StrToInt(Nyear) then begin
+      chkBirth.show;
+      MemInsertChk.year := False;
+    end else begin
+      chkBirth.hide;
+      age := StrToInt(Nyear) - StrToInt(year) + 1;
+      EditAge.Text := IntToStr(age);
+      EditAge.Properties.ReadOnly := True;
+      MemInsertChk.year := True;
+      LabAge.Hide;
+    end;
+
+  end else if EditNam = 'ComboMon' then begin
+    if ComboMon.Text = '' then begin
+      chkBirth.Show;
+      MemInsertChk.month := False;
+    end else if (StrToInt(ComboMon.Text) > 12) OR (StrToInt(ComboMon.Text) < 1) then begin
+      chkBirth.Show;
+      MemInsertChk.month := False;
+    end else begin
+      if (StrToInt(ComboMon.Text) > 0) OR (StrToInt(ComboMon.Text) < 10) then begin
+        ComboMon.Text := '0' + IntToStr(StrToInt(ComboMon.Text));
+      end;
+      chkBirth.Hide;
+      MemInsertChk.month := True;
+    end;
+
+  end else if EditNam = 'EditDay' then begin
+    if EditDay.Text = '' then begin
+      chkBirth.Show;
+      MemInsertChk.day := False;
+    end else if (StrToInt(EditDay.Text) > 31) or (StrToInt(EditDay.Text) < 1) then begin
+      chkBirth.Show;
+      MemInsertChk.day := False;
+    end else begin
+      if (StrToInt(EditDay.Text) > 0) AND (StrToInt(EditDay.Text) < 10) then begin
+        EditDay.Text := '0' + IntToStr(StrToInt(EditDay.Text));
+      end;
+      chkBirth.Hide;
+      MemInsertChk.day := True;
+    end;
+
+  end else if EditNam = 'ComFPhone' then begin
+    if ComFPhone.Text = '' then begin
+      chkPhone.Show;
+      MemInsertChk.phone1 := False;
+    end else begin
+      chkPhone.Hide;
+      MemInsertChk.phone1 := True;
+    end;
+
+  end else if EditNam = 'EditMPhone' then begin
+    if EditMPhone.Text = '' then begin
+      chkPhone.Show;
+      MemInsertChk.phone2 := False;
+    end else begin
+      chkPhone.Hide;
+      MemInsertChk.phone2 := True;
+    end;
+
+  end else if EditNam = 'EditLPhone' then begin
+     if EditLPhone.Text = '' then begin
+      chkPhone.Show;
+      MemInsertChk.phone3 := False;
+    end else begin
+      chkPhone.Hide;
+      MemInsertChk.phone3 := True;
+    end;
+
+  end else if EditNam = 'EditFEmail' then begin
+    if emailchk = '' then begin
+      chkEmail.Caption    := '이메일을 입력해주세요.';
+      chkEmail.Show;
+    end else begin
+      chkEmail.Hide;
+    end;
+
+  end else if EditNam = 'EditLEmail' then begin
+    if emailchk2 = '' then begin
+      chkEmail.Style.TextColor := clRed;
+      chkEmail.Caption         := '이메일을 입력해주세요.';
+      chkEmail.Show;
+    end else begin
+      chkEmail.Hide;
+    end;
   end;
+
+
+
+
+
+
+
+
+end;
+
+procedure TMemInsertForm.EditExit(Sender: TObject);
+var
+  ControlN : TWinControl;
+begin
+  ControlN := TWinControl(Sender);
+
+  DataModule1.SetEditStyle(ControlN.Parent, False);
+
+  EditEvent(ControlN);
+
 end;
 
 procedure TMemInsertForm.EditIDKeyPress(Sender: TObject; var Key: Char);
@@ -897,28 +925,6 @@ begin
   end else begin
     LabID.show;
   end;
-end;
-
-procedure TMemInsertForm.EditNameExit(Sender: TObject);
-var
-  namechk: string;
-begin
-  LabName.Style.Color := clWindow;
-  Panel5.Color          := clWindow;
-
-  namechk := EditName.Text;
-  if namechk = '' then
-  begin
-    chkName.Caption := '이름을 입력해주세요.';
-    MemInsertChk.name := False;
-    chkName.Show;
-  end
-  else if namechk <> '' then
-  begin
-    chkName.Hide;
-    MemInsertChk.name := True;
-  end;
-
 end;
 
 procedure TMemInsertForm.EditNameKeyPress(Sender: TObject; var Key: Char);
@@ -966,35 +972,6 @@ begin
   end;
 end;
 
-procedure TMemInsertForm.EditPWchkExit(Sender: TObject);
-var
-  pw, pwchk: string;
-begin
-  LabPWChk.Style.Color := clWindow;
-  Panel4.Color          := clWindow;
-
-  pw := EditPW.Text;
-  pwchk := EditPWchk.Text;
-
-  if pwchk = '' then begin
-    chkPWTrue.Caption := '비밀번호확인을 입력해주세요.';
-    MemInsertChk.pwchk := False;
-    chkPWTrue.Show;
-    chkPW.Hide;
-  end else begin
-    if not (pwchk = pw) then begin
-      chkPWTrue.Caption := '비밀번호가 일치하지 않습니다.';
-      MemInsertChk.pwchk := False;
-      chkPWTrue.Show;
-      chkPW.Hide;
-    end else begin
-      chkPWTrue.Hide;
-      MemInsertChk.pwchk := True;
-    end;
-  end;
-
-end;
-
 procedure TMemInsertForm.EditPWchkKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
@@ -1005,36 +982,6 @@ begin
   end;
 end;
 
-procedure TMemInsertForm.EditPWExit(Sender: TObject);
-var
-  pw: string;
-  PWlength: Integer;
-begin
-  LabPW.Style.Color := clWindow;
-  Panel3.Color          := clWindow;
-
-  pw := EditPW.Text;
-  PWlength := Length(pw);
-  if pw = '' then
-  begin
-    chkpw.Caption := '비밀번호를 입력해주세요.';
-    MemInsertChk.pw := False;
-    chkpw.Show;
-    chkPWTrue.Hide;
-  end else begin
-    if (PWlength < 6) or (PWlength > 18) then  begin
-      chkpw.Caption := '비밀번호를 8~16자로 입력해주세요.';
-      MemInsertChk.pw := False;
-      chkPW.Show;
-      chkPWTrue.Hide;
-    end else begin
-      chkPW.Hide;
-      MemInsertChk.pw := True;
-    end;
-  end;
-
-end;
-
 procedure TMemInsertForm.EditPWKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
@@ -1043,40 +990,6 @@ begin
   end else begin
     LabPW.show;
   end;
-end;
-
-procedure TMemInsertForm.EditYear2Exit(Sender: TObject);
-var
-  year: string;
-  Nyear: string;
-  age: Integer;
-begin
-  LabBirthYear.Style.Color := clWindow;
-  Panel6.Color          := clWindow;
-
-  year := EditYear.Text;
-  Nyear := FormatDateTime('yyyy', Now);
-
-  if year = '' then
-  begin
-    chkBirth.show;
-    MemInsertChk.year := False;
-  end
-  else if StrToInt(year) > StrToInt(Nyear) then
-  begin
-    chkBirth.show;
-    MemInsertChk.year := False;
-  end
-  else
-  begin
-    chkBirth.hide;
-    age := StrToInt(Nyear) - StrToInt(year) + 1;
-    EditAge.Text := IntToStr(age);
-    EditAge.Properties.ReadOnly := True;
-    MemInsertChk.year := True;
-    LabAge.Hide;
-  end;
-
 end;
 
 procedure TMemInsertForm.EditYearKeyUp(Sender: TObject; var Key: Word;
@@ -1100,8 +1013,8 @@ begin
   chkAdd.Hide;
   chkEmail.Hide;
   chkPhone.Hide;
-  with MemInsertChk do
-  begin
+
+  with MemInsertChk do begin
     name    := False;
     id      := False;
     pw      := False;
@@ -1115,6 +1028,7 @@ begin
     phone3  := False;
     email   := False;
   end;
+
 end;
 
 procedure TMemInsertForm.OnlyNumber(Sender: TObject; var Key: Char);

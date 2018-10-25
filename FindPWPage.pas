@@ -50,15 +50,13 @@ type
     procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 
     // --------------- 버튼 호버시 이벤트 ---------------
-    procedure BtnIdSelectMouseEnter(Sender: TObject);
-    procedure BtnIdSelectMouseLeave(Sender: TObject);
-    procedure BtnCloseMouseEnter(Sender: TObject);
-    procedure BtnCloseMouseLeave(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStyle_1MouseLeave(Sender: TObject);
     procedure EditEmail1KeyPress(Sender: TObject; var Key: Char);
     procedure EditEmail2KeyPress(Sender: TObject; var Key: Char);
     procedure ComboEmailSelPropertiesChange(Sender: TObject);
-    procedure BtnEmailChkMouseEnter(Sender: TObject);
-    procedure BtnEmailChkMouseLeave(Sender: TObject);
+    procedure BtnStyle_2MouseEnter(Sender: TObject);
+    procedure BtnStyle_2MouseLeave(Sender: TObject);
 
     // ---------------  버튼 클릭시 이메일인증 ---------------
    procedure BtnEmailChkClick(Sender: TObject);
@@ -91,16 +89,6 @@ uses
 procedure TFindPWForm.BtnCloseClick(Sender: TObject);
 begin
   Close;
-end;
-
-procedure TFindPWForm.BtnCloseMouseEnter(Sender: TObject);
-begin
-  BtnClose.Color := $00C66300;
-end;
-
-procedure TFindPWForm.BtnCloseMouseLeave(Sender: TObject);
-begin
-  BtnClose.Color := $00FF9E3E;
 end;
 
 procedure TFindPWForm.BtnEmailChkClick(Sender: TObject);
@@ -192,14 +180,14 @@ begin
 
 end;
 
-procedure TFindPWForm.BtnEmailChkMouseEnter(Sender: TObject);
+procedure TFindPWForm.BtnStyle_2MouseEnter(Sender: TObject);
 begin
-  BtnEmailChk.Color := $00FFAB57;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
-procedure TFindPWForm.BtnEmailChkMouseLeave(Sender: TObject);
+procedure TFindPWForm.BtnStyle_2MouseLeave(Sender: TObject);
 begin
-  BtnEmailChk.Color := $00FFBF80;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TFindPWForm.BtnIdSelectClick(Sender: TObject);
@@ -221,26 +209,23 @@ begin
   end;
 end;
 
-procedure TFindPWForm.BtnIdSelectMouseEnter(Sender: TObject);
+procedure TFindPWForm.BtnStyle_1MouseEnter(Sender: TObject);
 begin
-  BtnIdSelect.Color := $00C66300;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
-procedure TFindPWForm.BtnIdSelectMouseLeave(Sender: TObject);
+procedure TFindPWForm.BtnStyle_1MouseLeave(Sender: TObject);
 begin
-  BtnIdSelect.Color := $00FF9E3E;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TFindPWForm.ComboEmailSelPropertiesChange(Sender: TObject);
 begin
-if ComboEmailSel.Text <> '직접입력' then
-  begin
+  if ComboEmailSel.Text <> '직접입력' then begin
     EditEmail2.Properties.ReadOnly := True;
     EditEmail2.Text := ComboEmailSel.Text;
     chkEmail.Hide;
-  end
-  else
-  begin
+  end else begin
     EditEmail2.Properties.ReadOnly := False;
     EditEmail2.Text := '';
     EditEmail2.SetFocus;

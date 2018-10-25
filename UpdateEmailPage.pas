@@ -29,12 +29,10 @@ type
     procedure FormCreate(Sender: TObject);
 
     // --------------- 버튼 호버시 색 변경 ---------------
-    procedure BtnEmailChkMouseEnter(Sender: TObject);
-    procedure BtnEmailChkMouseLeave(Sender: TObject);
-    procedure BtnEmailUpdateMouseEnter(Sender: TObject);
-    procedure BtnEmailUpdateMouseLeave(Sender: TObject);
-    procedure BtnCloseMouseEnter(Sender: TObject);
-    procedure BtnCloseMouseLeave(Sender: TObject);
+    procedure BtnStyle_2MouseEnter(Sender: TObject);
+    procedure BtnStyle_2MouseLeave(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStyle_1MouseLeave(Sender: TObject);
 
     // --------------- 입력란 클릭 이벤트 ---------------
     procedure EditEnter(Sender: TObject);
@@ -69,16 +67,6 @@ uses
 procedure TUpdateEmailForm.BtnCloseClick(Sender: TObject);
 begin
   ModalResult := mrCancel;
-end;
-
-procedure TUpdateEmailForm.BtnCloseMouseEnter(Sender: TObject);
-begin
-  BtnClose.Color := $00C66300;
-end;
-
-procedure TUpdateEmailForm.BtnCloseMouseLeave(Sender: TObject);
-begin
-  BtnClose.Color := $00FF9E3E;
 end;
 
 procedure TUpdateEmailForm.BtnEmailChkClick(Sender: TObject);
@@ -148,14 +136,14 @@ begin
   end;
 end;
 
-procedure TUpdateEmailForm.BtnEmailChkMouseEnter(Sender: TObject);
+procedure TUpdateEmailForm.BtnStyle_2MouseEnter(Sender: TObject);
 begin
-  BtnEmailChk.Color := $00FFAB57;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), True);
 end;
 
-procedure TUpdateEmailForm.BtnEmailChkMouseLeave(Sender: TObject);
+procedure TUpdateEmailForm.BtnStyle_2MouseLeave(Sender: TObject);
 begin
-  BtnEmailChk.Color := $00FFBF80;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), False);
 end;
 
 procedure TUpdateEmailForm.BtnEmailUpdateClick(Sender: TObject);
@@ -189,14 +177,14 @@ begin
   end;
 end;
 
-procedure TUpdateEmailForm.BtnEmailUpdateMouseEnter(Sender: TObject);
+procedure TUpdateEmailForm.BtnStyle_1MouseEnter(Sender: TObject);
 begin
-  BtnEmailUpdate.Color := $00C66300;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
-procedure TUpdateEmailForm.BtnEmailUpdateMouseLeave(Sender: TObject);
+procedure TUpdateEmailForm.BtnStyle_1MouseLeave(Sender: TObject);
 begin
-  BtnEmailUpdate.Color := $00FF9E3E;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TUpdateEmailForm.ComboEmailSelPropertiesChange(Sender: TObject);

@@ -30,8 +30,8 @@ type
     procedure EditExit(Sender: TObject);
     procedure EditCodeValKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
-    procedure BtnCodeValMouseEnter(Sender: TObject);
-    procedure BtnCodeValMouseLeave(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStyle_1MouseLeave(Sender: TObject);
 
     // --------------- ´Ý±â ---------------
     procedure BtnCodeValClick(Sender: TObject);
@@ -63,14 +63,14 @@ begin
   
 end;
 
-procedure TEmailchkForm.BtnCodeValMouseEnter(Sender: TObject);
+procedure TEmailchkForm.BtnStyle_1MouseEnter(Sender: TObject);
 begin
-  BtnCodeVal.Color := $00C66300;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
-procedure TEmailchkForm.BtnCodeValMouseLeave(Sender: TObject);
+procedure TEmailchkForm.BtnStyle_1MouseLeave(Sender: TObject);
 begin
-  BtnCodeVal.Color := $00FF9E3E;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TEmailchkForm.EditEnter(Sender: TObject);

@@ -62,13 +62,11 @@ type
 
 
     // -------------- 마우스 호버시 색 변경 ---------------
-    procedure BtnCloseMouseLeave(Sender: TObject);
-    procedure BtnCloseMouseEnter(Sender: TObject);
-    procedure BtnAddFBreakdownMouseEnter(Sender: TObject);
-    procedure BtnAddFBreakdownMouseLeave(Sender: TObject);
-    procedure BtnUpdateFBreakdownMouseEnter(Sender: TObject);
+    procedure BtnStyle_1MouseLeave(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStyle_2MouseEnter(Sender: TObject);
+    procedure BtnStyle_2MouseLeave(Sender: TObject);
     procedure BtnUpdateFBreakdownMouseLeave(Sender: TObject);
-    procedure BtnDelFBreakdownMouseEnter(Sender: TObject);
     procedure BtnDelFBreakdownMouseLeave(Sender: TObject);
 
   private
@@ -159,14 +157,14 @@ begin
   SelectAnniversary;
 end;
 
-procedure TFixBreakdownEditForm.BtnAddFBreakdownMouseEnter(Sender: TObject);
+procedure TFixBreakdownEditForm.BtnStyle_2MouseEnter(Sender: TObject);
 begin
-  BtnAddFBreakdown.Color := $00FFAB57;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), True);
 end;
 
-procedure TFixBreakdownEditForm.BtnAddFBreakdownMouseLeave(Sender: TObject);
+procedure TFixBreakdownEditForm.BtnStyle_2MouseLeave(Sender: TObject);
 begin
-  BtnAddFBreakdown.Color := $00FFBF80;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), False);
 end;
 
 procedure TFixBreakdownEditForm.BtnUpdateFBreakdownClick(Sender: TObject);
@@ -187,11 +185,6 @@ begin
 
 end;
 
-procedure TFixBreakdownEditForm.BtnUpdateFBreakdownMouseEnter(Sender: TObject);
-begin
-  BtnUpdateFBreakdown.Color := $00FFAB57;
-end;
-
 procedure TFixBreakdownEditForm.BtnUpdateFBreakdownMouseLeave(Sender: TObject);
 begin
   if BtnUpdateFBreakdown.Caption = '수  정' then begin
@@ -204,14 +197,14 @@ begin
   ModalResult := mrCancel;
 end;
 
-procedure TFixBreakdownEditForm.BtnCloseMouseEnter(Sender: TObject);
+procedure TFixBreakdownEditForm.BtnStyle_1MouseEnter(Sender: TObject);
 begin
-  BtnClose.Color := $00C66300;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
-procedure TFixBreakdownEditForm.BtnCloseMouseLeave(Sender: TObject);
+procedure TFixBreakdownEditForm.BtnStyle_1MouseLeave(Sender: TObject);
 begin
-  BtnClose.Color := $00FF9E3E;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TFixBreakdownEditForm.BtnDelFBreakdownClick(Sender: TObject);
@@ -228,11 +221,6 @@ begin
     BtnUpdateFBreakdown.Enabled             := True;
     BtnAddFBreakdown.Enabled                := True;
   end;
-end;
-
-procedure TFixBreakdownEditForm.BtnDelFBreakdownMouseEnter(Sender: TObject);
-begin
-  BtnDelFBreakdown.Color := $00FFAB57;
 end;
 
 procedure TFixBreakdownEditForm.BtnDelFBreakdownMouseLeave(Sender: TObject);

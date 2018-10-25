@@ -50,16 +50,8 @@ type
     procedure FormCreate(Sender: TObject);
 
     // --------------- 버튼 마우스 호버시 색 변경 ---------------
-    procedure BtnMPhoneUpdateMouseEnter(Sender: TObject);
-    procedure BtnMPhoneUpdateMouseLeave(Sender: TObject);
-    procedure BtnMEmailUpdateMouseEnter(Sender: TObject);
-    procedure BtnMEmailUpdateMouseLeave(Sender: TObject);
-    procedure BtnMAddUpdateMouseEnter(Sender: TObject);
-    procedure BtnMAddUpdateMouseLeave(Sender: TObject);
-    procedure BtnMPWUpdateMouseEnter(Sender: TObject);
-    procedure BtnMPWUpdateMouseLeave(Sender: TObject);
-    procedure BtnMIDDeleteMouseEnter(Sender: TObject);
-    procedure BtnMIDDeleteMouseLeave(Sender: TObject);
+    procedure BtnStyle_2MouseEnter(Sender: TObject);
+    procedure BtnStyle_2MouseLeave(Sender: TObject);
 
     // --------------- 변경 버튼 클릭시 이벤트 ---------------
     procedure BtnMPhoneUpdateClick(Sender: TObject);
@@ -153,16 +145,6 @@ begin
   end;
 end;
 
-procedure TMemInfoForm.BtnMAddUpdateMouseEnter(Sender: TObject);
-begin
-  BtnMAddUpdate.Color := $00FFAB57;
-end;
-
-procedure TMemInfoForm.BtnMAddUpdateMouseLeave(Sender: TObject);
-begin
-  BtnMAddUpdate.Color := $00FFBF80;
-end;
-
 procedure TMemInfoForm.BtnMEmailUpdateClick(Sender: TObject);
 begin
   UpdateEmailForm := TUpdateEmailForm.Create(Self);
@@ -174,24 +156,14 @@ begin
   end;
 end;
 
-procedure TMemInfoForm.BtnMEmailUpdateMouseEnter(Sender: TObject);
+procedure TMemInfoForm.BtnStyle_2MouseEnter(Sender: TObject);
 begin
-  BtnMEmailUpdate.Color := $00FFAB57;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), True);
 end;
 
-procedure TMemInfoForm.BtnMEmailUpdateMouseLeave(Sender: TObject);
+procedure TMemInfoForm.BtnStyle_2MouseLeave(Sender: TObject);
 begin
-  BtnMEmailUpdate.Color := $00FFBF80;
-end;
-
-procedure TMemInfoForm.BtnMIDDeleteMouseEnter(Sender: TObject);
-begin
-  BtnMIDDelete.Color := $00FFAB57;
-end;
-
-procedure TMemInfoForm.BtnMIDDeleteMouseLeave(Sender: TObject);
-begin
-  BtnMIDDelete.Color := $00FFBF80;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), False);
 end;
 
 procedure TMemInfoForm.BtnMPhoneUpdateClick(Sender: TObject);
@@ -203,16 +175,6 @@ begin
     UpdatePhoneForm.Free;
     MemInfoShow;
   end;
-end;
-
-procedure TMemInfoForm.BtnMPhoneUpdateMouseEnter(Sender: TObject);
-begin
-  BtnMPhoneUpdate.Color := $00FFAB57;
-end;
-
-procedure TMemInfoForm.BtnMPhoneUpdateMouseLeave(Sender: TObject);
-begin
-  BtnMPhoneUpdate.Color := $00FFBF80;
 end;
 
 procedure TMemInfoForm.FormCreate(Sender: TObject);
@@ -272,16 +234,6 @@ begin
   finally
     UpdatePWForm.Free;
   end;
-end;
-
-procedure TMemInfoForm.BtnMPWUpdateMouseEnter(Sender: TObject);
-begin
-  BtnMPWUpdate.Color := $00FFAB57;
-end;
-
-procedure TMemInfoForm.BtnMPWUpdateMouseLeave(Sender: TObject);
-begin
-  BtnMPWUpdate.Color := $00FFBF80;
 end;
 
 end.

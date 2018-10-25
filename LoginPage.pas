@@ -43,8 +43,8 @@ type
     procedure EditKeyPress(Sender: TObject; var Key: Char);
 
     // --------------- 마우스 호버시 색 변경 ---------------
-    procedure BtnLoginMouseEnter(Sender: TObject);
-    procedure BtnLoginMouseLeave(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStyle_1MouseLeave(Sender: TObject);
 
     // --------------- 아이디 찾기폼 생성 ---------------
     procedure LabFindIDClick(Sender: TObject);
@@ -69,14 +69,14 @@ implementation
 uses
   HouseHoldPage, MemInsertPage, DataModule, FindIDPage, FindPWPage, HDataMethod;
 
-procedure TLoginForm.BtnLoginMouseEnter(Sender: TObject);
+procedure TLoginForm.BtnStyle_1MouseEnter(Sender: TObject);
 begin
-  BtnLogin.Color := $00C66300;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
-procedure TLoginForm.BtnLoginMouseLeave(Sender: TObject);
+procedure TLoginForm.BtnStyle_1MouseLeave(Sender: TObject);
 begin
-  BtnLogin.Color := $00FF9E3E;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TLoginForm.cxLabel1Click(Sender: TObject);

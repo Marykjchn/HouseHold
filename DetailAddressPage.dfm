@@ -174,6 +174,8 @@ object DetailAddressForm: TDetailAddressForm
       ParentFont = False
       TabOrder = 3
       OnClick = BtnDetailAddressClick
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object cxLabel10: TcxLabel
       Left = 144

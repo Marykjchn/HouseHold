@@ -1539,8 +1539,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 6
       OnClick = BtnAnniversaryEditClick
-      OnMouseEnter = BtnAnniversaryEditMouseEnter
-      OnMouseLeave = BtnAnniversaryEditMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStlye_1MouseLeave
     end
     object BtnFixBreakdownEdit: TPanel
       Left = 678
@@ -1559,8 +1559,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 7
       OnClick = BtnFixBreakdownEditClick
-      OnMouseEnter = BtnFixBreakdownEditMouseEnter
-      OnMouseLeave = BtnFixBreakdownEditMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStlye_1MouseLeave
     end
     object BtnClose: TPanel
       Left = 984
@@ -1579,8 +1579,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 8
       OnClick = BtnCloseClick
-      OnMouseEnter = BtnCloseMouseEnter
-      OnMouseLeave = BtnCloseMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStlye_1MouseLeave
     end
     object BtnReportShow: TPanel
       Left = 831
@@ -1599,8 +1599,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 9
       OnClick = BtnReportShowClick
-      OnMouseEnter = BtnReportShowMouseEnter
-      OnMouseLeave = BtnReportShowMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStlye_1MouseLeave
     end
     object BtnHoldingUpdate: TPanel
       Left = 963
@@ -1619,8 +1619,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 10
       OnClick = BtnHoldingUpdateClick
-      OnMouseEnter = BtnHoldingUpdateMouseEnter
-      OnMouseLeave = BtnHoldingUpdateMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object BtnHoldingDelete: TPanel
       Left = 1021
@@ -1639,8 +1639,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 11
       OnClick = BtnHoldingDeleteClick
-      OnMouseEnter = BtnHoldingDeleteMouseEnter
-      OnMouseLeave = BtnHoldingDeleteMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object BtnHoldingAction: TPanel
       Left = 1079
@@ -1678,8 +1678,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 2
       OnClick = BtnIncomeDeleteClick
-      OnMouseEnter = BtnIncomeDeleteMouseEnter
-      OnMouseLeave = BtnIncomeDeleteMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object BtnIncomeUpdate: TPanel
       Left = 963
@@ -1698,8 +1698,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 0
       OnClick = BtnIncomeUpdateClick
-      OnMouseEnter = BtnIncomeUpdateMouseEnter
-      OnMouseLeave = BtnIncomeUpdateMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object BtnSpendingDelete: TPanel
       Left = 1021
@@ -1718,8 +1718,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 13
       OnClick = BtnSpendingDeleteClick
-      OnMouseEnter = BtnSpendingDeleteMouseEnter
-      OnMouseLeave = BtnSpendingDeleteMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object BtnSpendingUpdate: TPanel
       Left = 963
@@ -1738,8 +1738,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 14
       OnClick = BtnSpendingUpdateClick
-      OnMouseEnter = BtnSpendingUpdateMouseEnter
-      OnMouseLeave = BtnSpendingUpdateMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object BtnIncomeAction: TPanel
       Left = 1079
@@ -1796,8 +1796,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 17
       OnClick = BtnMemoClearClick
-      OnMouseEnter = BtnMemoClearMouseEnter
-      OnMouseLeave = BtnMemoClearMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object BtnMemoStore: TPanel
       Left = 174
@@ -1816,8 +1816,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 18
       OnClick = BtnMemoStoreClick
-      OnMouseEnter = BtnMemoStoreMouseEnter
-      OnMouseLeave = BtnMemoStoreMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object BtnMemoUpdate: TPanel
       Left = 237
@@ -1836,8 +1836,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 19
       OnClick = BtnMemoUpdateClick
-      OnMouseEnter = BtnMemoUpdateMouseEnter
-      OnMouseLeave = BtnMemoUpdateMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object BtnUpdateMem: TPanel
       Left = 372
@@ -1856,8 +1856,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 25
       OnClick = BtnUpdateMemClick
-      OnMouseEnter = BtnUpdateMemMouseEnter
-      OnMouseLeave = BtnUpdateMemMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStlye_1MouseLeave
     end
   end
   object Panel2: TPanel
@@ -2139,8 +2139,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 6
       OnClick = BtnClearClick
-      OnMouseEnter = BtnClearMouseEnter
-      OnMouseLeave = BtnClearMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStlye_1MouseLeave
     end
     object BtnStore: TPanel
       Left = 50
@@ -2159,8 +2159,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 5
       OnClick = BtnStoreClick
-      OnMouseEnter = BtnStoreMouseEnter
-      OnMouseLeave = BtnStoreMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStlye_1MouseLeave
     end
     object BtnHouseHoldEdit: TPanel
       Left = 310
@@ -2179,8 +2179,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 7
       OnClick = BtnHouseHoldEditClick
-      OnMouseEnter = BtnHouseHoldEditMouseEnter
-      OnMouseLeave = BtnHouseHoldEditMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStlye_1MouseLeave
     end
     object BtnItemDel: TPanel
       Left = 340
@@ -2199,8 +2199,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 9
       OnClick = BtnItemDel2Click
-      OnMouseEnter = BtnItemDelMouseEnter
-      OnMouseLeave = BtnItemDelMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object BtnTypeDel: TPanel
       Left = 340
@@ -2219,8 +2219,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 11
       OnClick = BtnTypeDelClick
-      OnMouseEnter = BtnTypeDelMouseEnter
-      OnMouseLeave = BtnTypeDelMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object BtnItemAdd: TPanel
       Left = 307
@@ -2239,8 +2239,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 8
       OnClick = BtnItemAddClick
-      OnMouseEnter = BtnItemAddMouseEnter
-      OnMouseLeave = BtnItemAddMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object BtnTypeAdd: TPanel
       Left = 307
@@ -2259,8 +2259,8 @@ object HouseHoldForm: THouseHoldForm
       ParentFont = False
       TabOrder = 10
       OnClick = BtnTypeAddClick
-      OnMouseEnter = BtnTypeAddMouseEnter
-      OnMouseLeave = BtnTypeAddMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStlye_2MouseLeave
     end
     object ComboAmount: TcxCurrencyEdit
       Left = 130

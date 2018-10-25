@@ -227,8 +227,8 @@ object UpdatePhoneForm: TUpdatePhoneForm
       ParentFont = False
       TabOrder = 1
       OnClick = BtnCloseClick
-      OnMouseEnter = BtnCloseMouseEnter
-      OnMouseLeave = BtnCloseMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object BtnPhoneUpdate: TPanel
       Left = 45
@@ -247,8 +247,8 @@ object UpdatePhoneForm: TUpdatePhoneForm
       ParentFont = False
       TabOrder = 2
       OnClick = BtnPhoneUpdateClick
-      OnMouseEnter = BtnPhoneUpdateMouseEnter
-      OnMouseLeave = BtnPhoneUpdateMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object cxLabel10: TcxLabel
       Left = 138

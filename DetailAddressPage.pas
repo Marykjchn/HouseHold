@@ -30,6 +30,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure BtnDetailAddressClick(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStyle_1MouseLeave(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,6 +56,16 @@ begin
     DataModule1.addressSearch.ADetailAddr := EditDetailAddress.Text;
     ModalResult := mrOk;
   end;
+end;
+
+procedure TDetailAddressForm.BtnStyle_1MouseEnter(Sender: TObject);
+begin
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
+end;
+
+procedure TDetailAddressForm.BtnStyle_1MouseLeave(Sender: TObject);
+begin
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TDetailAddressForm.cxTextEdit1PropertiesChange(Sender: TObject);

@@ -135,8 +135,8 @@ object EmailchkForm: TEmailchkForm
       ParentFont = False
       TabOrder = 3
       OnClick = BtnCodeValClick
-      OnMouseEnter = BtnCodeValMouseEnter
-      OnMouseLeave = BtnCodeValMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
   end
   object Timer1: TTimer

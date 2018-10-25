@@ -287,8 +287,8 @@ object LoginForm: TLoginForm
       ParentFont = False
       TabOrder = 5
       OnClick = BtnLoginClick
-      OnMouseEnter = BtnLoginMouseEnter
-      OnMouseLeave = BtnLoginMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
   end
   object TPanel

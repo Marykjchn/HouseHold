@@ -280,56 +280,14 @@ type
       newDate: TDateTime);
 
     // --------------- 마우스 호버시 색 변경 ---------------
-    procedure BtnAnniversaryEditMouseEnter(Sender: TObject);
-    procedure BtnAnniversaryEditMouseLeave(Sender: TObject);
-    procedure BtnFixBreakdownEditMouseEnter(Sender: TObject);
-    procedure BtnFixBreakdownEditMouseLeave(Sender: TObject);
-    procedure BtnReportShowMouseEnter(Sender: TObject);
-    procedure BtnReportShowMouseLeave(Sender: TObject);
-    procedure BtnCloseMouseEnter(Sender: TObject);
-    procedure BtnCloseMouseLeave(Sender: TObject);
-    procedure BtnStoreMouseEnter(Sender: TObject);
-    procedure BtnStoreMouseLeave(Sender: TObject);
-    procedure BtnClearMouseEnter(Sender: TObject);
-    procedure BtnClearMouseLeave(Sender: TObject);
-    procedure BtnHouseHoldEditMouseEnter(Sender: TObject);
-    procedure BtnHouseHoldEditMouseLeave(Sender: TObject);
-    procedure BtnUpdateMemMouseEnter(Sender: TObject);
-    procedure BtnUpdateMemMouseLeave(Sender: TObject);
-    procedure BtnItemAddMouseEnter(Sender: TObject);
-    procedure BtnItemAddMouseLeave(Sender: TObject);
-    procedure BtnItemDelMouseEnter(Sender: TObject);
-    procedure BtnItemDelMouseLeave(Sender: TObject);
-    procedure BtnTypeAddMouseEnter(Sender: TObject);
-    procedure BtnTypeAddMouseLeave(Sender: TObject);
-    procedure BtnTypeDelMouseLeave(Sender: TObject);
-    procedure BtnTypeDelMouseEnter(Sender: TObject);
-    procedure BtnIncomeUpdateMouseEnter(Sender: TObject);
-    procedure BtnIncomeUpdateMouseLeave(Sender: TObject);
-    procedure BtnIncomeDeleteMouseLeave(Sender: TObject);
-    procedure BtnIncomeDeleteMouseEnter(Sender: TObject);
-    procedure BtnSpendingUpdateMouseEnter(Sender: TObject);
-    procedure BtnSpendingUpdateMouseLeave(Sender: TObject);
-    procedure BtnSpendingDeleteMouseEnter(Sender: TObject);
-    procedure BtnHoldingUpdateMouseEnter(Sender: TObject);
-    procedure BtnHoldingUpdateMouseLeave(Sender: TObject);
-    procedure BtnHoldingDeleteMouseEnter(Sender: TObject);
-    procedure BtnHoldingDeleteMouseLeave(Sender: TObject);
-    procedure BtnMemoStoreMouseEnter(Sender: TObject);
-    procedure BtnMemoStoreMouseLeave(Sender: TObject);
-    procedure BtnMemoUpdateMouseEnter(Sender: TObject);
-    procedure BtnMemoUpdateMouseLeave(Sender: TObject);
-    procedure BtnMemoClearMouseEnter(Sender: TObject);
-    procedure BtnMemoClearMouseLeave(Sender: TObject);
-    procedure BtnSpendingDeleteMouseLeave(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStlye_1MouseLeave(Sender: TObject);
+    procedure BtnStyle_2MouseEnter(Sender: TObject);
+    procedure BtnStlye_2MouseLeave(Sender: TObject);
+    
     procedure BtnExcelClick(Sender: TObject);
     procedure ComboAmountKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
-
-
-
-
-
 
     { 그리드 Update Procedure
     procedure QHContents_SelectAllAfterPost(DataSet: TDataSet);
@@ -379,16 +337,6 @@ begin
   ModalResult := mrCancel;
 end;
 
-procedure THouseHoldForm.BtnCloseMouseEnter(Sender: TObject);
-begin
- BtnClose.Color := $00C66300;
-end;
-
-procedure THouseHoldForm.BtnCloseMouseLeave(Sender: TObject);
-begin
-  BtnClose.Color := $00FF9E3E;
-end;
-
 procedure THouseHoldForm.BtnHoldingDeleteClick(Sender: TObject);
 begin
   if BtnHoldingDelete.Caption = '제  거' then begin
@@ -401,16 +349,6 @@ begin
   end;
 end;
 
-procedure THouseHoldForm.BtnHoldingDeleteMouseEnter(Sender: TObject);
-begin
-  BtnHoldingDelete.Color := $00FFAB57;
-end;
-
-procedure THouseHoldForm.BtnHoldingDeleteMouseLeave(Sender: TObject);
-begin
-  BtnHoldingDelete.Color := $00FFBF80;
-end;
-
 procedure THouseHoldForm.BtnHoldingUpdateClick(Sender: TObject);
 begin
   if BtnHoldingUpdate.Caption = '수  정' then begin
@@ -421,16 +359,6 @@ begin
     BtnHoldingDelete.Caption             := '제  거';
     BtnHoldingAction.Caption             := '조회모드';
   end;
-end;
-
-procedure THouseHoldForm.BtnHoldingUpdateMouseEnter(Sender: TObject);
-begin
-  BtnHoldingUpdate.Color := $00FFAB57;
-end;
-
-procedure THouseHoldForm.BtnHoldingUpdateMouseLeave(Sender: TObject);
-begin
-  BtnHoldingUpdate.Color := $00FFBF80;
 end;
 
 procedure THouseHoldForm.BtnMemoStoreClick(Sender: TObject);
@@ -480,14 +408,14 @@ begin
 
 end;
 
-procedure THouseHoldForm.BtnMemoStoreMouseEnter(Sender: TObject);
+procedure THouseHoldForm.BtnStyle_2MouseEnter(Sender: TObject);
 begin
-  BtnMemoStore.Color := $00FFAB57;
-end; 
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), True);
+end;
 
-procedure THouseHoldForm.BtnMemoStoreMouseLeave(Sender: TObject);
+procedure THouseHoldForm.BtnStlye_2MouseLeave(Sender: TObject);
 begin
-  BtnMemoStore.Color := $00FFBF80;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), False);
 end;
 
 procedure THouseHoldForm.BtnHouseHoldEditClick(Sender: TObject);
@@ -527,16 +455,6 @@ begin
 
 end;
 
-procedure THouseHoldForm.BtnHouseHoldEditMouseEnter(Sender: TObject);
-begin
-  BtnHouseHoldEdit.Color := $00C66300;
-end;
-
-procedure THouseHoldForm.BtnHouseHoldEditMouseLeave(Sender: TObject);
-begin
-  BtnHouseHoldEdit.Color := $00FF9E3E;
-end;
-
 procedure THouseHoldForm.BtnIncomeDeleteClick(Sender: TObject);
 begin
   if BtnIncomeDelete.Caption = '제  거' then begin
@@ -547,16 +465,6 @@ begin
     BtnIncomeDelete.Caption             := '제  거';
     BtnIncomeAction.Caption             := '수정모드';
   end;
-end;
-
-procedure THouseHoldForm.BtnIncomeDeleteMouseEnter(Sender: TObject);
-begin
-  BtnIncomeDelete.Color := $00FFAB57;
-end;
-
-procedure THouseHoldForm.BtnIncomeDeleteMouseLeave(Sender: TObject);
-begin
-  BtnIncomeDelete.Color := $00FFBF80;
 end;
 
 procedure THouseHoldForm.BtnIncomeUpdateClick(Sender: TObject);
@@ -571,17 +479,6 @@ begin
   end;
 end;
 
-procedure THouseHoldForm.BtnIncomeUpdateMouseEnter(Sender: TObject);
-begin
-  BtnIncomeUpdate.Color := $00FFAB57;
-end;
-
-
-procedure THouseHoldForm.BtnIncomeUpdateMouseLeave(Sender: TObject);
-begin
-  BtnIncomeUpdate.Color := $00FFBF80;
-end;
-
 procedure THouseHoldForm.BtnSpendingDeleteClick(Sender: TObject);
 begin
   if BtnSpendingDelete.Caption = '제  거' then begin
@@ -594,16 +491,6 @@ begin
   end;
 end;
 
-procedure THouseHoldForm.BtnSpendingDeleteMouseEnter(Sender: TObject);
-begin
-  BtnSpendingDelete.Color := $00FFAB57;
-end;
-
-procedure THouseHoldForm.BtnSpendingDeleteMouseLeave(Sender: TObject);
-begin
-  BtnSpendingDelete.Color := $00FFBF80;
-end;
-
 procedure THouseHoldForm.BtnSpendingUpdateClick(Sender: TObject);
 begin
   if BtnSpendingUpdate.Caption = '수  정' then begin
@@ -614,16 +501,6 @@ begin
     BtnSpendingDelete.Caption             := '제  거';
     BtnSpendingAction.Caption             := '조회모드';
   end;
-end;
-
-procedure THouseHoldForm.BtnSpendingUpdateMouseEnter(Sender: TObject);
-begin
-  BtnSpendingUpdate.Color := $00FFAB57;
-end;
-
-procedure THouseHoldForm.BtnSpendingUpdateMouseLeave(Sender: TObject);
-begin
-  BtnSpendingUpdate.Color := $00FFBF80;
 end;
 
 procedure THouseHoldForm.BtnItemAddClick(Sender: TObject);
@@ -666,16 +543,6 @@ begin
 
   end;
 
-end;
-
-procedure THouseHoldForm.BtnItemAddMouseEnter(Sender: TObject);
-begin
-  BtnItemAdd.Color := $00FFAB57;
-end;
-
-procedure THouseHoldForm.BtnItemAddMouseLeave(Sender: TObject);
-begin
-  BtnItemAdd.Color := $00FFBF80;
 end;
 
 procedure THouseHoldForm.BtnItemDel2Click(Sender: TObject);
@@ -722,29 +589,9 @@ begin
   end;
 end;
 
-procedure THouseHoldForm.BtnItemDelMouseEnter(Sender: TObject);
-begin
-  BtnItemDel.Color := $00FFAB57;
-end;
-
-procedure THouseHoldForm.BtnItemDelMouseLeave(Sender: TObject);
-begin
-  BtnItemDel.Color := $00FFBF80;
-end;
-
 procedure THouseHoldForm.BtnMemoClearClick(Sender: TObject);
 begin
   MemoSelect;
-end;
-
-procedure THouseHoldForm.BtnMemoClearMouseEnter(Sender: TObject);
-begin
-  BtnMemoClear.Color := $00FFAB57;
-end;
-
-procedure THouseHoldForm.BtnMemoClearMouseLeave(Sender: TObject);
-begin
-  BtnMemoClear.Color := $00FFBF80;
 end;
 
 procedure THouseHoldForm.BtnMemoStore2Click(Sender: TObject);
@@ -803,16 +650,6 @@ begin
   BtnMemoStore.Enabled        := True;
   cxMemo1.Properties.ReadOnly := False;
 
-end;
-
-procedure THouseHoldForm.BtnMemoUpdateMouseEnter(Sender: TObject);
-begin
-  BtnMemoUpdate.Color := $00FFAB57;
-end;
-
-procedure THouseHoldForm.BtnMemoUpdateMouseLeave(Sender: TObject);
-begin
-  BtnMemoUpdate.Color := $00FFBF80;
 end;
 
 procedure THouseHoldForm.CalenderViewAnniversary;
@@ -985,16 +822,6 @@ begin
   end;        
 end;
 
-procedure THouseHoldForm.BtnReportShowMouseEnter(Sender: TObject);
-begin
-  BtnReportShow.Color := $00C66300;
-end;
-
-procedure THouseHoldForm.BtnReportShowMouseLeave(Sender: TObject);
-begin
-  BtnReportShow.Color := $00FF9E3E;
-end;
-
 procedure THouseHoldForm.BtnFixBreakdownEditClick(Sender: TObject);
 begin
   FixBreakdownEditForm := TFixBreakdownEditForm.Create(self);
@@ -1003,16 +830,6 @@ begin
   finally
     FixBreakdownEditForm.Free;
   end;
-end;
-
-procedure THouseHoldForm.BtnFixBreakdownEditMouseEnter(Sender: TObject);
-begin
-  BtnFixBreakdownEdit.Color := $00C66300;
-end;
-
-procedure THouseHoldForm.BtnFixBreakdownEditMouseLeave(Sender: TObject);
-begin
-  BtnFixBreakdownEdit.Color := $00FF9E3E;
 end;
 
 procedure THouseHoldForm.cxMemo1PropertiesChange(Sender: TObject);
@@ -1256,14 +1073,14 @@ begin
 
 end;
 
-procedure THouseHoldForm.BtnStoreMouseEnter(Sender: TObject);
+procedure THouseHoldForm.BtnStyle_1MouseEnter(Sender: TObject);
 begin
- BtnStore.Color := $00C66300;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
-procedure THouseHoldForm.BtnStoreMouseLeave(Sender: TObject);
+procedure THouseHoldForm.BtnStlye_1MouseLeave(Sender: TObject);
 begin
-  BtnStore.Color := $00FF9E3E;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure THouseHoldForm.BtnExcelClick(Sender: TObject);
@@ -1325,15 +1142,6 @@ begin
 
   end;
 end;
-procedure THouseHoldForm.BtnTypeAddMouseEnter(Sender: TObject);
-begin
-  BtnTypeAdd.Color := $00FFAB57;
-end;
-
-procedure THouseHoldForm.BtnTypeAddMouseLeave(Sender: TObject);
-begin
-  BtnTypeAdd.Color := $00FFBF80;
-end;
 
 procedure THouseHoldForm.BtnTypeDelClick(Sender: TObject);
 var
@@ -1364,16 +1172,6 @@ begin
   end;
 end;
 
-procedure THouseHoldForm.BtnTypeDelMouseEnter(Sender: TObject);
-begin
-  BtnTypeDel.Color := $00FFAB57;
-end;
-
-procedure THouseHoldForm.BtnTypeDelMouseLeave(Sender: TObject);
-begin
-  BtnTypeDel.Color := $00FFBF80;
-end;
-
 procedure THouseHoldForm.BtnUpdateMemClick(Sender: TObject);
 begin
   MemInfoForm := TMemInfoForm.Create(Self);
@@ -1384,17 +1182,6 @@ begin
   end;
 
 
-end;
-
-procedure THouseHoldForm.BtnUpdateMemMouseEnter(Sender: TObject);
-begin
-  BtnUpdateMem.Color := $00C66300;
-
-end;
-
-procedure THouseHoldForm.BtnUpdateMemMouseLeave(Sender: TObject);
-begin
-  BtnUpdateMem.Color := $00FF9E3E;
 end;
 
 procedure THouseHoldForm.BtnAnniversaryEditClick(Sender: TObject);
@@ -1409,16 +1196,6 @@ begin
   end;
 end;
 
-procedure THouseHoldForm.BtnAnniversaryEditMouseEnter(Sender: TObject);
-begin
-  BtnAnniversaryEdit.Color := $00C66300;
-end;
-
-procedure THouseHoldForm.BtnAnniversaryEditMouseLeave(Sender: TObject);
-begin
-  BtnAnniversaryEdit.Color := $00FF9E3E;
-end;
-
 procedure THouseHoldForm.BtnClearClick(Sender: TObject);
 begin
   RadioDiv1.Checked     := True;
@@ -1426,16 +1203,6 @@ begin
   RadioMeans1.Checked   := True;
   ComboType.Text        := '';
   ComboAmount.EditValue := 0;
-end;
-
-procedure THouseHoldForm.BtnClearMouseEnter(Sender: TObject);
-begin
-  BtnClear.Color := $00C66300;
-end;
-
-procedure THouseHoldForm.BtnClearMouseLeave(Sender: TObject);
-begin
-  BtnClear.Color := $00FF9E3E;
 end;
 
 //procedure THouseHoldForm.DBPlannerCalendar1DayChange(Sender: TObject; origDate,

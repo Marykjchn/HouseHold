@@ -62,10 +62,9 @@ type
     // --------------- 마우스 호버시 색 변경 ---------------
     procedure BtnCloseMouseEnter(Sender: TObject);
     procedure BtnCloseMouseLeave(Sender: TObject);
-    procedure BtnUpdateAnniverMouseEnter(Sender: TObject);
     procedure BtnUpdateAnniverMouseLeave(Sender: TObject);
-    procedure BtnAddAnniverMouseLeave(Sender: TObject);
-    procedure BtnAddAnniverMouseEnter(Sender: TObject);
+    procedure BtnStyle_2MouseLeave(Sender: TObject);
+    procedure BtnStyle_2MouseEnter(Sender: TObject);
     procedure BtnDelAnniverMouseEnter(Sender: TObject);
     procedure BtnDelAnniverMouseLeave(Sender: TObject);
 
@@ -155,14 +154,14 @@ begin
   SelectAnniversary;
 end;
 
-procedure TAnniversaryEditForm.BtnAddAnniverMouseEnter(Sender: TObject);
+procedure TAnniversaryEditForm.BtnStyle_2MouseEnter(Sender: TObject);
 begin
-  BtnAddAnniver.Color := $00FFAB57;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), True);
 end;
 
-procedure TAnniversaryEditForm.BtnAddAnniverMouseLeave(Sender: TObject);
+procedure TAnniversaryEditForm.BtnStyle_2MouseLeave(Sender: TObject);
 begin
-  BtnAddAnniver.Color := $00FFBF80;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), False);
 end;
 
 procedure TAnniversaryEditForm.BtnUpdateAnniverClick(Sender: TObject);
@@ -182,11 +181,6 @@ begin
 
 end;
 
-procedure TAnniversaryEditForm.BtnUpdateAnniverMouseEnter(Sender: TObject);
-begin
-  BtnUpdateAnniver.Color := $00FFAB57;
-end;
-
 procedure TAnniversaryEditForm.BtnUpdateAnniverMouseLeave(Sender: TObject);
 begin
   if BtnUpdateAnniver.Caption = '수  정' then begin
@@ -202,12 +196,12 @@ end;
 
 procedure TAnniversaryEditForm.BtnCloseMouseEnter(Sender: TObject);
 begin
-  BtnClose.Color := $00C66300;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
 procedure TAnniversaryEditForm.BtnCloseMouseLeave(Sender: TObject);
 begin
- BtnClose.Color := $00FF9E3E;
+ DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TAnniversaryEditForm.BtnDelAnniverClick(Sender: TObject);

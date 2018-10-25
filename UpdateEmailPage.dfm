@@ -214,8 +214,8 @@ object UpdateEmailForm: TUpdateEmailForm
         ParentFont = False
         TabOrder = 6
         OnClick = BtnEmailChkClick
-        OnMouseEnter = BtnEmailChkMouseEnter
-        OnMouseLeave = BtnEmailChkMouseLeave
+        OnMouseEnter = BtnStyle_2MouseEnter
+        OnMouseLeave = BtnStyle_2MouseLeave
       end
     end
     object BtnClose: TPanel
@@ -235,8 +235,8 @@ object UpdateEmailForm: TUpdateEmailForm
       ParentFont = False
       TabOrder = 1
       OnClick = BtnCloseClick
-      OnMouseEnter = BtnCloseMouseEnter
-      OnMouseLeave = BtnCloseMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object BtnEmailUpdate: TPanel
       Left = 45
@@ -255,8 +255,8 @@ object UpdateEmailForm: TUpdateEmailForm
       ParentFont = False
       TabOrder = 2
       OnClick = BtnEmailUpdateClick
-      OnMouseEnter = BtnEmailUpdateMouseEnter
-      OnMouseLeave = BtnEmailUpdateMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object cxLabel10: TcxLabel
       Left = 157

@@ -205,8 +205,8 @@ object AnniAddForm: TAnniAddForm
       ParentFont = False
       TabOrder = 6
       OnClick = BtnAnniStoreClick
-      OnMouseEnter = BtnAnniStoreMouseEnter
-      OnMouseLeave = BtnAnniStoreMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object BtnClose: TPanel
       Left = 160
@@ -225,8 +225,8 @@ object AnniAddForm: TAnniAddForm
       ParentFont = False
       TabOrder = 7
       OnClick = BtnCloseClick
-      OnMouseEnter = BtnCloseMouseEnter
-      OnMouseLeave = BtnCloseMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object Panel4: TPanel
       Left = 80
@@ -465,7 +465,7 @@ object AnniAddForm: TAnniAddForm
           NameOfMonths.UseIntlNames = True
           StartDay = 7
           TodayFormat = '"Today" DDD/mm, YYYY'
-          Day = 24
+          Day = 25
           Month = 10
           Year = 2018
           TabOrder = 0

@@ -28,6 +28,9 @@ type
       Shift: TShiftState);
     procedure BtnMemInsertClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure BtnStyle_1Enter(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStyle_1MouseLeave(Sender: TObject);
   private
     { Private declarations }
     var
@@ -107,9 +110,25 @@ begin
   end;
 end;
 
+procedure TUpdatePWForm.BtnStyle_1MouseEnter(Sender: TObject);
+begin
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
+end;
+
+procedure TUpdatePWForm.BtnStyle_1MouseLeave(Sender: TObject);
+begin
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
+end;
+
+
+procedure TUpdatePWForm.BtnStyle_1Enter(Sender: TObject);
+begin
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
+end;
+
 procedure TUpdatePWForm.EditEnter(Sender: TObject);
 begin
-  DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, False);
 end;
 
 procedure TUpdatePWForm.EditExit(Sender: TObject);

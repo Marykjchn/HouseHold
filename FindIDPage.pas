@@ -47,16 +47,14 @@ type
     procedure ComboEmailSelPropertiesChange(Sender: TObject);
 
     // --------------- 버튼 호버시 색 변경 ---------------
-    procedure BtnIdSelectMouseEnter(Sender: TObject);
-    procedure BtnIdSelectMouseLeave(Sender: TObject);
-    procedure BtnCloseMouseEnter(Sender: TObject);
-    procedure BtnCloseMouseLeave(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStlye_1MouseLeave(Sender: TObject);
 
 
     // --------------- 검색 버튼 클릭시 전처리후 저장 ---------------
     procedure BtnIdSelectClick(Sender: TObject);
-    procedure BtnEmailChkMouseEnter(Sender: TObject);
-    procedure BtnEmailChkMouseLeave(Sender: TObject);
+    procedure BtnStyle_2MouseEnter(Sender: TObject);
+    procedure BtnStyle_2MouseLeave(Sender: TObject);
     procedure BtnEmailChkClick(Sender: TObject);
 
 
@@ -83,19 +81,7 @@ uses
 procedure TFindIDForm.BtnCloseClick(Sender: TObject);
 begin
   ModalResult := mrCancel;
-end;
-
-
-
-procedure TFindIDForm.BtnCloseMouseEnter(Sender: TObject);
-begin
-  BtnClose.Color := $00C66300;
-end;
-
-procedure TFindIDForm.BtnCloseMouseLeave(Sender: TObject);
-begin
-  BtnClose.Color := $00FF9E3E;
-end;
+end; 
 
 procedure TFindIDForm.BtnEmailChkClick(Sender: TObject);
 var
@@ -179,14 +165,14 @@ begin
 
 end;
 
-procedure TFindIDForm.BtnEmailChkMouseEnter(Sender: TObject);
+procedure TFindIDForm.BtnStyle_2MouseEnter(Sender: TObject);
 begin
-  BtnEmailChk.Color := $00FFAB57;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), True);
 end;
 
-procedure TFindIDForm.BtnEmailChkMouseLeave(Sender: TObject);
+procedure TFindIDForm.BtnStyle_2MouseLeave(Sender: TObject);
 begin
-  BtnEmailChk.Color := $00FFBF80;
+  DataModule1.SetBtnStyle_2(TWinControl(Sender), False);
 end;
 
 procedure TFindIDForm.BtnIdSelectClick(Sender: TObject);
@@ -200,14 +186,14 @@ begin
   end;
 end;
 
-procedure TFindIDForm.BtnIdSelectMouseEnter(Sender: TObject);
+procedure TFindIDForm.BtnStyle_1MouseEnter(Sender: TObject);
 begin
-  BtnIdSelect.Color := $00C66300;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
-procedure TFindIDForm.BtnIdSelectMouseLeave(Sender: TObject);
+procedure TFindIDForm.BtnStlye_1MouseLeave(Sender: TObject);
 begin
-  BtnIdSelect.Color := $00FF9E3E;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TFindIDForm.ComboEmailSelPropertiesChange(Sender: TObject);

@@ -32,10 +32,8 @@ type
     procedure OnlyNumber2(Sender: TObject; var Key: Char);
 
     // --------------- 버튼 호버시 색 변경 ---------------
-    procedure BtnPhoneUpdateMouseEnter(Sender: TObject);
-    procedure BtnPhoneUpdateMouseLeave(Sender: TObject);
-    procedure BtnCloseMouseEnter(Sender: TObject);
-    procedure BtnCloseMouseLeave(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStyle_1MouseLeave(Sender: TObject);
 
     // --------------- 입력란 이벤트 ---------------
     procedure EditEnter(Sender: TObject);
@@ -64,16 +62,6 @@ uses DataModule, HDataMethod;
 procedure TUpdatePhoneForm.BtnCloseClick(Sender: TObject);
 begin
   ModalResult := mrCancel;
-end;
-
-procedure TUpdatePhoneForm.BtnCloseMouseEnter(Sender: TObject);
-begin
-  BtnClose.Color := $00C66300;
-end;
-
-procedure TUpdatePhoneForm.BtnCloseMouseLeave(Sender: TObject);
-begin
-  BtnClose.Color := $00FF9E3E;
 end;
 
 procedure TUpdatePhoneForm.BtnPhoneUpdateClick(Sender: TObject);
@@ -134,14 +122,14 @@ begin
 
 end;
 
-procedure TUpdatePhoneForm.BtnPhoneUpdateMouseEnter(Sender: TObject);
+procedure TUpdatePhoneForm.BtnStyle_1MouseEnter(Sender: TObject);
 begin
-  BtnPhoneUpdate.Color := $00C66300;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
 end;
 
-procedure TUpdatePhoneForm.BtnPhoneUpdateMouseLeave(Sender: TObject);
+procedure TUpdatePhoneForm.BtnStyle_1MouseLeave(Sender: TObject);
 begin
-  BtnPhoneUpdate.Color := $00FF9E3E;
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TUpdatePhoneForm.EditEnter(Sender: TObject);

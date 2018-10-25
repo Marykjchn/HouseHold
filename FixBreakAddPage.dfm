@@ -175,7 +175,7 @@ object FixBreakAddForm: TFixBreakAddForm
           NameOfMonths.UseIntlNames = True
           StartDay = 7
           TodayFormat = '"Today" DDD/mm, YYYY'
-          Day = 24
+          Day = 25
           Month = 10
           Year = 2018
           TabOrder = 0
@@ -562,6 +562,8 @@ object FixBreakAddForm: TFixBreakAddForm
       ParentBackground = False
       ParentFont = False
       TabOrder = 13
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object BtnClose: TPanel
       Left = 208
@@ -580,6 +582,8 @@ object FixBreakAddForm: TFixBreakAddForm
       ParentFont = False
       TabOrder = 14
       OnClick = BtnCloseClick
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
   end
 end

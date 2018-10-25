@@ -76,8 +76,12 @@ type
     //// control 상의 Enable 지정 FControlColors 참조하여 구분
     procedure SetVisibleItems(AWinControl: TWinControl; AEnabled: Boolean);
 
-    // Edit버튼 스타일 지정
+    // Edit 스타일 지정
     procedure SetEditStyle(AWinControl: TWinControl; AEnabled: Boolean);
+
+    // TPnael 버튼 스타일 지정
+    procedure SetBtnStyle_1(AWinControl: TWinControl; AEnabled: Boolean);
+    procedure SetBtnStyle_2(AWinControl: TWinControl; AEnabled: Boolean);
 
     var
       TJusoTotNum  : Integer;  // 총 주소 row수
@@ -235,6 +239,26 @@ begin
 
   finally
     SMTP.Disconnect;
+  end;
+end;
+
+procedure TDataModule1.SetBtnStyle_1(AWinControl: TWinControl;
+  AEnabled: Boolean);
+begin
+  if AEnabled then begin
+    TPanel(AWinControl).Color := $00C66300;
+  end else begin
+    TPanel(AWinControl).Color := $00FF9122;
+  end;
+end;
+
+procedure TDataModule1.SetBtnStyle_2(AWinControl: TWinControl;
+  AEnabled: Boolean);
+begin
+  if AEnabled then begin
+    TPanel(AWinControl).Color := $00FFAB57;
+  end else begin
+    TPanel(AWinControl).Color := $00FFBF80;
   end;
 end;
 

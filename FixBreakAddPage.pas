@@ -41,6 +41,8 @@ type
     procedure BtnCloseClick(Sender: TObject);
     procedure EditEnter(Sender: TObject);
     procedure EditExit(Sender: TObject);
+    procedure BtnStyle_1MouseEnter(Sender: TObject);
+    procedure BtnStyle_1MouseLeave(Sender: TObject);
   private
     { Private declarations }
   public
@@ -65,6 +67,16 @@ end;
 procedure TFixBreakAddForm.EditExit(Sender: TObject);
 begin
   DataModule1.SetEditStyle(TWinControl(Sender).Parent, False);
+end;
+
+procedure TFixBreakAddForm.BtnStyle_1MouseEnter(Sender: TObject);
+begin
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
+end;
+
+procedure TFixBreakAddForm.BtnStyle_1MouseLeave(Sender: TObject);
+begin
+  DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
 procedure TFixBreakAddForm.EditEnter(Sender: TObject);

@@ -91,8 +91,8 @@ object MemInfoForm: TMemInfoForm
         ParentBackground = False
         ParentFont = False
         TabOrder = 3
-        OnMouseEnter = BtnMIDDeleteMouseEnter
-        OnMouseLeave = BtnMIDDeleteMouseLeave
+        OnMouseEnter = BtnStyle_2MouseEnter
+        OnMouseLeave = BtnStyle_2MouseLeave
       end
     end
     object Panel3: TPanel
@@ -198,8 +198,8 @@ object MemInfoForm: TMemInfoForm
         ParentFont = False
         TabOrder = 6
         OnClick = BtnMPhoneUpdateClick
-        OnMouseEnter = BtnMPhoneUpdateMouseEnter
-        OnMouseLeave = BtnMPhoneUpdateMouseLeave
+        OnMouseEnter = BtnStyle_2MouseEnter
+        OnMouseLeave = BtnStyle_2MouseLeave
       end
       object BtnMEmailUpdate: TPanel
         Left = 530
@@ -218,8 +218,8 @@ object MemInfoForm: TMemInfoForm
         ParentFont = False
         TabOrder = 7
         OnClick = BtnMEmailUpdateClick
-        OnMouseEnter = BtnMEmailUpdateMouseEnter
-        OnMouseLeave = BtnMEmailUpdateMouseLeave
+        OnMouseEnter = BtnStyle_2MouseEnter
+        OnMouseLeave = BtnStyle_2MouseLeave
       end
     end
     object Panel4: TPanel
@@ -361,8 +361,8 @@ object MemInfoForm: TMemInfoForm
         ParentFont = False
         TabOrder = 9
         OnClick = BtnMAddUpdateClick
-        OnMouseEnter = BtnMAddUpdateMouseEnter
-        OnMouseLeave = BtnMAddUpdateMouseLeave
+        OnMouseEnter = BtnStyle_2MouseEnter
+        OnMouseLeave = BtnStyle_2MouseLeave
       end
       object cxLabel14: TcxLabel
         Left = 230
@@ -494,8 +494,8 @@ object MemInfoForm: TMemInfoForm
         ParentFont = False
         TabOrder = 2
         OnClick = BtnMPWUpdateClick
-        OnMouseEnter = BtnMPWUpdateMouseEnter
-        OnMouseLeave = BtnMPWUpdateMouseLeave
+        OnMouseEnter = BtnStyle_2MouseEnter
+        OnMouseLeave = BtnStyle_2MouseLeave
       end
       object cxLabel8: TcxLabel
         Left = 300

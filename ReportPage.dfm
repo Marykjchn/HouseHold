@@ -1456,8 +1456,8 @@ object ReportForm: TReportForm
       ParentFont = False
       TabOrder = 12
       OnClick = BtnIncomeSpendingClick
-      OnMouseEnter = BtnIncomeSpendingMouseEnter
-      OnMouseLeave = BtnIncomeSpendingMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object BtnClose: TPanel
       Left = 985
@@ -1476,8 +1476,8 @@ object ReportForm: TReportForm
       ParentFont = False
       TabOrder = 13
       OnClick = BtnCloseClick
-      OnMouseEnter = BtnCloseMouseEnter
-      OnMouseLeave = BtnCloseMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object BtnTerm: TPanel
       Left = 1075
@@ -1496,8 +1496,8 @@ object ReportForm: TReportForm
       ParentFont = False
       TabOrder = 14
       OnClick = BtnTermClick
-      OnMouseEnter = BtnTermMouseEnter
-      OnMouseLeave = BtnTermMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStyle_2MouseLeave
     end
     object BtnMonth: TPanel
       Left = 1009
@@ -1516,8 +1516,8 @@ object ReportForm: TReportForm
       ParentFont = False
       TabOrder = 15
       OnClick = BtnMonthClick
-      OnMouseEnter = BtnMonthMouseEnter
-      OnMouseLeave = BtnMonthMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStyle_2MouseLeave
     end
     object BtnYear: TPanel
       Left = 943
@@ -1536,8 +1536,8 @@ object ReportForm: TReportForm
       ParentFont = False
       TabOrder = 16
       OnClick = BtnYearClick
-      OnMouseEnter = BtnYearMouseEnter
-      OnMouseLeave = BtnYearMouseLeave
+      OnMouseEnter = BtnStyle_2MouseEnter
+      OnMouseLeave = BtnStyle_2MouseLeave
     end
     object BtnSearch: TPanel
       Left = 253
@@ -1556,8 +1556,8 @@ object ReportForm: TReportForm
       ParentFont = False
       TabOrder = 17
       OnClick = BtnSearchClick
-      OnMouseEnter = BtnSearchMouseEnter
-      OnMouseLeave = BtnSearchMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object Panel2: TPanel
       Left = 681
@@ -1576,8 +1576,8 @@ object ReportForm: TReportForm
       ParentFont = False
       TabOrder = 18
       OnClick = Panel2Click
-      OnMouseEnter = Panel2MouseEnter
-      OnMouseLeave = Panel2MouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object cxLabel1: TcxLabel
       Left = 20

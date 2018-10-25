@@ -217,8 +217,8 @@ object FindPWForm: TFindPWForm
         ParentFont = False
         TabOrder = 6
         OnClick = BtnEmailChkClick
-        OnMouseEnter = BtnEmailChkMouseEnter
-        OnMouseLeave = BtnEmailChkMouseLeave
+        OnMouseEnter = BtnStyle_2MouseEnter
+        OnMouseLeave = BtnStyle_2MouseLeave
       end
       object chkEmail: TcxLabel
         Left = 25
@@ -413,8 +413,8 @@ object FindPWForm: TFindPWForm
       ParentFont = False
       TabOrder = 0
       OnClick = BtnIdSelectClick
-      OnMouseEnter = BtnIdSelectMouseEnter
-      OnMouseLeave = BtnIdSelectMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
     object BtnClose: TPanel
       Left = 220
@@ -433,8 +433,8 @@ object FindPWForm: TFindPWForm
       ParentFont = False
       TabOrder = 1
       OnClick = BtnCloseClick
-      OnMouseEnter = BtnCloseMouseEnter
-      OnMouseLeave = BtnCloseMouseLeave
+      OnMouseEnter = BtnStyle_1MouseEnter
+      OnMouseLeave = BtnStyle_1MouseLeave
     end
   end
 end
