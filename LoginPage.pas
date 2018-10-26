@@ -36,9 +36,8 @@ type
     procedure EditEnter(Sender: TObject);
     procedure EditExit(Sender: TObject);
     procedure EditIDKeyPress(Sender: TObject; var Key: Char);
-    procedure EditIDKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure EditKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure LabelClick(Sender: TObject);
-    procedure EditPWKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditKeyPress(Sender: TObject; var Key: Char);
 
     // --------------- 마우스 호버시 색 변경 ---------------
@@ -118,23 +117,13 @@ begin
 
 end;
 
-procedure TLoginForm.EditIDKeyUp(Sender: TObject; var Key: Word;
+procedure TLoginForm.EditKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if EditID.Text <> '' then begin
-    cxLabel1.hide;
+  if TcxTextEdit(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
   end else begin
-    cxLabel1.show;
-  end;
-end;
-
-procedure TLoginForm.EditPWKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if EditPW.Text <> '' then begin
-    cxLabel2.hide;
-  end else begin
-    cxLabel2.show;
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
   end;
 end;
 

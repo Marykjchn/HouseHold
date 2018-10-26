@@ -260,7 +260,7 @@ object AnniAddForm: TAnniAddForm
         TabOrder = 1
         OnEnter = EditEnter
         OnExit = EditExit
-        OnKeyUp = EditContentsKeyUp
+        OnKeyUp = EditKeyUp
         Width = 170
       end
       object cxLabel7: TcxLabel
@@ -314,7 +314,7 @@ object AnniAddForm: TAnniAddForm
         TabOrder = 1
         OnEnter = EditEnter
         OnExit = EditExit
-        OnKeyUp = EditNameKeyUp
+        OnKeyUp = EditKeyUp
         Width = 170
       end
       object cxLabel8: TcxLabel
@@ -376,7 +376,7 @@ object AnniAddForm: TAnniAddForm
         ReadOnly = False
         TabOrder = 1
         Visible = True
-        OnChange = DatePickerAnniChange
+        OnChange = DatePickerChange
         OnEnter = EditEnter
         OnExit = EditExit
         OnKeyPress = DatePickerAnniKeyPress

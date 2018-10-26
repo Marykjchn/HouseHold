@@ -97,7 +97,7 @@ object FindIDForm: TFindIDForm
           OnEnter = EditEnter
           OnExit = EditExit
           OnKeyPress = EditNameKeyPress
-          OnKeyUp = EditNameKeyUp
+          OnKeyUp = EditKeyUp
           Width = 300
         end
         object cxLabel1: TcxLabel

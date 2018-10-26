@@ -37,7 +37,7 @@ type
     // --- ¿Ã∏ß ---
     procedure EditEnter(Sender: TObject);
     procedure EditNameKeyPress(Sender: TObject; var Key: Char);
-    procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure EditKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditExit(Sender: TObject);
     procedure LabelClick(Sender: TObject);
 
@@ -312,13 +312,13 @@ begin
   end;
 end;
 
-procedure TFindIDForm.EditNameKeyUp(Sender: TObject; var Key: Word;
+procedure TFindIDForm.EditKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if EditName.Text <> '' then begin
-    cxLabel1.hide;
+  if TcxTextEdit(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
   end else begin
-    cxLabel1.show;
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
   end;
 end;
 

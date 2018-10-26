@@ -44,6 +44,8 @@ type
     procedure BtnStyle_1MouseEnter(Sender: TObject);
     procedure BtnStyle_1MouseLeave(Sender: TObject);
     procedure LabelClick(Sender: TObject);
+    procedure DatePickerChange(Sender: TObject);
+    procedure EditKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -70,6 +72,16 @@ begin
   DataModule1.SetEditStyle(TWinControl(Sender).Parent, False);
 end;
 
+procedure TFixBreakAddForm.EditKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if TcxTextEdit(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
+  end else begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
+  end;
+end;
+
 procedure TFixBreakAddForm.LabelClick(Sender: TObject);
 begin
   DataModule1.EditSetFocus(TwinControl(Sender).Parent);
@@ -83,6 +95,15 @@ end;
 procedure TFixBreakAddForm.BtnStyle_1MouseLeave(Sender: TObject);
 begin
   DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
+end;
+
+procedure TFixBreakAddForm.DatePickerChange(Sender: TObject);
+begin
+  if TPlannerDatePicker(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
+  end else begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
+  end;
 end;
 
 procedure TFixBreakAddForm.EditEnter(Sender: TObject);

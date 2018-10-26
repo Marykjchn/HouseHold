@@ -44,10 +44,9 @@ type
     // --- 아이디 ---
     procedure EditEnter(Sender: TObject);
     procedure EditExit(Sender: TObject);
-    procedure EditIDKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure EditKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     // --- 이름 ---
     procedure EditNameKeyPress(Sender: TObject; var Key: Char);
-    procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 
     // --------------- 버튼 호버시 이벤트 ---------------
     procedure BtnStyle_1MouseEnter(Sender: TObject);
@@ -339,13 +338,13 @@ begin
   end;
 end;
 
-procedure TFindPWForm.EditIDKeyUp(Sender: TObject; var Key: Word;
+procedure TFindPWForm.EditKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
- if EditID.Text <> '' then begin
-    cxLabel15.hide;
+  if TcxTextEdit(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
   end else begin
-    cxLabel15.show;
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
   end;
 end;
 
@@ -370,16 +369,6 @@ begin
   chkID.Hide;
   chkName.Hide;
   chkEmail.Hide;
-end;
-
-procedure TFindPWForm.EditNameKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if EditName.Text <> '' then begin
-    cxLabel1.hide;
-  end else begin
-    cxLabel1.show;
-  end;
 end;
 
 end.

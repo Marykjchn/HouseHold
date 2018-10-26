@@ -97,7 +97,7 @@ object SearchJusoForm: TSearchJusoForm
         OnEnter = EditEnter
         OnExit = EditExit
         OnKeyPress = EditAddressKeyPress
-        OnKeyUp = EditAddressKeyUp
+        OnKeyUp = EditKeyUp
         Width = 345
       end
       object LabEditAddress: TcxLabel

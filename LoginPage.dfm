@@ -95,7 +95,7 @@ object LoginForm: TLoginForm
         OnEnter = EditEnter
         OnExit = EditExit
         OnKeyPress = EditKeyPress
-        OnKeyUp = EditPWKeyUp
+        OnKeyUp = EditKeyUp
         Width = 271
       end
       object cxLabel2: TcxLabel
@@ -151,7 +151,7 @@ object LoginForm: TLoginForm
         OnEnter = EditEnter
         OnExit = EditExit
         OnKeyPress = EditIDKeyPress
-        OnKeyUp = EditIDKeyUp
+        OnKeyUp = EditKeyUp
         Width = 271
       end
       object cxLabel1: TcxLabel

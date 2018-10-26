@@ -85,9 +85,10 @@ object FixBreakAddForm: TFixBreakAddForm
         Font.Name = #47569#51008' '#44256#46357
         Font.Style = []
         ParentFont = False
-        ReadOnly = False
+        ReadOnly = True
         TabOrder = 1
         Visible = True
+        OnChange = DatePickerChange
         OnEnter = EditEnter
         OnExit = EditExit
         Version = '1.6.2.3'
@@ -321,6 +322,7 @@ object FixBreakAddForm: TFixBreakAddForm
         TabOrder = 1
         OnEnter = EditEnter
         OnExit = EditExit
+        OnKeyUp = EditKeyUp
         Width = 190
       end
       object LabItem: TcxLabel
@@ -463,6 +465,7 @@ object FixBreakAddForm: TFixBreakAddForm
         TabOrder = 1
         OnEnter = EditEnter
         OnExit = EditExit
+        OnKeyUp = EditKeyUp
         Width = 190
       end
       object LabType: TcxLabel
@@ -528,6 +531,7 @@ object FixBreakAddForm: TFixBreakAddForm
         TabOrder = 1
         OnEnter = EditEnter
         OnExit = EditExit
+        OnKeyUp = EditKeyUp
         Width = 190
       end
       object LabAmount: TcxLabel

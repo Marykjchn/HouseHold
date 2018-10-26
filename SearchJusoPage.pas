@@ -90,7 +90,7 @@ type
     // Edit 버튼 이벤트
     procedure EditEnter(Sender: TObject);
     procedure EditAddressKeyPress(Sender: TObject; var Key: Char);
-    procedure EditAddressKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure EditKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure LabelClick(Sender: TObject);
 
     // 폼생성시 이벤트
@@ -177,13 +177,13 @@ begin
   end;
 end;
 
-procedure TSearchJusoForm.EditAddressKeyUp(Sender: TObject; var Key: Word;
+procedure TSearchJusoForm.EditKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if EditAddress.Text <> '' then begin
-    LabEditAddress.hide;
+  if TcxTextEdit(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
   end else begin
-    LabEditAddress.show;
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
   end;
 end;
 

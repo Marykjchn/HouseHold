@@ -110,7 +110,7 @@ object UpdatePWForm: TUpdatePWForm
           TabOrder = 1
           OnEnter = EditEnter
           OnExit = EditExit
-          OnKeyUp = EditPWKeyUp
+          OnKeyUp = EditKeyUp
           Width = 300
         end
         object cxLabel16: TcxLabel
@@ -166,7 +166,7 @@ object UpdatePWForm: TUpdatePWForm
           Style.IsFontAssigned = True
           StyleFocused.Color = 16776441
           TabOrder = 1
-          OnKeyUp = EditPWchkKeyUp
+          OnKeyUp = EditKeyUp
           Width = 300
         end
         object cxLabel17: TcxLabel

@@ -70,7 +70,7 @@ object EmailchkForm: TEmailchkForm
         TabOrder = 1
         OnEnter = EditEnter
         OnExit = EditExit
-        OnKeyUp = EditCodeValKeyUp
+        OnKeyUp = EditKeyUp
         Width = 300
       end
       object cxLabel4: TcxLabel

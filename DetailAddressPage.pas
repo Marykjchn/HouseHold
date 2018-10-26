@@ -32,6 +32,8 @@ type
     procedure BtnDetailAddressClick(Sender: TObject);
     procedure BtnStyle_1MouseEnter(Sender: TObject);
     procedure BtnStyle_1MouseLeave(Sender: TObject);
+    procedure EditDetailAddressKeyUp(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -92,6 +94,16 @@ procedure TDetailAddressForm.EditDetailAddressKeyPress(Sender: TObject;
 begin
   if Key = #13 then begin
     BtnDetailAddress.OnClick(nil);
+  end;
+end;
+
+procedure TDetailAddressForm.EditDetailAddressKeyUp(Sender: TObject;
+  var Key: Word; Shift: TShiftState);
+begin
+  if TcxTextEdit(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
+  end else begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
   end;
 end;
 

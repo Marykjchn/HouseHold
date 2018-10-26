@@ -97,7 +97,7 @@ object FindPWForm: TFindPWForm
           OnEnter = EditEnter
           OnExit = EditExit
           OnKeyPress = EditIDKeyPress
-          OnKeyUp = EditIDKeyUp
+          OnKeyUp = EditKeyUp
           Width = 300
         end
         object cxLabel15: TcxLabel
@@ -180,7 +180,7 @@ object FindPWForm: TFindPWForm
           OnEnter = EditEnter
           OnExit = EditExit
           OnKeyPress = EditNameKeyPress
-          OnKeyUp = EditNameKeyUp
+          OnKeyUp = EditKeyUp
           Width = 300
         end
         object cxLabel1: TcxLabel

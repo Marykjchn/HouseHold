@@ -28,7 +28,7 @@ type
     // -------------- 버튼 호버시 색 변경 ---------------
     procedure EditEnter(Sender: TObject);
     procedure EditExit(Sender: TObject);
-    procedure EditCodeValKeyUp(Sender: TObject; var Key: Word;
+    procedure EditKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure BtnStyle_1MouseEnter(Sender: TObject);
     procedure BtnStyle_1MouseLeave(Sender: TObject);
@@ -89,13 +89,13 @@ begin
   DataModule1.SetEditStyle(TWinControl(Sender).Parent, False);
 end;
 
-procedure TEmailchkForm.EditCodeValKeyUp(Sender: TObject; var Key: Word;
+procedure TEmailchkForm.EditKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if EditCodeVal.Text <> '' then begin
-    cxLabel4.hide;
+  if TcxTextEdit(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
   end else begin
-    cxLabel4.show;
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
   end;
 end;
 

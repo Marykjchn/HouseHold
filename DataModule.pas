@@ -79,6 +79,8 @@ type
     // Label클릭시 EditSetFocus
     procedure EditSetFocus(AWinControl: TWinControl);
 
+    procedure EditValueChange(AWinControl: TWinControl; AVisible: Boolean);
+
     // Edit 스타일 지정
     procedure SetEditStyle(AWinControl: TWinControl; AEnabled: Boolean);
 
@@ -336,7 +338,23 @@ begin
       BoolItem := (Controls[i] is TcxTextEdit);
       if BoolItem then begin
         TcxTextEdit(Controls[i]).SetFocus;
+        Exit;
+      end;
+    end;
+  end;
+end;
 
+procedure TDataModule1.EditValueChange(AWinControl: TWinControl;
+  AVisible: Boolean);
+var
+  i         : Integer;
+  BoolItem  : Boolean;
+begin
+  with AWinControl do begin
+    for i := 0 to AWinControl.ControlCount - 1 do begin
+      BoolItem := (Controls[i] is TcxLabel);
+      if BoolItem then begin
+        TcxLabel(Controls[i]).Visible := AVisible;
         Exit;
       end;
     end;

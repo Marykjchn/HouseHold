@@ -23,9 +23,7 @@ type
     Panel2: TPanel;
     procedure EditEnter(Sender: TObject);
     procedure EditExit(Sender: TObject);
-    procedure EditPWKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure EditPWchkKeyUp(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
+    procedure EditKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure BtnMemInsertClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure BtnStyle_1Enter(Sender: TObject);
@@ -99,16 +97,6 @@ begin
   end;
 
 
-end;
-
-procedure TUpdatePWForm.EditPWchkKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if EditPWChk.Text <> '' then begin
-    cxLabel17.hide;
-  end else begin
-    cxLabel17.show;
-  end;
 end;
 
 procedure TUpdatePWForm.BtnStyle_1MouseEnter(Sender: TObject);
@@ -193,13 +181,13 @@ begin
 
 end;
 
-procedure TUpdatePWForm.EditPWKeyUp(Sender: TObject; var Key: Word;
+procedure TUpdatePWForm.EditKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if EditPW.Text <> '' then begin
-    cxLabel16.hide;
+  if TcxTextEdit(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
   end else begin
-    cxLabel16.show;
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
   end;
 end;
 

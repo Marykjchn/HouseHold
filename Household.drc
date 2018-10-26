@@ -2199,23 +2199,23 @@ END
 /* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\clisted.res */
 /* c:\program files (x86)\codegear\rad studio\5.0\mylib\TMS.Component.Pack.v4.6.0.7\asgprint.DFM */
 /* DetailAddressPage.dfm */
-/* E:\Developer\Delphi\코딩 연습\Household\SearchJusoPage.dfm */
-/* UpdatePhonePage.dfm */
+/* SearchJusoPage.dfm */
 /* EmailchkPage.dfm */
+/* FindPWPage.dfm */
+/* UpdatePWPage.dfm */
 /* UpdateEmailPage.dfm */
-/* E:\Developer\Delphi\코딩 연습\Household\FindPWPage.dfm */
-/* E:\Developer\Delphi\코딩 연습\Household\UpdatePWPage.dfm */
-/* E:\Developer\Delphi\코딩 연습\Household\MemInfoPage.dfm */
+/* UpdatePhonePage.dfm */
+/* MemInfoPage.dfm */
 /* FixBreakAddPage.dfm */
 /* FixBreakdownEditPage.dfm */
 /* AnniAddPage.dfm */
 /* AnniversaryEditPage.dfm */
 /* SolnLun.dcr */
 /* HouseholdPage.dfm */
-/* E:\Developer\Delphi\코딩 연습\Household\DataModule.dfm */
+/* DataModule.dfm */
 /* ReportPage.dfm */
-/* FindIDPage.dfm */
 /* E:\Developer\Delphi\코딩 연습\Household\MemInsertPage.dfm */
-/* LoginPage.dfm */
+/* E:\Developer\Delphi\코딩 연습\Household\FindIDPage.dfm */
+/* E:\Developer\Delphi\코딩 연습\Household\LoginPage.dfm */
 /* E:\Developer\Delphi\코딩 연습\Household\household.res */
 /* E:\Developer\Delphi\코딩 연습\Household\household.drf */

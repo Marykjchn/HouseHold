@@ -46,10 +46,9 @@ type
     procedure EditEnter(Sender: TObject);
     procedure EditExit(Sender: TObject);
 
-    procedure EditContentsKeyUp(Sender: TObject; var Key: Word;
+    procedure EditKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
-    procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure DatePickerAnniChange(Sender: TObject);
+    procedure DatePickerChange(Sender: TObject);
     procedure LabelClick(Sender: TObject);
 
 
@@ -143,12 +142,12 @@ begin
   DataModule1.EditSetFocus(TwinControl(Sender).Parent);
 end;
 
-procedure TAnniAddForm.DatePickerAnniChange(Sender: TObject);
+procedure TAnniAddForm.DatePickerChange(Sender: TObject);
 begin
-  if DatePickerAnni.Text <> '' then begin
-    cxLabel9.hide;
+  if TPlannerDatePicker(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
   end else begin
-    cxLabel9.Show;
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
   end;
 
 end;
@@ -168,23 +167,13 @@ begin
   DataModule1.SetEditStyle(TWinControl(Sender).Parent, False);
 end;
 
-procedure TAnniAddForm.EditContentsKeyUp(Sender: TObject; var Key: Word;
+procedure TAnniAddForm.EditKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if EditContents.Text <> '' then begin
-    cxLabel7.hide;
+  if TcxTextEdit(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
   end else begin
-    cxLabel7.show;
-  end;
-end;
-
-procedure TAnniAddForm.EditNameKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if EditName.Text <> '' then begin
-    cxLabel8.hide;
-  end else begin
-    cxLabel8.show;
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
   end;
 end;
 

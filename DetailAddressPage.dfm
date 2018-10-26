@@ -136,6 +136,7 @@ object DetailAddressForm: TDetailAddressForm
         OnEnter = EditEnter
         OnExit = EditExit
         OnKeyPress = EditDetailAddressKeyPress
+        OnKeyUp = EditDetailAddressKeyUp
         Width = 300
       end
       object LabDetailAddress: TcxLabel

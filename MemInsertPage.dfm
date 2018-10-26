@@ -286,7 +286,7 @@ object MemInsertForm: TMemInsertForm
         OnEnter = EditEnter
         OnExit = EditExit
         OnKeyPress = EditIDKeyPress
-        OnKeyUp = EditIDKeyUp
+        OnKeyUp = EditKeyUp
         Width = 300
       end
       object LabID: TcxLabel
@@ -344,7 +344,7 @@ object MemInsertForm: TMemInsertForm
         TabOrder = 1
         OnEnter = EditEnter
         OnExit = EditExit
-        OnKeyUp = EditPWKeyUp
+        OnKeyUp = EditKeyUp
         Width = 300
       end
       object LabPW: TcxLabel
@@ -402,7 +402,7 @@ object MemInsertForm: TMemInsertForm
         TabOrder = 1
         OnEnter = EditEnter
         OnExit = EditExit
-        OnKeyUp = EditPWchkKeyUp
+        OnKeyUp = EditKeyUp
         Width = 300
       end
       object LabPWChk: TcxLabel
@@ -460,7 +460,7 @@ object MemInsertForm: TMemInsertForm
         OnEnter = EditEnter
         OnExit = EditExit
         OnKeyPress = EditNameKeyPress
-        OnKeyUp = EditNameKeyUp
+        OnKeyUp = EditKeyUp
         Width = 300
       end
       object LabName: TcxLabel
@@ -516,7 +516,7 @@ object MemInsertForm: TMemInsertForm
         OnEnter = EditEnter
         OnExit = EditExit
         OnKeyPress = OnlyNumber
-        OnKeyUp = EditYearKeyUp
+        OnKeyUp = EditKeyUp
         Width = 76
       end
       object LabBirthYear: TcxLabel
@@ -590,7 +590,7 @@ object MemInsertForm: TMemInsertForm
         OnEnter = EditEnter
         OnExit = EditExit
         OnKeyPress = OnlyNumber
-        OnKeyUp = ComboMonKeyUp
+        OnKeyUp = ComboKeyUp
         Width = 76
       end
       object LabBirthMonth: TcxLabel
@@ -646,7 +646,7 @@ object MemInsertForm: TMemInsertForm
         OnEnter = EditEnter
         OnExit = EditExit
         OnKeyPress = OnlyNumber
-        OnKeyUp = EditDayKeyUp
+        OnKeyUp = EditKeyUp
         Width = 76
       end
       object LabBirthDay: TcxLabel
@@ -713,6 +713,7 @@ object MemInsertForm: TMemInsertForm
         TabOrder = 1
         OnEnter = EditEnter
         OnExit = EditExit
+        OnKeyUp = EditKeyUp
         Width = 81
       end
       object LabAge: TcxLabel

@@ -113,28 +113,18 @@ type
     // -----아이디-----
     procedure LabelClick(Sender: TObject);
     procedure EditEnter(Sender: TObject);
-    procedure EditIDKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure EditKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditIDKeyPress(Sender: TObject; var Key: Char);
     procedure EditExit(Sender: TObject);
 
-    // -----비밀번호-----
-    procedure EditPWKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-
-    // -----비밀번호 확인-----
-    procedure EditPWchkKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-
     // -----이름-----
-    procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditNameKeyPress(Sender: TObject; var Key: Char);
 
     // -----생년월일-----
     // 년도
-    procedure EditYearKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     // 월
-    procedure ComboMonKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure ComboMonPropertiesChange(Sender: TObject);
     // 일
-    procedure EditDayKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 
     // -----주소-----
     procedure LabAddressClick(Sender: TObject);
@@ -145,15 +135,11 @@ type
     // 선택
     procedure ComboEmailSelPropertiesChange(Sender: TObject);
 
-
     // --------------- 버튼 호버시 색변경 ---------------
     procedure BtnStyle_1MouseEnter(Sender: TObject);
     procedure BtnStyle_1MouseLeave(Sender: TObject);
     procedure BtnStyle_2MouseEnter(Sender: TObject);
     procedure BtnStyle_2MouseLeave(Sender: TObject);
-
-
-
 
     // --------------- 인증 메일 번호 ---------------
     procedure BtnEmailChkClick(Sender: TObject);
@@ -166,6 +152,7 @@ type
 
     // --------------- Edit앞딴처리 ---------------
     procedure EditEvent(EditN : TWinControl);
+    procedure ComboKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 
   private
     MemInsertChk: TMemInsertChk;
@@ -242,15 +229,14 @@ begin
   end;
 end;
 
-procedure TMemInsertForm.ComboMonKeyUp(Sender: TObject; var Key: Word;
+procedure TMemInsertForm.ComboKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if ComboMon.Text <> '' then begin
-    LabBirthMonth.hide;
+  if TcxComboBox(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
   end else begin
-    LabBirthMonth.show;
-  end;
-
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
+  end;          
 end;
 
 procedure TMemInsertForm.ComboMonPropertiesChange(Sender: TObject);
@@ -616,16 +602,6 @@ begin
   end;
 end;
 
-procedure TMemInsertForm.EditDayKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if EditDay.Text <> '' then begin
-    LabBirthDay.hide;
-  end else begin
-    LabBirthDay.show;
-  end;
-end;
-
 procedure TMemInsertForm.EditDetailAddressPropertiesChange(Sender: TObject);
 begin
   if EditDetailAddress.Text = '' then begin
@@ -886,13 +862,13 @@ begin
   end;
 end;
 
-procedure TMemInsertForm.EditIDKeyUp(Sender: TObject; var Key: Word;
+procedure TMemInsertForm.EditKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if EditID.Text <> '' then begin
-    LabID.hide;
+  if TcxTextEdit(Sender).Text <> '' then begin
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, False);
   end else begin
-    LabID.show;
+    Datamodule1.EditValueChange(TWinControl(Sender).Parent, True);
   end;
 end;
 
@@ -921,17 +897,6 @@ begin
   end;
 end;
 
-procedure TMemInsertForm.EditNameKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if EditName.Text <> '' then begin
-    LabName.hide;
-  end else begin
-    LabName.show;
-  end;
-end;
-
-
 procedure TMemInsertForm.EditPostCodePropertiesChange(Sender: TObject);
 begin
   if EditPostCode.Text <> '' then begin
@@ -939,37 +904,6 @@ begin
   end else begin
     LabPostCode.Show;
   end;
-end;
-
-procedure TMemInsertForm.EditPWchkKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if EditPWChk.Text <> '' then begin
-    LabPWChk.hide;
-  end else begin
-    LabPWChk.show;
-  end;
-end;
-
-procedure TMemInsertForm.EditPWKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if EditPW.Text <> '' then begin
-    LabPW.hide;
-  end else begin
-    LabPW.show;
-  end;
-end;
-
-procedure TMemInsertForm.EditYearKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if EditYear.Text <> '' then begin
-    LabBirthYear.hide;
-  end else begin
-    LabBirthYear.show;
-  end;
-
 end;
 
 procedure TMemInsertForm.FormCreate(Sender: TObject);
