@@ -76,6 +76,9 @@ type
     //// control 상의 Enable 지정 FControlColors 참조하여 구분
     procedure SetVisibleItems(AWinControl: TWinControl; AEnabled: Boolean);
 
+    // Label클릭시 EditSetFocus
+    procedure EditSetFocus(AWinControl: TWinControl);
+
     // Edit 스타일 지정
     procedure SetEditStyle(AWinControl: TWinControl; AEnabled: Boolean);
 
@@ -265,8 +268,8 @@ end;
 procedure TDataModule1.SetEditStyle(AWinControl: TWinControl;
   AEnabled: Boolean);
 var
-  i     : Integer;
-  BoolItem : Boolean;
+  i         : Integer;
+  BoolItem  : Boolean;
 begin
 
   with AWinControl do begin 
@@ -320,6 +323,23 @@ begin
 
     end;
 
+  end;
+end;
+
+procedure TDataModule1.EditSetFocus(AWinControl: TWinControl);
+var
+  i         : Integer;
+  BoolItem  : Boolean;
+begin
+  with AWinControl do begin
+    for i := 0 to AWinControl.ControlCount - 1 do begin
+      BoolItem := (Controls[i] is TcxTextEdit);
+      if BoolItem then begin
+        TcxTextEdit(Controls[i]).SetFocus;
+
+        Exit;
+      end;
+    end;
   end;
 end;
 
