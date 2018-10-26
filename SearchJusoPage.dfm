@@ -116,7 +116,7 @@ object SearchJusoForm: TSearchJusoForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = LabEditAddressClick
+        OnClick = LabelClick
       end
     end
     object plJusoList: TPanel

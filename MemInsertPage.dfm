@@ -305,7 +305,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = LabIDClick
+        OnClick = LabelClick
       end
     end
     object Panel3: TPanel
@@ -363,7 +363,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = LabPWClick
+        OnClick = LabelClick
       end
     end
     object Panel4: TPanel
@@ -421,7 +421,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = LabPWChkClick
+        OnClick = LabelClick
       end
     end
     object Panel5: TPanel
@@ -479,7 +479,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = LabNameClick
+        OnClick = LabelClick
       end
     end
     object Panel6: TPanel
@@ -535,7 +535,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = LabBirthYearClick
+        OnClick = LabelClick
       end
     end
     object Panel7: TPanel
@@ -609,7 +609,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = LabBirthMonthClick
+        OnClick = LabelClick
       end
     end
     object Panel8: TPanel
@@ -665,7 +665,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = LabBirthDayClick
+        OnClick = LabelClick
       end
     end
     object cxLabel6: TcxLabel
@@ -731,6 +731,7 @@ object MemInsertForm: TMemInsertForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
+        OnClick = LabelClick
       end
     end
     object Panel10: TPanel

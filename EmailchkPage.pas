@@ -35,6 +35,7 @@ type
 
     // --------------- ´Ý±â ---------------
     procedure BtnCodeValClick(Sender: TObject);
+    procedure LabelClick(Sender: TObject);
   private
     { Private declarations }
     var chkTime : TDateTime;
@@ -71,6 +72,11 @@ end;
 procedure TEmailchkForm.BtnStyle_1MouseLeave(Sender: TObject);
 begin
   DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
+end;
+
+procedure TEmailchkForm.LabelClick(Sender: TObject);
+begin
+  DataModule1.EditSetFocus(TwinControl(Sender).Parent);
 end;
 
 procedure TEmailchkForm.EditEnter(Sender: TObject);

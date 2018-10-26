@@ -89,6 +89,7 @@ object EmailchkForm: TEmailchkForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
+        OnClick = LabelClick
       end
       object cxLabel2: TcxLabel
         Left = 279

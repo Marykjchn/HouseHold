@@ -39,7 +39,7 @@ type
     procedure EditNameKeyPress(Sender: TObject; var Key: Char);
     procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditExit(Sender: TObject);
-    procedure cxLabel1Click(Sender: TObject);
+    procedure LabelClick(Sender: TObject);
 
     // --- 이메일 ---
     procedure EditEmail1KeyPress(Sender: TObject; var Key: Char);
@@ -212,9 +212,9 @@ if ComboEmailSel.Text <> '직접입력' then
   end;
 end;
 
-procedure TFindIDForm.cxLabel1Click(Sender: TObject);
+procedure TFindIDForm.LabelClick(Sender: TObject);
 begin
-  EditName.SetFocus;
+  DataModule1.EditSetFocus(TwinControl(Sender).Parent);
 end;
 
 procedure TFindIDForm.EditEmail1KeyPress(Sender: TObject; var Key: Char);

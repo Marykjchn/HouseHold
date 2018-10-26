@@ -37,9 +37,8 @@ type
     procedure EditExit(Sender: TObject);
     procedure EditIDKeyPress(Sender: TObject; var Key: Char);
     procedure EditIDKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure cxLabel1Click(Sender: TObject);
+    procedure LabelClick(Sender: TObject);
     procedure EditPWKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure cxLabel2Click(Sender: TObject);
     procedure EditKeyPress(Sender: TObject; var Key: Char);
 
     // --------------- 마우스 호버시 색 변경 ---------------
@@ -79,15 +78,9 @@ begin
   DataModule1.SetBtnStyle_1(TWinControl(Sender), False);
 end;
 
-procedure TLoginForm.cxLabel1Click(Sender: TObject);
+procedure TLoginForm.LabelClick(Sender: TObject);
 begin
-  EditID.SetFocus;
-end;
-
-
-procedure TLoginForm.cxLabel2Click(Sender: TObject);
-begin
-  EditPW.SetFocus;
+  DataModule1.EditSetFocus(TwinControl(Sender).Parent);
 end;
 
 procedure TLoginForm.EditEnter(Sender: TObject);

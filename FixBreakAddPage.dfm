@@ -175,7 +175,7 @@ object FixBreakAddForm: TFixBreakAddForm
           NameOfMonths.UseIntlNames = True
           StartDay = 7
           TodayFormat = '"Today" DDD/mm, YYYY'
-          Day = 25
+          Day = 26
           Month = 10
           Year = 2018
           TabOrder = 0
@@ -339,6 +339,7 @@ object FixBreakAddForm: TFixBreakAddForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
+        OnClick = LabelClick
       end
     end
     object cxLabel1: TcxLabel
@@ -480,6 +481,7 @@ object FixBreakAddForm: TFixBreakAddForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
+        OnClick = LabelClick
       end
     end
     object cxLabel10: TcxLabel
@@ -544,6 +546,7 @@ object FixBreakAddForm: TFixBreakAddForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
+        OnClick = LabelClick
       end
     end
     object BtnFixBreakStore: TPanel

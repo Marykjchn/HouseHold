@@ -111,35 +111,29 @@ type
     // ------------- 회원가입 입력란 이벤트 -------------
 
     // -----아이디-----
-    procedure LabIDClick(Sender: TObject);
+    procedure LabelClick(Sender: TObject);
     procedure EditEnter(Sender: TObject);
     procedure EditIDKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditIDKeyPress(Sender: TObject; var Key: Char);
     procedure EditExit(Sender: TObject);
 
     // -----비밀번호-----
-    procedure LabPWClick(Sender: TObject);
     procedure EditPWKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 
     // -----비밀번호 확인-----
-    procedure LabPWChkClick(Sender: TObject);
     procedure EditPWchkKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 
     // -----이름-----
-    procedure LabNameClick(Sender: TObject);
     procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditNameKeyPress(Sender: TObject; var Key: Char);
 
     // -----생년월일-----
     // 년도
-    procedure LabBirthYearClick(Sender: TObject);
     procedure EditYearKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     // 월
-    procedure LabBirthMonthClick(Sender: TObject);
     procedure ComboMonKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure ComboMonPropertiesChange(Sender: TObject);
     // 일
-    procedure LabBirthDayClick(Sender: TObject);
     procedure EditDayKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 
     // -----주소-----
@@ -586,48 +580,23 @@ begin
 
 end;
 
-procedure TMemInsertForm.LabIDClick(Sender: TObject);
-begin
-  EditID.SetFocus;
-end;
-
-procedure TMemInsertForm.LabPWClick(Sender: TObject);
-begin
-  EditPw.SetFocus;
-end;
-
-procedure TMemInsertForm.LabPWChkClick(Sender: TObject);
-begin
-  EditPWchk.SetFocus;
-end;
-
-procedure TMemInsertForm.LabBirthYearClick(Sender: TObject);
-begin
-  EditYear.SetFocus;
-end;
-
-procedure TMemInsertForm.LabBirthMonthClick(Sender: TObject);
-begin
-  ComboMon.SetFocus;
-end;
-
-procedure TMemInsertForm.LabBirthDayClick(Sender: TObject);
-begin
-  EditDay.SetFocus;
-end;
-
 procedure TMemInsertForm.LabAddressClick(Sender: TObject);
 begin
-  BtnSearchAddressClick(nil);
+  if TcxTextEdit(Sender).Text = '' then begin
+    BtnSearchAddressClick(nil);
+  end else begin
+    EditMPhone.SetFocus;
+    Exit;
+  end;
 end;
 
-procedure TMemInsertForm.LabNameClick(Sender: TObject);
+procedure TMemInsertForm.LabelClick(Sender: TObject);
 begin
-  EditName.SetFocus;
+  DataModule1.EditSetFocus(TwinControl(Sender).Parent);
 end;
 
 procedure TMemInsertForm.EditAddClick(Sender: TObject);
-begin  
+begin
   if TcxTextEdit(Sender).Text = '' then begin
     BtnSearchAddressClick(nil);
   end else begin

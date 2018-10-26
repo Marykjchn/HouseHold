@@ -31,6 +31,7 @@ type
     procedure BtnStyle_1Enter(Sender: TObject);
     procedure BtnStyle_1MouseEnter(Sender: TObject);
     procedure BtnStyle_1MouseLeave(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
   private
     { Private declarations }
     var
@@ -121,6 +122,11 @@ begin
 end;
 
 
+procedure TUpdatePWForm.Label1Click(Sender: TObject);
+begin
+  DataModule1.EditSetFocus(TWinControl(Sender).Parent);
+end;
+
 procedure TUpdatePWForm.BtnStyle_1Enter(Sender: TObject);
 begin
   DataModule1.SetBtnStyle_1(TWinControl(Sender), True);
@@ -128,7 +134,7 @@ end;
 
 procedure TUpdatePWForm.EditEnter(Sender: TObject);
 begin
-  DataModule1.SetEditStyle(TWinControl(Sender).Parent, False);
+  DataModule1.SetEditStyle(TWinControl(Sender).Parent, True);
 end;
 
 procedure TUpdatePWForm.EditExit(Sender: TObject);

@@ -114,7 +114,7 @@ object LoginForm: TLoginForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = cxLabel2Click
+        OnClick = LabelClick
       end
     end
     object Panel2: TPanel
@@ -170,7 +170,7 @@ object LoginForm: TLoginForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = cxLabel1Click
+        OnClick = LabelClick
       end
     end
     object Panel4: TPanel

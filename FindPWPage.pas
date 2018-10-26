@@ -64,6 +64,7 @@ type
     // --------------- 버튼 클릭시 비밀번호 수정 ---------------  
     procedure BtnIdSelectClick(Sender: TObject);
     procedure EditIDKeyPress(Sender: TObject; var Key: Char);
+    procedure LabelClick(Sender: TObject);
 
 
 
@@ -230,6 +231,11 @@ begin
     EditEmail2.Text := '';
     EditEmail2.SetFocus;
   end;
+end;
+
+procedure TFindPWForm.LabelClick(Sender: TObject);
+begin
+  DataModule1.EditSetFocus(TwinControl(Sender).Parent);
 end;
 
 procedure TFindPWForm.EditEmail1KeyPress(Sender: TObject; var Key: Char);

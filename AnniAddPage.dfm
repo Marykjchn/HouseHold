@@ -279,7 +279,7 @@ object AnniAddForm: TAnniAddForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = cxLabel7Click
+        OnClick = LabelClick
       end
     end
     object Panel5: TPanel
@@ -333,7 +333,7 @@ object AnniAddForm: TAnniAddForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = cxLabel8Click
+        OnClick = LabelClick
       end
     end
     object Panel6: TPanel
@@ -465,7 +465,7 @@ object AnniAddForm: TAnniAddForm
           NameOfMonths.UseIntlNames = True
           StartDay = 7
           TodayFormat = '"Today" DDD/mm, YYYY'
-          Day = 25
+          Day = 26
           Month = 10
           Year = 2018
           TabOrder = 0

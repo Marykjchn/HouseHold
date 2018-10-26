@@ -129,6 +129,7 @@ object UpdatePWForm: TUpdatePWForm
           Style.IsFontAssigned = True
           StyleDisabled.Color = clWindow
           StyleHot.Color = clWindow
+          OnClick = Label1Click
         end
       end
       object Panel4: TPanel
@@ -184,6 +185,7 @@ object UpdatePWForm: TUpdatePWForm
           Style.IsFontAssigned = True
           StyleDisabled.Color = clWindow
           StyleHot.Color = clWindow
+          OnClick = Label1Click
         end
       end
     end

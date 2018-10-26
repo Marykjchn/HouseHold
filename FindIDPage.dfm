@@ -116,7 +116,7 @@ object FindIDForm: TFindIDForm
           Style.IsFontAssigned = True
           StyleDisabled.Color = clWindow
           StyleHot.Color = clWindow
-          OnClick = cxLabel1Click
+          OnClick = LabelClick
         end
       end
       object BtnEmailChk: TPanel

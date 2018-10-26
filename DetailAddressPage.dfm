@@ -154,7 +154,7 @@ object DetailAddressForm: TDetailAddressForm
         Style.IsFontAssigned = True
         StyleDisabled.Color = clWindow
         StyleHot.Color = clWindow
-        OnClick = LabDetailAddressClick
+        OnClick = LabelClick
       end
     end
     object BtnDetailAddress: TPanel

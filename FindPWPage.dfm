@@ -116,6 +116,7 @@ object FindPWForm: TFindPWForm
           Style.IsFontAssigned = True
           StyleDisabled.Color = clWindow
           StyleHot.Color = clWindow
+          OnClick = LabelClick
         end
       end
       object chkName: TcxLabel
@@ -198,6 +199,7 @@ object FindPWForm: TFindPWForm
           Style.IsFontAssigned = True
           StyleDisabled.Color = clWindow
           StyleHot.Color = clWindow
+          OnClick = LabelClick
         end
       end
       object BtnEmailChk: TPanel

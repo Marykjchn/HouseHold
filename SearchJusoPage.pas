@@ -91,7 +91,7 @@ type
     procedure EditEnter(Sender: TObject);
     procedure EditAddressKeyPress(Sender: TObject; var Key: Char);
     procedure EditAddressKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure LabEditAddressClick(Sender: TObject);
+    procedure LabelClick(Sender: TObject);
 
     // 폼생성시 이벤트
     procedure FormCreate(Sender: TObject);
@@ -155,9 +155,9 @@ begin
   end;
 end;
 
-procedure TSearchJusoForm.LabEditAddressClick(Sender: TObject);
+procedure TSearchJusoForm.LabelClick(Sender: TObject);
 begin
-  EditAddress.SetFocus;
+  DataModule1.EditSetFocus(TWinControl(Sender).Parent);
 end;
 
 procedure TSearchJusoForm.EditEnter(Sender: TObject);

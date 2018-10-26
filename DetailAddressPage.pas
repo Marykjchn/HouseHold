@@ -20,7 +20,7 @@ type
     cxLabel10: TcxLabel;
     procedure cxTextEdit1PropertiesChange(Sender: TObject);
     procedure EditDetailAddressKeyPress(Sender: TObject; var Key: Char);
-    procedure LabDetailAddressClick(Sender: TObject);
+    procedure LabelClick(Sender: TObject);
 
     //Edit창 Enter시 스타일 변경
     procedure EditEnter(Sender: TObject);
@@ -113,9 +113,9 @@ begin
   EditDetailAddress.SetFocus;
 end;
 
-procedure TDetailAddressForm.LabDetailAddressClick(Sender: TObject);
+procedure TDetailAddressForm.LabelClick(Sender: TObject);
 begin
-  EditDetailAddress.SetFocus;
+  DataModule1.EditSetFocus(TwinControl(Sender).Parent);
 end;
 
 end.

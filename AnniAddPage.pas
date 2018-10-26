@@ -50,8 +50,7 @@ type
       Shift: TShiftState);
     procedure EditNameKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure DatePickerAnniChange(Sender: TObject);
-    procedure cxLabel7Click(Sender: TObject);
-    procedure cxLabel8Click(Sender: TObject);
+    procedure LabelClick(Sender: TObject);
 
 
     // -------------- 마우스 호버시 색 변경 ---------------
@@ -139,14 +138,9 @@ begin
   ModalResult := mrCancel;
 end;
 
-procedure TAnniAddForm.cxLabel7Click(Sender: TObject);
+procedure TAnniAddForm.LabelClick(Sender: TObject);
 begin
-  EditContents.SetFocus;
-end;
-
-procedure TAnniAddForm.cxLabel8Click(Sender: TObject);
-begin
-  EditName.SetFocus;
+  DataModule1.EditSetFocus(TwinControl(Sender).Parent);
 end;
 
 procedure TAnniAddForm.DatePickerAnniChange(Sender: TObject);
